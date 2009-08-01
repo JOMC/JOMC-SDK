@@ -86,7 +86,7 @@ import org.xml.sax.SAXException;
 @javax.annotation.Generated
 (
     value = "org.jomc.tools.JavaSources",
-    comments = "See http://jomc.sourceforge.net/jomc-tools"
+    comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
 )
 // SECTION-END
 public class XmlFramework
@@ -329,7 +329,7 @@ public class XmlFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     public XmlFramework()
     {
@@ -342,13 +342,13 @@ public class XmlFramework
 
     /**
      * Gets the value of the {@code configuration} property.
-     * @return The configuration of an XML framework implementation. Object from XML namespace http://jomc.eu/sdk/model.
+     * @return The configuration of an XML framework implementation. Object from XML namespace http://jomc.org/sdk/model.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     private java.lang.Object getConfiguration() throws org.jomc.ObjectManagementException
     {

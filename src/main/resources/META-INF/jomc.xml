@@ -132,7 +132,7 @@
       <properties>
         <property name="configuration" type="java.lang.Object">
           <documentation defaultLanguage="en">
-            <text language="en"><![CDATA[The configuration of an XML framework implementation. Object from XML namespace http://jomc.eu/sdk/model.]]></text>
+            <text language="en"><![CDATA[The configuration of an XML framework implementation. Object from XML namespace http://jomc.org/sdk/model.]]></text>
           </documentation>
         </property>
       </properties>

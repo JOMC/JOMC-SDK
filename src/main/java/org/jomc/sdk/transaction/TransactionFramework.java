@@ -64,13 +64,13 @@ import org.jomc.sdk.Environment;
  * <tr><td valign="top">English:</td><td valign="top"><pre>Transaction manager ''{0}'' not found.</pre></td></tr>
  * <tr><td valign="top">Deutsch:</td><td valign="top"><pre>Transaction manager ''{0}'' nicht gefunden.</pre></td></tr>
  * </table>
- * <li>"{@link #getMissingUserTransactionMessage missingUserTransaction}"<table>
- * <tr><td valign="top">English:</td><td valign="top"><pre>User transaction ''{0}'' not found.</pre></td></tr>
- * <tr><td valign="top">Deutsch:</td><td valign="top"><pre>User transaction ''{0}'' nicht gefunden.</pre></td></tr>
- * </table>
  * <li>"{@link #getMissingTransactionSynchronizationRegistryMessage missingTransactionSynchronizationRegistry}"<table>
  * <tr><td valign="top">English:</td><td valign="top"><pre>Transaction synchronization registry ''{0}'' not found.</pre></td></tr>
  * <tr><td valign="top">Deutsch:</td><td valign="top"><pre>Transaction synchronization registry ''{0}'' nicht gefunden.</pre></td></tr>
+ * </table>
+ * <li>"{@link #getMissingUserTransactionMessage missingUserTransaction}"<table>
+ * <tr><td valign="top">English:</td><td valign="top"><pre>User transaction ''{0}'' not found.</pre></td></tr>
+ * <tr><td valign="top">Deutsch:</td><td valign="top"><pre>User transaction ''{0}'' nicht gefunden.</pre></td></tr>
  * </table>
  * </ul></p>
  *
@@ -82,7 +82,7 @@ import org.jomc.sdk.Environment;
 @javax.annotation.Generated
 (
     value = "org.jomc.tools.JavaSources",
-    comments = "See http://jomc.sourceforge.net/jomc-tools"
+    comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
 )
 // SECTION-END
 public class TransactionFramework
@@ -157,7 +157,7 @@ public class TransactionFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     public TransactionFramework()
     {
@@ -177,7 +177,7 @@ public class TransactionFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     private javax.naming.Context getInitialContext() throws org.jomc.ObjectManagementException
     {
@@ -193,7 +193,7 @@ public class TransactionFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     private java.util.Locale getLocale() throws org.jomc.ObjectManagementException
     {
@@ -214,7 +214,7 @@ public class TransactionFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     private org.jomc.logging.Logger getLogger() throws org.jomc.ObjectManagementException
     {
@@ -240,7 +240,7 @@ public class TransactionFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     private String getMissingTransactionManagerMessage( final java.util.Locale locale, final java.lang.String jndiName ) throws org.jomc.ObjectManagementException
     {
@@ -262,7 +262,7 @@ public class TransactionFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     private String getMissingTransactionSynchronizationRegistryMessage( final java.util.Locale locale, final java.lang.String jndiName ) throws org.jomc.ObjectManagementException
     {
@@ -284,7 +284,7 @@ public class TransactionFramework
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc-tools"
+        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
     private String getMissingUserTransactionMessage( final java.util.Locale locale, final java.lang.String jndiName ) throws org.jomc.ObjectManagementException
     {
