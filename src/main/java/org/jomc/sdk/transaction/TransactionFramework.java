@@ -40,24 +40,21 @@ import javax.transaction.TransactionSynchronizationRegistry;
 import javax.transaction.UserTransaction;
 import org.jomc.sdk.Environment;
 
-// SECTION-START[Implementation Comment]
+// SECTION-START[Documentation]
 /**
  * Transaction framework.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.transaction.TransactionManager}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
- * <li>{@code javax.transaction.UserTransaction}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
- * <li>{@code javax.transaction.TransactionSynchronizationRegistry}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
+ * <li>{@code javax.transaction.TransactionManager}</li>
+ * <li>{@code javax.transaction.UserTransaction}</li>
+ * <li>{@code javax.transaction.TransactionSynchronizationRegistry}</li>
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getInitialContext InitialContext}"<blockquote>
- * Dependency on {@code javax.naming.Context} applying to Multiton scope.</blockquote></li>
+ * Dependency on {@code javax.naming.Context}.</blockquote></li>
  * <li>"{@link #getLocale Locale}"<blockquote>
- * Dependency on {@code java.util.Locale} at specification level 1.1 applying to Multiton scope bound to an instance.</blockquote></li>
+ * Dependency on {@code java.util.Locale} at specification level 1.1 bound to an instance.</blockquote></li>
  * <li>"{@link #getLogger Logger}"<blockquote>
- * Dependency on {@code org.jomc.logging.Logger} at specification level 1.0 applying to Multiton scope bound to an instance.</blockquote></li>
+ * Dependency on {@code org.jomc.logging.Logger} at specification level 1.0 bound to an instance.</blockquote></li>
  * </ul></p>
  * <p><b>Messages</b><ul>
  * <li>"{@link #getMissingTransactionManagerMessage missingTransactionManager}"<table>
@@ -153,7 +150,7 @@ public class TransactionFramework
     // SECTION-END
     // SECTION-START[Constructors]
 
-    /** Default implementation constructor. */
+    /** Creates a new {@code TransactionFramework} instance. */
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
@@ -205,7 +202,7 @@ public class TransactionFramework
      * <p>This method returns any available object of the {@code org.jomc.logging.Logger} specification at specification level 1.0.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code name}"</dt>
-     * <dd>Property of type {@code java.lang.String} with value "org.jomc.sdk.transaction.TransactionFramework".
+     * <dd>Property of type {@code $property.getType().value()} with value "org.jomc.sdk.transaction.TransactionFramework".
      * </dd>
      * </dl>
      * @return The {@code Logger} dependency.

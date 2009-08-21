@@ -38,12 +38,11 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-// SECTION-START[Implementation Comment]
+// SECTION-START[Documentation]
 /**
  * Naming framework.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.naming.Context}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
+ * <li>{@code javax.naming.Context}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getJndiName jndiName}"<blockquote>
@@ -83,7 +82,7 @@ public class NamingFramework
     // SECTION-END
     // SECTION-START[Constructors]
 
-    /** Default implementation constructor. */
+    /** Creates a new {@code NamingFramework} instance. */
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",

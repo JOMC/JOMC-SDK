@@ -34,7 +34,7 @@
 // SECTION-END
 package org.jomc.sdk;
 
-// SECTION-START[Implementation Comment]
+// SECTION-START[Documentation]
 /**
  * SDK environment.
  * <p><b>Properties</b><ul>
@@ -150,7 +150,7 @@ public class Environment
     // SECTION-END
     // SECTION-START[Constructors]
 
-    /** Default implementation constructor. */
+    /** Creates a new {@code Environment} instance. */
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",

@@ -364,7 +364,7 @@
             <dependency>
               <groupId>net.sourceforge.ccxjc</groupId>
               <artifactId>cc-xjc-plugin</artifactId>
-              <version>1.0-beta-6</version>
+              <version>1.0-beta-10</version>
             </dependency>
           </dependencies>
           <executions>
@@ -377,6 +377,10 @@
               <configuration>
                 <args>
                   <arg>-copy-constructor</arg>
+                  <arg>-cc-visibility</arg>
+                  <arg>private</arg>
+                  <arg>-cc-target</arg>
+                  <arg>1.5</arg>
                   <arg>-Xinject-code</arg>
                   <arg>-mark-generated</arg>
                 </args>

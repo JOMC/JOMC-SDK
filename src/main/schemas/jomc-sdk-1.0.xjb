@@ -43,7 +43,7 @@
     <jaxb:bindings node="xs:complexType[@name='SchemasType']">
       <ci:code><![CDATA[
     /**
-     * Gets a schema for a given public id.
+     * Gets a schema for a given public id from this list of schemas.
      *
      * @param publicId The public id of the schema to return.
      *

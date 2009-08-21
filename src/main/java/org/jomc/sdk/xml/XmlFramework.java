@@ -56,22 +56,16 @@ import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-// SECTION-START[Implementation Comment]
+// SECTION-START[Documentation]
 /**
  * XML framework.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.xml.bind.JAXBContext}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
- * <li>{@code javax.xml.bind.Marshaller}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
- * <li>{@code javax.xml.bind.Unmarshaller}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
- * <li>{@code javax.xml.validation.Schema}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
- * <li>{@code org.xml.sax.EntityResolver}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
- * <li>{@code org.w3c.dom.ls.LSResourceResolver}<blockquote>
- * Object applies to Multiton scope.</blockquote></li>
+ * <li>{@code javax.xml.bind.JAXBContext}</li>
+ * <li>{@code javax.xml.bind.Marshaller}</li>
+ * <li>{@code javax.xml.bind.Unmarshaller}</li>
+ * <li>{@code javax.xml.validation.Schema}</li>
+ * <li>{@code org.xml.sax.EntityResolver}</li>
+ * <li>{@code org.w3c.dom.ls.LSResourceResolver}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getConfiguration configuration}"<blockquote>
@@ -325,7 +319,7 @@ public class XmlFramework
     // SECTION-END
     // SECTION-START[Constructors]
 
-    /** Default implementation constructor. */
+    /** Creates a new {@code XmlFramework} instance. */
     @javax.annotation.Generated
     (
         value = "org.jomc.tools.JavaSources",
@@ -337,6 +331,8 @@ public class XmlFramework
         super();
         // SECTION-END
     }
+    // SECTION-END
+    // SECTION-START[Dependencies]
     // SECTION-END
     // SECTION-START[Properties]
 
@@ -354,5 +350,7 @@ public class XmlFramework
     {
         return (java.lang.Object) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "configuration" );
     }
+    // SECTION-END
+    // SECTION-START[Messages]
     // SECTION-END
 }
