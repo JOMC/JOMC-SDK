@@ -41,7 +41,8 @@
   <version>1.0-alpha-1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>JOMC SDK</name>
-  <description><![CDATA[Object management and configuration software development kit.]]></description>
+  <description><![CDATA[Object management and configuration software development kit.]]>
+  </description>
   <url>http://jomc.sourceforge.net/jomc-sdk/${pom.version}</url>
   <prerequisites>
     <maven>2.0.9</maven>
@@ -442,6 +443,7 @@
         <artifactId>buildnumber-maven-plugin</artifactId>
       </plugin>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-remote-resources-plugin</artifactId>
         <executions>
           <execution>
@@ -452,8 +454,8 @@
             <configuration>
               <resourceBundles>
                 <resourceBundle>org.jomc.build:jomc-build-resources:1.0-alpha-1-SNAPSHOT</resourceBundle>
-               </resourceBundles>
-               <properties>
+              </resourceBundles>
+              <properties>
                 <buildNumber>${buildNumber}</buildNumber>
               </properties>
             </configuration>
@@ -740,25 +742,29 @@
       <build>
         <plugins>
           <plugin>
+            <groupId>org.jomc</groupId>
+            <artifactId>maven-jomc-plugin</artifactId>
+          </plugin>
+          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-scm-plugin</artifactId>
             <executions>
               <execution>
                 <id>update-workdir</id>
-                <phase>initialize</phase>
+                <phase>validate</phase>
                 <goals>
                   <goal>update</goal>
                 </goals>
               </execution>
               <execution>
-                <id>checkin-main</id>
+                <id>main-java-sources</id>
                 <phase>process-resources</phase>
                 <goals>
                   <goal>checkin</goal>
                 </goals>
               </execution>
               <execution>
-                <id>checkin-test</id>
+                <id>test-java-sources</id>
                 <phase>process-test-resources</phase>
                 <goals>
                   <goal>checkin</goal>
