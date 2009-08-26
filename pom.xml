@@ -577,8 +577,6 @@
     </plugins>
   </reporting>
   <dependencies>
-
-    <!-- EE -->
     <dependency>
       <groupId>javax.persistence</groupId>
       <artifactId>persistence-api</artifactId>
@@ -591,19 +589,11 @@
       <version>1.1</version>
       <scope>compile</scope>
     </dependency>
-
-    <!-- JOMC -->
     <dependency>
       <groupId>org.jomc</groupId>
       <artifactId>jomc-api</artifactId>
       <version>1.0-alpha-1-SNAPSHOT</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jomc</groupId>
-      <artifactId>jomc-ri</artifactId>
-      <version>1.0-alpha-1-SNAPSHOT</version>
-      <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.jomc.logging</groupId>
