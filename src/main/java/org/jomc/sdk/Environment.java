@@ -68,32 +68,32 @@ public class Environment
     /**
      * Constant for the name of the system property holding the JNDI name of the {@code EntityManager} backing the SDK.
      */
-    public static final String ENTITY_MANAGER_JNDI_NAME = "sdk.entityManagerJndiName";
+    public static final String ENTITY_MANAGER_JNDI_NAME = "jomc.sdk.entityManagerJndiName";
 
     /**
      * Constant for the name of the system property holding the JNDI name of the {@code EntityManagerFactory} backing
      * the SDK.
      */
-    public static final String ENTITY_MANAGER_FACTORY_JNDI_NAME = "sdk.entityManagerFactoryJndiName";
+    public static final String ENTITY_MANAGER_FACTORY_JNDI_NAME = "jomc.sdk.entityManagerFactoryJndiName";
 
     /**
      * Constant for the name of the system property holding the JNDI name of the {@code TransactionManager} backing the
      * SDK.
      */
-    public static final String TRANSACTION_MANAGER_JNDI_NAME = "sdk.transactionManagerJndiName";
+    public static final String TRANSACTION_MANAGER_JNDI_NAME = "jomc.sdk.transactionManagerJndiName";
 
     /**
      * Constant for the name of the system property holding the JNDI name of the {@code UserTransaction} backing the
      * SDK.
      */
-    public static final String USER_TRANSACTION_JNDI_NAME = "sdk.userTransactionJndiName";
+    public static final String USER_TRANSACTION_JNDI_NAME = "jomc.sdk.userTransactionJndiName";
 
     /**
      * Constant for the name of the system property holding the JNDI name of the
      * {@code TransactionSynchronizationRegistry} backing the SDK.
      */
     public static final String TRANSACTION_SYNCHRONIZATION_REGISTRY_JNDI_NAME =
-        "sdk.transactionSynchronizationRegistryJndiName";
+        "jomc.sdk.transactionSynchronizationRegistryJndiName";
 
     /**
      * Gets the JNDI name of the {@code EntityManager} backing the SDK.

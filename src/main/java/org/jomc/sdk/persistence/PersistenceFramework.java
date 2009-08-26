@@ -51,7 +51,7 @@ import org.jomc.sdk.Environment;
  * Property of type {@code boolean} with value "false".</blockquote></li>
  * </ul></p>
  * <p><b>Dependencies</b><ul>
- * <li>"{@link #getInitialContext InitialContext}"<blockquote>
+ * <li>"{@link #getContext Context}"<blockquote>
  * Dependency on {@code javax.naming.Context}.</blockquote></li>
  * <li>"{@link #getLocale Locale}"<blockquote>
  * Dependency on {@code java.util.Locale} at specification level 1.1 bound to an instance.</blockquote></li>
@@ -86,7 +86,7 @@ public class PersistenceFramework
 
     public EntityManagerFactory getEntityManagerFactory() throws NamingException
     {
-        final EntityManagerFactory entityManagerFactory = (EntityManagerFactory) this.getInitialContext().lookup(
+        final EntityManagerFactory entityManagerFactory = (EntityManagerFactory) this.getContext().lookup(
             this.getSdkEnvironment().getEntityManagerFactoryJndiName() );
 
         if ( entityManagerFactory == null )
@@ -102,7 +102,7 @@ public class PersistenceFramework
     public EntityManager getEntityManager() throws NamingException
     {
         final EntityManager entityManager =
-            (EntityManager) this.getInitialContext().lookup( this.getSdkEnvironment().getEntityManagerJndiName() );
+            (EntityManager) this.getContext().lookup( this.getSdkEnvironment().getEntityManagerJndiName() );
 
         if ( entityManager != null )
         {
@@ -123,7 +123,6 @@ public class PersistenceFramework
 
     // SECTION-END
     // SECTION-START[PersistenceFramework]
-
     private Environment sdkEnvironment;
 
     public Environment getSdkEnvironment()
@@ -155,9 +154,9 @@ public class PersistenceFramework
     // SECTION-START[Dependencies]
 
     /**
-     * Gets the {@code InitialContext} dependency.
+     * Gets the {@code Context} dependency.
      * <p>This method returns the "{@code JOMC SDK}" object of the {@code javax.naming.Context} specification.</p>
-     * @return The {@code InitialContext} dependency.
+     * @return The {@code Context} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated
@@ -165,9 +164,9 @@ public class PersistenceFramework
         value = "org.jomc.tools.JavaSources",
         comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
-    private javax.naming.Context getInitialContext() throws org.jomc.ObjectManagementException
+    private javax.naming.Context getContext() throws org.jomc.ObjectManagementException
     {
-        return (javax.naming.Context) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "InitialContext" );
+        return (javax.naming.Context) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Context" );
     }
 
     /**

@@ -338,7 +338,7 @@ public class XmlFramework
 
     /**
      * Gets the value of the {@code configuration} property.
-     * @return The configuration of an XML framework implementation. Object from XML namespace http://jomc.org/sdk/model.
+     * @return The configuration of an XML framework implementation. {@code xml-framework-configuration} element from XML namespace http://jomc.org/sdk/model.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated

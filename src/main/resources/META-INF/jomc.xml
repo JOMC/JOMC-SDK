@@ -132,7 +132,7 @@
       <properties>
         <property name="configuration" type="java.lang.Object">
           <documentation defaultLanguage="en">
-            <text language="en"><![CDATA[The configuration of an XML framework implementation. Object from XML namespace http://jomc.org/sdk/model.]]></text>
+            <text language="en"><![CDATA[The configuration of an XML framework implementation. {@code xml-framework-configuration} element from XML namespace http://jomc.org/sdk/model.]]></text>
           </documentation>
         </property>
       </properties>
@@ -157,13 +157,6 @@
       <specifications>
         <reference identifier="javax.naming.Context"/>
       </specifications>
-      <properties>
-        <property name="jndiName" type="java.lang.String">
-          <documentation defaultLanguage="en">
-            <text language="en"><![CDATA[The JNDI name of the object returned by method {@code getObject}.]]></text>
-          </documentation>
-        </property>
-      </properties>
     </implementation>
 
     <!-- ******************************************************************* -->
@@ -187,7 +180,7 @@
         <reference identifier="javax.persistence.EntityManager"/>
       </specifications>
       <dependencies>
-        <dependency name="InitialContext" identifier="javax.naming.Context"
+        <dependency name="Context" identifier="javax.naming.Context"
                     bound="false" implementationName="${pom.name}"/>
 
         <dependency name="Locale" identifier="java.util.Locale"
@@ -252,7 +245,7 @@
         <reference identifier="javax.transaction.TransactionSynchronizationRegistry"/>
       </specifications>
       <dependencies>
-        <dependency name="InitialContext" identifier="javax.naming.Context"
+        <dependency name="Context" identifier="javax.naming.Context"
                     bound="false" implementationName="${pom.name}"/>
 
         <dependency name="Locale" identifier="java.util.Locale"

@@ -49,7 +49,7 @@ import org.jomc.sdk.Environment;
  * <li>{@code javax.transaction.TransactionSynchronizationRegistry}</li>
  * </ul></p>
  * <p><b>Dependencies</b><ul>
- * <li>"{@link #getInitialContext InitialContext}"<blockquote>
+ * <li>"{@link #getContext Context}"<blockquote>
  * Dependency on {@code javax.naming.Context}.</blockquote></li>
  * <li>"{@link #getLocale Locale}"<blockquote>
  * Dependency on {@code java.util.Locale} at specification level 1.1 bound to an instance.</blockquote></li>
@@ -88,7 +88,7 @@ public class TransactionFramework
 
     public TransactionManager getTransactionManager() throws NamingException
     {
-        final TransactionManager transactionManager = (TransactionManager) this.getInitialContext().lookup(
+        final TransactionManager transactionManager = (TransactionManager) this.getContext().lookup(
             this.getSdkEnvironment().getTransactionManagerJndiName() );
 
         if ( transactionManager == null )
@@ -103,7 +103,7 @@ public class TransactionFramework
 
     public UserTransaction getUserTransaction() throws NamingException
     {
-        final UserTransaction userTransaction = (UserTransaction) this.getInitialContext().lookup(
+        final UserTransaction userTransaction = (UserTransaction) this.getContext().lookup(
             this.getSdkEnvironment().getUserTransactionJndiName() );
 
         if ( userTransaction == null )
@@ -119,7 +119,7 @@ public class TransactionFramework
     public TransactionSynchronizationRegistry getTransactionSynchronizationRegistry() throws NamingException
     {
         final TransactionSynchronizationRegistry transactionSynchronizationRegistry =
-            (TransactionSynchronizationRegistry) this.getInitialContext().lookup(
+            (TransactionSynchronizationRegistry) this.getContext().lookup(
             this.getSdkEnvironment().getTransactionSynchronizationRegistryJndiName() );
 
         if ( transactionSynchronizationRegistry == null )
@@ -134,7 +134,6 @@ public class TransactionFramework
 
     // SECTION-END
     // SECTION-START[TransactionFramework]
-
     private Environment sdkEnvironment;
 
     public Environment getSdkEnvironment()
@@ -166,9 +165,9 @@ public class TransactionFramework
     // SECTION-START[Dependencies]
 
     /**
-     * Gets the {@code InitialContext} dependency.
+     * Gets the {@code Context} dependency.
      * <p>This method returns the "{@code JOMC SDK}" object of the {@code javax.naming.Context} specification.</p>
-     * @return The {@code InitialContext} dependency.
+     * @return The {@code Context} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated
@@ -176,9 +175,9 @@ public class TransactionFramework
         value = "org.jomc.tools.JavaSources",
         comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
     )
-    private javax.naming.Context getInitialContext() throws org.jomc.ObjectManagementException
+    private javax.naming.Context getContext() throws org.jomc.ObjectManagementException
     {
-        return (javax.naming.Context) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "InitialContext" );
+        return (javax.naming.Context) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Context" );
     }
 
     /**

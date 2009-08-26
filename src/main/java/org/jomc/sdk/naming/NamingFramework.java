@@ -44,10 +44,6 @@ import javax.naming.NamingException;
  * <p><b>Specifications</b><ul>
  * <li>{@code javax.naming.Context}</li>
  * </ul></p>
- * <p><b>Properties</b><ul>
- * <li>"{@link #getJndiName jndiName}"<blockquote>
- * Property of type {@code java.lang.String}.</blockquote></li>
- * </ul></p>
  *
  * @author <a href="mailto:cs@jomc.org">Christian Schulte</a> 1.0
  * @version $Id$
@@ -69,16 +65,6 @@ public class NamingFramework
         return new InitialContext();
     }
 
-    public Object getObject() throws NamingException
-    {
-        if ( this.getJndiName() != null )
-        {
-            return this.getContext().lookup( this.getJndiName() );
-        }
-
-        return null;
-    }
-
     // SECTION-END
     // SECTION-START[Constructors]
 
@@ -98,21 +84,6 @@ public class NamingFramework
     // SECTION-START[Dependencies]
     // SECTION-END
     // SECTION-START[Properties]
-
-    /**
-     * Gets the value of the {@code jndiName} property.
-     * @return The JNDI name of the object returned by method {@code getObject}.
-     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
-     */
-    @javax.annotation.Generated
-    (
-        value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
-    )
-    private java.lang.String getJndiName() throws org.jomc.ObjectManagementException
-    {
-        return (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "jndiName" );
-    }
     // SECTION-END
     // SECTION-START[Messages]
     // SECTION-END
