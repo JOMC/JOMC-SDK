@@ -60,12 +60,12 @@ import org.xml.sax.SAXException;
 /**
  * XML framework.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.xml.bind.JAXBContext}</li>
- * <li>{@code javax.xml.bind.Marshaller}</li>
- * <li>{@code javax.xml.bind.Unmarshaller}</li>
- * <li>{@code javax.xml.validation.Schema}</li>
- * <li>{@code org.xml.sax.EntityResolver}</li>
- * <li>{@code org.w3c.dom.ls.LSResourceResolver}</li>
+ * <li>{@code javax.xml.bind.JAXBContext} {@code Multiton}</li>
+ * <li>{@code javax.xml.bind.Marshaller} {@code Multiton}</li>
+ * <li>{@code javax.xml.bind.Unmarshaller} {@code Multiton}</li>
+ * <li>{@code javax.xml.validation.Schema} {@code Multiton}</li>
+ * <li>{@code org.xml.sax.EntityResolver} {@code Multiton}</li>
+ * <li>{@code org.w3c.dom.ls.LSResourceResolver} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getConfiguration configuration}"<blockquote>

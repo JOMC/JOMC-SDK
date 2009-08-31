@@ -42,7 +42,7 @@ import javax.naming.NamingException;
 /**
  * Naming framework.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.naming.Context}</li>
+ * <li>{@code javax.naming.Context} {@code Multiton}</li>
  * </ul></p>
  *
  * @author <a href="mailto:cs@jomc.org">Christian Schulte</a> 1.0

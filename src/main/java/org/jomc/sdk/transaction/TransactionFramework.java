@@ -44,9 +44,9 @@ import org.jomc.sdk.Environment;
 /**
  * Transaction framework.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.transaction.TransactionManager}</li>
- * <li>{@code javax.transaction.UserTransaction}</li>
- * <li>{@code javax.transaction.TransactionSynchronizationRegistry}</li>
+ * <li>{@code javax.transaction.TransactionManager} {@code Multiton}</li>
+ * <li>{@code javax.transaction.UserTransaction} {@code Multiton}</li>
+ * <li>{@code javax.transaction.TransactionSynchronizationRegistry} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getContext Context}"<blockquote>

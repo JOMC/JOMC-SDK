@@ -43,8 +43,8 @@ import org.jomc.sdk.Environment;
 /**
  * Persistence framework.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.persistence.EntityManagerFactory}</li>
- * <li>{@code javax.persistence.EntityManager}</li>
+ * <li>{@code javax.persistence.EntityManagerFactory} {@code Multiton}</li>
+ * <li>{@code javax.persistence.EntityManager} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #isContainerManaged containerManaged}"<blockquote>
