@@ -64,8 +64,8 @@ import org.xml.sax.SAXException;
  * <li>{@code javax.xml.bind.Marshaller} {@code Multiton}</li>
  * <li>{@code javax.xml.bind.Unmarshaller} {@code Multiton}</li>
  * <li>{@code javax.xml.validation.Schema} {@code Multiton}</li>
- * <li>{@code org.xml.sax.EntityResolver} {@code Multiton}</li>
  * <li>{@code org.w3c.dom.ls.LSResourceResolver} {@code Multiton}</li>
+ * <li>{@code org.xml.sax.EntityResolver} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getConfiguration configuration}"<blockquote>
@@ -77,11 +77,8 @@ import org.xml.sax.SAXException;
  */
 // SECTION-END
 // SECTION-START[Annotations]
-@javax.annotation.Generated
-(
-    value = "org.jomc.tools.JavaSources",
-    comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
-)
+@javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
 // SECTION-END
 public class XmlFramework
 {
@@ -320,11 +317,8 @@ public class XmlFramework
     // SECTION-START[Constructors]
 
     /** Creates a new {@code XmlFramework} instance. */
-    @javax.annotation.Generated
-    (
-        value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
-    )
+    @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
     public XmlFramework()
     {
         // SECTION-START[Default Constructor]
@@ -341,11 +335,8 @@ public class XmlFramework
      * @return The configuration of an XML framework implementation. {@code xml-framework-configuration} element from XML namespace http://jomc.org/sdk/model.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated
-    (
-        value = "org.jomc.tools.JavaSources",
-        comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools"
-    )
+    @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
     private java.lang.Object getConfiguration() throws org.jomc.ObjectManagementException
     {
         return (java.lang.Object) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "configuration" );
