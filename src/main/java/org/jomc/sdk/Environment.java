@@ -168,9 +168,11 @@ public class Environment
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private java.lang.String getDefaultEntityManagerFactoryJndiName() throws org.jomc.ObjectManagementException
+    private java.lang.String getDefaultEntityManagerFactoryJndiName()
     {
-        return (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerFactoryJndiName" );
+        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerFactoryJndiName" );
+        assert _p != null : "'defaultEntityManagerFactoryJndiName' property not found.";
+        return _p;
     }
 
     /**
@@ -180,9 +182,11 @@ public class Environment
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private java.lang.String getDefaultEntityManagerJndiName() throws org.jomc.ObjectManagementException
+    private java.lang.String getDefaultEntityManagerJndiName()
     {
-        return (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerJndiName" );
+        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerJndiName" );
+        assert _p != null : "'defaultEntityManagerJndiName' property not found.";
+        return _p;
     }
 
     /**
@@ -192,9 +196,11 @@ public class Environment
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private java.lang.String getDefaultTransactionManagerJndiName() throws org.jomc.ObjectManagementException
+    private java.lang.String getDefaultTransactionManagerJndiName()
     {
-        return (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionManagerJndiName" );
+        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionManagerJndiName" );
+        assert _p != null : "'defaultTransactionManagerJndiName' property not found.";
+        return _p;
     }
 
     /**
@@ -204,9 +210,11 @@ public class Environment
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private java.lang.String getDefaultTransactionSynchronizationRegistryJndiName() throws org.jomc.ObjectManagementException
+    private java.lang.String getDefaultTransactionSynchronizationRegistryJndiName()
     {
-        return (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionSynchronizationRegistryJndiName" );
+        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionSynchronizationRegistryJndiName" );
+        assert _p != null : "'defaultTransactionSynchronizationRegistryJndiName' property not found.";
+        return _p;
     }
 
     /**
@@ -216,9 +224,11 @@ public class Environment
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private java.lang.String getDefaultUserTransactionJndiName() throws org.jomc.ObjectManagementException
+    private java.lang.String getDefaultUserTransactionJndiName()
     {
-        return (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultUserTransactionJndiName" );
+        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultUserTransactionJndiName" );
+        assert _p != null : "'defaultUserTransactionJndiName' property not found.";
+        return _p;
     }
     // SECTION-END
     // SECTION-START[Messages]

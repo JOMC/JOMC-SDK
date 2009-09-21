@@ -167,9 +167,11 @@ public class TransactionFramework
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private javax.naming.Context getContext() throws org.jomc.ObjectManagementException
+    private javax.naming.Context getContext()
     {
-        return (javax.naming.Context) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Context" );
+        final javax.naming.Context _d = (javax.naming.Context) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Context" );
+        assert _d != null : "'Context' dependency not found.";
+        return _d;
     }
 
     /**
@@ -181,9 +183,11 @@ public class TransactionFramework
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private java.util.Locale getLocale() throws org.jomc.ObjectManagementException
+    private java.util.Locale getLocale()
     {
-        return (java.util.Locale) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Locale" );
+        final java.util.Locale _d = (java.util.Locale) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Locale" );
+        assert _d != null : "'Locale' dependency not found.";
+        return _d;
     }
 
     /**
@@ -200,9 +204,11 @@ public class TransactionFramework
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private org.jomc.logging.Logger getLogger() throws org.jomc.ObjectManagementException
+    private org.jomc.logging.Logger getLogger()
     {
-        return (org.jomc.logging.Logger) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Logger" );
+        final org.jomc.logging.Logger _d = (org.jomc.logging.Logger) org.jomc.ObjectManagerFactory.getObjectManager().getDependency( this, "Logger" );
+        assert _d != null : "'Logger' dependency not found.";
+        return _d;
     }
     // SECTION-END
     // SECTION-START[Properties]
@@ -223,9 +229,11 @@ public class TransactionFramework
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private String getMissingTransactionManagerMessage( final java.util.Locale locale, final java.lang.String jndiName ) throws org.jomc.ObjectManagementException
+    private String getMissingTransactionManagerMessage( final java.util.Locale locale, final java.lang.String jndiName )
     {
-        return org.jomc.ObjectManagerFactory.getObjectManager().getMessage( this, "missingTransactionManager", locale, new Object[] { jndiName, null } );
+        final String _m = org.jomc.ObjectManagerFactory.getObjectManager().getMessage( this, "missingTransactionManager", locale, new Object[] { jndiName, null } );
+        assert _m != null : "'missingTransactionManager' message not found.";
+        return _m;
     }
 
     /**
@@ -242,9 +250,11 @@ public class TransactionFramework
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private String getMissingTransactionSynchronizationRegistryMessage( final java.util.Locale locale, final java.lang.String jndiName ) throws org.jomc.ObjectManagementException
+    private String getMissingTransactionSynchronizationRegistryMessage( final java.util.Locale locale, final java.lang.String jndiName )
     {
-        return org.jomc.ObjectManagerFactory.getObjectManager().getMessage( this, "missingTransactionSynchronizationRegistry", locale, new Object[] { jndiName, null } );
+        final String _m = org.jomc.ObjectManagerFactory.getObjectManager().getMessage( this, "missingTransactionSynchronizationRegistry", locale, new Object[] { jndiName, null } );
+        assert _m != null : "'missingTransactionSynchronizationRegistry' message not found.";
+        return _m;
     }
 
     /**
@@ -261,9 +271,11 @@ public class TransactionFramework
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private String getMissingUserTransactionMessage( final java.util.Locale locale, final java.lang.String jndiName ) throws org.jomc.ObjectManagementException
+    private String getMissingUserTransactionMessage( final java.util.Locale locale, final java.lang.String jndiName )
     {
-        return org.jomc.ObjectManagerFactory.getObjectManager().getMessage( this, "missingUserTransaction", locale, new Object[] { jndiName, null } );
+        final String _m = org.jomc.ObjectManagerFactory.getObjectManager().getMessage( this, "missingUserTransaction", locale, new Object[] { jndiName, null } );
+        assert _m != null : "'missingUserTransaction' message not found.";
+        return _m;
     }
     // SECTION-END
 }

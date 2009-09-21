@@ -337,9 +337,11 @@ public class XmlFramework
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
                                  comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1-SNAPSHOT/jomc-tools" )
-    private java.lang.Object getConfiguration() throws org.jomc.ObjectManagementException
+    private java.lang.Object getConfiguration()
     {
-        return (java.lang.Object) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "configuration" );
+        final java.lang.Object _p = (java.lang.Object) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "configuration" );
+        assert _p != null : "'configuration' property not found.";
+        return _p;
     }
     // SECTION-END
     // SECTION-START[Messages]
