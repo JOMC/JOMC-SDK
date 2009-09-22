@@ -32,13 +32,11 @@
   $Id$
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jomc.sdk</groupId>
   <artifactId>jomc-sdk</artifactId>
-  <version>1.0-alpha-1-SNAPSHOT</version>
+  <version>1.0-alpha-1</version>
   <packaging>jar</packaging>
   <name>JOMC SDK</name>
   <description><![CDATA[Object management and configuration software development kit.]]>
@@ -95,9 +93,9 @@
     </mailingList>
   </mailingLists>
   <scm>
-    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</connection>
-    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</developerConnection>
-    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/trunk/</url>
+    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-1</connection>
+    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-1</developerConnection>
+    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-1</url>
   </scm>
   <build>
     <extensions>
@@ -477,8 +475,7 @@
             </goals>
             <configuration>
               <tasks>
-                <copy todir="${project.build.outputDirectory}/META-INF"
-                      file="${basedir}/src/main/bootstrap/jomc-bootstrap.xml"/>
+                <copy todir="${project.build.outputDirectory}/META-INF" file="${basedir}/src/main/bootstrap/jomc-bootstrap.xml" />
 
               </tasks>
             </configuration>
