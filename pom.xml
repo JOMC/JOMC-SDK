@@ -32,11 +32,13 @@
   $Id$
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jomc.sdk</groupId>
   <artifactId>jomc-sdk</artifactId>
-  <version>1.0-alpha-2-SNAPSHOT</version>
+  <version>1.0-alpha-1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>JOMC SDK</name>
   <description><![CDATA[Object management and configuration software development kit.]]>
@@ -475,7 +477,8 @@
             </goals>
             <configuration>
               <tasks>
-                <copy todir="${project.build.outputDirectory}/META-INF" file="${basedir}/src/main/bootstrap/jomc-bootstrap.xml" />
+                <copy todir="${project.build.outputDirectory}/META-INF"
+                      file="${basedir}/src/main/bootstrap/jomc-bootstrap.xml"/>
 
               </tasks>
             </configuration>
