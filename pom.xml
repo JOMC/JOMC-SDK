@@ -36,7 +36,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jomc.sdk</groupId>
   <artifactId>jomc-sdk</artifactId>
-  <version>1.0-alpha-1</version>
+  <version>1.0-alpha-2-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>JOMC SDK</name>
   <description><![CDATA[Object management and configuration software development kit.]]>
@@ -93,9 +93,9 @@
     </mailingList>
   </mailingLists>
   <scm>
-    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-1</connection>
-    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-1</developerConnection>
-    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-1</url>
+    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</connection>
+    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</developerConnection>
+    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/trunk/</url>
   </scm>
   <build>
     <extensions>
