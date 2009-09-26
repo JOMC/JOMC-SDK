@@ -39,8 +39,7 @@
   <version>1.0-alpha-2-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>JOMC SDK</name>
-  <description><![CDATA[Object management and configuration software development kit.]]>
-  </description>
+  <description>Object management and configuration software development kit.</description>
   <url>http://jomc.sourceforge.net/jomc-sdk/${pom.version}</url>
   <prerequisites>
     <maven>2.0.9</maven>
@@ -102,7 +101,7 @@
       <extension>
         <groupId>org.jomc.build</groupId>
         <artifactId>jomc-build-resources</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
       </extension>
     </extensions>
     <pluginManagement>
@@ -194,7 +193,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-remote-resources-plugin</artifactId>
-          <version>1.0</version>
+          <version>1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -245,7 +244,7 @@
         <plugin>
           <groupId>org.jomc</groupId>
           <artifactId>maven-jomc-plugin</artifactId>
-          <version>1.0-alpha-1</version>
+          <version>1.0-alpha-2</version>
           <executions>
             <execution>
               <id>main-java-sources</id>
@@ -447,7 +446,7 @@
             </goals>
             <configuration>
               <resourceBundles>
-                <resourceBundle>org.jomc.build:jomc-build-resources:1.1</resourceBundle>
+                <resourceBundle>org.jomc.build:jomc-build-resources:1.2</resourceBundle>
               </resourceBundles>
               <properties>
                 <buildNumber>${buildNumber}</buildNumber>
@@ -476,7 +475,6 @@
             <configuration>
               <tasks>
                 <copy todir="${project.build.outputDirectory}/META-INF" file="${basedir}/src/main/bootstrap/jomc-bootstrap.xml" />
-
               </tasks>
             </configuration>
           </execution>
@@ -576,6 +574,11 @@
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>2.1</version>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>emma-maven-plugin</artifactId>
+        <version>1.0-alpha-2</version>
+      </plugin>
     </plugins>
   </reporting>
   <dependencies>
@@ -594,13 +597,13 @@
     <dependency>
       <groupId>org.jomc</groupId>
       <artifactId>jomc-api</artifactId>
-      <version>1.0-alpha-1</version>
+      <version>1.0-alpha-2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jomc.logging</groupId>
       <artifactId>jomc-logging-api</artifactId>
-      <version>1.0-alpha-1</version>
+      <version>1.0-alpha-2</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
@@ -650,7 +653,7 @@
       </dependencies>
     </profile>
     <profile>
-      <id>ci</id>
+      <id>jomc-ci</id>
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>

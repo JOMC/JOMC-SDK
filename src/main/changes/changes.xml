@@ -40,6 +40,15 @@
     <author email="cs@jomc.org">Christian Schulte</author>
   </properties>
   <body>
+    <!-- ******************************************************************* -->
     <release version="1.0-alpha-1" date="2009-09-22"/>
+
+    <!-- ******************************************************************* -->
+    <release version="1.0-alpha-2" date="2009-09-26">
+      <action dev="schulte2005" type="fix"><![CDATA[
+      <code>http://jomc.org/sdk/model</code> schema updates:<ul>
+      <li>Corrected selector of <code>schema-key</code> key.</li></ul>]]>
+      </action>
+    </release>
   </body>
 </document>
