@@ -56,7 +56,7 @@ package org.jomc.sdk;
 // SECTION-END
 // SECTION-START[Annotations]
 @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
 // SECTION-END
 public class Environment
 {
@@ -149,7 +149,7 @@ public class Environment
 
     /** Creates a new {@code Environment} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
     public Environment()
     {
         // SECTION-START[Default Constructor]
@@ -167,7 +167,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
     private java.lang.String getDefaultEntityManagerFactoryJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerFactoryJndiName" );
@@ -181,7 +181,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
     private java.lang.String getDefaultEntityManagerJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerJndiName" );
@@ -195,7 +195,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
     private java.lang.String getDefaultTransactionManagerJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionManagerJndiName" );
@@ -209,7 +209,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
     private java.lang.String getDefaultTransactionSynchronizationRegistryJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionSynchronizationRegistryJndiName" );
@@ -223,7 +223,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
     private java.lang.String getDefaultUserTransactionJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultUserTransactionJndiName" );
