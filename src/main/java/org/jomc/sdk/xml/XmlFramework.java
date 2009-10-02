@@ -68,8 +68,10 @@ import org.xml.sax.SAXException;
  * <li>{@code org.xml.sax.EntityResolver} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
- * <li>"{@link #getConfiguration configuration}"<blockquote>
- * Property of type {@code java.lang.Object}.</blockquote></li>
+ * <li>"{@link #getConfiguration configuration}"
+ * <blockquote>Property of type {@code java.lang.Object}.
+ * <p>The configuration of an XML framework implementation. {@code xml-framework-configuration} element from XML namespace {@code http://jomc.org/sdk/model}.</p>
+ * </blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:cs@jomc.org">Christian Schulte</a> 1.0
@@ -78,7 +80,7 @@ import org.xml.sax.SAXException;
 // SECTION-END
 // SECTION-START[Annotations]
 @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
 // SECTION-END
 public class XmlFramework
 {
@@ -318,7 +320,7 @@ public class XmlFramework
 
     /** Creates a new {@code XmlFramework} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     public XmlFramework()
     {
         // SECTION-START[Default Constructor]
@@ -336,7 +338,7 @@ public class XmlFramework
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     private java.lang.Object getConfiguration()
     {
         final java.lang.Object _p = (java.lang.Object) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "configuration" );

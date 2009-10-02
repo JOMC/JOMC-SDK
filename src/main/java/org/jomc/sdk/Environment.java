@@ -38,16 +38,26 @@ package org.jomc.sdk;
 /**
  * SDK environment.
  * <p><b>Properties</b><ul>
- * <li>"{@link #getDefaultEntityManagerFactoryJndiName defaultEntityManagerFactoryJndiName}"<blockquote>
- * Property of type {@code java.lang.String} with value "java:comp/env/persistence/EntityManagerFactory".</blockquote></li>
- * <li>"{@link #getDefaultEntityManagerJndiName defaultEntityManagerJndiName}"<blockquote>
- * Property of type {@code java.lang.String} with value "java:comp/env/persistence/EntityManager".</blockquote></li>
- * <li>"{@link #getDefaultTransactionManagerJndiName defaultTransactionManagerJndiName}"<blockquote>
- * Property of type {@code java.lang.String} with value "java:comp/TransactionManager".</blockquote></li>
- * <li>"{@link #getDefaultTransactionSynchronizationRegistryJndiName defaultTransactionSynchronizationRegistryJndiName}"<blockquote>
- * Property of type {@code java.lang.String} with value "java:comp/TransactionSynchronizationRegistry".</blockquote></li>
- * <li>"{@link #getDefaultUserTransactionJndiName defaultUserTransactionJndiName}"<blockquote>
- * Property of type {@code java.lang.String} with value "java:comp/UserTransaction".</blockquote></li>
+ * <li>"{@link #getDefaultEntityManagerFactoryJndiName defaultEntityManagerFactoryJndiName}"
+ * <blockquote>Property of type {@code java.lang.String}.
+ * <p>The default JNDI name of the {@code EntityManagerFactory} backing the SDK.</p>
+ * </blockquote></li>
+ * <li>"{@link #getDefaultEntityManagerJndiName defaultEntityManagerJndiName}"
+ * <blockquote>Property of type {@code java.lang.String}.
+ * <p>The default JNDI name of the {@code EntityManager} backing the SDK.</p>
+ * </blockquote></li>
+ * <li>"{@link #getDefaultTransactionManagerJndiName defaultTransactionManagerJndiName}"
+ * <blockquote>Property of type {@code java.lang.String}.
+ * <p>The default JNDI name of the {@code TransactionManager} backing the SDK.</p>
+ * </blockquote></li>
+ * <li>"{@link #getDefaultTransactionSynchronizationRegistryJndiName defaultTransactionSynchronizationRegistryJndiName}"
+ * <blockquote>Property of type {@code java.lang.String}.
+ * <p>The default JNDI name of the {@code TransactionSynchronizationRegistry} backing the SDK.</p>
+ * </blockquote></li>
+ * <li>"{@link #getDefaultUserTransactionJndiName defaultUserTransactionJndiName}"
+ * <blockquote>Property of type {@code java.lang.String}.
+ * <p>The default JNDI name of the {@code UserTransaction} backing the SDK.</p>
+ * </blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:cs@jomc.org">Christian Schulte</a> 1.0
@@ -56,7 +66,7 @@ package org.jomc.sdk;
 // SECTION-END
 // SECTION-START[Annotations]
 @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
 // SECTION-END
 public class Environment
 {
@@ -149,7 +159,7 @@ public class Environment
 
     /** Creates a new {@code Environment} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     public Environment()
     {
         // SECTION-START[Default Constructor]
@@ -167,7 +177,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     private java.lang.String getDefaultEntityManagerFactoryJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerFactoryJndiName" );
@@ -181,7 +191,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     private java.lang.String getDefaultEntityManagerJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultEntityManagerJndiName" );
@@ -195,7 +205,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     private java.lang.String getDefaultTransactionManagerJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionManagerJndiName" );
@@ -209,7 +219,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     private java.lang.String getDefaultTransactionSynchronizationRegistryJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultTransactionSynchronizationRegistryJndiName" );
@@ -223,7 +233,7 @@ public class Environment
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-2/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-3/jomc-tools" )
     private java.lang.String getDefaultUserTransactionJndiName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "defaultUserTransactionJndiName" );
