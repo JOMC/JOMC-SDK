@@ -80,7 +80,7 @@ import org.xml.sax.SAXException;
 // SECTION-END
 // SECTION-START[Annotations]
 @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-4/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-5/jomc-tools" )
 // SECTION-END
 public class XmlFramework
 {
@@ -320,7 +320,7 @@ public class XmlFramework
 
     /** Creates a new {@code XmlFramework} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-4/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-5/jomc-tools" )
     public XmlFramework()
     {
         // SECTION-START[Default Constructor]
@@ -338,7 +338,7 @@ public class XmlFramework
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-4/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-5/jomc-tools" )
     private java.lang.Object getConfiguration()
     {
         final java.lang.Object _p = (java.lang.Object) org.jomc.ObjectManagerFactory.getObjectManager().getProperty( this, "configuration" );
