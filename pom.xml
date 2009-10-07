@@ -205,18 +205,13 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>2.6</version>
           <configuration>
-            <aggregate>true</aggregate>
             <breakiterator>true</breakiterator>
-            <charset>${project.reporting.outputEncoding}</charset>
-            <docencoding>${project.reporting.outputEncoding}</docencoding>
-            <encoding>${project.build.sourceEncoding}</encoding>
             <keywords>true</keywords>
             <linksource>true</linksource>
             <serialwarn>true</serialwarn>
-            <show>protected</show>
             <source>1.5</source>
-            <doctitle>${pom.name} ${pom.version} Documentation</doctitle>
-            <windowtitle>${pom.name} ${pom.version} Documentation</windowtitle>
+            <doctitle>${pom.name} Specification ${pom.version}</doctitle>
+            <windowtitle>${pom.name} Specification ${pom.version}</windowtitle>
             <links>
               <link>http://java.sun.com/javase/7/docs/api</link>
             </links>
@@ -499,18 +494,13 @@
             <inherited>true</inherited>
             <reports>
               <report>javadoc</report>
-              <report>jar</report>
+              <report>test-javadoc</report>
             </reports>
             <configuration>
               <breakiterator>true</breakiterator>
-              <charset>${project.reporting.outputEncoding}</charset>
-              <docencoding>${project.reporting.outputEncoding}</docencoding>
-              <encoding>${project.build.sourceEncoding}</encoding>
               <keywords>true</keywords>
               <linksource>true</linksource>
               <serialwarn>true</serialwarn>
-              <show>public</show>
-              <nodeprecated>true</nodeprecated>
               <source>1.5</source>
               <doctitle>${pom.name} Specification ${pom.version}</doctitle>
               <windowtitle>${pom.name} Specification ${pom.version}</windowtitle>
