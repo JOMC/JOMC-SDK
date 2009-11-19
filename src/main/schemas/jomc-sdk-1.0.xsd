@@ -72,92 +72,41 @@
 
   $Id$
 
-]]></xsd:documentation>
+]]>
+    </xsd:documentation>
   </xsd:annotation>
-  <!--                                                                       -->
-  <!-- XmlFrameworkConfiguration                                             -->
-  <!--                                                                       -->
-  <xsd:element name="xml-framework-configuration"
-               type="sdk:XmlFrameworkConfigurationType"/>
-  <xsd:complexType name="XmlFrameworkConfigurationType">
-    <xsd:annotation>
-      <xsd:appinfo>
-        <jaxb:class>
-          <jaxb:javadoc><![CDATA[XML framework configuration.]]></jaxb:javadoc>
-        </jaxb:class>
-      </xsd:appinfo>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element ref="sdk:schemas" minOccurs="1" maxOccurs="1">
-        <xsd:annotation>
-          <xsd:appinfo>
-            <jaxb:property>
-              <jaxb:javadoc><![CDATA[The schemas backing an implementation.]]></jaxb:javadoc>
-            </jaxb:property>
-          </xsd:appinfo>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-    <xsd:attribute name="formatted-output" type="xsd:boolean" default="true" use="optional">
-      <xsd:annotation>
-        <xsd:appinfo>
-          <jaxb:property>
-            <jaxb:javadoc><![CDATA[{@code true} for an implementation to format output; {@code false} for an implementation to not perform any output formatting.]]></jaxb:javadoc>
-          </jaxb:property>
-        </xsd:appinfo>
-      </xsd:annotation>
-    </xsd:attribute>
-    <xsd:attribute name="validating" type="xsd:boolean" default="true" use="optional">
-      <xsd:annotation>
-        <xsd:appinfo>
-          <jaxb:property>
-            <jaxb:javadoc><![CDATA[{@code true} for an implementation to perform schema validation; {@code false} for an implementation to not perform any additional schema validation.]]></jaxb:javadoc>
-          </jaxb:property>
-        </xsd:appinfo>
-      </xsd:annotation>
-    </xsd:attribute>
-    <xsd:attribute name="encoding" type="xsd:string" default="UTF-8" use="optional">
-      <xsd:annotation>
-        <xsd:appinfo>
-          <jaxb:property>
-            <jaxb:javadoc><![CDATA[The encoding of an implementation for encoding data.]]></jaxb:javadoc>
-          </jaxb:property>
-        </xsd:appinfo>
-      </xsd:annotation>
-    </xsd:attribute>
-    <xsd:attribute name="schema-language" type="xsd:string" default="http://www.w3.org/2001/XMLSchema" use="optional">
-      <xsd:annotation>
-        <xsd:appinfo>
-          <jaxb:property>
-            <jaxb:javadoc><![CDATA[The schema language of the schemas backing an implementation.]]></jaxb:javadoc>
-          </jaxb:property>
-        </xsd:appinfo>
-      </xsd:annotation>
-    </xsd:attribute>
-  </xsd:complexType>
   <!--                                                                       -->
   <!-- Schemas                                                               -->
   <!--                                                                       -->
   <xsd:element name="schemas" type="sdk:SchemasType">
     <xsd:key name="schema-key">
       <xsd:annotation>
-        <xsd:documentation xml:lang="en"><![CDATA[Key of a schema.]]></xsd:documentation>
+        <xsd:documentation xml:lang="en">Key of a schema.</xsd:documentation>
       </xsd:annotation>
       <xsd:selector xpath="sdk:schema"/>
-      <xsd:field xpath="@public-id"/>
+      <xsd:field xpath="@system-id"/>
     </xsd:key>
   </xsd:element>
   <xsd:complexType name="SchemasType">
     <xsd:annotation>
       <xsd:appinfo>
         <jaxb:class>
-          <jaxb:javadoc><![CDATA[List of schemas.]]></jaxb:javadoc>
+          <jaxb:javadoc>List of schemas.</jaxb:javadoc>
         </jaxb:class>
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element ref="sdk:schema" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
+    <xsd:attribute name="language-id" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:appinfo>
+          <jaxb:property>
+            <jaxb:javadoc>The language id of the list of schemas.</jaxb:javadoc>
+          </jaxb:property>
+        </xsd:appinfo>
+      </xsd:annotation>
+    </xsd:attribute>
   </xsd:complexType>
   <!--                                                                       -->
   <!-- Schema                                                                -->
@@ -168,28 +117,29 @@
       <xsd:appinfo>
         <jaxb:class>
           <jaxb:javadoc><![CDATA[<![CDATA[Model of a schema.
-<p>A schema consists of the properties {@code publicId}, {@code systemId},
-{@code contextId} and {@code classpathId}. Property {@code publicId} holds the
-public id of the schema. Property {@code systemId} holds the system id of the
+<p>A schema consists of the properties {@code systemId}, {@code publicId},
+{@code contextId} and {@code classpathId}. Property {@code systemId} holds the
+system id of the schema. Property {@code publicId} holds the public id of the
 schema. Property {@code contextId} holds the JAXB context id of the schema.
-Property {@code classpathId} holds the classpath location of the schema.]]></jaxb:javadoc>
+Property {@code classpathId} holds the classpath location of the schema.]]>
+          </jaxb:javadoc>
         </jaxb:class>
       </xsd:appinfo>
     </xsd:annotation>
-    <xsd:attribute name="public-id" type="xsd:string" use="required">
-      <xsd:annotation>
-        <xsd:appinfo>
-          <jaxb:property>
-            <jaxb:javadoc><![CDATA[The public id of the schema.]]></jaxb:javadoc>
-          </jaxb:property>
-        </xsd:appinfo>
-      </xsd:annotation>
-    </xsd:attribute>
     <xsd:attribute name="system-id" type="xsd:string" use="required">
       <xsd:annotation>
         <xsd:appinfo>
           <jaxb:property>
-            <jaxb:javadoc><![CDATA[The system id of the schema.]]></jaxb:javadoc>
+            <jaxb:javadoc>The system id of the schema.</jaxb:javadoc>
+          </jaxb:property>
+        </xsd:appinfo>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="public-id" type="xsd:string" use="optional">
+      <xsd:annotation>
+        <xsd:appinfo>
+          <jaxb:property>
+            <jaxb:javadoc>The public id of the schema.</jaxb:javadoc>
           </jaxb:property>
         </xsd:appinfo>
       </xsd:annotation>
@@ -198,7 +148,7 @@ Property {@code classpathId} holds the classpath location of the schema.]]></jax
       <xsd:annotation>
         <xsd:appinfo>
           <jaxb:property>
-            <jaxb:javadoc><![CDATA[The context id of the schema.]]></jaxb:javadoc>
+            <jaxb:javadoc>The context id of the schema.</jaxb:javadoc>
           </jaxb:property>
         </xsd:appinfo>
       </xsd:annotation>
@@ -207,7 +157,7 @@ Property {@code classpathId} holds the classpath location of the schema.]]></jax
       <xsd:annotation>
         <xsd:appinfo>
           <jaxb:property>
-            <jaxb:javadoc><![CDATA[The classpath id of the schema.]]></jaxb:javadoc>
+            <jaxb:javadoc>The classpath id of the schema.</jaxb:javadoc>
           </jaxb:property>
         </xsd:appinfo>
       </xsd:annotation>

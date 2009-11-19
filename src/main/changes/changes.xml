@@ -56,5 +56,18 @@
       <action dev="schulte2005" type="update">Build updates.</action>
     </release>
 
+    <!-- ******************************************************************* -->
+    <release version="1.0-alpha-4" date="2009-11-19">
+      <action dev="schulte2005" type="update"><![CDATA[
+      Updated to JOMC 1.0-alpha-9.]]>
+      </action>
+      <action dev="schulte2005" type="update"><![CDATA[
+      Added class <code>org.jomc.sdk.ModelProvider</code>.]]>
+      </action>
+      <action dev="schulte2005" type="update"><![CDATA[
+      Removed deprecated classes.]]>
+      </action>
+    </release>
+
   </body>
 </document>

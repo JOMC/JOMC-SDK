@@ -33,14 +33,109 @@
 
 -->
 <module xmlns="http://jomc.org/model"
+        xmlns:sdk="http://jomc.org/sdk/model"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://jomc.org/model http://jomc.org/model/jomc-1.0.xsd"
-        name="${pom.name} Tests"
-        version="${pom.version}"
-        vendor="${pom.organization.name}"
+        xsi:schemaLocation="http://jomc.org/model http://jomc.org/model/jomc-1.0.xsd
+                            http://jomc.org/sdk/model http://jomc.org/sdk/model/jomc-sdk-1.0.xsd"
+        name="${project.name} Tests"
+        version="${project.version}"
+        vendor="${project.organization.name}"
         modelVersion="1.0">
 
   <documentation defaultLanguage="en">
-    <text language="en"><![CDATA[${pom.description}]]></text>
+    <text language="en"><![CDATA[${project.description}]]></text>
   </documentation>
+  <implementations>
+    <!-- ******************************************************************* -->
+    <implementation identifier="${project.name} Model"
+                    name="${project.name} Model"
+                    version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">XML Model Test</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="org.jomc.sdk.xml.Model"
+                   version="1.0"/>
+      </specifications>
+      <properties>
+        <property name="schemas" type="org.jomc.sdk.model.SchemasType">
+          <sdk:schemas language-id="http://www.w3.org/2001/XMLSchema">
+            <sdk:schema public-id="http://jomc.org/sdk/model"
+                        system-id="http://jomc.org/sdk/model/jomc-sdk-1.0.xsd"
+                        context-id="org.jomc.sdk.model"
+                        classpath-id="org/jomc/sdk/model/jomc-sdk-1.0.xsd"/>
+
+          </sdk:schemas>
+        </property>
+      </properties>
+    </implementation>
+    <!-- ******************************************************************* -->
+    <implementation identifier="org.jomc.sdk.xml.test.ModelTest"
+                    class="org.jomc.sdk.xml.test.ModelTest"
+                    name="${project.name} Tests"
+                    version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">Test cases for the {@code ${project.name} Model} implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <dependencies>
+        <dependency identifier="javax.xml.bind.JAXBContext"
+                    name="Context"
+                    implementationName="${project.name} Model"/>
+
+        <dependency identifier="javax.xml.bind.Marshaller"
+                    name="Marshaller"
+                    implementationName="${project.name} Model"/>
+
+        <dependency identifier="javax.xml.bind.Unmarshaller"
+                    name="Unmarshaller"
+                    implementationName="${project.name} Model"/>
+
+        <dependency identifier="javax.xml.validation.Schema"
+                    name="Schema"
+                    implementationName="${project.name} Model"/>
+
+        <dependency identifier="org.xml.sax.EntityResolver"
+                    name="EntityResolver"
+                    implementationName="${project.name} Model"/>
+
+        <dependency identifier="org.w3c.dom.ls.LSResourceResolver"
+                    name="ResourceResolver"
+                    implementationName="${project.name} Model"/>
+
+      </dependencies>
+    </implementation>
+    <!-- ******************************************************************* -->
+    <implementation identifier="org.jomc.sdk.test.ObjectManagementListener"
+                    class="org.jomc.sdk.test.ObjectManagementListener"
+                    name="${project.name} Tests"
+                    version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">{@code Listener} implementation logging to the console.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="org.jomc.spi.Listener" version="1.0"/>
+      </specifications>
+    </implementation>
+  </implementations>
 </module>
