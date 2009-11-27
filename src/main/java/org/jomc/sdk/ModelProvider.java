@@ -75,7 +75,7 @@ import org.xml.sax.EntityResolver;
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
 @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-9/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-10/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public class ModelProvider implements org.jomc.model.ModelProvider
@@ -190,7 +190,7 @@ public class ModelProvider implements org.jomc.model.ModelProvider
 
     /** Creates a new {@code ModelProvider} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-9/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-10/jomc-tools" )
     public ModelProvider()
     {
         // SECTION-START[Default Constructor]
