@@ -54,7 +54,7 @@ import java.util.logging.Level;
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
 @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-9/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-10/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public class ObjectManagementListener
@@ -81,7 +81,7 @@ public class ObjectManagementListener
 
     /** Creates a new {@code ObjectManagementListener} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-9/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-10/jomc-tools" )
     public ObjectManagementListener()
     {
         // SECTION-START[Default Constructor]
