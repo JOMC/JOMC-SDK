@@ -32,32 +32,11 @@
   $Id$
 
 -->
-<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+<schemas xmlns="http://jomc.org/model/bootstrap"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd"
-         name="JOMC SDK">
-  <poweredBy>
-    <logo href="http://sourceforge.net/donate/index.php?group_id=257507" img="http://images.sourceforge.net/images/project-support.jpg" name="Support This Project"/>
-  </poweredBy>
-  <skin>
-    <groupId>org.apache.maven.skins</groupId>
-    <artifactId>maven-classic-skin</artifactId>
-    <version>1.0</version>
-  </skin>
-  <body>
-    <head>
-      <meta name="keywords" lang="de" content="objekt, container, java, quelltext, generator, quelltextgenerator, configuration, management"/>
-      <meta name="keywords" lang="en" content="object, container, java, source, code, sourcecode, generator, sourcecodegenerator, configuration, management"/>
-    </head>
-    <menu ref="parent" />
-    <menu ref="modules" />
-    <menu name="Sourceforge">
-      <item name="Project Summary" href="http://sourceforge.net/projects/jomc/"/>
-      <item name="Support" href="http://sourceforge.net/projects/jomc/support/"/>
-      <item name="Files" href="http://sourceforge.net/projects/jomc/files/"/>
-      <item name="Issues" href="http://sourceforge.net/apps/mantisbt/jomc/"/>
-      <item name="Stats" href="http://sourceforge.net/project/stats/?group_id=257507&amp;ugn=jomc"/>
-    </menu>
-    <menu ref="reports" />
-  </body>
-</project>
+         xsi:schemaLocation="http://jomc.org/model/bootstrap http://jomc.org/model/bootstrap/jomc-bootstrap-1.0.xsd">
+
+  <schema public-id="http://jomc.org/sdk/model" system-id="http://jomc.org/sdk/model/jomc-sdk-1.0.xsd"
+          context-id="org.jomc.sdk.model" classpath-id="org/jomc/sdk/model/jomc-sdk-1.0.xsd"/>
+
+</schemas>

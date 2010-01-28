@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  Copyright (c) 2009 The JOMC Project
+  Copyright (c) 2005 Christian Schulte <cs@jomc.org>
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in
+      the documentation and/or other materials provided with the
+      distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE JOMC PROJECT AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+  THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE JOMC PROJECT OR
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  $Id$
+
+-->
+<module xmlns="http://jomc.org/model"
+        xmlns:sdk="http://jomc.org/sdk/model"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://jomc.org/model http://jomc.org/model/jomc-1.0.xsd
+                            http://jomc.org/sdk/model http://jomc.org/sdk/model/jomc-sdk-1.0.xsd"
+        name="${project.name} Tests" version="${project.version}" vendor="${project.organization.name}"
+        modelVersion="1.0">
+
+  <documentation defaultLanguage="en">
+    <text language="en">${project.description}</text>
+  </documentation>
+  <implementations>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="Test XML Schema Set" name="Test XML Schema Set" version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">Test XML Schema Set</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+      </authors>
+      <specifications>
+        <reference identifier="XML Schema Set" version="${xmlschemaset.specification.version}"/>
+      </specifications>
+      <properties>
+        <property name="schemas" type="org.jomc.sdk.model.SchemasType">
+          <sdk:schemas language-id="http://www.w3.org/2001/XMLSchema">
+            <sdk:schema public-id="http://jomc.org/sdk/model" system-id="http://jomc.org/sdk/model/jomc-sdk-1.0.xsd"
+                        java-context-id="org.jomc.sdk.model"  java-classpath-id="org/jomc/sdk/model/jomc-sdk-1.0.xsd"/>
+
+          </sdk:schemas>
+        </property>
+      </properties>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="org.jomc.sdk.model.test.ModelTest" class="org.jomc.sdk.model.test.ModelTest"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">Test cases for the {@code Test XML Schema Set}.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+      </authors>
+      <dependencies>
+        <dependency identifier="javax.xml.bind.JAXBContext" name="DefaultContext" implementationName="Test XML Schema Set"/>
+        <dependency identifier="javax.xml.bind.Marshaller" name="DefaultMarshaller" implementationName="Test XML Schema Set"/>
+        <dependency identifier="javax.xml.bind.Marshaller" name="CustomMarshaller" implementationName="Test XML Schema Set">
+          <properties>
+            <property name="jaxbEncoding" value="US-ASCII" override="true"/>
+            <property name="jaxbFormattedOutput" type="boolean" value="true" override="true"/>
+            <property name="jaxbFragment" type="boolean" value="false" override="true"/>
+            <property name="jaxbSchemaLocation" type="boolean" value="true" override="true"/>
+            <property name="jaxbNoNamespaceSchemaLocation" value="TEST" override="true"/>
+            <property name="jaxpSchemaValidation" type="boolean" value="true" override="true"/>
+          </properties>
+        </dependency>
+        <dependency identifier="javax.xml.bind.Unmarshaller" name="DefaultUnmarshaller" implementationName="Test XML Schema Set"/>
+        <dependency identifier="javax.xml.bind.Unmarshaller" name="CustomUnmarshaller" implementationName="Test XML Schema Set">
+          <properties>
+            <property name="jaxpSchemaValidation" type="boolean" value="true" override="true"/>
+          </properties>
+        </dependency>
+        <dependency identifier="javax.xml.validation.Schema" name="DefaultSchema" implementationName="Test XML Schema Set"/>
+        <dependency identifier="org.xml.sax.EntityResolver" name="DefaultEntityResolver" implementationName="Test XML Schema Set"/>
+        <dependency identifier="org.w3c.dom.ls.LSResourceResolver" name="DefaultResourceResolver" implementationName="Test XML Schema Set"/>
+      </dependencies>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="org.jomc.sdk.model.test.ListTypeTest" class="org.jomc.sdk.model.test.ListTypeTest"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">Test cases for the {@code ListType} complex type.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+      </authors>
+      <properties>
+        <property name="primitiveList" type="java.util.List&lt;Integer&gt;">
+          <sdk:list>
+            <sdk:item type="int" value="1"/>
+            <sdk:item type="int" value="2"/>
+            <sdk:item type="int" value="3"/>
+            <sdk:item type="int" value="4"/>
+            <sdk:item type="int" value="5"/>
+          </sdk:list>
+        </property>
+        <property name="stringList" type="java.util.List&lt;String&gt;">
+          <sdk:list>
+            <sdk:item value="String 1"/>
+            <sdk:item value="String 2"/>
+            <sdk:item value="String 3"/>
+            <sdk:item value="String 4"/>
+            <sdk:item value="String 5"/>
+          </sdk:list>
+        </property>
+        <property name="fileList" type="java.util.List&lt;java.io.File&gt;">
+          <sdk:list>
+            <sdk:item value="/tmp/1" type="java.io.File"/>
+            <sdk:item value="/tmp/2" type="java.io.File"/>
+            <sdk:item value="/tmp/3" type="java.io.File"/>
+            <sdk:item value="/tmp/4" type="java.io.File"/>
+            <sdk:item value="/tmp/5" type="java.io.File"/>
+          </sdk:list>
+        </property>
+        <property name="complexTypeList" type="java.util.List&lt;org.jomc.model.Text&gt;">
+          <sdk:list>
+            <sdk:item type="org.jomc.model.Text">
+              <text xmlns="http://jomc.org/model" language="en">Text 1</text>
+            </sdk:item>
+            <sdk:item type="org.jomc.model.Text">
+              <text xmlns="http://jomc.org/model" language="en">Text 2</text>
+            </sdk:item>
+            <sdk:item type="org.jomc.model.Text">
+              <text xmlns="http://jomc.org/model" language="en">Text 3</text>
+            </sdk:item>
+            <sdk:item type="org.jomc.model.Text">
+              <text xmlns="http://jomc.org/model" language="en">Text 4</text>
+            </sdk:item>
+            <sdk:item type="org.jomc.model.Text">
+              <text xmlns="http://jomc.org/model" language="en">Text 5</text>
+            </sdk:item>
+          </sdk:list>
+        </property>
+        <property name="listOfLists" type="java.util.List&lt;java.util.List&lt;String&gt;&gt;">
+          <sdk:list>
+            <sdk:item type="java.util.List&lt;String&gt;">
+              <sdk:list>
+                <sdk:item value="List 1 - String 1"/>
+                <sdk:item value="List 1 - String 2"/>
+                <sdk:item value="List 1 - String 3"/>
+                <sdk:item value="List 1 - String 4"/>
+                <sdk:item value="List 1 - String 5"/>
+              </sdk:list>
+            </sdk:item>
+            <sdk:item type="java.util.List&lt;String&gt;">
+              <sdk:list>
+                <sdk:item value="List 2 - String 1"/>
+                <sdk:item value="List 2 - String 2"/>
+                <sdk:item value="List 2 - String 3"/>
+                <sdk:item value="List 2 - String 4"/>
+                <sdk:item value="List 2 - String 5"/>
+              </sdk:list>
+            </sdk:item>
+            <sdk:item type="java.util.List&lt;String&gt;">
+              <sdk:list>
+                <sdk:item value="List 3 - String 1"/>
+                <sdk:item value="List 3 - String 2"/>
+                <sdk:item value="List 3 - String 3"/>
+                <sdk:item value="List 3 - String 4"/>
+                <sdk:item value="List 3 - String 5"/>
+              </sdk:list>
+            </sdk:item>
+            <sdk:item type="java.util.List&lt;String&gt;">
+              <sdk:list>
+                <sdk:item value="List 4 - String 1"/>
+                <sdk:item value="List 4 - String 2"/>
+                <sdk:item value="List 4 - String 3"/>
+                <sdk:item value="List 4 - String 4"/>
+                <sdk:item value="List 4 - String 5"/>
+              </sdk:list>
+            </sdk:item>
+            <sdk:item type="java.util.List&lt;String&gt;">
+              <sdk:list>
+                <sdk:item value="List 5 - String 1"/>
+                <sdk:item value="List 5 - String 2"/>
+                <sdk:item value="List 5 - String 3"/>
+                <sdk:item value="List 5 - String 4"/>
+                <sdk:item value="List 5 - String 5"/>
+              </sdk:list>
+            </sdk:item>
+          </sdk:list>
+        </property>
+      </properties>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="org.jomc.sdk.model.test.MapTypeTest" class="org.jomc.sdk.model.test.MapTypeTest"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">Test cases for the {@code MapType} complex type.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+      </authors>
+      <properties>
+        <property name="primitiveMap" type="java.util.Map&lt;Integer,Integer&gt;">
+          <sdk:map>
+            <sdk:entry>
+              <sdk:key type="int" value="1"/>
+              <sdk:value type="int" value="1"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="2"/>
+              <sdk:value type="int" value="2"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="3"/>
+              <sdk:value type="int" value="3"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="4"/>
+              <sdk:value type="int" value="4"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="5"/>
+              <sdk:value type="int" value="5"/>
+            </sdk:entry>
+          </sdk:map>
+        </property>
+        <property name="stringMap" type="java.util.Map&lt;String,String&gt;">
+          <sdk:map>
+            <sdk:entry>
+              <sdk:key value="String 1"/>
+              <sdk:value value="String 1"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key value="String 2"/>
+              <sdk:value value="String 2"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key value="String 3"/>
+              <sdk:value value="String 3"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key value="String 4"/>
+              <sdk:value value="String 4"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key value="String 5"/>
+              <sdk:value value="String 5"/>
+            </sdk:entry>
+          </sdk:map>
+        </property>
+        <property name="fileMap" type="java.util.Map&lt;java.io.File,java.io.File&gt;">
+          <sdk:map>
+            <sdk:entry>
+              <sdk:key type="java.io.File" value="/tmp/1"/>
+              <sdk:value type="java.io.File" value="/tmp/1"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.io.File" value="/tmp/2"/>
+              <sdk:value type="java.io.File" value="/tmp/2"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.io.File" value="/tmp/3"/>
+              <sdk:value type="java.io.File" value="/tmp/3"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.io.File" value="/tmp/4"/>
+              <sdk:value type="java.io.File" value="/tmp/4"/>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.io.File" value="/tmp/5"/>
+              <sdk:value type="java.io.File" value="/tmp/5"/>
+            </sdk:entry>
+          </sdk:map>
+        </property>
+        <property name="complexTypeMap" type="java.util.Map&lt;Integer,org.jomc.model.Text&gt;">
+          <sdk:map>
+            <sdk:entry>
+              <sdk:key type="int" value="1"/>
+              <sdk:value type="org.jomc.model.Text">
+                <text xmlns="http://jomc.org/model" language="en">Text 1</text>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="2"/>
+              <sdk:value type="org.jomc.model.Text">
+                <text xmlns="http://jomc.org/model" language="en">Text 2</text>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="3"/>
+              <sdk:value type="org.jomc.model.Text">
+                <text xmlns="http://jomc.org/model" language="en">Text 3</text>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="4"/>
+              <sdk:value type="org.jomc.model.Text">
+                <text xmlns="http://jomc.org/model" language="en">Text 4</text>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="int" value="5"/>
+              <sdk:value type="org.jomc.model.Text">
+                <text xmlns="http://jomc.org/model" language="en">Text 5</text>
+              </sdk:value>
+            </sdk:entry>
+          </sdk:map>
+        </property>
+        <property name="mapOfMaps" type="java.util.Map&lt;java.util.Map&lt;String,String&gt;,java.util.Map&lt;String,String&gt;&gt;">
+          <sdk:map>
+            <sdk:entry>
+              <sdk:key type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 1"/>
+                    <sdk:value value="Map 1 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 2"/>
+                    <sdk:value value="Map 1 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 3"/>
+                    <sdk:value value="Map 1 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 4"/>
+                    <sdk:value value="Map 1 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 5"/>
+                    <sdk:value value="Map 1 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:key>
+              <sdk:value type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 1"/>
+                    <sdk:value value="Map 1 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 2"/>
+                    <sdk:value value="Map 1 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 3"/>
+                    <sdk:value value="Map 1 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 4"/>
+                    <sdk:value value="Map 1 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 1 - String 5"/>
+                    <sdk:value value="Map 1 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 1"/>
+                    <sdk:value value="Map 2 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 2"/>
+                    <sdk:value value="Map 2 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 3"/>
+                    <sdk:value value="Map 2 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 4"/>
+                    <sdk:value value="Map 2 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 5"/>
+                    <sdk:value value="Map 2 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:key>
+              <sdk:value type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 1"/>
+                    <sdk:value value="Map 2 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 2"/>
+                    <sdk:value value="Map 2 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 3"/>
+                    <sdk:value value="Map 2 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 4"/>
+                    <sdk:value value="Map 2 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 2 - String 5"/>
+                    <sdk:value value="Map 2 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 1"/>
+                    <sdk:value value="Map 3 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 2"/>
+                    <sdk:value value="Map 3 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 3"/>
+                    <sdk:value value="Map 3 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 4"/>
+                    <sdk:value value="Map 3 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 5"/>
+                    <sdk:value value="Map 3 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:key>
+              <sdk:value type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 1"/>
+                    <sdk:value value="Map 3 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 2"/>
+                    <sdk:value value="Map 3 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 3"/>
+                    <sdk:value value="Map 3 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 4"/>
+                    <sdk:value value="Map 3 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 3 - String 5"/>
+                    <sdk:value value="Map 3 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 1"/>
+                    <sdk:value value="Map 4 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 2"/>
+                    <sdk:value value="Map 4 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 3"/>
+                    <sdk:value value="Map 4 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 4"/>
+                    <sdk:value value="Map 4 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 5"/>
+                    <sdk:value value="Map 4 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:key>
+              <sdk:value type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 1"/>
+                    <sdk:value value="Map 4 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 2"/>
+                    <sdk:value value="Map 4 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 3"/>
+                    <sdk:value value="Map 4 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 4"/>
+                    <sdk:value value="Map 4 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 4 - String 5"/>
+                    <sdk:value value="Map 4 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:value>
+            </sdk:entry>
+            <sdk:entry>
+              <sdk:key type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 1"/>
+                    <sdk:value value="Map 5 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 2"/>
+                    <sdk:value value="Map 5 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 3"/>
+                    <sdk:value value="Map 5 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 4"/>
+                    <sdk:value value="Map 5 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 5"/>
+                    <sdk:value value="Map 5 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:key>
+              <sdk:value type="java.util.Map&lt;String,String&gt;">
+                <sdk:map>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 1"/>
+                    <sdk:value value="Map 5 - String 1"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 2"/>
+                    <sdk:value value="Map 5 - String 2"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 3"/>
+                    <sdk:value value="Map 5 - String 3"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 4"/>
+                    <sdk:value value="Map 5 - String 4"/>
+                  </sdk:entry>
+                  <sdk:entry>
+                    <sdk:key value="Map 5 - String 5"/>
+                    <sdk:value value="Map 5 - String 5"/>
+                  </sdk:entry>
+                </sdk:map>
+              </sdk:value>
+            </sdk:entry>
+          </sdk:map>
+        </property>
+      </properties>
+    </implementation>
+  </implementations>
+</module>
