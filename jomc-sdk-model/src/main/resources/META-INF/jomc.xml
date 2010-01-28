@@ -70,6 +70,19 @@
       </authors>
     </implementation>
     <!-- *********************************************************************************************************** -->
+    <implementation identifier="org.jomc.sdk.model.support.SdkModelValidator"
+                    class="org.jomc.sdk.model.support.SdkModelValidator"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">SDK 'ModelValidator' implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+      </authors>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
     <implementation identifier="Default XML Schema Set" name="Default XML Schema Set" version="${project.version}"
                     vendor="${project.organization.name}">
 

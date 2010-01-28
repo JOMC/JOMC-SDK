@@ -37,5 +37,6 @@
           xsi:schemaLocation="http://jomc.org/model/bootstrap http://jomc.org/model/bootstrap/jomc-bootstrap-1.0.xsd">
 
   <service ordinal="2000" identifier="org.jomc.model.ModelProcessor" class="org.jomc.sdk.model.support.SdkModelProcessor"/>
+  <service ordinal="2000" identifier="org.jomc.model.ModelValidator" class="org.jomc.sdk.model.support.SdkModelValidator"/>
 
 </services>
