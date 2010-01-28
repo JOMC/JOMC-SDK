@@ -37,7 +37,6 @@
 package org.jomc.sdk.model.test;
 
 import java.io.File;
-import org.jomc.model.Text;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
