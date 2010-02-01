@@ -67,6 +67,19 @@
       </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
+    <implementation identifier="org.jomc.sdk.model.test.ModelExceptionTest"
+                    class="org.jomc.sdk.model.test.ModelExceptionTest"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}">
+
+      <documentation defaultLanguage="en">
+        <text language="en">Test cases for class {@code org.jomc.sdk.model.ModelException}.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+      </authors>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
     <implementation identifier="org.jomc.sdk.model.test.ModelTest" class="org.jomc.sdk.model.test.ModelTest"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}">
