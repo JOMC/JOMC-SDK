@@ -59,7 +59,7 @@
       <action dev="schulte2005" type="update">Removed deprecated classes.</action>
     </release>
     <!-- *********************************************************************************************************** -->
-    <release version="1.0-alpha-5" date="2010-01-30">
+    <release version="1.0-alpha-5" date="2010-02-02">
       <action dev="schulte2005" type="update"><![CDATA[
       Refactored to multi-module project adding artifact <code>jomc-sdk-model</code>.]]>
       </action>
