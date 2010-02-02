@@ -75,13 +75,13 @@ public class SdkModelProcessor implements org.jomc.model.ModelProcessor
     // SECTION-START[ModelProcessor]
 
     /** {@code QName} of the {@code java-context-id} attribute of {@code schema} elements. */
-    public static QName XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-context-id" );
+    public static final QName XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-context-id" );
 
     /** {@code QName} of the {@code java-classpath-id} attribute of {@code schema} elements. */
-    public static QName XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-classpath-id" );
+    public static final QName XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-classpath-id" );
 
     /** Identifier of the {@code XML Schema Set} specification. */
-    private static String XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER = "XML Schema Set";
+    private static final String XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER = "XML Schema Set";
 
     public Modules processModules( final ModelContext context, final Modules modules ) throws ModelException
     {
