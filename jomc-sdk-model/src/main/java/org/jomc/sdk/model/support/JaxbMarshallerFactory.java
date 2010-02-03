@@ -107,12 +107,9 @@ public class JaxbMarshallerFactory
 
         for ( SchemaType s : this.getSchemas().getSchema() )
         {
-            if ( s.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE ) )
+            if ( s.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE ) && s.getPublicId() != null )
             {
-                if ( s.getPublicId() != null )
-                {
-                    schemaLocation.append( " " ).append( s.getPublicId() ).append( " " ).append( s.getSystemId() );
-                }
+                schemaLocation.append( " " ).append( s.getPublicId() ).append( " " ).append( s.getSystemId() );
             }
         }
 
