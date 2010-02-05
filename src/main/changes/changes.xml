@@ -68,5 +68,11 @@
       <code>jomc-sdk-1.0.xsd</code> schema.]]>
       </action>
     </release>
+    <!-- *********************************************************************************************************** -->
+    <release version="1.0-alpha-6" date="2010-02-06">
+      <action dev="schulte2005" type="update"><![CDATA[
+      Added <code>jomc-sdk-jpa</code> and <code>jomc-sdk-jta</code> artifacts.]]>
+      </action>
+    </release>
   </body>
 </document>

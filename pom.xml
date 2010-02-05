@@ -594,6 +594,18 @@
         <version>2.2</version>
       </dependency>
 
+      <!-- EE -->
+      <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>persistence-api</artifactId>
+        <version>1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.transaction</groupId>
+        <artifactId>transaction-api</artifactId>
+        <version>1.1</version>
+      </dependency>
+
       <!-- Test -->
       <dependency>
         <groupId>junit</groupId>
@@ -734,6 +746,8 @@
   </reporting>
   <modules>
     <module>jomc-sdk-model</module>
+    <module>jomc-sdk-jpa</module>
+    <module>jomc-sdk-jta</module>
   </modules>
   <distributionManagement>
     <repository>
