@@ -36,7 +36,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jomc.sdk</groupId>
   <artifactId>jomc-sdk</artifactId>
-  <version>1.0-alpha-6</version>
+  <version>1.0-alpha-7-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>JOMC SDK</name>
   <description>Object management and configuration software development kit.</description>
@@ -92,9 +92,9 @@
     </mailingList>
   </mailingLists>
   <scm>
-    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-6</connection>
-    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-6</developerConnection>
-    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/tags/jomc-sdk-1.0-alpha-6</url>
+    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</connection>
+    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</developerConnection>
+    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/trunk/</url>
   </scm>
   <build>
     <extensions>
@@ -625,7 +625,7 @@
       <dependency>
         <groupId>org.jomc.sdk</groupId>
         <artifactId>jomc-sdk-model</artifactId>
-        <version>1.0-alpha-6</version>
+        <version>1.0-alpha-7-SNAPSHOT</version>
       </dependency>
 
     </dependencies>
