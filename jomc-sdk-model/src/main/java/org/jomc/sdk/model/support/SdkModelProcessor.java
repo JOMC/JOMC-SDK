@@ -67,12 +67,12 @@ import static javax.xml.XMLConstants.NULL_NS_URI;
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
 @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-16/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-17-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public class SdkModelProcessor implements org.jomc.model.ModelProcessor
 {
-    // SECTION-START[ModelProcessor]
+    // SECTION-START[SdkModelProcessor]
 
     /** {@code QName} of the {@code java-context-id} attribute of {@code schema} elements. */
     public static final QName XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-context-id" );
@@ -208,7 +208,7 @@ public class SdkModelProcessor implements org.jomc.model.ModelProcessor
 
     /** Creates a new {@code SdkModelProcessor} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.JavaSources",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-16/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-17-SNAPSHOT/jomc-tools" )
     public SdkModelProcessor()
     {
         // SECTION-START[Default Constructor]
