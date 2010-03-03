@@ -2,7 +2,7 @@
 <!--
 
   Copyright (c) 2009 The JOMC Project
-  Copyright (c) 2005 Christian Schulte <cs@jomc.org>
+  Copyright (c) 2005 Christian Schulte <schulte2005@users.sourceforge.net>
   All rights reserved.
 
   Redistribution and use in source and binary forms, with or without
@@ -51,7 +51,9 @@
         <text language="en">Test XML Schema Set</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <specifications>
         <reference identifier="XML Schema Set" version="${xmlschemaset.specification.version}"/>
@@ -76,7 +78,9 @@
         <text language="en">Test cases for class {@code org.jomc.sdk.model.ModelException}.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
     </implementation>
     <!-- *********************************************************************************************************** -->
@@ -88,7 +92,9 @@
         <text language="en">Test cases for the {@code Test XML Schema Set}.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <dependencies>
         <dependency identifier="javax.xml.bind.JAXBContext" name="DefaultContext" implementationName="Test XML Schema Set"/>
@@ -123,7 +129,9 @@
         <text language="en">Test cases for the {@code ListType} complex type.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <properties>
         <property name="primitiveList" type="java.util.List&lt;Integer&gt;">
@@ -232,7 +240,9 @@
         <text language="en">Test cases for the {@code MapType} complex type.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <properties>
         <property name="primitiveMap" type="java.util.Map&lt;Integer,Integer&gt;">
@@ -606,7 +616,9 @@
         <text language="en">Test cases for class {@code org.jomc.sdk.model.SdkModelValidator}.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
     </implementation>
   </implementations>

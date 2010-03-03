@@ -2,7 +2,7 @@
 <!--
 
   Copyright (c) 2009 The JOMC Project
-  Copyright (c) 2005 Christian Schulte <cs@jomc.org>
+  Copyright (c) 2005 Christian Schulte <schulte2005@users.sourceforge.net>
   All rights reserved.
 
   Redistribution and use in source and binary forms, with or without
@@ -47,6 +47,11 @@
       <documentation defaultLanguage="en">
         <text language="en">Set of XML Schemas</text>
       </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
       <properties>
         <property name="schemas" type="org.jomc.sdk.model.SchemasType">
           <documentation defaultLanguage="en">
@@ -67,7 +72,9 @@
         <text language="en">SDK 'ModelProcessor' implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
     </implementation>
     <!-- *********************************************************************************************************** -->
@@ -80,7 +87,9 @@
         <text language="en">SDK 'ModelValidator' implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
     </implementation>
     <!-- *********************************************************************************************************** -->
@@ -91,7 +100,9 @@
         <text language="en">Default XML Schema Set.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <properties>
         <property name="schemas" type="org.jomc.sdk.model.SchemasType">
@@ -112,7 +123,9 @@
         <text language="en">XML Schema Set 'JAXBContext' factory implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <specifications>
         <reference identifier="javax.xml.bind.JAXBContext"/>
@@ -131,7 +144,9 @@
         <text language="en">XML Schema Set JAXB 'Marshaller' factory implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <specifications>
         <reference identifier="javax.xml.bind.Marshaller"/>
@@ -186,7 +201,9 @@
         <text language="en">XML Schema Set JAXB 'Unmarshaller' factory implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <specifications>
         <reference identifier="javax.xml.bind.Unmarshaller"/>
@@ -216,7 +233,9 @@
         <text language="en">XML Schema Set JAXP 'Schema' factory implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <specifications>
         <reference identifier="javax.xml.validation.Schema"/>
@@ -237,7 +256,9 @@
         <text language="en">XML Schema Set JAXP 'EntityResolver' factory implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <specifications>
         <reference identifier="org.xml.sax.EntityResolver"/>
@@ -254,7 +275,9 @@
         <text language="en">XML Schema Set JAXP 'LSResourceResolver' factory implementation.</text>
       </documentation>
       <authors>
-        <author name="Christian Schulte" version="1.0" mail="cs@jomc.org" createDate="2005-07-25T19:56:45Z"/>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
       </authors>
       <specifications>
         <reference identifier="org.w3c.dom.ls.LSResourceResolver"/>
