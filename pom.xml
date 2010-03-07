@@ -870,6 +870,10 @@
           </plugin>
         </plugins>
       </build>
+      <properties>
+        <jomc.sourceProcessing>false</jomc.sourceProcessing>
+        <jomc.verbose>true</jomc.verbose>
+      </properties>
     </profile>
   </profiles>
   <properties>
