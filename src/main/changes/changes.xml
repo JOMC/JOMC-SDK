@@ -74,5 +74,10 @@
       Added <code>jomc-sdk-jpa</code> and <code>jomc-sdk-jta</code> artifacts.]]>
       </action>
     </release>
+    <!-- *********************************************************************************************************** -->
+    <release version="1.0-alpha-7" date="2010-03-08">
+      <action dev="schulte2005" type="update">Updated to JOMC 1.0-alpha-17.</action>
+      <action dev="schulte2005" type="update">Updated to JOMC Logging 1.0-alpha-10.</action>
+    </release>
   </body>
 </document>
