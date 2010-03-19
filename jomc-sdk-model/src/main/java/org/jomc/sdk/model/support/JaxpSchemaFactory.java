@@ -62,10 +62,6 @@ import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASS
  * <p>List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</p>
  * </blockquote></li>
  * </ul></p>
- * <p><b>Dependencies</b><ul>
- * <li>"{@link #getResourceResolver ResourceResolver}"<blockquote>
- * Dependency on {@code org.w3c.dom.ls.LSResourceResolver} bound to an instance.</blockquote></li>
- * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version $Id$
@@ -75,7 +71,7 @@ import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASS
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public class JaxpSchemaFactory
@@ -118,7 +114,6 @@ public class JaxpSchemaFactory
 
         if ( !sources.isEmpty() )
         {
-            schemaFactory.setResourceResolver( this.getResourceResolver() );
             schema = schemaFactory.newSchema( sources.toArray( new Source[ sources.size() ] ) );
         }
 
@@ -131,7 +126,7 @@ public class JaxpSchemaFactory
 
     /** Creates a new {@code JaxpSchemaFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     public JaxpSchemaFactory()
     {
         // SECTION-START[Default Constructor]
@@ -141,24 +136,6 @@ public class JaxpSchemaFactory
     // </editor-fold>
     // SECTION-END
     // SECTION-START[Dependencies]
-    // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
-    /**
-     * Gets the {@code ResourceResolver} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model}" object of the {@code org.w3c.dom.ls.LSResourceResolver} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code ResourceResolver} dependency.
-     * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
-     */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
-    private org.w3c.dom.ls.LSResourceResolver getResourceResolver()
-    {
-        final org.w3c.dom.ls.LSResourceResolver _d = (org.w3c.dom.ls.LSResourceResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "ResourceResolver" );
-        assert _d != null : "'ResourceResolver' dependency not found.";
-        return _d;
-    }
-    // </editor-fold>
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
@@ -169,7 +146,7 @@ public class JaxpSchemaFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private org.jomc.sdk.model.SchemasType getSchemas()
     {
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );

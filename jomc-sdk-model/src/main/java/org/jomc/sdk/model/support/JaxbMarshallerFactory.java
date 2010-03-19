@@ -36,10 +36,20 @@
 // SECTION-END
 package org.jomc.sdk.model.support;
 
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.SchemaFactory;
 import org.jomc.sdk.model.SchemaType;
+import org.jomc.sdk.model.SchemasType;
 import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE;
+import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE;
+import org.xml.sax.SAXException;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
@@ -78,12 +88,6 @@ import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CONTE
  * <p>List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</p>
  * </blockquote></li>
  * </ul></p>
- * <p><b>Dependencies</b><ul>
- * <li>"{@link #getContext Context}"<blockquote>
- * Dependency on {@code javax.xml.bind.JAXBContext} bound to an instance.</blockquote></li>
- * <li>"{@link #getSchema Schema}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
- * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version $Id$
@@ -93,7 +97,7 @@ import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CONTE
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public class JaxbMarshallerFactory
@@ -102,36 +106,76 @@ public class JaxbMarshallerFactory
     // SECTION-END
     // SECTION-START[JaxbMarshallerFactory]
 
-    public Marshaller getObject() throws JAXBException
+    public Marshaller getObject() throws JAXBException, SAXException
     {
-        final Marshaller marshaller = this.getContext().createMarshaller();
+        Marshaller marshaller = null;
         final StringBuilder schemaLocation = new StringBuilder();
+        final StringBuilder packageNames = new StringBuilder();
+        final SchemasType schemas = this.getSchemas();
+        final List<Source> sources =
+            this.isJaxpSchemaValidation() ? new ArrayList<Source>( schemas.getSchema().size() ) : null;
 
-        for ( SchemaType s : this.getSchemas().getSchema() )
+        for ( SchemaType s : schemas.getSchema() )
         {
-            if ( s.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE ) && s.getPublicId() != null )
+            if ( s.getPublicId() != null )
             {
                 schemaLocation.append( " " ).append( s.getPublicId() ).append( " " ).append( s.getSystemId() );
             }
+
+            if ( s.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE ) )
+            {
+                packageNames.append( ':' ).append( s.getOtherAttributes().get( XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE ) );
+            }
+
+            if ( sources != null )
+            {
+                final StreamSource source = new StreamSource();
+                source.setPublicId( s.getPublicId() );
+                source.setSystemId( s.getSystemId() );
+
+                if ( s.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE ) )
+                {
+                    String absoluteLocation = s.getOtherAttributes().get( XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE );
+                    if ( !absoluteLocation.startsWith( "/" ) )
+                    {
+                        absoluteLocation = '/' + absoluteLocation;
+                    }
+
+                    final URL resource = this.getClass().getResource( absoluteLocation );
+                    if ( resource != null )
+                    {
+                        source.setSystemId( resource.toExternalForm() );
+                    }
+                }
+
+                sources.add( source );
+            }
         }
 
-        marshaller.setProperty( Marshaller.JAXB_ENCODING, this.getJaxbEncoding() );
-        marshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, this.isJaxbFormattedOutput() );
-        marshaller.setProperty( Marshaller.JAXB_FRAGMENT, this.isJaxbFragment() );
+        if ( packageNames.length() > 0 )
+        {
+            marshaller = JAXBContext.newInstance( packageNames.substring( 1 ) ).createMarshaller();
+            marshaller.setProperty( Marshaller.JAXB_ENCODING, this.getJaxbEncoding() );
+            marshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, this.isJaxbFormattedOutput() );
+            marshaller.setProperty( Marshaller.JAXB_FRAGMENT, this.isJaxbFragment() );
 
-        if ( this.getJaxbNoNamespaceSchemaLocation().length() > 0 )
-        {
-            marshaller.setProperty( Marshaller.JAXB_NO_NAMESPACE_SCHEMA_LOCATION,
-                                    this.getJaxbNoNamespaceSchemaLocation() );
+            if ( this.getJaxbNoNamespaceSchemaLocation().length() > 0 )
+            {
+                marshaller.setProperty( Marshaller.JAXB_NO_NAMESPACE_SCHEMA_LOCATION,
+                                        this.getJaxbNoNamespaceSchemaLocation() );
 
-        }
-        if ( this.isJaxbSchemaLocation() && schemaLocation.length() > 0 )
-        {
-            marshaller.setProperty( Marshaller.JAXB_SCHEMA_LOCATION, schemaLocation.toString() );
-        }
-        if ( this.isJaxpSchemaValidation() )
-        {
-            marshaller.setSchema( this.getSchema() );
+            }
+
+            if ( this.isJaxbSchemaLocation() && schemaLocation.length() > 0 )
+            {
+                marshaller.setProperty( Marshaller.JAXB_SCHEMA_LOCATION, schemaLocation.substring( 1 ) );
+            }
+
+            if ( sources != null )
+            {
+                final SchemaFactory schemaFactory = SchemaFactory.newInstance( schemas.getLanguageId() );
+                marshaller.setSchema( schemaFactory.newSchema( sources.toArray( new Source[ sources.size() ] ) ) );
+            }
         }
 
         return marshaller;
@@ -143,7 +187,7 @@ public class JaxbMarshallerFactory
 
     /** Creates a new {@code JaxbMarshallerFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     public JaxbMarshallerFactory()
     {
         // SECTION-START[Default Constructor]
@@ -153,40 +197,6 @@ public class JaxbMarshallerFactory
     // </editor-fold>
     // SECTION-END
     // SECTION-START[Dependencies]
-    // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
-    /**
-     * Gets the {@code Context} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model}" object of the {@code javax.xml.bind.JAXBContext} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code Context} dependency.
-     * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
-     */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
-    private javax.xml.bind.JAXBContext getContext()
-    {
-        final javax.xml.bind.JAXBContext _d = (javax.xml.bind.JAXBContext) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "Context" );
-        assert _d != null : "'Context' dependency not found.";
-        return _d;
-    }
-
-    /**
-     * Gets the {@code Schema} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model}" object of the {@code javax.xml.validation.Schema} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code Schema} dependency.
-     * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
-     */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
-    private javax.xml.validation.Schema getSchema()
-    {
-        final javax.xml.validation.Schema _d = (javax.xml.validation.Schema) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "Schema" );
-        assert _d != null : "'Schema' dependency not found.";
-        return _d;
-    }
-    // </editor-fold>
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
@@ -197,7 +207,7 @@ public class JaxbMarshallerFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private java.lang.String getJaxbEncoding()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbEncoding" );
@@ -211,7 +221,7 @@ public class JaxbMarshallerFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private boolean isJaxbFormattedOutput()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbFormattedOutput" );
@@ -225,7 +235,7 @@ public class JaxbMarshallerFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private boolean isJaxbFragment()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbFragment" );
@@ -239,7 +249,7 @@ public class JaxbMarshallerFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private java.lang.String getJaxbNoNamespaceSchemaLocation()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbNoNamespaceSchemaLocation" );
@@ -253,7 +263,7 @@ public class JaxbMarshallerFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private boolean isJaxbSchemaLocation()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbSchemaLocation" );
@@ -267,7 +277,7 @@ public class JaxbMarshallerFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private boolean isJaxpSchemaValidation()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxpSchemaValidation" );
@@ -281,7 +291,7 @@ public class JaxbMarshallerFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18-SNAPSHOT/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-alpha-18/jomc-tools" )
     private org.jomc.sdk.model.SchemasType getSchemas()
     {
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );
