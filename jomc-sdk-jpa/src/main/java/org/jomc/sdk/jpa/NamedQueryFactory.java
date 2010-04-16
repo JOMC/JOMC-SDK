@@ -70,7 +70,7 @@ import javax.persistence.Query;
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                             comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-1/jomc-tools" )
+                             comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-2/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public class NamedQueryFactory
@@ -104,7 +104,7 @@ public class NamedQueryFactory
 
     /** Creates a new {@code NamedQueryFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-2/jomc-tools" )
     public NamedQueryFactory()
     {
         // SECTION-START[Default Constructor]
@@ -125,7 +125,7 @@ public class NamedQueryFactory
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-2/jomc-tools" )
     private javax.persistence.EntityManager getEntityManager()
     {
         return (javax.persistence.EntityManager) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "EntityManager" );
@@ -141,7 +141,7 @@ public class NamedQueryFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-2/jomc-tools" )
     private java.util.Map<String,Object> getParameterMap()
     {
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "parameterMap" );
@@ -155,7 +155,7 @@ public class NamedQueryFactory
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor",
-                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-1/jomc-tools" )
+                                 comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-2/jomc-tools" )
     private java.lang.String getQueryName()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "queryName" );
