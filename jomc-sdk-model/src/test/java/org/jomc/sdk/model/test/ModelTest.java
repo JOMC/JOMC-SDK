@@ -72,7 +72,7 @@ import org.junit.Test;
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public class ModelTest
@@ -138,7 +138,7 @@ public class ModelTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code ModelTest} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     public ModelTest()
     {
         // SECTION-START[Default Constructor]
@@ -177,7 +177,7 @@ public class ModelTest
      * @return The {@code CustomMarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private javax.xml.bind.Marshaller getCustomMarshaller()
     {
         final javax.xml.bind.Marshaller _d = (javax.xml.bind.Marshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "CustomMarshaller" );
@@ -197,7 +197,7 @@ public class ModelTest
      * @return The {@code CustomUnmarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private javax.xml.bind.Unmarshaller getCustomUnmarshaller()
     {
         final javax.xml.bind.Unmarshaller _d = (javax.xml.bind.Unmarshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "CustomUnmarshaller" );
@@ -212,7 +212,7 @@ public class ModelTest
      * @return The {@code DefaultContext} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private javax.xml.bind.JAXBContext getDefaultContext()
     {
         final javax.xml.bind.JAXBContext _d = (javax.xml.bind.JAXBContext) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "DefaultContext" );
@@ -227,7 +227,7 @@ public class ModelTest
      * @return The {@code DefaultEntityResolver} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private org.xml.sax.EntityResolver getDefaultEntityResolver()
     {
         final org.xml.sax.EntityResolver _d = (org.xml.sax.EntityResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "DefaultEntityResolver" );
@@ -242,7 +242,7 @@ public class ModelTest
      * @return The {@code DefaultMarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private javax.xml.bind.Marshaller getDefaultMarshaller()
     {
         final javax.xml.bind.Marshaller _d = (javax.xml.bind.Marshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "DefaultMarshaller" );
@@ -257,7 +257,7 @@ public class ModelTest
      * @return The {@code DefaultResourceResolver} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private org.w3c.dom.ls.LSResourceResolver getDefaultResourceResolver()
     {
         final org.w3c.dom.ls.LSResourceResolver _d = (org.w3c.dom.ls.LSResourceResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "DefaultResourceResolver" );
@@ -272,7 +272,7 @@ public class ModelTest
      * @return The {@code DefaultSchema} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private javax.xml.validation.Schema getDefaultSchema()
     {
         final javax.xml.validation.Schema _d = (javax.xml.validation.Schema) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "DefaultSchema" );
@@ -287,7 +287,7 @@ public class ModelTest
      * @return The {@code DefaultUnmarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
     private javax.xml.bind.Unmarshaller getDefaultUnmarshaller()
     {
         final javax.xml.bind.Unmarshaller _d = (javax.xml.bind.Unmarshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "DefaultUnmarshaller" );
