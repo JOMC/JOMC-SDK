@@ -36,6 +36,9 @@
 // SECTION-END
 package org.jomc.sdk.model.support;
 
+import org.jomc.model.Specification;
+import org.jomc.model.Properties;
+import org.jomc.model.Property;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Locale;
@@ -66,10 +69,10 @@ import static javax.xml.XMLConstants.NULL_NS_URI;
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public class SdkModelProcessor implements org.jomc.model.ModelProcessor
+public final class SdkModelProcessor implements org.jomc.model.ModelProcessor
 {
     // SECTION-START[SdkModelProcessor]
 
@@ -104,6 +107,7 @@ public class SdkModelProcessor implements org.jomc.model.ModelProcessor
             }
         }
 
+        this.substituteSystemProperties( processedModules );
         return processedModules;
     }
 
@@ -119,9 +123,13 @@ public class SdkModelProcessor implements org.jomc.model.ModelProcessor
 
         final List<Implementation> impls = m.getImplementations().getImplementation();
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbContextFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbBinderFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbIntrospectorFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbMarshallerFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbUnmarshallerFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpSchemaFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpValidatorFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpValidatorHandlerFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpEntityResolverFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpResourceResolverFactory.class ) );
         return m;
@@ -161,9 +169,9 @@ public class SdkModelProcessor implements org.jomc.model.ModelProcessor
             {
                 for ( Dependency dependencyDeclaration : dependencyDeclarations.getDependency() )
                 {
-                    if ( dependencyDeclaration.getImplementationName() != null &&
-                         dependencyDeclaration.getImplementationName().equals( factoryDeclaration.getName() ) &&
-                         !dependencyDeclaration.isFinal() )
+                    if ( dependencyDeclaration.getImplementationName() != null
+                         && dependencyDeclaration.getImplementationName().equals( factoryDeclaration.getName() )
+                         && !dependencyDeclaration.isFinal() )
                     {
                         if ( i.getDependencies() == null )
                         {
@@ -181,6 +189,117 @@ public class SdkModelProcessor implements org.jomc.model.ModelProcessor
         }
 
         return i;
+    }
+
+    private void substituteSystemProperties( final Modules modules )
+    {
+        for ( Module m : modules.getModule() )
+        {
+            this.substituteSystemProperties( m.getProperties() );
+
+            if ( m.getSpecifications() != null )
+            {
+                for ( Specification s : m.getSpecifications().getSpecification() )
+                {
+                    this.substituteSystemProperties( s.getProperties() );
+                }
+            }
+
+            if ( m.getImplementations() != null )
+            {
+                for ( Implementation i : m.getImplementations().getImplementation() )
+                {
+                    this.substituteSystemProperties( i.getProperties() );
+
+                    if ( i.getDependencies() != null )
+                    {
+                        for ( Dependency d : i.getDependencies().getDependency() )
+                        {
+                            this.substituteSystemProperties( d );
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void substituteSystemProperties( final Dependency dependency )
+    {
+        this.substituteSystemProperties( dependency.getProperties() );
+
+        if ( dependency.getDependencies() != null )
+        {
+            for ( Dependency d : dependency.getDependencies().getDependency() )
+            {
+                this.substituteSystemProperties( d );
+            }
+        }
+    }
+
+    private void substituteSystemProperties( final Properties properties )
+    {
+        final String startingMarker =
+            System.getProperty( "org.jomc.sdk.model.support.SdkModelProcessor.systemPropertyStartingMarker", "@@" );
+
+        final String endingMarker =
+            System.getProperty( "org.jomc.sdk.model.support.SdkModelProcessor.systemPropertyEndingMarker", "@@" );
+
+        if ( properties != null )
+        {
+            for ( Property p : properties.getProperty() )
+            {
+                if ( p.getValue() != null )
+                {
+                    final StringBuilder b = new StringBuilder();
+                    final StringBuilder propertyName = new StringBuilder();
+                    boolean inPropertyName = false;
+
+                    for ( int i = 0; i < p.getValue().length(); i++ )
+                    {
+                        if ( !inPropertyName )
+                        {
+                            if ( i + startingMarker.length() <= p.getValue().length()
+                                 && startingMarker.equals( p.getValue().substring( i, i + startingMarker.length() ) ) )
+                            {
+                                propertyName.setLength( 0 );
+                                propertyName.append( startingMarker );
+                                i += startingMarker.length() - 1;
+                                inPropertyName = true;
+                                continue;
+                            }
+
+                            b.append( p.getValue().charAt( i ) );
+                            continue;
+                        }
+
+                        if ( inPropertyName )
+                        {
+                            if ( i + endingMarker.length() <= p.getValue().length()
+                                 && endingMarker.equals( p.getValue().substring( i, i + endingMarker.length() ) ) )
+                            {
+                                b.append( System.getProperty( propertyName.substring( startingMarker.length() ),
+                                                              propertyName + endingMarker ) );
+
+                                propertyName.setLength( 0 );
+                                i += endingMarker.length() - 1;
+                                inPropertyName = false;
+                                continue;
+                            }
+
+                            propertyName.append( p.getValue().charAt( i ) );
+                            continue;
+                        }
+                    }
+
+                    if ( propertyName.length() > 0 )
+                    {
+                        b.append( propertyName );
+                    }
+
+                    p.setValue( b.toString() );
+                }
+            }
+        }
     }
 
     private static Texts getTexts( final String key, final Object... arguments )
@@ -206,7 +325,7 @@ public class SdkModelProcessor implements org.jomc.model.ModelProcessor
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code SdkModelProcessor} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
     public SdkModelProcessor()
     {
         // SECTION-START[Default Constructor]

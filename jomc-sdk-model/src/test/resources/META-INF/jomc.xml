@@ -97,28 +97,194 @@
 
       </authors>
       <dependencies>
-        <dependency identifier="javax.xml.bind.JAXBContext" name="DefaultContext" implementationName="Test XML Schema Set"/>
-        <dependency identifier="javax.xml.bind.Marshaller" name="DefaultMarshaller" implementationName="Test XML Schema Set"/>
-        <dependency identifier="javax.xml.bind.Marshaller" name="CustomMarshaller" implementationName="Test XML Schema Set">
+        <dependency name="DefaultContext" identifier="javax.xml.bind.JAXBContext"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="DefaultMarshaller" identifier="javax.xml.bind.Marshaller"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="CustomMarshaller" identifier="javax.xml.bind.Marshaller"
+                    implementationName="Test XML Schema Set">
+
+          <dependencies>
+            <dependency name="schema" identifier="javax.xml.validation.Schema"
+                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+
+          </dependencies>
           <properties>
             <property name="jaxbEncoding" value="US-ASCII" override="true"/>
             <property name="jaxbFormattedOutput" type="boolean" value="true" override="true"/>
             <property name="jaxbFragment" type="boolean" value="false" override="true"/>
             <property name="jaxbSchemaLocation" type="boolean" value="true" override="true"/>
             <property name="jaxbNoNamespaceSchemaLocation" value="TEST" override="true"/>
-            <property name="jaxpSchemaValidation" type="boolean" value="true" override="true"/>
           </properties>
         </dependency>
-        <dependency identifier="javax.xml.bind.Unmarshaller" name="DefaultUnmarshaller" implementationName="Test XML Schema Set"/>
-        <dependency identifier="javax.xml.bind.Unmarshaller" name="CustomUnmarshaller" implementationName="Test XML Schema Set">
+        <dependency name="DefaultUnmarshaller" identifier="javax.xml.bind.Unmarshaller"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="CustomUnmarshaller" identifier="javax.xml.bind.Unmarshaller"
+                    implementationName="Test XML Schema Set">
+
+          <dependencies>
+            <dependency name="schema" identifier="javax.xml.validation.Schema"
+                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+
+          </dependencies>
+        </dependency>
+        <dependency name="DefaultSchema" identifier="javax.xml.validation.Schema"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="CustomSchema" identifier="javax.xml.validation.Schema"
+                    implementationName="Test XML Schema Set">
+
+          <dependencies>
+            <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
+                        implementationName="Test XML Schema Set" optional="true"/>
+
+          </dependencies>
+        </dependency>
+
+        <dependency name="CustomSchemaUnrecognizedFeature" identifier="javax.xml.validation.Schema"
+                    implementationName="Test XML Schema Set">
+
           <properties>
-            <property name="jaxpSchemaValidation" type="boolean" value="true" override="true"/>
+            <property name="schemaFeatures" type="java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;">
+              <map xmlns="http://jomc.org/sdk/model">
+                <entry>
+                  <key type="java.lang.String" value="UNRECOGNIZED FEATURE"/>
+                  <value type="java.lang.Boolean" value="true"/>
+                </entry>
+              </map>
+            </property>
           </properties>
         </dependency>
-        <dependency identifier="javax.xml.validation.Schema" name="DefaultSchema" implementationName="Test XML Schema Set"/>
-        <dependency identifier="org.xml.sax.EntityResolver" name="DefaultEntityResolver" implementationName="Test XML Schema Set"/>
-        <dependency identifier="org.w3c.dom.ls.LSResourceResolver" name="DefaultResourceResolver" implementationName="Test XML Schema Set"/>
+        <dependency name="CustomSchemaUnrecognizedProperty" identifier="javax.xml.validation.Schema"
+                    implementationName="Test XML Schema Set">
+
+          <properties>
+            <property name="schemaProperties" type="java.util.Map&lt;java.lang.String,java.lang.Object&gt;">
+              <map xmlns="http://jomc.org/sdk/model">
+                <entry>
+                  <key type="java.lang.String" value="UNRECOGNIZED PROPERTY"/>
+                  <value type="java.lang.Boolean" value="true"/>
+                </entry>
+              </map>
+            </property>
+          </properties>
+        </dependency>
+        <dependency name="DefaultValidator" identifier="javax.xml.validation.Validator"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="CustomValidatorUnrecognizedFeature" identifier="javax.xml.validation.Validator"
+                    implementationName="Test XML Schema Set">
+
+          <properties>
+            <property name="validatorFeatures" type="java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;">
+              <map xmlns="http://jomc.org/sdk/model">
+                <entry>
+                  <key type="java.lang.String" value="UNRECOGNIZED FEATURE"/>
+                  <value type="java.lang.Boolean" value="true"/>
+                </entry>
+              </map>
+            </property>
+          </properties>
+        </dependency>
+        <dependency name="CustomValidatorUnrecognizedProperty" identifier="javax.xml.validation.Validator"
+                    implementationName="Test XML Schema Set">
+
+          <properties>
+            <property name="validatorProperties" type="java.util.Map&lt;java.lang.String,java.lang.Object&gt;">
+              <map xmlns="http://jomc.org/sdk/model">
+                <entry>
+                  <key type="java.lang.String" value="UNRECOGNIZED PROPERTY"/>
+                  <value type="java.lang.String" value="TEST"/>
+                </entry>
+              </map>
+            </property>
+          </properties>
+        </dependency>
+        <dependency name="DefaultValidatorHandler" identifier="javax.xml.validation.ValidatorHandler"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="CustomValidatorHandlerUnrecognizedFeature" identifier="javax.xml.validation.ValidatorHandler"
+                    implementationName="Test XML Schema Set">
+
+          <properties>
+            <property name="validatorHandlerFeatures" type="java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;">
+              <map xmlns="http://jomc.org/sdk/model">
+                <entry>
+                  <key type="java.lang.String" value="UNRECOGNIZED FEATURE"/>
+                  <value type="java.lang.Boolean" value="true"/>
+                </entry>
+              </map>
+            </property>
+          </properties>
+        </dependency>
+        <dependency name="CustomValidatorHandlerUnrecognizedProperty" identifier="javax.xml.validation.ValidatorHandler"
+                    implementationName="Test XML Schema Set">
+
+          <properties>
+            <property name="validatorHandlerProperties" type="java.util.Map&lt;java.lang.String,java.lang.Object&gt;">
+              <map xmlns="http://jomc.org/sdk/model">
+                <entry>
+                  <key type="java.lang.String" value="UNRECOGNIZED PROPERTY"/>
+                  <value type="java.lang.Boolean" value="true"/>
+                </entry>
+              </map>
+            </property>
+          </properties>
+        </dependency>
+        <dependency name="DefaultContentHandler" identifier="org.xml.sax.ContentHandler"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="DefaultEntityResolver" identifier="org.xml.sax.EntityResolver"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="DefaultResourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="DefaultBinder" identifier="javax.xml.bind.Binder"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="DefaultIntrospector" identifier="javax.xml.bind.JAXBIntrospector"
+                    implementationName="Test XML Schema Set"/>
+
+        <dependency name="DefaultDocumentBuilder" identifier="javax.xml.parsers.DocumentBuilder"
+                    implementationName="JOMC SDK"/>
+
+        <dependency name="DefaultSaxParser" identifier="javax.xml.parsers.SAXParser"
+                    implementationName="JOMC SDK"/>
+
+        <dependency name="CustomSaxParser" identifier="javax.xml.parsers.SAXParser"
+                    implementationName="JOMC SDK">
+
+          <dependencies>
+            <dependency name="schema" identifier="javax.xml.validation.Schema"
+                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+
+          </dependencies>
+        </dependency>
+
+        <dependency name="DefaultSaxXmlReader" identifier="org.xml.sax.XMLReader"
+                    implementationName="JOMC SDK"/>
+
+        <dependency name="CustomSaxXmlReader" identifier="org.xml.sax.XMLReader"
+                    implementationName="JOMC SDK">
+
+          <dependencies>
+            <dependency name="schema" identifier="javax.xml.validation.Schema"
+                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+
+          </dependencies>
+        </dependency>
       </dependencies>
+      <properties>
+        <property name="sysUserName" value="@@user.name@@"/>
+        <property name="sysUserHome" value="@@user.home@@"/>
+        <property name="sysUserDir" value="@@user.dir@@"/>
+        <property name="sysUserNameAndHomeAndDir" value="@@user.name@@ AND @@user.home@@ AND @@user.dir@@"/>
+        <property name="sysIllegalSubstitution" value="@@user.name AND @@user.home AND @@user.dir"/>
+      </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
     <implementation identifier="org.jomc.sdk.model.test.ListTypeTest" class="org.jomc.sdk.model.test.ListTypeTest"

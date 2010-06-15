@@ -34,28 +34,32 @@
  */
 // </editor-fold>
 // SECTION-END
-package org.jomc.sdk.model.support;
+package org.jomc.sdk.jpa;
 
-import java.net.URL;
-import org.jomc.sdk.model.SchemaType;
-import org.jomc.sdk.model.SchemasType;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
-import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE;
+import java.util.Map;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * XML Schema Set JAXP 'EntityResolver' factory implementation.
+ * Factory providing a JPA query instance.
  * <p><b>Specifications</b><ul>
- * <li>{@code org.xml.sax.EntityResolver} {@code Multiton}</li>
+ * <li>{@code javax.persistence.Query} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
- * <li>"{@link #getSchemas schemas}"
- * <blockquote>Property of type {@code org.jomc.sdk.model.SchemasType}.
- * <p>List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</p>
+ * <li>"{@link #getParameterMap parameterMap}"
+ * <blockquote>Property of type {@code java.util.Map<String,Object>}.
+ * <p>Map of parameters to set on the query.</p>
  * </blockquote></li>
+ * <li>"{@link #getQuery query}"
+ * <blockquote>Property of type {@code java.lang.String}.
+ * <p>Query to provide.</p>
+ * </blockquote></li>
+ * </ul></p>
+ * <p><b>Dependencies</b><ul>
+ * <li>"{@link #getEntityManager EntityManager}"<blockquote>
+ * Dependency on {@code javax.persistence.EntityManager}.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -68,60 +72,38 @@ import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASS
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public final class JaxpEntityResolverFactory extends DefaultHandler
+public class QueryFactory
 {
-    // SECTION-START[EntityResolver]
+    // SECTION-START[Query]
+    // SECTION-END
+    // SECTION-START[QueryFactory]
 
-    @Override
-    public InputSource resolveEntity( final String publicId, final String systemId ) throws SAXException
+    public Query getObject()
     {
-        final SchemasType schemas = this.getSchemas();
-        SchemaType schema = null;
-        InputSource source = null;
+        final EntityManager em = this.getEntityManager();
 
-        if ( publicId != null )
+        if ( em != null )
         {
-            schema = schemas.getSchemaByPublicId( publicId );
-        }
-        if ( schema == null )
-        {
-            schema = schemas.getSchemaBySystemId( systemId );
-        }
-        if ( schema != null )
-        {
-            source = new InputSource();
-            source.setPublicId( schema.getPublicId() == null ? publicId : schema.getPublicId() );
-            source.setSystemId( schema.getSystemId() == null ? systemId : schema.getSystemId() );
+            final Query q = em.createQuery( this.getQuery() );
 
-            if ( schema.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE ) )
+            for ( Map.Entry<String, Object> e : this.getParameterMap().entrySet() )
             {
-                String absoluteLocation = schema.getOtherAttributes().get( XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE );
-
-                if ( !absoluteLocation.startsWith( "/" ) )
-                {
-                    absoluteLocation = '/' + absoluteLocation;
-                }
-
-                final URL resource = this.getClass().getResource( absoluteLocation );
-                if ( resource != null )
-                {
-                    source.setSystemId( resource.toExternalForm() );
-                }
+                q.setParameter( e.getKey(), e.getValue() );
             }
+
+            return q;
         }
 
-        return source;
+        return null;
     }
 
-    // SECTION-END
-    // SECTION-START[JaxpEntityResolverFactory]
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
-    /** Creates a new {@code JaxpEntityResolverFactory} instance. */
+    /** Creates a new {@code QueryFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    public JaxpEntityResolverFactory()
+    public QueryFactory()
     {
         // SECTION-START[Default Constructor]
         super();
@@ -130,20 +112,49 @@ public final class JaxpEntityResolverFactory extends DefaultHandler
     // </editor-fold>
     // SECTION-END
     // SECTION-START[Dependencies]
+    // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
+
+    /**
+     * Gets the {@code EntityManager} dependency.
+     * <p>This method returns the "{@code JOMC SDK JPA}" object of the {@code javax.persistence.EntityManager} specification.</p>
+     * <p>That specification does not apply to any scope. A new object is returned whenever requested.</p>
+     * @return The {@code EntityManager} dependency.
+     * {@code null} if no object is available.
+     * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private javax.persistence.EntityManager getEntityManager()
+    {
+        return (javax.persistence.EntityManager) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "EntityManager" );
+    }
+    // </editor-fold>
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code schemas} property.
-     * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).
+     * Gets the value of the {@code parameterMap} property.
+     * @return Map of parameters to set on the query.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    private org.jomc.sdk.model.SchemasType getSchemas()
+    private java.util.Map<String,Object> getParameterMap()
     {
-        final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );
-        assert _p != null : "'schemas' property not found.";
+        final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "parameterMap" );
+        assert _p != null : "'parameterMap' property not found.";
+        return _p;
+    }
+
+    /**
+     * Gets the value of the {@code query} property.
+     * @return Query to provide.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private java.lang.String getQuery()
+    {
+        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "query" );
+        assert _p != null : "'query' property not found.";
         return _p;
     }
     // </editor-fold>

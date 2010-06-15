@@ -36,6 +36,7 @@
 // SECTION-END
 package org.jomc.sdk.model.support;
 
+import java.util.Map;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -57,10 +58,22 @@ import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASS
  * <li>{@code javax.xml.validation.Schema} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
+ * <li>"{@link #getSchemaFeatures schemaFeatures}"
+ * <blockquote>Property of type {@code java.util.Map<String,Boolean>}.
+ * </blockquote></li>
+ * <li>"{@link #getSchemaProperties schemaProperties}"
+ * <blockquote>Property of type {@code java.util.Map<String,Object>}.
+ * </blockquote></li>
  * <li>"{@link #getSchemas schemas}"
  * <blockquote>Property of type {@code org.jomc.sdk.model.SchemasType}.
  * <p>List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</p>
  * </blockquote></li>
+ * </ul></p>
+ * <p><b>Dependencies</b><ul>
+ * <li>"{@link #getErrorHandler errorHandler}"<blockquote>
+ * Dependency on {@code org.xml.sax.ErrorHandler} bound to an instance.</blockquote></li>
+ * <li>"{@link #getResourceResolver resourceResolver}"<blockquote>
+ * Dependency on {@code org.w3c.dom.ls.LSResourceResolver} bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -70,10 +83,10 @@ import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASS
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public class JaxpSchemaFactory
+public final class JaxpSchemaFactory
 {
     // SECTION-START[Schema]
     // SECTION-END
@@ -113,6 +126,19 @@ public class JaxpSchemaFactory
 
         if ( !sources.isEmpty() )
         {
+            schemaFactory.setErrorHandler( this.getErrorHandler() );
+            schemaFactory.setResourceResolver( this.getResourceResolver() );
+
+            for ( Map.Entry<String, Boolean> e : this.getSchemaFeatures().entrySet() )
+            {
+                schemaFactory.setFeature( e.getKey(), e.getValue() );
+            }
+
+            for ( Map.Entry<String, Object> e : this.getSchemaProperties().entrySet() )
+            {
+                schemaFactory.setProperty( e.getKey(), e.getValue() );
+            }
+
             schema = schemaFactory.newSchema( sources.toArray( new Source[ sources.size() ] ) );
         }
 
@@ -124,7 +150,7 @@ public class JaxpSchemaFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code JaxpSchemaFactory} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
     public JaxpSchemaFactory()
     {
         // SECTION-START[Default Constructor]
@@ -134,16 +160,72 @@ public class JaxpSchemaFactory
     // </editor-fold>
     // SECTION-END
     // SECTION-START[Dependencies]
+    // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
+
+    /**
+     * Gets the {@code errorHandler} dependency.
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code org.xml.sax.ErrorHandler} specification.</p>
+     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * @return The {@code errorHandler} dependency.
+     * {@code null} if no object is available.
+     * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private org.xml.sax.ErrorHandler getErrorHandler()
+    {
+        return (org.xml.sax.ErrorHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "errorHandler" );
+    }
+
+    /**
+     * Gets the {@code resourceResolver} dependency.
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code org.w3c.dom.ls.LSResourceResolver} specification.</p>
+     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * @return The {@code resourceResolver} dependency.
+     * {@code null} if no object is available.
+     * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private org.w3c.dom.ls.LSResourceResolver getResourceResolver()
+    {
+        return (org.w3c.dom.ls.LSResourceResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "resourceResolver" );
+    }
+    // </editor-fold>
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
+
+    /**
+     * Gets the value of the {@code schemaFeatures} property.
+     * @return The value of the {@code schemaFeatures} property.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private java.util.Map<String,Boolean> getSchemaFeatures()
+    {
+        final java.util.Map<String,Boolean> _p = (java.util.Map<String,Boolean>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaFeatures" );
+        assert _p != null : "'schemaFeatures' property not found.";
+        return _p;
+    }
+
+    /**
+     * Gets the value of the {@code schemaProperties} property.
+     * @return The value of the {@code schemaProperties} property.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private java.util.Map<String,Object> getSchemaProperties()
+    {
+        final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaProperties" );
+        assert _p != null : "'schemaProperties' property not found.";
+        return _p;
+    }
 
     /**
      * Gets the value of the {@code schemas} property.
      * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-4", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-4/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
     private org.jomc.sdk.model.SchemasType getSchemas()
     {
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );

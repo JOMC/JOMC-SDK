@@ -37,36 +37,43 @@
 package org.jomc.sdk.model.support;
 
 import java.util.Map;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import org.jomc.sdk.model.SchemaType;
-import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE;
+import org.jomc.sdk.model.SchemasType;
 import org.xml.sax.SAXException;
+import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * XML Schema Set JAXB 'Unmarshaller' factory implementation.
+ * XML Schema Set JAXP 'Validator' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.xml.bind.Unmarshaller} {@code Multiton}</li>
+ * <li>{@code javax.xml.validation.Validator} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getSchemas schemas}"
  * <blockquote>Property of type {@code org.jomc.sdk.model.SchemasType}.
  * <p>List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</p>
  * </blockquote></li>
- * <li>"{@link #getUnmarshallerProperties unmarshallerProperties}"
+ * <li>"{@link #getValidatorFeatures validatorFeatures}"
+ * <blockquote>Property of type {@code java.util.Map<String,Boolean>}.
+ * </blockquote></li>
+ * <li>"{@link #getValidatorProperties validatorProperties}"
  * <blockquote>Property of type {@code java.util.Map<String,Object>}.
  * </blockquote></li>
  * </ul></p>
  * <p><b>Dependencies</b><ul>
- * <li>"{@link #getAttachmentUnmarshaller attachmentUnmarshaller}"<blockquote>
- * Dependency on {@code javax.xml.bind.attachment.AttachmentUnmarshaller} bound to an instance.</blockquote></li>
- * <li>"{@link #getSchema schema}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
- * <li>"{@link #getValidationEventHandler validationEventHandler}"<blockquote>
- * Dependency on {@code javax.xml.bind.ValidationEventHandler} bound to an instance.</blockquote></li>
+ * <li>"{@link #getErrorHandler errorHandler}"<blockquote>
+ * Dependency on {@code org.xml.sax.ErrorHandler} bound to an instance.</blockquote></li>
+ * <li>"{@link #getResourceResolver resourceResolver}"<blockquote>
+ * Dependency on {@code org.w3c.dom.ls.LSResourceResolver} bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -79,49 +86,71 @@ import org.xml.sax.SAXException;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public final class JaxbUnmarshallerFactory
+public final class JaxpValidatorFactory
 {
-    // SECTION-START[Unmarshaller]
+    // SECTION-START[Validator]
     // SECTION-END
-    // SECTION-START[JaxbUnmarshallerFactory]
+    // SECTION-START[JaxpValidatorFactory]
 
-    public Unmarshaller getObject() throws JAXBException, SAXException
+    public Validator getObject() throws IOException, SAXException
     {
-        Unmarshaller unmarshaller = null;
-        final StringBuilder packageNames = new StringBuilder();
+        Validator validator = null;
+        final SchemaFactory schemaFactory = SchemaFactory.newInstance( this.getSchemas().getLanguageId() );
+        final SchemasType schemas = this.getSchemas();
+        final List<Source> sources = new ArrayList<Source>( schemas.getSchema().size() );
 
-        for ( SchemaType s : this.getSchemas().getSchema() )
+        for ( SchemaType s : schemas.getSchema() )
         {
-            if ( s.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE ) )
+            final StreamSource source = new StreamSource();
+            source.setPublicId( s.getPublicId() );
+            source.setSystemId( s.getSystemId() );
+
+            if ( s.getOtherAttributes().containsKey( XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE ) )
             {
-                packageNames.append( ':' ).append( s.getOtherAttributes().get( XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE ) );
+                String absoluteLocation = s.getOtherAttributes().get( XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE );
+                if ( !absoluteLocation.startsWith( "/" ) )
+                {
+                    absoluteLocation = '/' + absoluteLocation;
+                }
+
+                final URL resource = this.getClass().getResource( absoluteLocation );
+                if ( resource != null )
+                {
+                    source.setSystemId( resource.toExternalForm() );
+                    source.setInputStream( resource.openStream() );
+                }
+            }
+
+            sources.add( source );
+        }
+
+        if ( !sources.isEmpty() )
+        {
+            validator = schemaFactory.newSchema( sources.toArray( new Source[ sources.size() ] ) ).newValidator();
+            validator.setErrorHandler( this.getErrorHandler() );
+            validator.setResourceResolver( this.getResourceResolver() );
+
+            for ( Map.Entry<String, Boolean> e : this.getValidatorFeatures().entrySet() )
+            {
+                validator.setFeature( e.getKey(), e.getValue() );
+            }
+
+            for ( Map.Entry<String, Object> e : this.getValidatorProperties().entrySet() )
+            {
+                validator.setProperty( e.getKey(), e.getValue() );
             }
         }
 
-        if ( packageNames.length() > 0 )
-        {
-            unmarshaller = JAXBContext.newInstance( packageNames.substring( 1 ) ).createUnmarshaller();
-
-            for ( Map.Entry<String, Object> e : this.getUnmarshallerProperties().entrySet() )
-            {
-                unmarshaller.setProperty( e.getKey(), e.getValue() );
-            }
-
-            unmarshaller.setAttachmentUnmarshaller( this.getAttachmentUnmarshaller() );
-            unmarshaller.setEventHandler( this.getValidationEventHandler() );
-            unmarshaller.setSchema( this.getSchema() );
-        }
-
-        return unmarshaller;
+        return validator;
     }
 
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
-    /** Creates a new {@code JaxbUnmarshallerFactory} instance. */
+    /** Creates a new {@code JaxpValidatorFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    public JaxbUnmarshallerFactory()
+    public JaxpValidatorFactory()
     {
         // SECTION-START[Default Constructor]
         super();
@@ -133,45 +162,31 @@ public final class JaxbUnmarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
 
     /**
-     * Gets the {@code attachmentUnmarshaller} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.bind.attachment.AttachmentUnmarshaller} specification.</p>
+     * Gets the {@code errorHandler} dependency.
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code org.xml.sax.ErrorHandler} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code attachmentUnmarshaller} dependency.
+     * @return The {@code errorHandler} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    private javax.xml.bind.attachment.AttachmentUnmarshaller getAttachmentUnmarshaller()
+    private org.xml.sax.ErrorHandler getErrorHandler()
     {
-        return (javax.xml.bind.attachment.AttachmentUnmarshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "attachmentUnmarshaller" );
+        return (org.xml.sax.ErrorHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "errorHandler" );
     }
 
     /**
-     * Gets the {@code schema} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.validation.Schema} specification.</p>
+     * Gets the {@code resourceResolver} dependency.
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code org.w3c.dom.ls.LSResourceResolver} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code schema} dependency.
+     * @return The {@code resourceResolver} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    private javax.xml.validation.Schema getSchema()
+    private org.w3c.dom.ls.LSResourceResolver getResourceResolver()
     {
-        return (javax.xml.validation.Schema) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "schema" );
-    }
-
-    /**
-     * Gets the {@code validationEventHandler} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.bind.ValidationEventHandler} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code validationEventHandler} dependency.
-     * {@code null} if no object is available.
-     * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
-     */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    private javax.xml.bind.ValidationEventHandler getValidationEventHandler()
-    {
-        return (javax.xml.bind.ValidationEventHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "validationEventHandler" );
+        return (org.w3c.dom.ls.LSResourceResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "resourceResolver" );
     }
     // </editor-fold>
     // SECTION-END
@@ -192,15 +207,28 @@ public final class JaxbUnmarshallerFactory
     }
 
     /**
-     * Gets the value of the {@code unmarshallerProperties} property.
-     * @return The value of the {@code unmarshallerProperties} property.
+     * Gets the value of the {@code validatorFeatures} property.
+     * @return The value of the {@code validatorFeatures} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    private java.util.Map<String,Object> getUnmarshallerProperties()
+    private java.util.Map<String,Boolean> getValidatorFeatures()
     {
-        final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "unmarshallerProperties" );
-        assert _p != null : "'unmarshallerProperties' property not found.";
+        final java.util.Map<String,Boolean> _p = (java.util.Map<String,Boolean>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validatorFeatures" );
+        assert _p != null : "'validatorFeatures' property not found.";
+        return _p;
+    }
+
+    /**
+     * Gets the value of the {@code validatorProperties} property.
+     * @return The value of the {@code validatorProperties} property.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private java.util.Map<String,Object> getValidatorProperties()
+    {
+        final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validatorProperties" );
+        assert _p != null : "'validatorProperties' property not found.";
         return _p;
     }
     // </editor-fold>

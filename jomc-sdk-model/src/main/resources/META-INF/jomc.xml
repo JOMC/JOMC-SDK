@@ -43,7 +43,9 @@
   </documentation>
   <specifications>
     <!-- *********************************************************************************************************** -->
-    <specification identifier="XML Schema Set" vendor="${project.organization.name}" version="${xmlschemaset.specification.version}">
+    <specification identifier="XML Schema Set" vendor="${project.organization.name}"
+                   version="${xmlschemaset.specification.version}">
+
       <documentation defaultLanguage="en">
         <text language="en">Set of XML Schemas</text>
       </documentation>
@@ -63,7 +65,7 @@
   </specifications>
   <implementations>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.SdkModelProcessor"
+    <implementation identifier="${project.name} Processor"
                     class="org.jomc.sdk.model.support.SdkModelProcessor"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
@@ -78,7 +80,7 @@
       </authors>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.SdkModelValidator"
+    <implementation identifier="${project.name} Validator"
                     class="org.jomc.sdk.model.support.SdkModelValidator"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
@@ -114,7 +116,41 @@
       </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.JaxbContextFactory"
+    <implementation identifier="JAXB Binder Factory"
+                    class="org.jomc.sdk.model.support.JaxbBinderFactory"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">XML Schema Set 'Binder' factory implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="javax.xml.bind.Binder"/>
+      </specifications>
+      <implementations>
+        <reference identifier="Default XML Schema Set" version="${project.version}"/>
+      </implementations>
+      <dependencies>
+        <dependency name="schema" identifier="javax.xml.validation.Schema"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="validationEventHandler" identifier="javax.xml.bind.ValidationEventHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
+      <properties>
+        <property name="binderProperties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+      </properties>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="JAXB Context Factory"
                     class="org.jomc.sdk.model.support.JaxbContextFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
@@ -135,7 +171,28 @@
       </implementations>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.JaxbMarshallerFactory"
+    <implementation identifier="JAXB Introspector Factory"
+                    class="org.jomc.sdk.model.support.JaxbIntrospectorFactory"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">XML Schema Set 'JAXBIntrospector' factory implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="javax.xml.bind.JAXBIntrospector"/>
+      </specifications>
+      <implementations>
+        <reference identifier="Default XML Schema Set" version="${project.version}"/>
+      </implementations>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="JAXB Marshaller Factory"
                     class="org.jomc.sdk.model.support.JaxbMarshallerFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
@@ -154,18 +211,29 @@
       <implementations>
         <reference identifier="Default XML Schema Set" version="${project.version}"/>
       </implementations>
+      <dependencies>
+        <dependency name="validationEventHandler" identifier="javax.xml.bind.ValidationEventHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="attachmentMarshaller" identifier="javax.xml.bind.attachment.AttachmentMarshaller"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="schema" identifier="javax.xml.validation.Schema"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
       <properties>
         <property name="jaxbEncoding" value="UTF-8">
           <documentation defaultLanguage="en">
             <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.</text>
           </documentation>
         </property>
-        <property name="jaxbFormattedOutput" type="boolean" value="false">
+        <property name="jaxbFormattedOutput" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
             <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.</text>
           </documentation>
         </property>
-        <property name="jaxbFragment" type="boolean" value="true">
+        <property name="jaxbFragment" type="java.lang.Boolean" value="true">
           <documentation defaultLanguage="en">
             <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.</text>
           </documentation>
@@ -180,15 +248,13 @@
             <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.</text>
           </documentation>
         </property>
-        <property name="jaxpSchemaValidation" type="boolean" value="false">
-          <documentation defaultLanguage="en">
-            <text language="en">See {@link javax.xml.bind.Marshaller#setSchema(javax.xml.validation.Schema)}.</text>
-          </documentation>
+        <property name="marshallerProperties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.JaxbUnmarshallerFactory"
+    <implementation identifier="JAXB Unmarshaller Factory"
                     class="org.jomc.sdk.model.support.JaxbUnmarshallerFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
@@ -207,17 +273,25 @@
       <implementations>
         <reference identifier="Default XML Schema Set" version="${project.version}"/>
       </implementations>
+      <dependencies>
+        <dependency name="validationEventHandler" identifier="javax.xml.bind.ValidationEventHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="attachmentUnmarshaller" identifier="javax.xml.bind.attachment.AttachmentUnmarshaller"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="schema" identifier="javax.xml.validation.Schema"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
       <properties>
-        <property name="jaxpSchemaValidation" type="boolean" value="false">
-          <documentation defaultLanguage="en">
-            <text language="en">See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.</text>
-          </documentation>
+        <property name="unmarshallerProperties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.JaxpSchemaFactory"
-                    class="org.jomc.sdk.model.support.JaxpSchemaFactory"
+    <implementation identifier="JAXP Schema Factory" class="org.jomc.sdk.model.support.JaxpSchemaFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
 
@@ -235,11 +309,103 @@
       <implementations>
         <reference identifier="Default XML Schema Set" version="${project.version}"/>
       </implementations>
+      <dependencies>
+        <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
+      <properties>
+        <property name="schemaFeatures" type="java.util.Map&lt;String,Boolean&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+        <property name="schemaProperties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+      </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.JaxpEntityResolverFactory"
+    <implementation identifier="JAXP Validator Factory"
+                    class="org.jomc.sdk.model.support.JaxpValidatorFactory"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">XML Schema Set JAXP 'Validator' factory implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="javax.xml.validation.Validator"/>
+      </specifications>
+      <implementations>
+        <reference identifier="Default XML Schema Set" version="${project.version}"/>
+      </implementations>
+      <dependencies>
+        <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
+      <properties>
+        <property name="validatorFeatures" type="java.util.Map&lt;String,Boolean&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+        <property name="validatorProperties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+      </properties>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="JAXP Validator Handler Factory"
+                    class="org.jomc.sdk.model.support.JaxpValidatorHandlerFactory"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">XML Schema Set JAXP 'ValidatorHandler' factory implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="org.xml.sax.ContentHandler"/>
+        <reference identifier="javax.xml.validation.ValidatorHandler"/>
+      </specifications>
+      <implementations>
+        <reference identifier="Default XML Schema Set" version="${project.version}"/>
+      </implementations>
+      <dependencies>
+        <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
+      <properties>
+        <property name="validatorHandlerFeatures" type="java.util.Map&lt;String,Boolean&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+        <property name="validatorHandlerProperties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+      </properties>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="JAXP Entity Resolver Factory"
                     class="org.jomc.sdk.model.support.JaxpEntityResolverFactory" classDeclaration="true"
-                    name="${project.name}" version="${project.version}" vendor="${project.organization.name}" stateless="true">
+                    name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
+                    stateless="true">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXP 'EntityResolver' factory implementation.</text>
@@ -257,9 +423,11 @@
       </implementations>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="org.jomc.sdk.model.support.JaxpResourceResolverFactory"
+    <implementation identifier="JAXP Resource Resolver Factory"
                     class="org.jomc.sdk.model.support.JaxpResourceResolverFactory" classDeclaration="true"
-                    name="${project.name}" version="${project.version}" vendor="${project.organization.name}" stateless="true">
+                    name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
+                    stateless="true">
+
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXP 'LSResourceResolver' factory implementation.</text>
       </documentation>
@@ -274,6 +442,182 @@
       <implementations>
         <reference identifier="Default XML Schema Set" version="${project.version}"/>
       </implementations>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="JAXP Document Builder Factory"
+                    class="org.jomc.sdk.model.support.JaxpDocumentBuilderFactory" classDeclaration="true"
+                    name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
+                    stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">JAXP 'DocumentBuilder' factory implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="javax.xml.parsers.DocumentBuilder"/>
+      </specifications>
+      <dependencies>
+        <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="entityResolver" identifier="org.xml.sax.EntityResolver"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="schema" identifier="javax.xml.validation.Schema"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
+      <properties>
+        <property name="coalescing" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which convert CDATA nodes to Text nodes and append them to the adjacent (if any) Text node; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="expandingEntityReferences" type="java.lang.Boolean" value="true">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which expand entity reference nodes; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="ignoringComments" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which ignores comments; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="ignoringElementContentWhitespace" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which ignore ignorable whitespace in element content; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="namespaceAware" type="java.lang.Boolean" value="true">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="validating" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="XIncludeAware" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="features" type="java.util.Map&lt;String,Boolean&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+        <property name="attributes" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+      </properties>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="JAXP SAX Parser Factory"
+                    class="org.jomc.sdk.model.support.JaxpSaxParserFactory" classDeclaration="true"
+                    name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
+                    stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">JAXP 'SAXParser' factory implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="javax.xml.parsers.SAXParser"/>
+      </specifications>
+      <dependencies>
+        <dependency name="schema" identifier="javax.xml.validation.Schema"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
+      <properties>
+        <property name="namespaceAware" type="java.lang.Boolean" value="true">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="validating" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="XIncludeAware" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="features" type="java.util.Map&lt;String,Boolean&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+        <property name="properties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+      </properties>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
+    <implementation identifier="JAXP SAX XML Reader Factory"
+                    class="org.jomc.sdk.model.support.JaxpSaxXmlReaderFactory" classDeclaration="true"
+                    name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
+                    stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">JAXP 'SAXParser' factory implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+      <specifications>
+        <reference identifier="org.xml.sax.XMLReader"/>
+      </specifications>
+      <dependencies>
+        <dependency name="contentHandler" identifier="org.xml.sax.ContentHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="dtdHandler" identifier="org.xml.sax.DTDHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="entityResolver" identifier="org.xml.sax.EntityResolver"
+                    implementationName="${project.name} Default" optional="true"/>
+
+        <dependency name="schema" identifier="javax.xml.validation.Schema"
+                    implementationName="${project.name} Default" optional="true"/>
+
+      </dependencies>
+      <properties>
+        <property name="namespaceAware" type="java.lang.Boolean" value="true">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="validating" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="XIncludeAware" type="java.lang.Boolean" value="false">
+          <documentation defaultLanguage="en">
+            <text language="en">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
+          </documentation>
+        </property>
+        <property name="features" type="java.util.Map&lt;String,Boolean&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+        <property name="properties" type="java.util.Map&lt;String,Object&gt;">
+          <map xmlns="http://jomc.org/sdk/model"/>
+        </property>
+      </properties>
     </implementation>
   </implementations>
 </module>

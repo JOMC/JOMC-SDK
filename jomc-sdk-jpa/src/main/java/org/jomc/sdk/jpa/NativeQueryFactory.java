@@ -43,18 +43,18 @@ import javax.persistence.Query;
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * Factory providing a named JPA query instance.
+ * Factory providing a native JPA query instance.
  * <p><b>Specifications</b><ul>
  * <li>{@code javax.persistence.Query} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
+ * <li>"{@link #getNativeQuery nativeQuery}"
+ * <blockquote>Property of type {@code java.lang.String}.
+ * <p>Native query to provide.</p>
+ * </blockquote></li>
  * <li>"{@link #getParameterMap parameterMap}"
  * <blockquote>Property of type {@code java.util.Map<String,Object>}.
  * <p>Map of parameters to set on the query.</p>
- * </blockquote></li>
- * <li>"{@link #getQueryName queryName}"
- * <blockquote>Property of type {@code java.lang.String}.
- * <p>Name of the query to provide.</p>
  * </blockquote></li>
  * </ul></p>
  * <p><b>Dependencies</b><ul>
@@ -72,11 +72,11 @@ import javax.persistence.Query;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public class NamedQueryFactory
+public class NativeQueryFactory
 {
     // SECTION-START[Query]
     // SECTION-END
-    // SECTION-START[NamedQueryFactory]
+    // SECTION-START[NativeQueryFactory]
 
     public Query getObject()
     {
@@ -84,7 +84,7 @@ public class NamedQueryFactory
 
         if ( em != null )
         {
-            final Query q = em.createNamedQuery( this.getQueryName() );
+            final Query q = em.createNativeQuery( this.getNativeQuery() );
 
             for ( Map.Entry<String, Object> e : this.getParameterMap().entrySet() )
             {
@@ -101,9 +101,9 @@ public class NamedQueryFactory
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
-    /** Creates a new {@code NamedQueryFactory} instance. */
+    /** Creates a new {@code NativeQueryFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    public NamedQueryFactory()
+    public NativeQueryFactory()
     {
         // SECTION-START[Default Constructor]
         super();
@@ -133,6 +133,19 @@ public class NamedQueryFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
+     * Gets the value of the {@code nativeQuery} property.
+     * @return Native query to provide.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    private java.lang.String getNativeQuery()
+    {
+        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "nativeQuery" );
+        assert _p != null : "'nativeQuery' property not found.";
+        return _p;
+    }
+
+    /**
      * Gets the value of the {@code parameterMap} property.
      * @return Map of parameters to set on the query.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
@@ -142,19 +155,6 @@ public class NamedQueryFactory
     {
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "parameterMap" );
         assert _p != null : "'parameterMap' property not found.";
-        return _p;
-    }
-
-    /**
-     * Gets the value of the {@code queryName} property.
-     * @return Name of the query to provide.
-     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
-     */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
-    private java.lang.String getQueryName()
-    {
-        final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "queryName" );
-        assert _p != null : "'queryName' property not found.";
         return _p;
     }
     // </editor-fold>
