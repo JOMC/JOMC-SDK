@@ -32,11 +32,19 @@
   $Id$
 
 -->
-<services xmlns="http://jomc.org/model/bootstrap"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://jomc.org/model/bootstrap http://jomc.sourceforge.net/model/bootstrap/jomc-bootstrap-1.0.xsd">
+<modlet xmlns="http://jomc.org/model/modlet"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://jomc.org/model/modlet http://jomc.sourceforge.net/model/modlet/jomc-modlet-1.0.xsd"
+        identifier="${project.name}" model="http://jomc.org/model" name="${project.name}"
+        vendor="${project.organization.name}" version="${project.version}">
 
-  <service ordinal="2000" identifier="org.jomc.model.ModelProcessor" class="org.jomc.sdk.model.support.SdkModelProcessor"/>
-  <service ordinal="2000" identifier="org.jomc.model.ModelValidator" class="org.jomc.sdk.model.support.SdkModelValidator"/>
+  <schemas>
+    <schema public-id="http://jomc.org/sdk/model" system-id="http://jomc.sourceforge.net/sdk/model/jomc-sdk-1.0.xsd"
+            context-id="org.jomc.sdk.model" classpath-id="org/jomc/sdk/model/jomc-sdk-1.0.xsd"/>
 
-</services>
+  </schemas>
+  <services>
+    <service ordinal="2000" identifier="org.jomc.model.ModelProcessor" class="org.jomc.sdk.model.support.SdkModelProcessor"/>
+    <service ordinal="2000" identifier="org.jomc.model.ModelValidator" class="org.jomc.sdk.model.support.SdkModelValidator"/>
+  </services>
+</modlet>
