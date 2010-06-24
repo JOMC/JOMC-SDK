@@ -64,7 +64,8 @@ import org.jomc.model.Modules;
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments =
+"See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public final class SdkModelProcessor implements ModelProcessor
@@ -150,10 +151,10 @@ public final class SdkModelProcessor implements ModelProcessor
     private void substituteSystemProperties( final Properties properties )
     {
         final String startingMarker =
-            System.getProperty( "org.jomc.sdk.model.support.SdkModelProcessor.systemPropertyStartingMarker", "@@" );
+            System.getProperty( "org.jomc.sdk.model.modlet.SdkModelProcessor.systemPropertyStartingMarker", "@@" );
 
         final String endingMarker =
-            System.getProperty( "org.jomc.sdk.model.support.SdkModelProcessor.systemPropertyEndingMarker", "@@" );
+            System.getProperty( "org.jomc.sdk.model.modlet.SdkModelProcessor.systemPropertyEndingMarker", "@@" );
 
         if ( properties != null )
         {
@@ -223,9 +224,9 @@ public final class SdkModelProcessor implements ModelProcessor
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code SdkModelProcessor} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments =
+    "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
     public SdkModelProcessor()
     {
         // SECTION-START[Default Constructor]
