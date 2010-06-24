@@ -93,7 +93,7 @@ import org.xml.sax.XMLReader;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public class JaxpSaxXmlReaderFactory
+public final class JaxpSaxXmlReaderFactory
 {
     // SECTION-START[XMLReader]
     // SECTION-END

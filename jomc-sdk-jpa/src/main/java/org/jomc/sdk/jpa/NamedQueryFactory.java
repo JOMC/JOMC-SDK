@@ -72,7 +72,7 @@ import javax.persistence.Query;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public class NamedQueryFactory
+public final class NamedQueryFactory
 {
     // SECTION-START[Query]
     // SECTION-END

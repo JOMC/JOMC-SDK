@@ -36,6 +36,7 @@
 // SECTION-END
 package org.jomc.sdk.model.support;
 
+import org.w3c.dom.ls.LSResourceResolver;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
@@ -69,9 +70,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public final class JaxpResourceResolverFactory
-    implements
-    org.w3c.dom.ls.LSResourceResolver
+public final class JaxpResourceResolverFactory implements LSResourceResolver
 {
     // SECTION-START[LSResourceResolver]
 
