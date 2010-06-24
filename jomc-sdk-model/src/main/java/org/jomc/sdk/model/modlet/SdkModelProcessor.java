@@ -34,28 +34,23 @@
  */
 // </editor-fold>
 // SECTION-END
-package org.jomc.sdk.model.support;
+package org.jomc.sdk.model.modlet;
 
+import org.jomc.modlet.Model;
+import org.jomc.modlet.ModelContext;
+import org.jomc.modlet.ModelException;
+import org.jomc.modlet.ModelProcessor;
 import org.jomc.model.Specification;
 import org.jomc.model.Properties;
 import org.jomc.model.Property;
 import java.text.MessageFormat;
-import java.util.List;
-import java.util.Locale;
 import java.util.ResourceBundle;
-import javax.xml.namespace.QName;
-import org.jomc.model.Dependencies;
+import java.util.logging.Level;
+import javax.xml.bind.JAXBElement;
 import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
-import org.jomc.model.ImplementationReference;
-import org.jomc.model.Implementations;
-import org.jomc.model.ModelContext;
-import org.jomc.model.ModelException;
 import org.jomc.model.Module;
 import org.jomc.model.Modules;
-import org.jomc.model.Text;
-import org.jomc.model.Texts;
-import static javax.xml.XMLConstants.NULL_NS_URI;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
@@ -72,123 +67,39 @@ import static javax.xml.XMLConstants.NULL_NS_URI;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
 // </editor-fold>
 // SECTION-END
-public final class SdkModelProcessor implements org.jomc.model.ModelProcessor
+public final class SdkModelProcessor implements ModelProcessor
 {
     // SECTION-START[SdkModelProcessor]
 
-    /** {@code QName} of the {@code java-context-id} attribute of {@code schema} elements. */
-    public static final QName XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-context-id" );
-
-    /** {@code QName} of the {@code java-classpath-id} attribute of {@code schema} elements. */
-    public static final QName XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-classpath-id" );
-
-    /** Identifier of the {@code XML Schema Set} specification. */
-    private static final String XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER = "XML Schema Set";
-
-    public Modules processModules( final ModelContext context, final Modules modules ) throws ModelException
+    public Model processModel( final ModelContext context, final Model model ) throws ModelException
     {
         if ( context == null )
         {
             throw new NullPointerException( "context" );
         }
+        if ( model == null )
+        {
+            throw new NullPointerException( "model" );
+        }
+
+        JAXBElement<Modules> modules = model.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
+
         if ( modules == null )
         {
-            throw new NullPointerException( "modules" );
+            throw new ModelException( getMessage( "modulesNotFound", model.getIdentifier() ) );
         }
 
-        final Modules processedModules = new Modules( modules );
-        final Implementations schemaSets = modules.getImplementations( XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER );
-
-        if ( schemaSets != null )
+        if ( context.isLoggable( Level.FINE ) )
         {
-            for ( Implementation schemaSet : schemaSets.getImplementation() )
-            {
-                processedModules.getModule().add( this.createSchemaSetModule( processedModules, schemaSet ) );
-            }
+            context.log( Level.FINE, getMessage( "processingModel", this.getClass().getName(), model.getIdentifier() ),
+                         null );
+
         }
 
-        this.substituteSystemProperties( processedModules );
-        return processedModules;
-    }
-
-    private Module createSchemaSetModule( final Modules modules, final Implementation schemaSet )
-    {
-        final Module m = new Module();
-        m.setName( getMessage( "schemaSetModuleName", schemaSet.getIdentifier() ) );
-        m.setVendor( schemaSet.getVendor() );
-        m.setVersion( schemaSet.getVersion() );
-        m.setDocumentation( getTexts( "modelProcessorInfo" ) );
-        m.setImplementations( new Implementations() );
-        m.getImplementations().setDocumentation( getTexts( "modelProcessorInfo" ) );
-
-        final List<Implementation> impls = m.getImplementations().getImplementation();
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbContextFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbBinderFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbIntrospectorFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbMarshallerFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbUnmarshallerFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpSchemaFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpValidatorFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpValidatorHandlerFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpEntityResolverFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpResourceResolverFactory.class ) );
-        return m;
-    }
-
-    private Implementation createJavaSchemaSetImplementation(
-        final Modules modules, final Implementation schemaSet, final Class factoryClazz )
-    {
-        final Implementation i = new Implementation();
-        i.setIdentifier( getMessage( "schemaSetImplementationIdenifier", schemaSet.getIdentifier(),
-                                     factoryClazz.getSimpleName() ) );
-
-        i.setName( schemaSet.getName() );
-        i.setDocumentation( getTexts( "modelProcessorInfo" ) );
-        i.setClazz( factoryClazz.getName() );
-        i.setFinal( true );
-        i.setStateless( true );
-        i.setVendor( schemaSet.getVendor() );
-        i.setVersion( schemaSet.getVersion() );
-        i.setProperties( schemaSet.getProperties() );
-        i.setDependencies( schemaSet.getDependencies() );
-        i.setMessages( schemaSet.getMessages() );
-
-        final Implementation factoryDeclaration = modules.getImplementation( factoryClazz );
-
-        if ( factoryDeclaration != null )
-        {
-            final Implementations implementationReferences = new Implementations();
-            final ImplementationReference implementationReference = new ImplementationReference();
-            i.setImplementations( implementationReferences );
-            implementationReferences.getReference().add( implementationReference );
-            implementationReference.setIdentifier( factoryDeclaration.getIdentifier() );
-            implementationReference.setVersion( factoryDeclaration.getVersion() );
-
-            final Dependencies dependencyDeclarations = modules.getDependencies( factoryDeclaration.getIdentifier() );
-            if ( dependencyDeclarations != null )
-            {
-                for ( Dependency dependencyDeclaration : dependencyDeclarations.getDependency() )
-                {
-                    if ( dependencyDeclaration.getImplementationName() != null
-                         && dependencyDeclaration.getImplementationName().equals( factoryDeclaration.getName() )
-                         && !dependencyDeclaration.isFinal() )
-                    {
-                        if ( i.getDependencies() == null )
-                        {
-                            i.setDependencies( new Dependencies() );
-                        }
-
-                        final Dependency d = new Dependency( dependencyDeclaration );
-                        d.setImplementationName( i.getName() );
-                        d.setFinal( true );
-                        d.setOverride( true );
-                        i.getDependencies().getDependency().add( d );
-                    }
-                }
-            }
-        }
-
-        return i;
+        final Model copy = new Model( model );
+        modules = copy.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
+        this.substituteSystemProperties( modules.getValue() );
+        return copy;
     }
 
     private void substituteSystemProperties( final Modules modules )
@@ -300,17 +211,6 @@ public final class SdkModelProcessor implements org.jomc.model.ModelProcessor
                 }
             }
         }
-    }
-
-    private static Texts getTexts( final String key, final Object... arguments )
-    {
-        final Texts texts = new Texts();
-        final Text text = new Text();
-        texts.getText().add( text );
-        texts.setDefaultLanguage( Locale.getDefault().getLanguage() );
-        text.setLanguage( texts.getDefaultLanguage() );
-        text.setValue( getMessage( key, arguments ) );
-        return texts;
     }
 
     private static String getMessage( final String key, final Object... arguments )

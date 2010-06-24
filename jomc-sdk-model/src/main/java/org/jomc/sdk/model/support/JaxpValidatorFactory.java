@@ -48,7 +48,7 @@ import javax.xml.validation.Validator;
 import org.jomc.sdk.model.SchemaType;
 import org.jomc.sdk.model.SchemasType;
 import org.xml.sax.SAXException;
-import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE;
+import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">

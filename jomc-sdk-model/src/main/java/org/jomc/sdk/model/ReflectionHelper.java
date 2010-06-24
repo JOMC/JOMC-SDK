@@ -36,6 +36,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import org.jomc.model.PropertyException;
 
 /**
  * Provides package private static helper methods for accessing objects using reflection.
@@ -53,7 +54,7 @@ abstract class ReflectionHelper
         super();
     }
 
-    static java.lang.Object getJavaValue( final ClassLoader classLoader, final Object o ) throws ModelException
+    static java.lang.Object getJavaValue( final ClassLoader classLoader, final Object o ) throws PropertyException
     {
         if ( o != null )
         {
@@ -63,7 +64,7 @@ abstract class ReflectionHelper
             }
             catch ( final IllegalAccessException e )
             {
-                throw new ModelException( getMessage(
+                throw new PropertyException( getMessage(
                     "methodAccessDenied", GET_JAVA_VALUE, o.getClass().getName() ), e );
 
             }
@@ -73,13 +74,13 @@ abstract class ReflectionHelper
             }
             catch ( final InvocationTargetException e )
             {
-                throw new ModelException( getMessage(
+                throw new PropertyException( getMessage(
                     "methodInvocationFailure", GET_JAVA_VALUE, o.getClass().getName() ), e );
 
             }
             catch ( final SecurityException e )
             {
-                throw new ModelException( getMessage(
+                throw new PropertyException( getMessage(
                     "methodAccessDenied", GET_JAVA_VALUE, o.getClass().getName() ), e );
 
             }
@@ -94,13 +95,13 @@ abstract class ReflectionHelper
     }
 
     static <T> T getJavaValue( final ClassLoader classLoader, final Object o, final Class<T> returnType )
-        throws ModelException
+        throws PropertyException
     {
         final Object javaValue = getJavaValue( classLoader, o );
 
         if ( javaValue != null && !returnType.isAssignableFrom( javaValue.getClass() ) )
         {
-            throw new ModelException( getMessage(
+            throw new PropertyException( getMessage(
                 "illegalMethodInvocationResult", GET_JAVA_VALUE, o.getClass().getName(), javaValue.getClass().getName(),
                 returnType.getName() ) );
 
@@ -109,7 +110,7 @@ abstract class ReflectionHelper
         return (T) javaValue;
     }
 
-    static <T> T getJavaValue( final Class<T> type, final String value ) throws ModelException
+    static <T> T getJavaValue( final Class<T> type, final String value ) throws PropertyException
     {
         if ( value != null )
         {
@@ -119,7 +120,7 @@ abstract class ReflectionHelper
                 {
                     if ( value.length() != 1 )
                     {
-                        throw new ModelException( getMessage( "illegalValue", value, Character.class.getName() ) );
+                        throw new PropertyException( getMessage( "illegalValue", value, Character.class.getName() ) );
                     }
 
                     return type.getConstructor( new Class[]
@@ -146,11 +147,11 @@ abstract class ReflectionHelper
             }
             catch ( final InstantiationException e )
             {
-                throw new ModelException( getMessage( "instantiationException", type.getName() ), e );
+                throw new PropertyException( getMessage( "instantiationException", type.getName() ), e );
             }
             catch ( final IllegalAccessException e )
             {
-                throw new ModelException( getMessage( "constructorAccessDenied", type.getName() ), e );
+                throw new PropertyException( getMessage( "constructorAccessDenied", type.getName() ), e );
             }
             catch ( final IllegalArgumentException e )
             {
@@ -158,11 +159,11 @@ abstract class ReflectionHelper
             }
             catch ( final InvocationTargetException e )
             {
-                throw new ModelException( getMessage( "constructorInvocationFailure", type.getName() ), e );
+                throw new PropertyException( getMessage( "constructorInvocationFailure", type.getName() ), e );
             }
             catch ( final NoSuchMethodException e )
             {
-                throw new ModelException( getMessage( "constructorNotFound", type.getName() ), e );
+                throw new PropertyException( getMessage( "constructorNotFound", type.getName() ), e );
             }
         }
 

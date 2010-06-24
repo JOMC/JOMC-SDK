@@ -113,32 +113,9 @@
               </resources>
             </configuration>
           </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-schemas</id>
-            <phase>process-resources</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <classesDirectory>${project.build.directory}/schemas</classesDirectory>
-              <classifier>schemas</classifier>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <executions>
           <execution>
             <id>copy-modlet</id>
-            <phase>process-test-resources</phase>
+            <phase>compile</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
@@ -159,9 +136,31 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-schemas</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classesDirectory>${project.build.directory}/schemas</classesDirectory>
+              <classifier>schemas</classifier>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
+    <dependency>
+      <groupId>org.jomc</groupId>
+      <artifactId>jomc-modlet</artifactId>
+      <scope>compile</scope>
+    </dependency>
     <dependency>
       <groupId>org.jomc</groupId>
       <artifactId>jomc-model</artifactId>

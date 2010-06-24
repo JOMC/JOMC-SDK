@@ -34,7 +34,7 @@
  */
 // </editor-fold>
 // SECTION-END
-package org.jomc.sdk.model.support;
+package org.jomc.sdk.model.modlet;
 
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
@@ -42,16 +42,18 @@ import java.util.logging.Level;
 import javax.xml.bind.JAXBElement;
 import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
-import org.jomc.model.ModelContext;
-import org.jomc.model.ModelException;
-import org.jomc.model.ModelValidationReport;
-import org.jomc.model.ModelValidator;
 import org.jomc.model.Module;
 import org.jomc.model.Modules;
 import org.jomc.model.ObjectFactory;
 import org.jomc.model.Properties;
 import org.jomc.model.Property;
+import org.jomc.model.PropertyException;
 import org.jomc.model.Specification;
+import org.jomc.modlet.Model;
+import org.jomc.modlet.ModelContext;
+import org.jomc.modlet.ModelException;
+import org.jomc.modlet.ModelValidationReport;
+import org.jomc.modlet.ModelValidator;
 import org.jomc.sdk.model.ItemType;
 import org.jomc.sdk.model.ListType;
 import org.jomc.sdk.model.MapType;
@@ -75,14 +77,36 @@ public final class SdkModelValidator implements ModelValidator
 {
     // SECTION-START[SdkModelValidator]
 
-    public ModelValidationReport validateModel( final ModelContext context, final Modules modules )
-        throws ModelException
+    public ModelValidationReport validateModel( final ModelContext context, final Model model ) throws ModelException
     {
+        if ( context == null )
+        {
+            throw new NullPointerException( "context" );
+        }
+        if ( model == null )
+        {
+            throw new NullPointerException( "model" );
+        }
+
+        JAXBElement<Modules> modules = model.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
+
+        if ( modules == null )
+        {
+            throw new ModelException( getMessage( "modulesNotFound", model.getIdentifier() ) );
+        }
+
+        if ( context.isLoggable( Level.FINE ) )
+        {
+            context.log( Level.FINE, getMessage( "validatingModel", this.getClass().getName(), model.getIdentifier() ),
+                         null );
+
+        }
+
         final ModelValidationReport report = new ModelValidationReport();
 
         if ( modules != null )
         {
-            for ( Module m : modules.getModule() )
+            for ( Module m : modules.getValue().getModule() )
             {
                 this.assertValidSdkObjects( context, m, null, null, null, report );
 
@@ -258,7 +282,7 @@ public final class SdkModelValidator implements ModelValidator
                             {
                                 item.getJavaValue( context.getClassLoader() );
                             }
-                            catch ( final org.jomc.sdk.model.ModelException e )
+                            catch ( final PropertyException e )
                             {
                                 if ( module != null )
                                 {
@@ -304,7 +328,7 @@ public final class SdkModelValidator implements ModelValidator
                         {
                             list.getJavaValue( context.getClassLoader() );
                         }
-                        catch ( final org.jomc.sdk.model.ModelException e )
+                        catch ( final PropertyException e )
                         {
                             if ( module != null )
                             {
@@ -521,7 +545,7 @@ public final class SdkModelValidator implements ModelValidator
                             {
                                 entry.getKey().getJavaValue( context.getClassLoader() );
                             }
-                            catch ( final org.jomc.sdk.model.ModelException e )
+                            catch ( final PropertyException e )
                             {
                                 if ( module != null )
                                 {
@@ -567,7 +591,7 @@ public final class SdkModelValidator implements ModelValidator
                             {
                                 entry.getValue().getJavaValue( context.getClassLoader() );
                             }
-                            catch ( final org.jomc.sdk.model.ModelException e )
+                            catch ( final PropertyException e )
                             {
                                 if ( module != null )
                                 {
@@ -615,7 +639,7 @@ public final class SdkModelValidator implements ModelValidator
                         {
                             map.getJavaValue( context.getClassLoader() );
                         }
-                        catch ( final org.jomc.sdk.model.ModelException e )
+                        catch ( final PropertyException e )
                         {
                             if ( module != null )
                             {

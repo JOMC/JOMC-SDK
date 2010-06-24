@@ -51,9 +51,9 @@
      *
      * @return The Java value of this type.
      *
-     * @throws ModelException if getting the Java value fails.
+     * @throws org.jomc.model.PropertyException if getting the Java value fails.
      */
-    public java.util.List getJavaValue( final ClassLoader classLoader ) throws ModelException
+    public java.util.List getJavaValue( final ClassLoader classLoader ) throws org.jomc.model.PropertyException
     {
         final java.util.List javaValue = new java.util.ArrayList( this.getItem().size() );
 
@@ -90,9 +90,9 @@
      *
      * @return The Java value of this type.
      *
-     * @throws ModelException if getting the Java value fails.
+     * @throws org.jomc.model.PropertyException if getting the Java value fails.
      */
-    public java.util.Map getJavaValue( final ClassLoader classLoader ) throws ModelException
+    public java.util.Map getJavaValue( final ClassLoader classLoader ) throws org.jomc.model.PropertyException
     {
         final java.util.Map javaValue = new java.util.HashMap( this.getEntry().size() );
 
@@ -155,9 +155,9 @@
      *
      * @return The Java value of the item or {@code null}.
      *
-     * @throws ModelException if getting the Java value of the item fails.
+     * @throws org.jomc.model.PropertyException if getting the Java value of the item fails.
      */
-    public Object getJavaValue( final ClassLoader classLoader ) throws ModelException
+    public Object getJavaValue( final ClassLoader classLoader ) throws org.jomc.model.PropertyException
     {
         try
         {
@@ -165,7 +165,7 @@
             {
                 if ( this.getType() == null )
                 {
-                    throw new ModelException( getMessage( "objectWithoutType" ) );
+                    throw new org.jomc.model.PropertyException( getMessage( "objectWithoutType" ) );
                 }
 
                 String typeName = this.getType();
@@ -242,14 +242,14 @@
 
             if ( this.getValue() == null && primitive )
             {
-                throw new ModelException( getMessage( "objectWithoutValue", this.getType() ) );
+                throw new org.jomc.model.PropertyException( getMessage( "objectWithoutValue", this.getType() ) );
             }
 
             return ReflectionHelper.getJavaValue( javaType, this.getValue() );
         }
         catch ( final ClassNotFoundException e )
         {
-            throw new ModelException( getMessage( "classNotFound", this.getType() ), e );
+            throw new org.jomc.model.PropertyException( getMessage( "classNotFound", this.getType() ), e );
         }
     }
 

@@ -40,7 +40,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.JAXBIntrospector;
 import org.jomc.sdk.model.SchemaType;
-import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE;
+import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">

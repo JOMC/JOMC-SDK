@@ -65,8 +65,23 @@
   </specifications>
   <implementations>
     <!-- *********************************************************************************************************** -->
+    <implementation identifier="${project.name} Provider"
+                    class="org.jomc.sdk.model.modlet.SdkModelProvider"
+                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true">
+
+      <documentation defaultLanguage="en">
+        <text language="en">SDK 'ModelProvider' implementation.</text>
+      </documentation>
+      <authors>
+        <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
+                createDate="2005-07-25T19:56:45Z"/>
+
+      </authors>
+    </implementation>
+    <!-- *********************************************************************************************************** -->
     <implementation identifier="${project.name} Processor"
-                    class="org.jomc.sdk.model.support.SdkModelProcessor"
+                    class="org.jomc.sdk.model.modlet.SdkModelProcessor"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
 
@@ -81,7 +96,7 @@
     </implementation>
     <!-- *********************************************************************************************************** -->
     <implementation identifier="${project.name} Validator"
-                    class="org.jomc.sdk.model.support.SdkModelValidator"
+                    class="org.jomc.sdk.model.modlet.SdkModelValidator"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true">
 

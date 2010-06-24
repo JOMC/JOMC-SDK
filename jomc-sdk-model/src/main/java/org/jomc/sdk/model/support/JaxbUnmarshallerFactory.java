@@ -41,7 +41,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import org.jomc.sdk.model.SchemaType;
-import static org.jomc.sdk.model.support.SdkModelProcessor.XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE;
+import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT_ID_ATTRIBUTE;
 import org.xml.sax.SAXException;
 
 // SECTION-START[Documentation]
