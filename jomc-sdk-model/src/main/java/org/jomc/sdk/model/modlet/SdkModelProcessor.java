@@ -39,15 +39,14 @@ package org.jomc.sdk.model.modlet;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
-import javax.xml.bind.JAXBElement;
 import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
-import org.jomc.model.ModelObject;
 import org.jomc.model.Module;
 import org.jomc.model.Modules;
 import org.jomc.model.Properties;
 import org.jomc.model.Property;
 import org.jomc.model.Specification;
+import org.jomc.model.modlet.ModelHelper;
 import org.jomc.modlet.Model;
 import org.jomc.modlet.ModelContext;
 import org.jomc.modlet.ModelException;
@@ -84,7 +83,7 @@ public final class SdkModelProcessor implements ModelProcessor
         }
 
         Model processed = null;
-        JAXBElement<Modules> modules = model.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
+        Modules modules = ModelHelper.getModules( model );
 
         if ( modules != null )
         {
@@ -96,8 +95,8 @@ public final class SdkModelProcessor implements ModelProcessor
             }
 
             processed = new Model( model );
-            modules = processed.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
-            this.substituteSystemProperties( modules.getValue() );
+            modules = ModelHelper.getModules( processed );
+            this.substituteSystemProperties( modules );
         }
         else if ( context.isLoggable( Level.WARNING ) )
         {

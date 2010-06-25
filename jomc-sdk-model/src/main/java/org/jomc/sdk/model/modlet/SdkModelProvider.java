@@ -41,18 +41,17 @@ import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
-import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 import org.jomc.model.Dependencies;
 import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
 import org.jomc.model.ImplementationReference;
 import org.jomc.model.Implementations;
-import org.jomc.model.ModelObject;
 import org.jomc.model.Module;
 import org.jomc.model.Modules;
 import org.jomc.model.Text;
 import org.jomc.model.Texts;
+import org.jomc.model.modlet.ModelHelper;
 import org.jomc.modlet.Model;
 import org.jomc.modlet.ModelContext;
 import org.jomc.modlet.ModelException;
@@ -109,7 +108,7 @@ public final class SdkModelProvider implements ModelProvider
         }
 
         Model found = null;
-        JAXBElement<Modules> modules = model.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
+        Modules modules = ModelHelper.getModules( model );
 
         if ( modules != null )
         {
@@ -121,20 +120,20 @@ public final class SdkModelProvider implements ModelProvider
             }
 
             found = new Model( model );
-            modules = found.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
+            modules = ModelHelper.getModules( found );
 
             final Implementations schemaSets =
-                modules.getValue().getImplementations( XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER );
+                modules.getImplementations( XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER );
 
             if ( schemaSets != null )
             {
                 for ( Implementation schemaSet : schemaSets.getImplementation() )
                 {
-                    final Module schemaSetModule = this.createSchemaSetModule( modules.getValue(), schemaSet );
+                    final Module schemaSetModule = this.createSchemaSetModule( modules, schemaSet );
 
-                    if ( modules.getValue().getModule( schemaSetModule.getName() ) == null )
+                    if ( modules.getModule( schemaSetModule.getName() ) == null )
                     {
-                        modules.getValue().getModule().add( schemaSetModule );
+                        modules.getModule().add( schemaSetModule );
                     }
                 }
             }
