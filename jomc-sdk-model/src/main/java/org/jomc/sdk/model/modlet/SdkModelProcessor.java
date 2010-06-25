@@ -36,21 +36,22 @@
 // SECTION-END
 package org.jomc.sdk.model.modlet;
 
-import org.jomc.modlet.Model;
-import org.jomc.modlet.ModelContext;
-import org.jomc.modlet.ModelException;
-import org.jomc.modlet.ModelProcessor;
-import org.jomc.model.Specification;
-import org.jomc.model.Properties;
-import org.jomc.model.Property;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import javax.xml.bind.JAXBElement;
 import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
+import org.jomc.model.ModelObject;
 import org.jomc.model.Module;
 import org.jomc.model.Modules;
+import org.jomc.model.Properties;
+import org.jomc.model.Property;
+import org.jomc.model.Specification;
+import org.jomc.modlet.Model;
+import org.jomc.modlet.ModelContext;
+import org.jomc.modlet.ModelException;
+import org.jomc.modlet.ModelProcessor;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
@@ -82,24 +83,28 @@ public final class SdkModelProcessor implements ModelProcessor
             throw new NullPointerException( "model" );
         }
 
-        JAXBElement<Modules> modules = model.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
+        Model processed = null;
+        JAXBElement<Modules> modules = model.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
 
-        if ( modules == null )
+        if ( modules != null )
         {
-            throw new ModelException( getMessage( "modulesNotFound", model.getIdentifier() ) );
+            if ( context.isLoggable( Level.FINE ) )
+            {
+                context.log( Level.FINE, getMessage(
+                    "processingModel", this.getClass().getName(), model.getIdentifier() ), null );
+
+            }
+
+            processed = new Model( model );
+            modules = processed.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
+            this.substituteSystemProperties( modules.getValue() );
+        }
+        else if ( context.isLoggable( Level.WARNING ) )
+        {
+            context.log( Level.WARNING, getMessage( "modulesNotFound", model.getIdentifier() ), null );
         }
 
-        if ( context.isLoggable( Level.FINE ) )
-        {
-            context.log( Level.FINE, getMessage( "processingModel", this.getClass().getName(), model.getIdentifier() ),
-                         null );
-
-        }
-
-        final Model copy = new Model( model );
-        modules = copy.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
-        this.substituteSystemProperties( modules.getValue() );
-        return copy;
+        return processed;
     }
 
     private void substituteSystemProperties( final Modules modules )

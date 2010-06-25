@@ -36,19 +36,20 @@
 // SECTION-END
 package org.jomc.sdk.model.modlet;
 
-import java.util.logging.Level;
-import java.util.List;
-import org.jomc.model.Dependencies;
-import org.jomc.model.Dependency;
-import org.jomc.model.ImplementationReference;
-import org.jomc.model.Module;
-import org.jomc.model.Implementation;
-import org.jomc.model.Implementations;
 import java.text.MessageFormat;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
+import org.jomc.model.Dependencies;
+import org.jomc.model.Dependency;
+import org.jomc.model.Implementation;
+import org.jomc.model.ImplementationReference;
+import org.jomc.model.Implementations;
+import org.jomc.model.ModelObject;
+import org.jomc.model.Module;
 import org.jomc.model.Modules;
 import org.jomc.model.Text;
 import org.jomc.model.Texts;
@@ -107,40 +108,43 @@ public final class SdkModelProvider implements ModelProvider
             throw new NullPointerException( "model" );
         }
 
-        JAXBElement<Modules> modules = model.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
+        Model found = null;
+        JAXBElement<Modules> modules = model.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
 
-        if ( modules == null )
+        if ( modules != null )
         {
-            throw new ModelException( getMessage( "modulesNotFound", model.getIdentifier() ) );
-        }
-
-        if ( context.isLoggable( Level.FINE ) )
-        {
-            context.log( Level.FINE, getMessage( "providingModel", this.getClass().getName(), model.getIdentifier() ),
-                         null );
-
-        }
-
-        final Model copy = new Model( model );
-        modules = copy.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
-
-        final Implementations schemaSets =
-            modules.getValue().getImplementations( XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER );
-
-        if ( schemaSets != null )
-        {
-            for ( Implementation schemaSet : schemaSets.getImplementation() )
+            if ( context.isLoggable( Level.FINE ) )
             {
-                final Module schemaSetModule = this.createSchemaSetModule( modules.getValue(), schemaSet );
+                context.log( Level.FINE, getMessage(
+                    "providingModel", this.getClass().getName(), model.getIdentifier() ), null );
 
-                if ( modules.getValue().getModule( schemaSetModule.getName() ) == null )
+            }
+
+            found = new Model( model );
+            modules = found.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
+
+            final Implementations schemaSets =
+                modules.getValue().getImplementations( XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER );
+
+            if ( schemaSets != null )
+            {
+                for ( Implementation schemaSet : schemaSets.getImplementation() )
                 {
-                    modules.getValue().getModule().add( schemaSetModule );
+                    final Module schemaSetModule = this.createSchemaSetModule( modules.getValue(), schemaSet );
+
+                    if ( modules.getValue().getModule( schemaSetModule.getName() ) == null )
+                    {
+                        modules.getValue().getModule().add( schemaSetModule );
+                    }
                 }
             }
         }
+        else if ( context.isLoggable( Level.WARNING ) )
+        {
+            context.log( Level.WARNING, getMessage( "modulesNotFound", model.getIdentifier() ), null );
+        }
 
-        return copy;
+        return found;
     }
 
     private Module createSchemaSetModule( final Modules modules, final Implementation schemaSet )

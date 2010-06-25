@@ -42,6 +42,7 @@ import java.util.logging.Level;
 import javax.xml.bind.JAXBElement;
 import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
+import org.jomc.model.ModelObject;
 import org.jomc.model.Module;
 import org.jomc.model.Modules;
 import org.jomc.model.ObjectFactory;
@@ -88,24 +89,18 @@ public final class SdkModelValidator implements ModelValidator
             throw new NullPointerException( "model" );
         }
 
-        JAXBElement<Modules> modules = model.getAnyElement( Modules.MODEL_PUBLIC_ID, "modules" );
-
-        if ( modules == null )
-        {
-            throw new ModelException( getMessage( "modulesNotFound", model.getIdentifier() ) );
-        }
-
-        if ( context.isLoggable( Level.FINE ) )
-        {
-            context.log( Level.FINE, getMessage( "validatingModel", this.getClass().getName(), model.getIdentifier() ),
-                         null );
-
-        }
-
         final ModelValidationReport report = new ModelValidationReport();
+        JAXBElement<Modules> modules = model.getAnyElement( ModelObject.MODEL_PUBLIC_ID, "modules" );
 
         if ( modules != null )
         {
+            if ( context.isLoggable( Level.FINE ) )
+            {
+                context.log( Level.FINE, getMessage(
+                    "validatingModel", this.getClass().getName(), model.getIdentifier() ), null );
+
+            }
+
             for ( Module m : modules.getValue().getModule() )
             {
                 this.assertValidSdkObjects( context, m, null, null, null, report );
@@ -135,15 +130,17 @@ public final class SdkModelValidator implements ModelValidator
                 }
             }
         }
+        else if ( context.isLoggable( Level.WARNING ) )
+        {
+            context.log( Level.WARNING, getMessage( "modulesNotFound", model.getIdentifier() ), null );
+        }
 
         return report;
     }
 
     private void assertValidSdkObjects( final ModelContext context, final Module module,
-                                        final Specification specification,
-                                        final Implementation implementation,
-                                        final Dependency dependency,
-                                        final ModelValidationReport report )
+                                        final Specification specification, final Implementation implementation,
+                                        final Dependency dependency, final ModelValidationReport report )
     {
         if ( module != null && ( implementation != null || dependency != null || specification != null ) )
         {
@@ -284,6 +281,11 @@ public final class SdkModelValidator implements ModelValidator
                             }
                             catch ( final PropertyException e )
                             {
+                                if ( context.isLoggable( Level.FINE ) )
+                                {
+                                    context.log( Level.FINE, e.getMessage(), e );
+                                }
+
                                 if ( module != null )
                                 {
                                     report.getDetails().add( new ModelValidationReport.Detail(
@@ -330,6 +332,11 @@ public final class SdkModelValidator implements ModelValidator
                         }
                         catch ( final PropertyException e )
                         {
+                            if ( context.isLoggable( Level.FINE ) )
+                            {
+                                context.log( Level.FINE, e.getMessage(), e );
+                            }
+
                             if ( module != null )
                             {
                                 report.getDetails().add( new ModelValidationReport.Detail(
@@ -547,6 +554,11 @@ public final class SdkModelValidator implements ModelValidator
                             }
                             catch ( final PropertyException e )
                             {
+                                if ( context.isLoggable( Level.FINE ) )
+                                {
+                                    context.log( Level.FINE, e.getMessage(), e );
+                                }
+
                                 if ( module != null )
                                 {
                                     report.getDetails().add( new ModelValidationReport.Detail(
@@ -593,6 +605,11 @@ public final class SdkModelValidator implements ModelValidator
                             }
                             catch ( final PropertyException e )
                             {
+                                if ( context.isLoggable( Level.FINE ) )
+                                {
+                                    context.log( Level.FINE, e.getMessage(), e );
+                                }
+
                                 if ( module != null )
                                 {
                                     report.getDetails().add( new ModelValidationReport.Detail(
@@ -641,6 +658,11 @@ public final class SdkModelValidator implements ModelValidator
                         }
                         catch ( final PropertyException e )
                         {
+                            if ( context.isLoggable( Level.FINE ) )
+                            {
+                                context.log( Level.FINE, e.getMessage(), e );
+                            }
+
                             if ( module != null )
                             {
                                 report.getDetails().add( new ModelValidationReport.Detail(
