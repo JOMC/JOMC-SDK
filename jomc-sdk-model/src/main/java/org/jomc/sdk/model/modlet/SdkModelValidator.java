@@ -90,7 +90,7 @@ public final class SdkModelValidator implements ModelValidator
         }
 
         final ModelValidationReport report = new ModelValidationReport();
-        Modules modules = ModelHelper.getModules( model );
+        final Modules modules = ModelHelper.getModules( model );
 
         if ( modules != null )
         {
