@@ -67,55 +67,55 @@ import org.junit.Test;
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getCustomMarshaller CustomMarshaller}"<blockquote>
- * Dependency on {@code javax.xml.bind.Marshaller} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.Marshaller'} ({@code javax.xml.bind.Marshaller}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomSaxParser CustomSaxParser}"<blockquote>
- * Dependency on {@code javax.xml.parsers.SAXParser} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.parsers.SAXParser'} ({@code javax.xml.parsers.SAXParser}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomSaxXmlReader CustomSaxXmlReader}"<blockquote>
- * Dependency on {@code org.xml.sax.XMLReader} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.xml.sax.XMLReader'} ({@code org.xml.sax.XMLReader}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomSchema CustomSchema}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomSchemaUnrecognizedFeature CustomSchemaUnrecognizedFeature}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomSchemaUnrecognizedProperty CustomSchemaUnrecognizedProperty}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomUnmarshaller CustomUnmarshaller}"<blockquote>
- * Dependency on {@code javax.xml.bind.Unmarshaller} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.Unmarshaller'} ({@code javax.xml.bind.Unmarshaller}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomValidatorHandlerUnrecognizedFeature CustomValidatorHandlerUnrecognizedFeature}"<blockquote>
- * Dependency on {@code javax.xml.validation.ValidatorHandler} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.ValidatorHandler'} ({@code javax.xml.validation.ValidatorHandler}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomValidatorHandlerUnrecognizedProperty CustomValidatorHandlerUnrecognizedProperty}"<blockquote>
- * Dependency on {@code javax.xml.validation.ValidatorHandler} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.ValidatorHandler'} ({@code javax.xml.validation.ValidatorHandler}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomValidatorUnrecognizedFeature CustomValidatorUnrecognizedFeature}"<blockquote>
- * Dependency on {@code javax.xml.validation.Validator} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Validator'} ({@code javax.xml.validation.Validator}) bound to an instance.</blockquote></li>
  * <li>"{@link #getCustomValidatorUnrecognizedProperty CustomValidatorUnrecognizedProperty}"<blockquote>
- * Dependency on {@code javax.xml.validation.Validator} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Validator'} ({@code javax.xml.validation.Validator}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultBinder DefaultBinder}"<blockquote>
- * Dependency on {@code javax.xml.bind.Binder} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.Binder'} ({@code javax.xml.bind.Binder}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultContentHandler DefaultContentHandler}"<blockquote>
- * Dependency on {@code org.xml.sax.ContentHandler} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.xml.sax.ContentHandler'} ({@code org.xml.sax.ContentHandler}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultContext DefaultContext}"<blockquote>
- * Dependency on {@code javax.xml.bind.JAXBContext} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.JAXBContext'} ({@code javax.xml.bind.JAXBContext}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultDocumentBuilder DefaultDocumentBuilder}"<blockquote>
- * Dependency on {@code javax.xml.parsers.DocumentBuilder} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.parsers.DocumentBuilder'} ({@code javax.xml.parsers.DocumentBuilder}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultEntityResolver DefaultEntityResolver}"<blockquote>
- * Dependency on {@code org.xml.sax.EntityResolver} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.xml.sax.EntityResolver'} ({@code org.xml.sax.EntityResolver}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultIntrospector DefaultIntrospector}"<blockquote>
- * Dependency on {@code javax.xml.bind.JAXBIntrospector} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.JAXBIntrospector'} ({@code javax.xml.bind.JAXBIntrospector}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultMarshaller DefaultMarshaller}"<blockquote>
- * Dependency on {@code javax.xml.bind.Marshaller} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.Marshaller'} ({@code javax.xml.bind.Marshaller}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultResourceResolver DefaultResourceResolver}"<blockquote>
- * Dependency on {@code org.w3c.dom.ls.LSResourceResolver} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.w3c.dom.ls.LSResourceResolver'} ({@code org.w3c.dom.ls.LSResourceResolver}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultSaxParser DefaultSaxParser}"<blockquote>
- * Dependency on {@code javax.xml.parsers.SAXParser} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.parsers.SAXParser'} ({@code javax.xml.parsers.SAXParser}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultSaxXmlReader DefaultSaxXmlReader}"<blockquote>
- * Dependency on {@code org.xml.sax.XMLReader} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.xml.sax.XMLReader'} ({@code org.xml.sax.XMLReader}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultSchema DefaultSchema}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultUnmarshaller DefaultUnmarshaller}"<blockquote>
- * Dependency on {@code javax.xml.bind.Unmarshaller} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.Unmarshaller'} ({@code javax.xml.bind.Unmarshaller}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultValidator DefaultValidator}"<blockquote>
- * Dependency on {@code javax.xml.validation.Validator} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Validator'} ({@code javax.xml.validation.Validator}) bound to an instance.</blockquote></li>
  * <li>"{@link #getDefaultValidatorHandler DefaultValidatorHandler}"<blockquote>
- * Dependency on {@code javax.xml.validation.ValidatorHandler} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.ValidatorHandler'} ({@code javax.xml.validation.ValidatorHandler}) bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -357,7 +357,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomMarshaller} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.bind.Marshaller} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.bind.Marshaller'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code jaxbEncoding}"</dt>
@@ -389,7 +389,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSaxParser} dependency.
-     * <p>This method returns the "{@code JOMC SDK}" object of the {@code javax.xml.parsers.SAXParser} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK}" object of the {@code 'javax.xml.parsers.SAXParser'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code CustomSaxParser} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -404,7 +404,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSaxXmlReader} dependency.
-     * <p>This method returns the "{@code JOMC SDK}" object of the {@code org.xml.sax.XMLReader} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK}" object of the {@code 'org.xml.sax.XMLReader'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code CustomSaxXmlReader} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -419,7 +419,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSchema} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.Schema} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code CustomSchema} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -434,7 +434,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSchemaUnrecognizedFeature} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.Schema} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code schemaFeatures}"</dt>
@@ -454,7 +454,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSchemaUnrecognizedProperty} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.Schema} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code schemaProperties}"</dt>
@@ -474,7 +474,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomUnmarshaller} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.bind.Unmarshaller} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.bind.Unmarshaller'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code CustomUnmarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -489,7 +489,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorHandlerUnrecognizedFeature} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.ValidatorHandler} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.ValidatorHandler'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorHandlerFeatures}"</dt>
@@ -509,7 +509,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorHandlerUnrecognizedProperty} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.ValidatorHandler} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.ValidatorHandler'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorHandlerProperties}"</dt>
@@ -529,7 +529,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorUnrecognizedFeature} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.Validator} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.Validator'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorFeatures}"</dt>
@@ -549,7 +549,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorUnrecognizedProperty} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.Validator} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.Validator'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorProperties}"</dt>
@@ -569,7 +569,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultBinder} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.bind.Binder} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.bind.Binder'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultBinder} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -584,7 +584,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultContentHandler} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code org.xml.sax.ContentHandler} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'org.xml.sax.ContentHandler'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultContentHandler} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -599,7 +599,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultContext} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.bind.JAXBContext} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.bind.JAXBContext'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultContext} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -614,7 +614,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultDocumentBuilder} dependency.
-     * <p>This method returns the "{@code JOMC SDK}" object of the {@code javax.xml.parsers.DocumentBuilder} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK}" object of the {@code 'javax.xml.parsers.DocumentBuilder'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultDocumentBuilder} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -629,7 +629,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultEntityResolver} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code org.xml.sax.EntityResolver} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'org.xml.sax.EntityResolver'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultEntityResolver} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -644,7 +644,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultIntrospector} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.bind.JAXBIntrospector} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.bind.JAXBIntrospector'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultIntrospector} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -659,7 +659,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultMarshaller} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.bind.Marshaller} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.bind.Marshaller'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultMarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -674,7 +674,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultResourceResolver} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code org.w3c.dom.ls.LSResourceResolver} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultResourceResolver} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -689,7 +689,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultSaxParser} dependency.
-     * <p>This method returns the "{@code JOMC SDK}" object of the {@code javax.xml.parsers.SAXParser} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK}" object of the {@code 'javax.xml.parsers.SAXParser'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultSaxParser} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -704,7 +704,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultSaxXmlReader} dependency.
-     * <p>This method returns the "{@code JOMC SDK}" object of the {@code org.xml.sax.XMLReader} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK}" object of the {@code 'org.xml.sax.XMLReader'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultSaxXmlReader} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -719,7 +719,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultSchema} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.Schema} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultSchema} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -734,7 +734,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultUnmarshaller} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.bind.Unmarshaller} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.bind.Unmarshaller'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultUnmarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -749,7 +749,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultValidator} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.Validator} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.Validator'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultValidator} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -764,7 +764,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultValidatorHandler} dependency.
-     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code javax.xml.validation.ValidatorHandler} specification.</p>
+     * <p>This method returns the "{@code Test XML Schema Set}" object of the {@code 'javax.xml.validation.ValidatorHandler'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultValidatorHandler} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
