@@ -46,7 +46,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
 /**
  * XML Schema Set 'JAXBContext' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.xml.bind.JAXBContext} {@code Multiton}</li>
+ * <li>{@code 'javax.xml.bind.JAXBContext'} ({@code javax.xml.bind.JAXBContext}) {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getSchemas schemas}"

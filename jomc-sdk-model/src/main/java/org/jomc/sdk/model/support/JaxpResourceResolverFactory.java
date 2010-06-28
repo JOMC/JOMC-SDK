@@ -51,7 +51,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
 /**
  * XML Schema Set JAXP 'LSResourceResolver' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code org.w3c.dom.ls.LSResourceResolver} {@code Multiton}</li>
+ * <li>{@code 'org.w3c.dom.ls.LSResourceResolver'} ({@code org.w3c.dom.ls.LSResourceResolver}) {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getSchemas schemas}"

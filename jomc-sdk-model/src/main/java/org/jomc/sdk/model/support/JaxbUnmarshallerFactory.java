@@ -49,7 +49,7 @@ import org.xml.sax.SAXException;
 /**
  * XML Schema Set JAXB 'Unmarshaller' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.xml.bind.Unmarshaller} {@code Multiton}</li>
+ * <li>{@code 'javax.xml.bind.Unmarshaller'} ({@code javax.xml.bind.Unmarshaller}) {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getSchemas schemas}"
@@ -62,11 +62,11 @@ import org.xml.sax.SAXException;
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getAttachmentUnmarshaller attachmentUnmarshaller}"<blockquote>
- * Dependency on {@code javax.xml.bind.attachment.AttachmentUnmarshaller} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.attachment.AttachmentUnmarshaller'} ({@code javax.xml.bind.attachment.AttachmentUnmarshaller}) bound to an instance.</blockquote></li>
  * <li>"{@link #getSchema schema}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
  * <li>"{@link #getValidationEventHandler validationEventHandler}"<blockquote>
- * Dependency on {@code javax.xml.bind.ValidationEventHandler} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.ValidationEventHandler'} ({@code javax.xml.bind.ValidationEventHandler}) bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -134,7 +134,7 @@ public final class JaxbUnmarshallerFactory
 
     /**
      * Gets the {@code attachmentUnmarshaller} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.bind.attachment.AttachmentUnmarshaller} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.bind.attachment.AttachmentUnmarshaller'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code attachmentUnmarshaller} dependency.
      * {@code null} if no object is available.
@@ -148,7 +148,7 @@ public final class JaxbUnmarshallerFactory
 
     /**
      * Gets the {@code schema} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.validation.Schema} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code schema} dependency.
      * {@code null} if no object is available.
@@ -162,7 +162,7 @@ public final class JaxbUnmarshallerFactory
 
     /**
      * Gets the {@code validationEventHandler} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.bind.ValidationEventHandler} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.bind.ValidationEventHandler'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code validationEventHandler} dependency.
      * {@code null} if no object is available.

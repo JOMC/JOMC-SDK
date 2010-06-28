@@ -47,7 +47,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
 /**
  * XML Schema Set 'JAXBIntrospector' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.xml.bind.JAXBIntrospector} {@code Multiton}</li>
+ * <li>{@code 'javax.xml.bind.JAXBIntrospector'} ({@code javax.xml.bind.JAXBIntrospector}) {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getSchemas schemas}"

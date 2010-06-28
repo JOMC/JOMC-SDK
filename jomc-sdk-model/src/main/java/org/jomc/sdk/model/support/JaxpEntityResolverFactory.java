@@ -49,7 +49,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
 /**
  * XML Schema Set JAXP 'EntityResolver' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code org.xml.sax.EntityResolver} {@code Multiton}</li>
+ * <li>{@code 'org.xml.sax.EntityResolver'} ({@code org.xml.sax.EntityResolver}) {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getSchemas schemas}"

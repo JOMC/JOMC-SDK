@@ -48,7 +48,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
 /**
  * XML Schema Set 'Binder' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.xml.bind.Binder} {@code Multiton}</li>
+ * <li>{@code 'javax.xml.bind.Binder'} ({@code javax.xml.bind.Binder}) {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getBinderProperties binderProperties}"
@@ -61,9 +61,9 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getSchema schema}"<blockquote>
- * Dependency on {@code javax.xml.validation.Schema} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
  * <li>"{@link #getValidationEventHandler validationEventHandler}"<blockquote>
- * Dependency on {@code javax.xml.bind.ValidationEventHandler} bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.ValidationEventHandler'} ({@code javax.xml.bind.ValidationEventHandler}) bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -130,7 +130,7 @@ public final class JaxbBinderFactory
 
     /**
      * Gets the {@code schema} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.validation.Schema} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code schema} dependency.
      * {@code null} if no object is available.
@@ -144,7 +144,7 @@ public final class JaxbBinderFactory
 
     /**
      * Gets the {@code validationEventHandler} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code javax.xml.bind.ValidationEventHandler} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.bind.ValidationEventHandler'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code validationEventHandler} dependency.
      * {@code null} if no object is available.
