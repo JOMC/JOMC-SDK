@@ -45,7 +45,7 @@ import javax.persistence.Query;
 /**
  * Factory providing a named JPA query instance.
  * <p><b>Specifications</b><ul>
- * <li>{@code javax.persistence.Query} {@code Multiton}</li>
+ * <li>{@code 'javax.persistence.Query'} ({@code javax.persistence.Query}) {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getParameterMap parameterMap}"
@@ -59,7 +59,7 @@ import javax.persistence.Query;
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getEntityManager EntityManager}"<blockquote>
- * Dependency on {@code javax.persistence.EntityManager}.</blockquote></li>
+ * Dependency on {@code 'javax.persistence.EntityManager'} ({@code javax.persistence.EntityManager}).</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -116,7 +116,7 @@ public final class NamedQueryFactory
 
     /**
      * Gets the {@code EntityManager} dependency.
-     * <p>This method returns the "{@code JOMC SDK JPA}" object of the {@code javax.persistence.EntityManager} specification.</p>
+     * <p>This method returns the "{@code JOMC SDK JPA}" object of the {@code 'javax.persistence.EntityManager'} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested.</p>
      * @return The {@code EntityManager} dependency.
      * {@code null} if no object is available.
