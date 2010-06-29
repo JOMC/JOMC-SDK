@@ -46,7 +46,7 @@ import javax.xml.parsers.ParserConfigurationException;
 /**
  * JAXP 'DocumentBuilder' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code 'javax.xml.parsers.DocumentBuilder'} ({@code javax.xml.parsers.DocumentBuilder}) {@code Multiton}</li>
+ * <li>{@code 'javax.xml.parsers.DocumentBuilder'} {@code (javax.xml.parsers.DocumentBuilder)} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #isXIncludeAware XIncludeAware}"
@@ -86,11 +86,11 @@ import javax.xml.parsers.ParserConfigurationException;
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getEntityResolver entityResolver}"<blockquote>
- * Dependency on {@code 'org.xml.sax.EntityResolver'} ({@code org.xml.sax.EntityResolver}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} bound to an instance.</blockquote></li>
  * <li>"{@link #getErrorHandler errorHandler}"<blockquote>
- * Dependency on {@code 'org.xml.sax.ErrorHandler'} ({@code org.xml.sax.ErrorHandler}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.xml.sax.ErrorHandler'} {@code (org.xml.sax.ErrorHandler)} bound to an instance.</blockquote></li>
  * <li>"{@link #getSchema schema}"<blockquote>
- * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -100,7 +100,7 @@ import javax.xml.parsers.ParserConfigurationException;
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public final class JaxpDocumentBuilderFactory
@@ -142,7 +142,7 @@ public final class JaxpDocumentBuilderFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code JaxpDocumentBuilderFactory} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     public JaxpDocumentBuilderFactory()
     {
         // SECTION-START[Default Constructor]
@@ -156,13 +156,13 @@ public final class JaxpDocumentBuilderFactory
 
     /**
      * Gets the {@code entityResolver} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'org.xml.sax.EntityResolver'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code entityResolver} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private org.xml.sax.EntityResolver getEntityResolver()
     {
         return (org.xml.sax.EntityResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "entityResolver" );
@@ -170,13 +170,13 @@ public final class JaxpDocumentBuilderFactory
 
     /**
      * Gets the {@code errorHandler} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'org.xml.sax.ErrorHandler'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'org.xml.sax.ErrorHandler'} {@code (org.xml.sax.ErrorHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code errorHandler} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private org.xml.sax.ErrorHandler getErrorHandler()
     {
         return (org.xml.sax.ErrorHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "errorHandler" );
@@ -184,13 +184,13 @@ public final class JaxpDocumentBuilderFactory
 
     /**
      * Gets the {@code schema} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code schema} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private javax.xml.validation.Schema getSchema()
     {
         return (javax.xml.validation.Schema) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "schema" );
@@ -205,7 +205,7 @@ public final class JaxpDocumentBuilderFactory
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isXIncludeAware()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "XIncludeAware" );
@@ -218,7 +218,7 @@ public final class JaxpDocumentBuilderFactory
      * @return The value of the {@code attributes} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.util.Map<String,Object> getAttributes()
     {
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "attributes" );
@@ -231,7 +231,7 @@ public final class JaxpDocumentBuilderFactory
      * @return {@code true} if the factory is configured to produce parsers which convert CDATA nodes to Text nodes and append them to the adjacent (if any) Text node; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isCoalescing()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "coalescing" );
@@ -244,7 +244,7 @@ public final class JaxpDocumentBuilderFactory
      * @return {@code true} if the factory is configured to produce parsers which expand entity reference nodes; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isExpandingEntityReferences()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "expandingEntityReferences" );
@@ -257,7 +257,7 @@ public final class JaxpDocumentBuilderFactory
      * @return The value of the {@code features} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.util.Map<String,Boolean> getFeatures()
     {
         final java.util.Map<String,Boolean> _p = (java.util.Map<String,Boolean>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "features" );
@@ -270,7 +270,7 @@ public final class JaxpDocumentBuilderFactory
      * @return {@code true} if the factory is configured to produce parsers which ignores comments; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isIgnoringComments()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "ignoringComments" );
@@ -283,7 +283,7 @@ public final class JaxpDocumentBuilderFactory
      * @return {@code true} if the factory is configured to produce parsers which ignore ignorable whitespace in element content; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isIgnoringElementContentWhitespace()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "ignoringElementContentWhitespace" );
@@ -296,7 +296,7 @@ public final class JaxpDocumentBuilderFactory
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isNamespaceAware()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "namespaceAware" );
@@ -309,7 +309,7 @@ public final class JaxpDocumentBuilderFactory
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isValidating()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validating" );

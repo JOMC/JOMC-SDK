@@ -49,7 +49,7 @@ import org.xml.sax.SAXException;
 /**
  * XML Schema Set JAXB 'Marshaller' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code 'javax.xml.bind.Marshaller'} ({@code javax.xml.bind.Marshaller}) {@code Multiton}</li>
+ * <li>{@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getJaxbEncoding jaxbEncoding}"
@@ -82,11 +82,11 @@ import org.xml.sax.SAXException;
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getAttachmentMarshaller attachmentMarshaller}"<blockquote>
- * Dependency on {@code 'javax.xml.bind.attachment.AttachmentMarshaller'} ({@code javax.xml.bind.attachment.AttachmentMarshaller}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.attachment.AttachmentMarshaller'} {@code (javax.xml.bind.attachment.AttachmentMarshaller)} bound to an instance.</blockquote></li>
  * <li>"{@link #getSchema schema}"<blockquote>
- * Dependency on {@code 'javax.xml.validation.Schema'} ({@code javax.xml.validation.Schema}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</blockquote></li>
  * <li>"{@link #getValidationEventHandler validationEventHandler}"<blockquote>
- * Dependency on {@code 'javax.xml.bind.ValidationEventHandler'} ({@code javax.xml.bind.ValidationEventHandler}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -96,7 +96,7 @@ import org.xml.sax.SAXException;
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public final class JaxbMarshallerFactory
@@ -161,7 +161,7 @@ public final class JaxbMarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code JaxbMarshallerFactory} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     public JaxbMarshallerFactory()
     {
         // SECTION-START[Default Constructor]
@@ -175,13 +175,13 @@ public final class JaxbMarshallerFactory
 
     /**
      * Gets the {@code attachmentMarshaller} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.bind.attachment.AttachmentMarshaller'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.attachment.AttachmentMarshaller'} {@code (javax.xml.bind.attachment.AttachmentMarshaller)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code attachmentMarshaller} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private javax.xml.bind.attachment.AttachmentMarshaller getAttachmentMarshaller()
     {
         return (javax.xml.bind.attachment.AttachmentMarshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "attachmentMarshaller" );
@@ -189,13 +189,13 @@ public final class JaxbMarshallerFactory
 
     /**
      * Gets the {@code schema} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.validation.Schema'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code schema} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private javax.xml.validation.Schema getSchema()
     {
         return (javax.xml.validation.Schema) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "schema" );
@@ -203,13 +203,13 @@ public final class JaxbMarshallerFactory
 
     /**
      * Gets the {@code validationEventHandler} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'javax.xml.bind.ValidationEventHandler'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code validationEventHandler} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private javax.xml.bind.ValidationEventHandler getValidationEventHandler()
     {
         return (javax.xml.bind.ValidationEventHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "validationEventHandler" );
@@ -224,7 +224,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.String getJaxbEncoding()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbEncoding" );
@@ -237,7 +237,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isJaxbFormattedOutput()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbFormattedOutput" );
@@ -250,7 +250,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.Boolean isJaxbFragment()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbFragment" );
@@ -263,7 +263,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.lang.String getJaxbNoNamespaceSchemaLocation()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbNoNamespaceSchemaLocation" );
@@ -276,7 +276,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private boolean isJaxbSchemaLocation()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbSchemaLocation" );
@@ -289,7 +289,7 @@ public final class JaxbMarshallerFactory
      * @return The value of the {@code marshallerProperties} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.util.Map<String,Object> getMarshallerProperties()
     {
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "marshallerProperties" );
@@ -302,7 +302,7 @@ public final class JaxbMarshallerFactory
      * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private org.jomc.sdk.model.SchemasType getSchemas()
     {
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );

@@ -55,8 +55,8 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
 /**
  * XML Schema Set JAXP 'ValidatorHandler' factory implementation.
  * <p><b>Specifications</b><ul>
- * <li>{@code 'javax.xml.validation.ValidatorHandler'} ({@code javax.xml.validation.ValidatorHandler}) {@code Multiton}</li>
- * <li>{@code 'org.xml.sax.ContentHandler'} ({@code org.xml.sax.ContentHandler}) {@code Multiton}</li>
+ * <li>{@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} {@code Multiton}</li>
+ * <li>{@code 'org.xml.sax.ContentHandler'} {@code (org.xml.sax.ContentHandler)} {@code Multiton}</li>
  * </ul></p>
  * <p><b>Properties</b><ul>
  * <li>"{@link #getSchemas schemas}"
@@ -72,9 +72,9 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  * </ul></p>
  * <p><b>Dependencies</b><ul>
  * <li>"{@link #getErrorHandler errorHandler}"<blockquote>
- * Dependency on {@code 'org.xml.sax.ErrorHandler'} ({@code org.xml.sax.ErrorHandler}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.xml.sax.ErrorHandler'} {@code (org.xml.sax.ErrorHandler)} bound to an instance.</blockquote></li>
  * <li>"{@link #getResourceResolver resourceResolver}"<blockquote>
- * Dependency on {@code 'org.w3c.dom.ls.LSResourceResolver'} ({@code org.w3c.dom.ls.LSResourceResolver}) bound to an instance.</blockquote></li>
+ * Dependency on {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} bound to an instance.</blockquote></li>
  * </ul></p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -84,7 +84,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
 // </editor-fold>
 // SECTION-END
 public final class JaxpValidatorHandlerFactory
@@ -152,7 +152,7 @@ public final class JaxpValidatorHandlerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code JaxpValidatorHandlerFactory} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     public JaxpValidatorHandlerFactory()
     {
         // SECTION-START[Default Constructor]
@@ -166,13 +166,13 @@ public final class JaxpValidatorHandlerFactory
 
     /**
      * Gets the {@code errorHandler} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'org.xml.sax.ErrorHandler'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'org.xml.sax.ErrorHandler'} {@code (org.xml.sax.ErrorHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code errorHandler} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private org.xml.sax.ErrorHandler getErrorHandler()
     {
         return (org.xml.sax.ErrorHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "errorHandler" );
@@ -180,13 +180,13 @@ public final class JaxpValidatorHandlerFactory
 
     /**
      * Gets the {@code resourceResolver} dependency.
-     * <p>This method returns the "{@code JOMC SDK Model Default}" object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} specification.</p>
+     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code resourceResolver} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private org.w3c.dom.ls.LSResourceResolver getResourceResolver()
     {
         return (org.w3c.dom.ls.LSResourceResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "resourceResolver" );
@@ -201,7 +201,7 @@ public final class JaxpValidatorHandlerFactory
      * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private org.jomc.sdk.model.SchemasType getSchemas()
     {
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );
@@ -214,7 +214,7 @@ public final class JaxpValidatorHandlerFactory
      * @return The value of the {@code validatorHandlerFeatures} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.util.Map<String,Boolean> getValidatorHandlerFeatures()
     {
         final java.util.Map<String,Boolean> _p = (java.util.Map<String,Boolean>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validatorHandlerFeatures" );
@@ -227,7 +227,7 @@ public final class JaxpValidatorHandlerFactory
      * @return The value of the {@code validatorHandlerProperties} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0-beta-5-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.0-beta-5-SNAPSHOT/jomc-tools" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.0", comments = "See http://jomc.sourceforge.net/jomc/1.0/jomc-tools" )
     private java.util.Map<String,Object> getValidatorHandlerProperties()
     {
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validatorHandlerProperties" );
