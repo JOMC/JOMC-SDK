@@ -36,7 +36,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jomc.sdk</groupId>
   <artifactId>jomc-sdk</artifactId>
-  <version>1.0-beta-2-SNAPSHOT</version>
+  <version>1.0-beta-2</version>
   <packaging>pom</packaging>
   <name>JOMC SDK</name>
   <description>JOMC SDK is an object management and configuration software development kit. This is the parent module of the JOMC SDK artifacts.</description>
@@ -89,9 +89,9 @@
     </mailingList>
   </mailingLists>
   <scm>
-    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</connection>
-    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/trunk</developerConnection>
-    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/trunk/</url>
+    <connection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-beta-2</connection>
+    <developerConnection>scm:svn:https://jomc.svn.sourceforge.net/svnroot/jomc/jomc-sdk/tags/jomc-sdk-1.0-beta-2</developerConnection>
+    <url>http://jomc.svn.sourceforge.net/viewvc/jomc/jomc-sdk/tags/jomc-sdk-1.0-beta-2</url>
   </scm>
   <build>
     <extensions>
@@ -615,7 +615,7 @@
       <dependency>
         <groupId>org.jomc.sdk</groupId>
         <artifactId>jomc-sdk-model</artifactId>
-        <version>1.0-beta-2-SNAPSHOT</version>
+        <version>1.0-beta-2</version>
       </dependency>
 
     </dependencies>
