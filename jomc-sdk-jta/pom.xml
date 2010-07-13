@@ -42,6 +42,7 @@
   <artifactId>jomc-sdk-jta</artifactId>
   <name>JOMC SDK JTA</name>
   <description>Object management and configuration software development kit JTA support.</description>
+  <url>${jomc.artifacts.url}/${project.artifactId}-${project.version}</url>
   <build>
     <resources>
       <resource>
@@ -55,12 +56,6 @@
         <directory>src/test/resources</directory>
       </testResource>
     </testResources>
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
   </build>
   <dependencies>
     <dependency>
@@ -69,4 +64,11 @@
       <scope>compile</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <site>
+      <id>jomc.sourceforge.net</id>
+      <name>JOMC Site</name>
+      <url>${jomc.artifacts.distribution.url}/${project.artifactId}-${project.version}</url>
+    </site>
+  </distributionManagement>
 </project>

@@ -40,7 +40,7 @@
   <packaging>pom</packaging>
   <name>JOMC SDK</name>
   <description>JOMC SDK is an object management and configuration software development kit. This is the parent module of the JOMC SDK artifacts.</description>
-  <url>http://jomc.sourceforge.net/jomc-sdk/${jomc.site.version}</url>
+  <url>${jomc.artifacts.url}</url>
   <inceptionYear>2005</inceptionYear>
   <organization>
     <name>The JOMC Project</name>
@@ -98,7 +98,7 @@
       <extension>
         <groupId>org.jomc.build</groupId>
         <artifactId>jomc-build-resources</artifactId>
-        <version>${jomc-build.version}</version>
+        <version>${jomc.build.version}</version>
       </extension>
     </extensions>
     <pluginManagement>
@@ -119,6 +119,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>2.1.1</version>
+          <configuration>
+            <validate>true</validate>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -130,26 +133,6 @@
             </delimiters>
             <useDefaultDelimiters>false</useDefaultDelimiters>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>buildnumber-maven-plugin</artifactId>
-          <version>1.0-beta-4</version>
-          <executions>
-            <execution>
-              <id>create-buildnumber</id>
-              <phase>validate</phase>
-              <goals>
-                <goal>create</goal>
-              </goals>
-              <configuration>
-                <format>{0,date,yyyy-MM-dd'T'HH:mm:ssZ}</format>
-                <items>
-                  <item>timestamp</item>
-                </items>
-              </configuration>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -262,33 +245,6 @@
           <version>2.5</version>
         </plugin>
         <plugin>
-          <groupId>org.jomc</groupId>
-          <artifactId>maven-jomc-plugin</artifactId>
-          <version>${jomc.version}</version>
-          <executions>
-            <execution>
-              <id>main-default</id>
-              <goals>
-                <goal>attach-main-module</goal>
-                <goal>manage-main-sources</goal>
-                <goal>commit-main-classes</goal>
-                <goal>validate-main-classes</goal>
-                <goal>validate-main-model</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>test-default</id>
-              <goals>
-                <goal>attach-test-module</goal>
-                <goal>manage-test-sources</goal>
-                <goal>commit-test-classes</goal>
-                <goal>validate-test-classes</goal>
-                <goal>validate-test-model</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
           <version>2.1</version>
@@ -320,6 +276,26 @@
           </configuration>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-plugin</artifactId>
+          <version>1.3</version>
+          <configuration>
+            <message>[maven-scm-plugin] Build ${buildNumber}</message>
+            <username>${jomc.scm.username}</username>
+            <password>${jomc.scm.password}</password>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-changes-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>xml-maven-plugin</artifactId>
+          <version>1.0-beta-3</version>
+        </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>1.5</version>
@@ -349,7 +325,7 @@
                 <goal>xjc</goal>
               </goals>
               <configuration>
-                <arguments>-copy-constructor -cc-visibility private -cc-target 1.5 -mark-generated -Xinject-code</arguments>
+                <arguments>-copy-constructor -mark-generated -Xinject-code</arguments>
                 <bindingDirectory>src/main/schemas</bindingDirectory>
                 <extension>true</extension>
                 <npa>true</npa>
@@ -361,30 +337,92 @@
           </executions>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-scm-plugin</artifactId>
-          <version>1.3</version>
-          <configuration>
-            <message>[maven-scm-plugin] Build ${buildNumber}</message>
-            <username>${jomc.scm.username}</username>
-            <password>${jomc.scm.password}</password>
-          </configuration>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>buildnumber-maven-plugin</artifactId>
+          <version>1.0-beta-4</version>
+          <executions>
+            <execution>
+              <id>create-buildnumber</id>
+              <phase>validate</phase>
+              <goals>
+                <goal>create</goal>
+              </goals>
+              <configuration>
+                <format>{0,date,yyyy-MM-dd'T'HH:mm:ssZ}</format>
+                <items>
+                  <item>timestamp</item>
+                </items>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>xml-maven-plugin</artifactId>
-          <version>1.0-beta-3</version>
+          <groupId>org.jomc</groupId>
+          <artifactId>maven-jomc-plugin</artifactId>
+          <version>${jomc.version}</version>
+          <executions>
+            <execution>
+              <id>main-default</id>
+              <goals>
+                <goal>attach-main-module</goal>
+                <goal>manage-main-sources</goal>
+                <goal>commit-main-classes</goal>
+                <goal>validate-main-classes</goal>
+                <goal>validate-main-model</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>test-default</id>
+              <goals>
+                <goal>attach-test-module</goal>
+                <goal>manage-test-sources</goal>
+                <goal>commit-test-classes</goal>
+                <goal>validate-test-classes</goal>
+                <goal>validate-test-model</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <inherited>false</inherited>
+        <artifactId>maven-changes-plugin</artifactId>
         <executions>
           <execution>
-            <id>unpack</id>
+            <id>validate-changes</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>changes-validate</goal>
+            </goals>
+            <configuration>
+              <failOnError>true</failOnError>
+              <xmlPath>src/main/changes/changes.xml</xmlPath>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-changes</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <classifier>changes</classifier>
+              <failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
+              <includeGroupIds>org.jomc,org.jomc.logging,org.jomc.sdk</includeGroupIds>
+              <outputDirectory>${project.build.directory}/jomc-changes</outputDirectory>
+              <type>xhtml</type>
+            </configuration>
+          </execution>
+          <execution>
+            <id>unpack-build-resources</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>unpack</goal>
@@ -394,7 +432,7 @@
                 <artifactItem>
                   <groupId>org.jomc.build</groupId>
                   <artifactId>jomc-build-resources</artifactId>
-                  <version>${jomc-build.version}</version>
+                  <version>${jomc.build.version}</version>
                   <outputDirectory>${project.build.directory}/jomc-build-resources</outputDirectory>
                 </artifactItem>
               </artifactItems>
@@ -405,10 +443,9 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>xml-maven-plugin</artifactId>
-        <inherited>false</inherited>
         <executions>
           <execution>
-            <id>transform</id>
+            <id>transform-changes</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>transform</goal>
@@ -444,18 +481,9 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <!--
-
-        Selectively inheriting executions not working. See http://jira.codehaus.org/browse/MNG-3959
-        Workaround: inherited="false" in this pom and a copy of the plugin in all child poms to stop maven from
-                    executing the "attach" execution in the child poms.
-
-        -->
-        <inherited>false</inherited>
         <executions>
           <execution>
-            <id>attach</id>
-            <inherited>false</inherited> <!-- Ignored. MNG-3959 -->
+            <id>attach-changes</id>
             <goals>
               <goal>attach-artifact</goal>
             </goals>
@@ -496,7 +524,7 @@
             </goals>
             <configuration>
               <resourceBundles>
-                <resourceBundle>org.jomc.build:jomc-build-resources:${jomc-build.version}</resourceBundle>
+                <resourceBundle>org.jomc.build:jomc-build-resources:${jomc.build.version}</resourceBundle>
               </resourceBundles>
               <properties>
                 <buildNumber>${buildNumber}</buildNumber>
@@ -563,7 +591,7 @@
       <dependency>
         <groupId>javax.xml.bind</groupId>
         <artifactId>jaxb-api</artifactId>
-        <version>2.2</version>
+        <version>2.2.1</version>
       </dependency>
       <dependency>
         <groupId>javax.xml.stream</groupId>
@@ -578,7 +606,7 @@
       <dependency>
         <groupId>com.sun.xml.bind</groupId>
         <artifactId>jaxb-impl</artifactId>
-        <version>2.2</version>
+        <version>2.2.1.1</version>
       </dependency>
 
       <!-- EE -->
@@ -612,6 +640,94 @@
       <dependency>
         <groupId>org.jomc.sdk</groupId>
         <artifactId>jomc-sdk-model</artifactId>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-model</artifactId>
+        <classifier>javadoc</classifier>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-model</artifactId>
+        <classifier>sources</classifier>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-model</artifactId>
+        <classifier>changes</classifier>
+        <type>xhtml</type>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-model</artifactId>
+        <classifier>license</classifier>
+        <type>txt</type>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jpa</artifactId>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jpa</artifactId>
+        <classifier>javadoc</classifier>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jpa</artifactId>
+        <classifier>sources</classifier>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jpa</artifactId>
+        <classifier>changes</classifier>
+        <type>xhtml</type>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jpa</artifactId>
+        <classifier>license</classifier>
+        <type>txt</type>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jta</artifactId>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jta</artifactId>
+        <classifier>javadoc</classifier>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jta</artifactId>
+        <classifier>sources</classifier>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jta</artifactId>
+        <classifier>changes</classifier>
+        <type>xhtml</type>
+        <version>1.0-beta-3-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jomc.sdk</groupId>
+        <artifactId>jomc-sdk-jta</artifactId>
+        <classifier>license</classifier>
+        <type>txt</type>
         <version>1.0-beta-3-SNAPSHOT</version>
       </dependency>
 
@@ -692,7 +808,6 @@
         <artifactId>maven-changes-plugin</artifactId>
         <version>2.2</version>
         <!-- version>2.3</version Upgrade breaks changes report due to http://jira.codehaus.org/browse/MCHANGES-190 -->
-        <inherited>false</inherited>
         <reportSets>
           <reportSet>
             <reports>
@@ -749,7 +864,7 @@
     <site>
       <id>jomc.sourceforge.net</id>
       <name>JOMC Site</name>
-      <url>scp://shell.sourceforge.net/home/groups/j/jo/jomc/htdocs/jomc-sdk/${jomc.site.version}</url>
+      <url>${jomc.artifacts.distribution.url}</url>
     </site>
   </distributionManagement>
   <profiles>
@@ -891,12 +1006,14 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <xjcOutputDirectory>${project.build.directory}/generated-sources/jaxb</xjcOutputDirectory>
     <remoteResourcesOutputDirectory>${project.build.directory}/maven-shared-archive-resources</remoteResourcesOutputDirectory>
-    <jomc.version>1.0</jomc.version>
-    <jomc-build.version>1.4</jomc-build.version>
-    <jomc-logging.version>1.0</jomc-logging.version>
-    <jomc.site.version>1.0.x</jomc.site.version>
-    <surefire.version>2.5</surefire.version>
     <emma-maven-plugin.version>1.0-alpha-2</emma-maven-plugin.version>
+    <jomc.version>1.0</jomc.version>
+    <jomc.base.version>1.0</jomc.base.version>
+    <jomc.artifacts.url>http://jomc.sourceforge.net/jomc-sdk/${jomc.base.version}</jomc.artifacts.url>
+    <jomc.artifacts.distribution.url>scp://shell.sourceforge.net/home/groups/j/jo/jomc/htdocs/jomc-sdk/${jomc.base.version}</jomc.artifacts.distribution.url>
+    <jomc.build.version>1.5</jomc.build.version>
+    <jomc-logging.version>1.0</jomc-logging.version>
+    <surefire.version>2.5</surefire.version>
     <xmlschemaset.specification.version>1.0</xmlschemaset.specification.version>
   </properties>
 </project>
