@@ -87,13 +87,6 @@ public final class SdkModelProcessor implements ModelProcessor
 
         if ( modules != null )
         {
-            if ( context.isLoggable( Level.FINE ) )
-            {
-                context.log( Level.FINE, getMessage(
-                    "processingModel", this.getClass().getName(), model.getIdentifier() ), null );
-
-            }
-
             processed = new Model( model );
             modules = ModelHelper.getModules( processed );
             this.substituteSystemProperties( modules );

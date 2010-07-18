@@ -112,13 +112,6 @@ public final class SdkModelProvider implements ModelProvider
 
         if ( modules != null )
         {
-            if ( context.isLoggable( Level.FINE ) )
-            {
-                context.log( Level.FINE, getMessage(
-                    "providingModel", this.getClass().getName(), model.getIdentifier() ), null );
-
-            }
-
             found = new Model( model );
             modules = ModelHelper.getModules( found );
 
