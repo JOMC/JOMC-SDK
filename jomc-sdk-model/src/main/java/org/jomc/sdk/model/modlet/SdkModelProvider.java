@@ -126,6 +126,13 @@ public final class SdkModelProvider implements ModelProvider
 
                     if ( modules.getModule( schemaSetModule.getName() ) == null )
                     {
+                        if ( context.isLoggable( Level.FINEST ) )
+                        {
+                            context.log( Level.FINEST, getMessage( "foundSchemaSetModule", schemaSetModule.getName(),
+                                                                   schemaSet.getIdentifier() ), null );
+
+                        }
+
                         modules.getModule().add( schemaSetModule );
                     }
                 }
