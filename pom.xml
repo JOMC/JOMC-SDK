@@ -1032,7 +1032,7 @@
     <xjcOutputDirectory>${project.build.directory}/generated-sources/jaxb</xjcOutputDirectory>
     <remoteResourcesOutputDirectory>${project.build.directory}/maven-shared-archive-resources</remoteResourcesOutputDirectory>
     <emma-maven-plugin.version>1.0-alpha-2</emma-maven-plugin.version>
-    <jomc.version>1.1-SNAPSHOT</jomc.version>
+    <jomc.version>1.1</jomc.version>
     <jomc.base.version>1.0</jomc.base.version>
     <jomc.artifacts.url>http://jomc.sourceforge.net/jomc-sdk/${jomc.base.version}</jomc.artifacts.url>
     <jomc.artifacts.distribution.url>scp://shell.sourceforge.net/home/groups/j/jo/jomc/htdocs/jomc-sdk/${jomc.base.version}</jomc.artifacts.distribution.url>
