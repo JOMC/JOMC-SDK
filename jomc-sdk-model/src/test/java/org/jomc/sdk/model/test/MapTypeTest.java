@@ -1,8 +1,8 @@
 // SECTION-START[License Header]
 // <editor-fold defaultstate="collapsed" desc=" Generated License ">
 /*
- *   Copyright (c) 2010 The JOMC Project
- *   Copyright (c) 2005 Christian Schulte <schulte2005@users.sourceforge.net>
+ *   Copyright (c) 2009 - 2011 The JOMC Project
+ *   Copyright (c) 2005 - 2011 Christian Schulte <schulte2005@users.sourceforge.net>
  *   All rights reserved.
  *
  *   Redistribution and use in source and binary forms, with or without
@@ -44,23 +44,43 @@ import static org.junit.Assert.assertEquals;
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * Test cases for the {@code MapType} complex type.
- * <p><b>Properties</b><ul>
- * <li>"{@link #getComplexTypeMap complexTypeMap}"
- * <blockquote>Property of type {@code java.util.Map<Integer,org.jomc.model.Text>}.
- * </blockquote></li>
- * <li>"{@link #getFileMap fileMap}"
- * <blockquote>Property of type {@code java.util.Map<java.io.File,java.io.File>}.
- * </blockquote></li>
- * <li>"{@link #getMapOfMaps mapOfMaps}"
- * <blockquote>Property of type {@code java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>>}.
- * </blockquote></li>
- * <li>"{@link #getPrimitiveMap primitiveMap}"
- * <blockquote>Property of type {@code java.util.Map<Integer,Integer>}.
- * </blockquote></li>
- * <li>"{@link #getStringMap stringMap}"
- * <blockquote>Property of type {@code java.util.Map<String,String>}.
- * </blockquote></li>
- * </ul></p>
+ * <p>
+ *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+ *     <tr class="TableHeadingColor">
+ *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Properties</font></th>
+ *     </tr>
+ *     <tr class="TableSubHeadingColor">
+ *       <td align="left" scope="col" nowrap><b>Name</b></td>
+ *       <td align="left" scope="col" nowrap><b>Type</b></td>
+ *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getComplexTypeMap complexTypeMap}</td>
+ *       <td align="left" nowrap>{@code java.util.Map&lt;Integer,org.jomc.model.Text&gt;}</td>
+ *       <td align="left" valign="top"></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getFileMap fileMap}</td>
+ *       <td align="left" nowrap>{@code java.util.Map&lt;java.io.File,java.io.File&gt;}</td>
+ *       <td align="left" valign="top"></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getMapOfMaps mapOfMaps}</td>
+ *       <td align="left" nowrap>{@code java.util.Map&lt;java.util.Map&lt;String,String&gt;,java.util.Map&lt;String,String&gt;&gt;}</td>
+ *       <td align="left" valign="top"></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getPrimitiveMap primitiveMap}</td>
+ *       <td align="left" nowrap>{@code java.util.Map&lt;Integer,Integer&gt;}</td>
+ *       <td align="left" valign="top"></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getStringMap stringMap}</td>
+ *       <td align="left" nowrap>{@code java.util.Map&lt;String,String&gt;}</td>
+ *       <td align="left" valign="top"></td>
+ *     </tr>
+ *   </table>
+ * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version $Id$
@@ -69,7 +89,7 @@ import static org.junit.Assert.assertEquals;
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
 // </editor-fold>
 // SECTION-END
 public class MapTypeTest
@@ -126,7 +146,7 @@ public class MapTypeTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code MapTypeTest} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public MapTypeTest()
     {
         // SECTION-START[Default Constructor]
@@ -145,7 +165,7 @@ public class MapTypeTest
      * @return The value of the {@code complexTypeMap} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.util.Map<Integer,org.jomc.model.Text> getComplexTypeMap()
     {
         final java.util.Map<Integer,org.jomc.model.Text> _p = (java.util.Map<Integer,org.jomc.model.Text>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "complexTypeMap" );
@@ -158,7 +178,7 @@ public class MapTypeTest
      * @return The value of the {@code fileMap} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.util.Map<java.io.File,java.io.File> getFileMap()
     {
         final java.util.Map<java.io.File,java.io.File> _p = (java.util.Map<java.io.File,java.io.File>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "fileMap" );
@@ -171,7 +191,7 @@ public class MapTypeTest
      * @return The value of the {@code mapOfMaps} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>> getMapOfMaps()
     {
         final java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>> _p = (java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "mapOfMaps" );
@@ -184,7 +204,7 @@ public class MapTypeTest
      * @return The value of the {@code primitiveMap} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.util.Map<Integer,Integer> getPrimitiveMap()
     {
         final java.util.Map<Integer,Integer> _p = (java.util.Map<Integer,Integer>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "primitiveMap" );
@@ -197,7 +217,7 @@ public class MapTypeTest
      * @return The value of the {@code stringMap} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.util.Map<String,String> getStringMap()
     {
         final java.util.Map<String,String> _p = (java.util.Map<String,String>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "stringMap" );
