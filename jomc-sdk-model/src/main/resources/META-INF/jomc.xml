@@ -44,7 +44,7 @@
   <specifications>
     <!-- *********************************************************************************************************** -->
     <specification identifier="XML Schema Set" vendor="${project.organization.name}"
-                   version="${xmlschemaset.specification.version}">
+                   version="${xmlschemaset.specification.version}" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">Set of XML Schemas</text>
@@ -68,7 +68,7 @@
     <implementation identifier="${project.name} Provider"
                     class="org.jomc.sdk.model.modlet.SdkModelProvider"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">SDK 'ModelProvider' implementation.</text>
@@ -83,7 +83,7 @@
     <implementation identifier="${project.name} Processor"
                     class="org.jomc.sdk.model.modlet.SdkModelProcessor"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">SDK 'ModelProcessor' implementation.</text>
@@ -98,7 +98,7 @@
     <implementation identifier="${project.name} Validator"
                     class="org.jomc.sdk.model.modlet.SdkModelValidator"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">SDK 'ModelValidator' implementation.</text>
@@ -111,7 +111,7 @@
     </implementation>
     <!-- *********************************************************************************************************** -->
     <implementation identifier="Default XML Schema Set" name="Default XML Schema Set" version="${project.version}"
-                    vendor="${project.organization.name}">
+                    vendor="${project.organization.name}" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">Default XML Schema Set.</text>
@@ -134,7 +134,7 @@
     <implementation identifier="JAXB Binder Factory"
                     class="org.jomc.sdk.model.support.JaxbBinderFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set 'Binder' factory implementation.</text>
@@ -168,7 +168,7 @@
     <implementation identifier="JAXB Context Factory"
                     class="org.jomc.sdk.model.support.JaxbContextFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set 'JAXBContext' factory implementation.</text>
@@ -189,7 +189,7 @@
     <implementation identifier="JAXB Introspector Factory"
                     class="org.jomc.sdk.model.support.JaxbIntrospectorFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set 'JAXBIntrospector' factory implementation.</text>
@@ -210,7 +210,7 @@
     <implementation identifier="JAXB Marshaller Factory"
                     class="org.jomc.sdk.model.support.JaxbMarshallerFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXB 'Marshaller' factory implementation.</text>
@@ -272,7 +272,7 @@
     <implementation identifier="JAXB Unmarshaller Factory"
                     class="org.jomc.sdk.model.support.JaxbUnmarshallerFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXB 'Unmarshaller' factory implementation.</text>
@@ -308,7 +308,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JAXP Schema Factory" class="org.jomc.sdk.model.support.JaxpSchemaFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXP 'Schema' factory implementation.</text>
@@ -345,7 +345,7 @@
     <implementation identifier="JAXP Validator Factory"
                     class="org.jomc.sdk.model.support.JaxpValidatorFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXP 'Validator' factory implementation.</text>
@@ -382,7 +382,7 @@
     <implementation identifier="JAXP Validator Handler Factory"
                     class="org.jomc.sdk.model.support.JaxpValidatorHandlerFactory"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true">
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXP 'ValidatorHandler' factory implementation.</text>
@@ -420,7 +420,7 @@
     <implementation identifier="JAXP Entity Resolver Factory"
                     class="org.jomc.sdk.model.support.JaxpEntityResolverFactory" classDeclaration="true"
                     name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true">
+                    stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXP 'EntityResolver' factory implementation.</text>
@@ -441,7 +441,7 @@
     <implementation identifier="JAXP Resource Resolver Factory"
                     class="org.jomc.sdk.model.support.JaxpResourceResolverFactory" classDeclaration="true"
                     name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true">
+                    stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">XML Schema Set JAXP 'LSResourceResolver' factory implementation.</text>
@@ -462,7 +462,7 @@
     <implementation identifier="JAXP Document Builder Factory"
                     class="org.jomc.sdk.model.support.JaxpDocumentBuilderFactory" classDeclaration="true"
                     name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true">
+                    stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">JAXP 'DocumentBuilder' factory implementation.</text>
@@ -534,7 +534,7 @@
     <implementation identifier="JAXP SAX Parser Factory"
                     class="org.jomc.sdk.model.support.JaxpSaxParserFactory" classDeclaration="true"
                     name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true">
+                    stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">JAXP 'SAXParser' factory implementation.</text>
@@ -580,7 +580,7 @@
     <implementation identifier="JAXP SAX XML Reader Factory"
                     class="org.jomc.sdk.model.support.JaxpSaxXmlReaderFactory" classDeclaration="true"
                     name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true">
+                    stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">JAXP 'SAXParser' factory implementation.</text>

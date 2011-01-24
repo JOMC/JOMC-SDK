@@ -45,7 +45,7 @@
   <implementations>
     <!-- *********************************************************************************************************** -->
     <implementation identifier="Test XML Schema Set" name="Test XML Schema Set" version="${project.version}"
-                    vendor="${project.organization.name}">
+                    vendor="${project.organization.name}" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">Test XML Schema Set</text>
@@ -71,7 +71,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="org.jomc.sdk.model.test.ModelTest" class="org.jomc.sdk.model.test.ModelTest"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}">
+                    vendor="${project.organization.name}" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">Test cases for the {@code Test XML Schema Set}.</text>
@@ -274,7 +274,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="org.jomc.sdk.model.test.ListTypeTest" class="org.jomc.sdk.model.test.ListTypeTest"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}">
+                    vendor="${project.organization.name}" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">Test cases for the {@code ListType} complex type.</text>
@@ -385,7 +385,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="org.jomc.sdk.model.test.MapTypeTest" class="org.jomc.sdk.model.test.MapTypeTest"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}">
+                    vendor="${project.organization.name}" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en">Test cases for the {@code MapType} complex type.</text>
@@ -762,7 +762,7 @@
     <implementation identifier="org.jomc.sdk.model.modlet.test.SdkModelValidatorTest"
                     class="org.jomc.sdk.model.modlet.test.SdkModelValidatorTest"
                     classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}">
+                    vendor="${project.organization.name}" createDate="2009-07-26T19:56:45Z">
       <documentation defaultLanguage="en">
         <text language="en">Test cases for class {@code org.jomc.sdk.model.modlet.SdkModelValidator}.</text>
       </documentation>
