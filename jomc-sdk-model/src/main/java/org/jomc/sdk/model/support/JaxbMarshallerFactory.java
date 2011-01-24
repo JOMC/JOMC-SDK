@@ -1,8 +1,8 @@
 // SECTION-START[License Header]
 // <editor-fold defaultstate="collapsed" desc=" Generated License ">
 /*
- *   Copyright (c) 2010 The JOMC Project
- *   Copyright (c) 2005 Christian Schulte <schulte2005@users.sourceforge.net>
+ *   Copyright (c) 2009 - 2011 The JOMC Project
+ *   Copyright (c) 2005 - 2011 Christian Schulte <schulte2005@users.sourceforge.net>
  *   All rights reserved.
  *
  *   Redistribution and use in source and binary forms, with or without
@@ -48,46 +48,95 @@ import org.xml.sax.SAXException;
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * XML Schema Set JAXB 'Marshaller' factory implementation.
- * <p><b>Specifications</b><ul>
- * <li>{@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} {@code Multiton}</li>
- * </ul></p>
- * <p><b>Properties</b><ul>
- * <li>"{@link #getJaxbEncoding jaxbEncoding}"
- * <blockquote>Property of type {@code java.lang.String}.
- * <p>See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.</p>
- * </blockquote></li>
- * <li>"{@link #isJaxbFormattedOutput jaxbFormattedOutput}"
- * <blockquote>Property of type {@code java.lang.Boolean}.
- * <p>See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.</p>
- * </blockquote></li>
- * <li>"{@link #isJaxbFragment jaxbFragment}"
- * <blockquote>Property of type {@code java.lang.Boolean}.
- * <p>See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.</p>
- * </blockquote></li>
- * <li>"{@link #getJaxbNoNamespaceSchemaLocation jaxbNoNamespaceSchemaLocation}"
- * <blockquote>Property of type {@code java.lang.String}.
- * <p>See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.</p>
- * </blockquote></li>
- * <li>"{@link #isJaxbSchemaLocation jaxbSchemaLocation}"
- * <blockquote>Property of type {@code boolean}.
- * <p>See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.</p>
- * </blockquote></li>
- * <li>"{@link #getMarshallerProperties marshallerProperties}"
- * <blockquote>Property of type {@code java.util.Map<String,Object>}.
- * </blockquote></li>
- * <li>"{@link #getSchemas schemas}"
- * <blockquote>Property of type {@code org.jomc.sdk.model.SchemasType}.
- * <p>List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</p>
- * </blockquote></li>
- * </ul></p>
- * <p><b>Dependencies</b><ul>
- * <li>"{@link #getAttachmentMarshaller attachmentMarshaller}"<blockquote>
- * Dependency on {@code 'javax.xml.bind.attachment.AttachmentMarshaller'} {@code (javax.xml.bind.attachment.AttachmentMarshaller)} bound to an instance.</blockquote></li>
- * <li>"{@link #getSchema schema}"<blockquote>
- * Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</blockquote></li>
- * <li>"{@link #getValidationEventHandler validationEventHandler}"<blockquote>
- * Dependency on {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} bound to an instance.</blockquote></li>
- * </ul></p>
+ * <p>
+ *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+ *     <tr class="TableHeadingColor">
+ *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Specifications</font></th>
+ *     </tr>
+ *     <tr class="TableSubHeadingColor">
+ *       <td align="left" scope="col" nowrap><b>Identifier</b></td>
+ *       <td align="left" scope="col" nowrap><b>Class</b></td>
+ *       <td align="left" scope="col" nowrap><b>Scope</b></td>
+ *       <td align="left" scope="col" nowrap><b>Version</b></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@code javax.xml.bind.Marshaller}</td>
+ *       <td align="left" nowrap>{@code javax.xml.bind.Marshaller}</td>
+ *       <td align="left" nowrap>{@code Multiton}</td>
+ *       <td align="left" nowrap></td>
+ *     </tr>
+ *   </table>
+ * </p>
+ * <p>
+ *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+ *     <tr class="TableHeadingColor">
+ *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Properties</font></th>
+ *     </tr>
+ *     <tr class="TableSubHeadingColor">
+ *       <td align="left" scope="col" nowrap><b>Name</b></td>
+ *       <td align="left" scope="col" nowrap><b>Type</b></td>
+ *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getJaxbEncoding jaxbEncoding}</td>
+ *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top">See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #isJaxbFormattedOutput jaxbFormattedOutput}</td>
+ *       <td align="left" nowrap>{@code java.lang.Boolean}</td>
+ *       <td align="left" valign="top">See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #isJaxbFragment jaxbFragment}</td>
+ *       <td align="left" nowrap>{@code java.lang.Boolean}</td>
+ *       <td align="left" valign="top">See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getJaxbNoNamespaceSchemaLocation jaxbNoNamespaceSchemaLocation}</td>
+ *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top">See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #isJaxbSchemaLocation jaxbSchemaLocation}</td>
+ *       <td align="left" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top">See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getMarshallerProperties marshallerProperties}</td>
+ *       <td align="left" nowrap>{@code java.util.Map&lt;String,Object&gt;}</td>
+ *       <td align="left" valign="top"></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getSchemas schemas}</td>
+ *       <td align="left" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
+ *       <td align="left" valign="top">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</td>
+ *     </tr>
+ *   </table>
+ * </p>
+ * <p>
+ *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+ *     <tr class="TableHeadingColor">
+ *       <th align="left" scope="col" colspan="2" nowrap><font size="+2">Dependencies</font></th>
+ *     </tr>
+ *     <tr class="TableSubHeadingColor">
+ *       <td align="left" scope="col" nowrap><b>Name</b></td>
+ *       <td align="left" scope="col" nowrap><b>Description</b></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getAttachmentMarshaller attachmentMarshaller}</td>
+ *       <td align="left">Dependency on {@code 'javax.xml.bind.attachment.AttachmentMarshaller'} {@code (javax.xml.bind.attachment.AttachmentMarshaller)} bound to an instance.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getSchema schema}</td>
+ *       <td align="left">Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getValidationEventHandler validationEventHandler}</td>
+ *       <td align="left">Dependency on {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} bound to an instance.</td>
+ *     </tr>
+ *   </table>
+ * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version $Id$
@@ -96,7 +145,7 @@ import org.xml.sax.SAXException;
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
 // </editor-fold>
 // SECTION-END
 public final class JaxbMarshallerFactory
@@ -161,7 +210,7 @@ public final class JaxbMarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code JaxbMarshallerFactory} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public JaxbMarshallerFactory()
     {
         // SECTION-START[Default Constructor]
@@ -181,7 +230,7 @@ public final class JaxbMarshallerFactory
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private javax.xml.bind.attachment.AttachmentMarshaller getAttachmentMarshaller()
     {
         return (javax.xml.bind.attachment.AttachmentMarshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "attachmentMarshaller" );
@@ -195,7 +244,7 @@ public final class JaxbMarshallerFactory
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private javax.xml.validation.Schema getSchema()
     {
         return (javax.xml.validation.Schema) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "schema" );
@@ -209,7 +258,7 @@ public final class JaxbMarshallerFactory
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private javax.xml.bind.ValidationEventHandler getValidationEventHandler()
     {
         return (javax.xml.bind.ValidationEventHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "validationEventHandler" );
@@ -224,7 +273,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.lang.String getJaxbEncoding()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbEncoding" );
@@ -237,7 +286,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.lang.Boolean isJaxbFormattedOutput()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbFormattedOutput" );
@@ -250,7 +299,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.lang.Boolean isJaxbFragment()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbFragment" );
@@ -263,7 +312,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.lang.String getJaxbNoNamespaceSchemaLocation()
     {
         final java.lang.String _p = (java.lang.String) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbNoNamespaceSchemaLocation" );
@@ -276,7 +325,7 @@ public final class JaxbMarshallerFactory
      * @return See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private boolean isJaxbSchemaLocation()
     {
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "jaxbSchemaLocation" );
@@ -289,7 +338,7 @@ public final class JaxbMarshallerFactory
      * @return The value of the {@code marshallerProperties} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private java.util.Map<String,Object> getMarshallerProperties()
     {
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "marshallerProperties" );
@@ -302,7 +351,7 @@ public final class JaxbMarshallerFactory
      * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private org.jomc.sdk.model.SchemasType getSchemas()
     {
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );

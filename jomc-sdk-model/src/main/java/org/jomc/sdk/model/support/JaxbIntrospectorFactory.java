@@ -1,8 +1,8 @@
 // SECTION-START[License Header]
 // <editor-fold defaultstate="collapsed" desc=" Generated License ">
 /*
- *   Copyright (c) 2010 The JOMC Project
- *   Copyright (c) 2005 Christian Schulte <schulte2005@users.sourceforge.net>
+ *   Copyright (c) 2009 - 2011 The JOMC Project
+ *   Copyright (c) 2005 - 2011 Christian Schulte <schulte2005@users.sourceforge.net>
  *   All rights reserved.
  *
  *   Redistribution and use in source and binary forms, with or without
@@ -46,15 +46,42 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * XML Schema Set 'JAXBIntrospector' factory implementation.
- * <p><b>Specifications</b><ul>
- * <li>{@code 'javax.xml.bind.JAXBIntrospector'} {@code (javax.xml.bind.JAXBIntrospector)} {@code Multiton}</li>
- * </ul></p>
- * <p><b>Properties</b><ul>
- * <li>"{@link #getSchemas schemas}"
- * <blockquote>Property of type {@code org.jomc.sdk.model.SchemasType}.
- * <p>List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</p>
- * </blockquote></li>
- * </ul></p>
+ * <p>
+ *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+ *     <tr class="TableHeadingColor">
+ *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Specifications</font></th>
+ *     </tr>
+ *     <tr class="TableSubHeadingColor">
+ *       <td align="left" scope="col" nowrap><b>Identifier</b></td>
+ *       <td align="left" scope="col" nowrap><b>Class</b></td>
+ *       <td align="left" scope="col" nowrap><b>Scope</b></td>
+ *       <td align="left" scope="col" nowrap><b>Version</b></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@code javax.xml.bind.JAXBIntrospector}</td>
+ *       <td align="left" nowrap>{@code javax.xml.bind.JAXBIntrospector}</td>
+ *       <td align="left" nowrap>{@code Multiton}</td>
+ *       <td align="left" nowrap></td>
+ *     </tr>
+ *   </table>
+ * </p>
+ * <p>
+ *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+ *     <tr class="TableHeadingColor">
+ *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Properties</font></th>
+ *     </tr>
+ *     <tr class="TableSubHeadingColor">
+ *       <td align="left" scope="col" nowrap><b>Name</b></td>
+ *       <td align="left" scope="col" nowrap><b>Type</b></td>
+ *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" nowrap>{@link #getSchemas schemas}</td>
+ *       <td align="left" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
+ *       <td align="left" valign="top">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</td>
+ *     </tr>
+ *   </table>
+ * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version $Id$
@@ -63,7 +90,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
 // SECTION-END
 // SECTION-START[Annotations]
 // <editor-fold defaultstate="collapsed" desc=" Generated Annotations ">
-@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+@javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
 // </editor-fold>
 // SECTION-END
 public final class JaxbIntrospectorFactory
@@ -99,7 +126,7 @@ public final class JaxbIntrospectorFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
 
     /** Creates a new {@code JaxbIntrospectorFactory} instance. */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public JaxbIntrospectorFactory()
     {
         // SECTION-START[Default Constructor]
@@ -118,7 +145,7 @@ public final class JaxbIntrospectorFactory
      * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
-    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.1", comments = "See http://jomc.sourceforge.net/jomc/1.1/jomc-tools-1.1" )
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     private org.jomc.sdk.model.SchemasType getSchemas()
     {
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );
