@@ -44,7 +44,7 @@
 
   <implementations>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JPA Entity Manager"
+    <implementation identifier="JOMC :: JPA Entity Manager"
                     location="jndi:java:comp/env/persistence/EntityManager"
                     name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
                     stateless="true" createDate="2009-07-26T19:56:45Z">
@@ -62,7 +62,7 @@
       </specifications>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JPA Entity Manager Factory"
+    <implementation identifier="JOMC :: JPA Entity Manager Factory"
                     location="jndi:java:comp/env/persistence/EntityManagerFactory"
                     name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
                     stateless="true" createDate="2009-07-26T19:56:45Z">
@@ -80,7 +80,7 @@
       </specifications>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JPA Query Factory" class="org.jomc.sdk.jpa.QueryFactory"
+    <implementation identifier="JOMC :: JPA Query Factory" class="org.jomc.sdk.jpa.QueryFactory"
                     abstract="true" classDeclaration="true" name="${project.name} Query Factory"
                     version="${project.version}" vendor="${project.organization.name}"
                     createDate="2009-07-26T19:56:45Z">
@@ -116,7 +116,7 @@
       </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JPA Named Query Factory" class="org.jomc.sdk.jpa.NamedQueryFactory"
+    <implementation identifier="JOMC :: JPA Named Query Factory" class="org.jomc.sdk.jpa.NamedQueryFactory"
                     abstract="true" classDeclaration="true" name="${project.name} Named Query Factory"
                     version="${project.version}" vendor="${project.organization.name}"
                     createDate="2009-07-26T19:56:45Z">
@@ -152,7 +152,7 @@
       </properties>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JPA Native Query Factory" class="org.jomc.sdk.jpa.NativeQueryFactory"
+    <implementation identifier="JOMC :: JPA Native Query Factory" class="org.jomc.sdk.jpa.NativeQueryFactory"
                     abstract="true" classDeclaration="true" name="${project.name} Native Query Factory"
                     version="${project.version}" vendor="${project.organization.name}"
                     createDate="2009-07-26T19:56:45Z">

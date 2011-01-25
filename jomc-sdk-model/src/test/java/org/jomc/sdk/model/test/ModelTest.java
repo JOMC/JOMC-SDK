@@ -436,7 +436,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomMarshaller} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code jaxbEncoding}"</dt>
@@ -498,7 +498,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSchema} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code CustomSchema} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -513,7 +513,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSchemaUnrecognizedFeature} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code schemaFeatures}"</dt>
@@ -533,7 +533,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomSchemaUnrecognizedProperty} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code schemaProperties}"</dt>
@@ -553,7 +553,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomUnmarshaller} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code CustomUnmarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -568,7 +568,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorHandlerUnrecognizedFeature} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorHandlerFeatures}"</dt>
@@ -588,7 +588,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorHandlerUnrecognizedProperty} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorHandlerProperties}"</dt>
@@ -608,7 +608,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorUnrecognizedFeature} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorFeatures}"</dt>
@@ -628,7 +628,7 @@ public class ModelTest
 
     /**
      * Gets the {@code CustomValidatorUnrecognizedProperty} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorProperties}"</dt>
@@ -648,7 +648,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultBinder} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.bind.Binder'} {@code (javax.xml.bind.Binder)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Binder'} {@code (javax.xml.bind.Binder)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultBinder} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -663,7 +663,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultContentHandler} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'org.xml.sax.ContentHandler'} {@code (org.xml.sax.ContentHandler)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.ContentHandler'} {@code (org.xml.sax.ContentHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultContentHandler} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -678,7 +678,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultContext} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBContext'} {@code (javax.xml.bind.JAXBContext)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBContext'} {@code (javax.xml.bind.JAXBContext)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultContext} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -708,7 +708,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultEntityResolver} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultEntityResolver} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -723,7 +723,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultIntrospector} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBIntrospector'} {@code (javax.xml.bind.JAXBIntrospector)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBIntrospector'} {@code (javax.xml.bind.JAXBIntrospector)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultIntrospector} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -738,7 +738,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultMarshaller} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultMarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -753,7 +753,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultResourceResolver} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultResourceResolver} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -798,7 +798,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultSchema} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultSchema} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -813,7 +813,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultUnmarshaller} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultUnmarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -828,7 +828,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultValidator} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultValidator} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -843,7 +843,7 @@ public class ModelTest
 
     /**
      * Gets the {@code DefaultValidatorHandler} dependency.
-     * <p>This method returns the {@code 'Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
+     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * @return The {@code DefaultValidatorHandler} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.

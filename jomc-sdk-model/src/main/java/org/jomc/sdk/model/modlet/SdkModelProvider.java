@@ -94,7 +94,7 @@ public final class SdkModelProvider implements ModelProvider
     public static final QName XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE = new QName( NULL_NS_URI, "java-classpath-id" );
 
     /** Identifier of the {@code XML Schema Set} specification. */
-    private static final String XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER = "XML Schema Set";
+    private static final String XML_SCHEMA_SET_SPECIFICATION_IDENTIFIER = "JOMC :: XML Schema Set";
 
     public Model findModel( final ModelContext context, final Model model ) throws ModelException
     {
@@ -171,7 +171,7 @@ public final class SdkModelProvider implements ModelProvider
     }
 
     private Implementation createJavaSchemaSetImplementation(
-        final Modules modules, final Implementation schemaSet, final Class factoryClazz )
+        final Modules modules, final Implementation schemaSet, final Class<?> factoryClazz )
     {
         final Implementation i = new Implementation();
         i.setIdentifier( getMessage( "schemaSetImplementationIdenifier", schemaSet.getIdentifier(),

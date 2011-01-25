@@ -44,7 +44,7 @@
   </documentation>
   <implementations>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="Test XML Schema Set" name="Test XML Schema Set" version="${project.version}"
+    <implementation identifier="JOMC :: Test XML Schema Set" name="JOMC :: Test XML Schema Set" version="${project.version}"
                     vendor="${project.organization.name}" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -56,7 +56,7 @@
 
       </authors>
       <specifications>
-        <reference identifier="XML Schema Set" version="${xmlschemaset.specification.version}"/>
+        <reference identifier="JOMC :: XML Schema Set" version="${xmlschemaset.specification.version}"/>
       </specifications>
       <properties>
         <property name="schemas" type="org.jomc.sdk.model.SchemasType">
@@ -83,17 +83,17 @@
       </authors>
       <dependencies>
         <dependency name="DefaultContext" identifier="javax.xml.bind.JAXBContext"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="DefaultMarshaller" identifier="javax.xml.bind.Marshaller"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="CustomMarshaller" identifier="javax.xml.bind.Marshaller"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <dependencies>
             <dependency name="schema" identifier="javax.xml.validation.Schema"
-                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+                        implementationName="JOMC :: Test XML Schema Set" override="true" optional="true"/>
 
           </dependencies>
           <properties>
@@ -105,32 +105,32 @@
           </properties>
         </dependency>
         <dependency name="DefaultUnmarshaller" identifier="javax.xml.bind.Unmarshaller"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="CustomUnmarshaller" identifier="javax.xml.bind.Unmarshaller"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <dependencies>
             <dependency name="schema" identifier="javax.xml.validation.Schema"
-                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+                        implementationName="JOMC :: Test XML Schema Set" override="true" optional="true"/>
 
           </dependencies>
         </dependency>
         <dependency name="DefaultSchema" identifier="javax.xml.validation.Schema"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="CustomSchema" identifier="javax.xml.validation.Schema"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <dependencies>
             <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
-                        implementationName="Test XML Schema Set" optional="true"/>
+                        implementationName="JOMC :: Test XML Schema Set" optional="true"/>
 
           </dependencies>
         </dependency>
 
         <dependency name="CustomSchemaUnrecognizedFeature" identifier="javax.xml.validation.Schema"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
             <property name="schemaFeatures" type="java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;">
@@ -144,7 +144,7 @@
           </properties>
         </dependency>
         <dependency name="CustomSchemaUnrecognizedProperty" identifier="javax.xml.validation.Schema"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
             <property name="schemaProperties" type="java.util.Map&lt;java.lang.String,java.lang.Object&gt;">
@@ -158,10 +158,10 @@
           </properties>
         </dependency>
         <dependency name="DefaultValidator" identifier="javax.xml.validation.Validator"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="CustomValidatorUnrecognizedFeature" identifier="javax.xml.validation.Validator"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
             <property name="validatorFeatures" type="java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;">
@@ -175,7 +175,7 @@
           </properties>
         </dependency>
         <dependency name="CustomValidatorUnrecognizedProperty" identifier="javax.xml.validation.Validator"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
             <property name="validatorProperties" type="java.util.Map&lt;java.lang.String,java.lang.Object&gt;">
@@ -189,10 +189,10 @@
           </properties>
         </dependency>
         <dependency name="DefaultValidatorHandler" identifier="javax.xml.validation.ValidatorHandler"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="CustomValidatorHandlerUnrecognizedFeature" identifier="javax.xml.validation.ValidatorHandler"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
             <property name="validatorHandlerFeatures" type="java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;">
@@ -206,7 +206,7 @@
           </properties>
         </dependency>
         <dependency name="CustomValidatorHandlerUnrecognizedProperty" identifier="javax.xml.validation.ValidatorHandler"
-                    implementationName="Test XML Schema Set">
+                    implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
             <property name="validatorHandlerProperties" type="java.util.Map&lt;java.lang.String,java.lang.Object&gt;">
@@ -220,19 +220,19 @@
           </properties>
         </dependency>
         <dependency name="DefaultContentHandler" identifier="org.xml.sax.ContentHandler"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="DefaultEntityResolver" identifier="org.xml.sax.EntityResolver"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="DefaultResourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="DefaultBinder" identifier="javax.xml.bind.Binder"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="DefaultIntrospector" identifier="javax.xml.bind.JAXBIntrospector"
-                    implementationName="Test XML Schema Set"/>
+                    implementationName="JOMC :: Test XML Schema Set"/>
 
         <dependency name="DefaultDocumentBuilder" identifier="javax.xml.parsers.DocumentBuilder"
                     implementationName="JOMC SDK"/>
@@ -245,7 +245,7 @@
 
           <dependencies>
             <dependency name="schema" identifier="javax.xml.validation.Schema"
-                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+                        implementationName="JOMC :: Test XML Schema Set" override="true" optional="true"/>
 
           </dependencies>
         </dependency>
@@ -258,7 +258,7 @@
 
           <dependencies>
             <dependency name="schema" identifier="javax.xml.validation.Schema"
-                        implementationName="Test XML Schema Set" override="true" optional="true"/>
+                        implementationName="JOMC :: Test XML Schema Set" override="true" optional="true"/>
 
           </dependencies>
         </dependency>

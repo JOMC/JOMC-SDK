@@ -43,7 +43,7 @@
 
   <implementations>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JTA Transaction Manager"
+    <implementation identifier="JOMC :: JTA Transaction Manager"
                     location="jndi:java:comp/TransactionManager"
                     name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
                     stateless="true" createDate="2009-07-26T19:56:45Z">
@@ -61,7 +61,7 @@
       </specifications>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JTA User Transaction"
+    <implementation identifier="JOMC :: JTA User Transaction"
                     location="jndi:java:comp/UserTransaction"
                     name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
                     stateless="true" createDate="2009-07-26T19:56:45Z">
@@ -79,7 +79,7 @@
       </specifications>
     </implementation>
     <!-- *********************************************************************************************************** -->
-    <implementation identifier="JTA Transaction Synchronization Registry"
+    <implementation identifier="JOMC :: JTA Transaction Synchronization Registry"
                     location="jndi:java:comp/TransactionSynchronizationRegistry"
                     name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
                     stateless="true" createDate="2009-07-26T19:56:45Z">

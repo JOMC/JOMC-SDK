@@ -149,7 +149,7 @@ public final class SdkModelValidator implements ModelValidator
         }
 
         Properties properties = null;
-        JAXBElement detailElement = null;
+        JAXBElement<?> detailElement = null;
 
         if ( module != null )
         {
@@ -178,7 +178,7 @@ public final class SdkModelValidator implements ModelValidator
                 if ( p.getAny() != null )
                 {
                     final Object any =
-                        p.getAny() instanceof JAXBElement ? ( (JAXBElement) p.getAny() ).getValue() : p.getAny();
+                        p.getAny() instanceof JAXBElement<?> ? ( (JAXBElement<?>) p.getAny() ).getValue() : p.getAny();
 
                     if ( any instanceof ListType )
                     {
