@@ -1106,7 +1106,7 @@
     <jomc.artifacts.distribution.url>scp://shell.sourceforge.net/home/groups/j/jo/jomc/htdocs/jomc-sdk/${jomc.base.version}</jomc.artifacts.distribution.url>
     <jomc.build.version>1.5</jomc.build.version>
     <jomc-logging.version>1.1-SNAPSHOT</jomc-logging.version>
-    <surefire.version>2.7.1</surefire.version>
+    <surefire.version>2.7.2</surefire.version>
     <xmlschemaset.specification.version>1.0</xmlschemaset.specification.version>
   </properties>
 </project>
