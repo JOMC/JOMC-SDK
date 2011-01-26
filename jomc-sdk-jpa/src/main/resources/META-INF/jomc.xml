@@ -107,7 +107,7 @@
             <text language="en">Query to provide.</text>
           </documentation>
         </property>
-        <property name="parameterMap" type="java.util.Map&lt;String,Object&gt;">
+        <property name="parameterMap" type="java.util.Map<String,Object>">
           <documentation defaultLanguage="en">
             <text language="en">Map of parameters to set on the query.</text>
           </documentation>
@@ -143,7 +143,7 @@
             <text language="en">Name of the query to provide.</text>
           </documentation>
         </property>
-        <property name="parameterMap" type="java.util.Map&lt;String,Object&gt;">
+        <property name="parameterMap" type="java.util.Map<String,Object>">
           <documentation defaultLanguage="en">
             <text language="en">Map of parameters to set on the query.</text>
           </documentation>
@@ -179,7 +179,7 @@
             <text language="en">Native query to provide.</text>
           </documentation>
         </property>
-        <property name="parameterMap" type="java.util.Map&lt;String,Object&gt;">
+        <property name="parameterMap" type="java.util.Map<String,Object>">
           <documentation defaultLanguage="en">
             <text language="en">Map of parameters to set on the query.</text>
           </documentation>
