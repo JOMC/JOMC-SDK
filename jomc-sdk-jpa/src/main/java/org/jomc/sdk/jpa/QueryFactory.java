@@ -75,7 +75,7 @@ import javax.persistence.Query;
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getParameterMap parameterMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;String,Object&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top">Map of parameters to set on the query.</td>
  *     </tr>
  *     <tr class="TableRowColor">
