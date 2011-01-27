@@ -84,7 +84,7 @@ import org.xml.sax.SAXException;
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getUnmarshallerProperties unmarshallerProperties}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;String,Object&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>

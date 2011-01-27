@@ -90,12 +90,12 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getValidatorFeatures validatorFeatures}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;String,Boolean&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<String,Boolean>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getValidatorProperties validatorProperties}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;String,Object&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>

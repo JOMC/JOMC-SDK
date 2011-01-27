@@ -81,7 +81,7 @@ import javax.xml.parsers.ParserConfigurationException;
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getAttributes attributes}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;String,Object&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
@@ -96,7 +96,7 @@ import javax.xml.parsers.ParserConfigurationException;
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getFeatures features}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;String,Boolean&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<String,Boolean>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
