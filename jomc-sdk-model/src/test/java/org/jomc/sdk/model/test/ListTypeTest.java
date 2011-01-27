@@ -60,27 +60,27 @@ import static org.junit.Assert.assertTrue;
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getComplexTypeList complexTypeList}</td>
- *       <td align="left" nowrap>{@code java.util.List&lt;org.jomc.model.Text&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.List<org.jomc.model.Text>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getFileList fileList}</td>
- *       <td align="left" nowrap>{@code java.util.List&lt;java.io.File&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.List<java.io.File>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getListOfLists listOfLists}</td>
- *       <td align="left" nowrap>{@code java.util.List&lt;java.util.List&lt;String&gt;&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.List<java.util.List<String>>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getPrimitiveList primitiveList}</td>
- *       <td align="left" nowrap>{@code java.util.List&lt;Integer&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.List<Integer>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getStringList stringList}</td>
- *       <td align="left" nowrap>{@code java.util.List&lt;String&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.List<String>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>

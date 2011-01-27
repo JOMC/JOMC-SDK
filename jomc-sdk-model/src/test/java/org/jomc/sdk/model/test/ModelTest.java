@@ -517,7 +517,7 @@ public class ModelTest
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code schemaFeatures}"</dt>
-     * <dd>Property of type {@code java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;}.
+     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Boolean>}.
      * </dd>
      * </dl>
      * @return The {@code CustomSchemaUnrecognizedFeature} dependency.
@@ -537,7 +537,7 @@ public class ModelTest
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code schemaProperties}"</dt>
-     * <dd>Property of type {@code java.util.Map&lt;java.lang.String,java.lang.Object&gt;}.
+     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Object>}.
      * </dd>
      * </dl>
      * @return The {@code CustomSchemaUnrecognizedProperty} dependency.
@@ -572,7 +572,7 @@ public class ModelTest
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorHandlerFeatures}"</dt>
-     * <dd>Property of type {@code java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;}.
+     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Boolean>}.
      * </dd>
      * </dl>
      * @return The {@code CustomValidatorHandlerUnrecognizedFeature} dependency.
@@ -592,7 +592,7 @@ public class ModelTest
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorHandlerProperties}"</dt>
-     * <dd>Property of type {@code java.util.Map&lt;java.lang.String,java.lang.Object&gt;}.
+     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Object>}.
      * </dd>
      * </dl>
      * @return The {@code CustomValidatorHandlerUnrecognizedProperty} dependency.
@@ -612,7 +612,7 @@ public class ModelTest
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorFeatures}"</dt>
-     * <dd>Property of type {@code java.util.Map&lt;java.lang.String,java.lang.Boolean&gt;}.
+     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Boolean>}.
      * </dd>
      * </dl>
      * @return The {@code CustomValidatorUnrecognizedFeature} dependency.
@@ -632,7 +632,7 @@ public class ModelTest
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
      * <p><b>Properties</b><dl>
      * <dt>"{@code validatorProperties}"</dt>
-     * <dd>Property of type {@code java.util.Map&lt;java.lang.String,java.lang.Object&gt;}.
+     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Object>}.
      * </dd>
      * </dl>
      * @return The {@code CustomValidatorUnrecognizedProperty} dependency.

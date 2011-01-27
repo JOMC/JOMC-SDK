@@ -56,27 +56,27 @@ import static org.junit.Assert.assertEquals;
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getComplexTypeMap complexTypeMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;Integer,org.jomc.model.Text&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<Integer,org.jomc.model.Text>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getFileMap fileMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;java.io.File,java.io.File&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<java.io.File,java.io.File>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getMapOfMaps mapOfMaps}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;java.util.Map&lt;String,String&gt;,java.util.Map&lt;String,String&gt;&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getPrimitiveMap primitiveMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;Integer,Integer&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<Integer,Integer>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" nowrap>{@link #getStringMap stringMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map&lt;String,String&gt;}</td>
+ *       <td align="left" nowrap>{@code java.util.Map<String,String>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>
