@@ -380,16 +380,21 @@
           <version>1.6</version>
           <executions>
             <execution>
-              <id>check-jdk15-compat</id>
+              <id>check</id>
               <phase>verify</phase>
               <goals>
                 <goal>check</goal>
               </goals>
               <configuration>
+                <ignoreDependencies>false</ignoreDependencies>
+                <ignores>
+                  <ignore>javax.persistence*</ignore>
+                  <ignore>org.jomc*</ignore>
+                </ignores>
                 <signature>
-                  <groupId>org.codehaus.mojo.signature</groupId>
-                  <artifactId>java15</artifactId>
-                  <version>1.0</version>
+                  <groupId>org.jomc.build</groupId>
+                  <artifactId>jdk15-jaxb21-signature</artifactId>
+                  <version>${jomc.build.version}</version>
                 </signature>
               </configuration>
             </execution>
@@ -1113,7 +1118,7 @@
     <jomc.base.version>1.0</jomc.base.version>
     <jomc.artifacts.url>http://jomc.sourceforge.net/jomc-sdk/${jomc.base.version}</jomc.artifacts.url>
     <jomc.artifacts.distribution.url>scp://shell.sourceforge.net/home/groups/j/jo/jomc/htdocs/jomc-sdk/${jomc.base.version}</jomc.artifacts.distribution.url>
-    <jomc.build.version>1.5</jomc.build.version>
+    <jomc.build.version>1.6-SNAPSHOT</jomc.build.version>
     <jomc-logging.version>1.1-SNAPSHOT</jomc-logging.version>
     <surefire.version>2.7.2</surefire.version>
     <xmlschemaset.specification.version>1.0</xmlschemaset.specification.version>
