@@ -59,28 +59,28 @@ import org.junit.Test;
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSysIllegalSubstitution sysIllegalSubstitution}</td>
- *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSysIllegalSubstitution sysIllegalSubstitution}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSysUserDir sysUserDir}</td>
- *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSysUserDir sysUserDir}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSysUserHome sysUserHome}</td>
- *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSysUserHome sysUserHome}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSysUserName sysUserName}</td>
- *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSysUserName sysUserName}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSysUserNameAndHomeAndDir sysUserNameAndHomeAndDir}</td>
- *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSysUserNameAndHomeAndDir sysUserNameAndHomeAndDir}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>
@@ -95,104 +95,104 @@ import org.junit.Test;
  *       <td align="left" scope="col" nowrap><b>Description</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomMarshaller CustomMarshaller}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomMarshaller CustomMarshaller}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomSaxParser CustomSaxParser}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomSaxParser CustomSaxParser}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomSaxXmlReader CustomSaxXmlReader}</td>
- *       <td align="left">Dependency on {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomSaxXmlReader CustomSaxXmlReader}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomSchema CustomSchema}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomSchema CustomSchema}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomSchemaUnrecognizedFeature CustomSchemaUnrecognizedFeature}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomSchemaUnrecognizedFeature CustomSchemaUnrecognizedFeature}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomSchemaUnrecognizedProperty CustomSchemaUnrecognizedProperty}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomSchemaUnrecognizedProperty CustomSchemaUnrecognizedProperty}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomUnmarshaller CustomUnmarshaller}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomUnmarshaller CustomUnmarshaller}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomValidatorHandlerUnrecognizedFeature CustomValidatorHandlerUnrecognizedFeature}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorHandlerUnrecognizedFeature CustomValidatorHandlerUnrecognizedFeature}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomValidatorHandlerUnrecognizedProperty CustomValidatorHandlerUnrecognizedProperty}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorHandlerUnrecognizedProperty CustomValidatorHandlerUnrecognizedProperty}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomValidatorUnrecognizedFeature CustomValidatorUnrecognizedFeature}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorUnrecognizedFeature CustomValidatorUnrecognizedFeature}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getCustomValidatorUnrecognizedProperty CustomValidatorUnrecognizedProperty}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorUnrecognizedProperty CustomValidatorUnrecognizedProperty}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultBinder DefaultBinder}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.Binder'} {@code (javax.xml.bind.Binder)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultBinder DefaultBinder}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Binder'} {@code (javax.xml.bind.Binder)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultContentHandler DefaultContentHandler}</td>
- *       <td align="left">Dependency on {@code 'org.xml.sax.ContentHandler'} {@code (org.xml.sax.ContentHandler)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultContentHandler DefaultContentHandler}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.ContentHandler'} {@code (org.xml.sax.ContentHandler)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultContext DefaultContext}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.JAXBContext'} {@code (javax.xml.bind.JAXBContext)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultContext DefaultContext}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBContext'} {@code (javax.xml.bind.JAXBContext)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultDocumentBuilder DefaultDocumentBuilder}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.parsers.DocumentBuilder'} {@code (javax.xml.parsers.DocumentBuilder)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultDocumentBuilder DefaultDocumentBuilder}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.DocumentBuilder'} {@code (javax.xml.parsers.DocumentBuilder)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultEntityResolver DefaultEntityResolver}</td>
- *       <td align="left">Dependency on {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultEntityResolver DefaultEntityResolver}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultIntrospector DefaultIntrospector}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.JAXBIntrospector'} {@code (javax.xml.bind.JAXBIntrospector)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultIntrospector DefaultIntrospector}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBIntrospector'} {@code (javax.xml.bind.JAXBIntrospector)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultMarshaller DefaultMarshaller}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultMarshaller DefaultMarshaller}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultResourceResolver DefaultResourceResolver}</td>
- *       <td align="left">Dependency on {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultResourceResolver DefaultResourceResolver}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultSaxParser DefaultSaxParser}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultSaxParser DefaultSaxParser}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultSaxXmlReader DefaultSaxXmlReader}</td>
- *       <td align="left">Dependency on {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultSaxXmlReader DefaultSaxXmlReader}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultSchema DefaultSchema}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultSchema DefaultSchema}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultUnmarshaller DefaultUnmarshaller}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultUnmarshaller DefaultUnmarshaller}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultValidator DefaultValidator}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultValidator DefaultValidator}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getDefaultValidatorHandler DefaultValidatorHandler}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getDefaultValidatorHandler DefaultValidatorHandler}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification bound to an instance.</td>
  *     </tr>
  *   </table>
  * </p>
@@ -438,23 +438,40 @@ public class ModelTest
      * Gets the {@code CustomMarshaller} dependency.
      * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * <p><b>Properties</b><dl>
-     * <dt>"{@code jaxbEncoding}"</dt>
-     * <dd>Property of type {@code java.lang.String}.
-     * </dd>
-     * <dt>"{@code jaxbFormattedOutput}"</dt>
-     * <dd>Property of type {@code boolean}.
-     * </dd>
-     * <dt>"{@code jaxbFragment}"</dt>
-     * <dd>Property of type {@code boolean}.
-     * </dd>
-     * <dt>"{@code jaxbSchemaLocation}"</dt>
-     * <dd>Property of type {@code boolean}.
-     * </dd>
-     * <dt>"{@code jaxbNoNamespaceSchemaLocation}"</dt>
-     * <dd>Property of type {@code java.lang.String}.
-     * </dd>
-     * </dl>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code jaxbEncoding}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code jaxbFormattedOutput}</td>
+     *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code jaxbFragment}</td>
+     *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code jaxbSchemaLocation}</td>
+     *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code jaxbNoNamespaceSchemaLocation}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
+     * </p>
      * @return The {@code CustomMarshaller} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -515,11 +532,20 @@ public class ModelTest
      * Gets the {@code CustomSchemaUnrecognizedFeature} dependency.
      * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * <p><b>Properties</b><dl>
-     * <dt>"{@code schemaFeatures}"</dt>
-     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Boolean>}.
-     * </dd>
-     * </dl>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code schemaFeatures}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Boolean>}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
+     * </p>
      * @return The {@code CustomSchemaUnrecognizedFeature} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -535,11 +561,20 @@ public class ModelTest
      * Gets the {@code CustomSchemaUnrecognizedProperty} dependency.
      * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * <p><b>Properties</b><dl>
-     * <dt>"{@code schemaProperties}"</dt>
-     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Object>}.
-     * </dd>
-     * </dl>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code schemaProperties}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Object>}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
+     * </p>
      * @return The {@code CustomSchemaUnrecognizedProperty} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -570,11 +605,20 @@ public class ModelTest
      * Gets the {@code CustomValidatorHandlerUnrecognizedFeature} dependency.
      * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * <p><b>Properties</b><dl>
-     * <dt>"{@code validatorHandlerFeatures}"</dt>
-     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Boolean>}.
-     * </dd>
-     * </dl>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code validatorHandlerFeatures}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Boolean>}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
+     * </p>
      * @return The {@code CustomValidatorHandlerUnrecognizedFeature} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -590,11 +634,20 @@ public class ModelTest
      * Gets the {@code CustomValidatorHandlerUnrecognizedProperty} dependency.
      * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * <p><b>Properties</b><dl>
-     * <dt>"{@code validatorHandlerProperties}"</dt>
-     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Object>}.
-     * </dd>
-     * </dl>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code validatorHandlerProperties}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Object>}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
+     * </p>
      * @return The {@code CustomValidatorHandlerUnrecognizedProperty} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -610,11 +663,20 @@ public class ModelTest
      * Gets the {@code CustomValidatorUnrecognizedFeature} dependency.
      * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * <p><b>Properties</b><dl>
-     * <dt>"{@code validatorFeatures}"</dt>
-     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Boolean>}.
-     * </dd>
-     * </dl>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code validatorFeatures}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Boolean>}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
+     * </p>
      * @return The {@code CustomValidatorUnrecognizedFeature} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -630,11 +692,20 @@ public class ModelTest
      * Gets the {@code CustomValidatorUnrecognizedProperty} dependency.
      * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
      * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * <p><b>Properties</b><dl>
-     * <dt>"{@code validatorProperties}"</dt>
-     * <dd>Property of type {@code java.util.Map<java.lang.String,java.lang.Object>}.
-     * </dd>
-     * </dl>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code validatorProperties}</td>
+     *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Object>}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
+     * </p>
      * @return The {@code CustomValidatorUnrecognizedProperty} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */

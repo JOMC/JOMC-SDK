@@ -55,28 +55,28 @@ import static org.junit.Assert.assertEquals;
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getComplexTypeMap complexTypeMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map<Integer,org.jomc.model.Text>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getComplexTypeMap complexTypeMap}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<Integer,org.jomc.model.Text>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getFileMap fileMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map<java.io.File,java.io.File>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getFileMap fileMap}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.io.File,java.io.File>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getMapOfMaps mapOfMaps}</td>
- *       <td align="left" nowrap>{@code java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getMapOfMaps mapOfMaps}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getPrimitiveMap primitiveMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map<Integer,Integer>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getPrimitiveMap primitiveMap}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<Integer,Integer>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getStringMap stringMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map<String,String>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getStringMap stringMap}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,String>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>

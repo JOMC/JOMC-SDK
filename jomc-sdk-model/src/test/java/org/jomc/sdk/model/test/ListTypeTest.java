@@ -59,28 +59,28 @@ import static org.junit.Assert.assertTrue;
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getComplexTypeList complexTypeList}</td>
- *       <td align="left" nowrap>{@code java.util.List<org.jomc.model.Text>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getComplexTypeList complexTypeList}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.List<org.jomc.model.Text>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getFileList fileList}</td>
- *       <td align="left" nowrap>{@code java.util.List<java.io.File>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getFileList fileList}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.List<java.io.File>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getListOfLists listOfLists}</td>
- *       <td align="left" nowrap>{@code java.util.List<java.util.List<String>>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getListOfLists listOfLists}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.List<java.util.List<String>>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getPrimitiveList primitiveList}</td>
- *       <td align="left" nowrap>{@code java.util.List<Integer>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getPrimitiveList primitiveList}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.List<Integer>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getStringList stringList}</td>
- *       <td align="left" nowrap>{@code java.util.List<String>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getStringList stringList}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.List<String>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>
