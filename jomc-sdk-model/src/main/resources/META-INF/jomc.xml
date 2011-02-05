@@ -124,7 +124,7 @@
       <properties>
         <property name="schemas" type="org.jomc.sdk.model.SchemasType">
           <documentation defaultLanguage="en">
-            <text language="en">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</text>
+            <text language="en">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').</text>
           </documentation>
           <schemas xmlns="http://jomc.org/sdk/model" language-id="http://www.w3.org/2001/XMLSchema"/>
         </property>
