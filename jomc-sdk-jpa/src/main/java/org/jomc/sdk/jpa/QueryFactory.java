@@ -74,13 +74,13 @@ import javax.persistence.Query;
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getParameterMap parameterMap}</td>
- *       <td align="left" nowrap>{@code java.util.Map<String,Object>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getParameterMap parameterMap}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top">Map of parameters to set on the query.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getQuery query}</td>
- *       <td align="left" nowrap>{@code java.lang.String}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getQuery query}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
  *       <td align="left" valign="top">Query to provide.</td>
  *     </tr>
  *   </table>
@@ -95,8 +95,8 @@ import javax.persistence.Query;
  *       <td align="left" scope="col" nowrap><b>Description</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getEntityManager EntityManager}</td>
- *       <td align="left">Dependency on {@code 'javax.persistence.EntityManager'} {@code (javax.persistence.EntityManager)}.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getEntityManager EntityManager}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK JPA'} object of the {@code 'javax.persistence.EntityManager'} {@code (javax.persistence.EntityManager)} specification.</td>
  *     </tr>
  *   </table>
  * </p>
