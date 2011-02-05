@@ -78,13 +78,13 @@ import org.xml.sax.SAXException;
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSchemas schemas}</td>
- *       <td align="left" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
+ *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
  *       <td align="left" valign="top">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getUnmarshallerProperties unmarshallerProperties}</td>
- *       <td align="left" nowrap>{@code java.util.Map<String,Object>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getUnmarshallerProperties unmarshallerProperties}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>
@@ -99,16 +99,16 @@ import org.xml.sax.SAXException;
  *       <td align="left" scope="col" nowrap><b>Description</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getAttachmentUnmarshaller attachmentUnmarshaller}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.attachment.AttachmentUnmarshaller'} {@code (javax.xml.bind.attachment.AttachmentUnmarshaller)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getAttachmentUnmarshaller attachmentUnmarshaller}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.attachment.AttachmentUnmarshaller'} {@code (javax.xml.bind.attachment.AttachmentUnmarshaller)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSchema schema}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSchema schema}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getValidationEventHandler validationEventHandler}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getValidationEventHandler validationEventHandler}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} specification bound to an instance.</td>
  *     </tr>
  *   </table>
  * </p>

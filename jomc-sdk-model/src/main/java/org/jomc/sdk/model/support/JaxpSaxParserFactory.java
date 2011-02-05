@@ -76,28 +76,28 @@ import org.xml.sax.SAXException;
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #isXIncludeAware XIncludeAware}</td>
- *       <td align="left" nowrap>{@code java.lang.Boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@link #isXIncludeAware XIncludeAware}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.Boolean}</td>
  *       <td align="left" valign="top">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getFeatures features}</td>
- *       <td align="left" nowrap>{@code java.util.Map<String,Boolean>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getFeatures features}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Boolean>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #isNamespaceAware namespaceAware}</td>
- *       <td align="left" nowrap>{@code java.lang.Boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@link #isNamespaceAware namespaceAware}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.Boolean}</td>
  *       <td align="left" valign="top">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getProperties properties}</td>
- *       <td align="left" nowrap>{@code java.util.Map<String,Object>}</td>
+ *       <td align="left" valign="top" nowrap>{@link #getProperties properties}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #isValidating validating}</td>
- *       <td align="left" nowrap>{@code java.lang.Boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@link #isValidating validating}</td>
+ *       <td align="left" valign="top" nowrap>{@code java.lang.Boolean}</td>
  *       <td align="left" valign="top">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</td>
  *     </tr>
  *   </table>
@@ -112,8 +112,8 @@ import org.xml.sax.SAXException;
  *       <td align="left" scope="col" nowrap><b>Description</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@link #getSchema schema}</td>
- *       <td align="left">Dependency on {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} bound to an instance.</td>
+ *       <td align="left" valign="top" nowrap>{@link #getSchema schema}</td>
+ *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
  *     </tr>
  *   </table>
  * </p>
