@@ -86,7 +86,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
  *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
- *       <td align="left" valign="top">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).</td>
+ *       <td align="left" valign="top">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getValidatorFeatures validatorFeatures}</td>
@@ -239,7 +239,7 @@ public final class JaxpValidatorFactory
 
     /**
      * Gets the value of the {@code schemas} property.
-     * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model).
+     * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
