@@ -44,6 +44,32 @@
   <description>Object management and configuration software development kit JPA support.</description>
   <url>${jomc.artifacts.url}/${project.artifactId}-${project.version}</url>
   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>animal-sniffer-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>check</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration>
+              <ignoreDependencies>false</ignoreDependencies>
+              <ignores>
+                <ignore>org.jomc*</ignore>
+              </ignores>
+              <signature>
+                <groupId>org.jomc.build</groupId>
+                <artifactId>jdk15-jpa10-signature</artifactId>
+                <version>${jomc.build.version}</version>
+              </signature>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
     <resources>
       <resource>
         <filtering>true</filtering>
