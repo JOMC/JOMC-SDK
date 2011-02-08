@@ -1116,8 +1116,7 @@
     <jomc.version>1.2-SNAPSHOT</jomc.version>
     <jomc.base.version>1.0</jomc.base.version>
     <jomc.artifacts.url>http://jomc.sourceforge.net/jomc-sdk/${jomc.base.version}</jomc.artifacts.url>
-    <!-- jomc.artifacts.distribution.url>scp://shell.sourceforge.net/home/groups/j/jo/jomc/htdocs/jomc-sdk/${jomc.base.version}</jomc.artifacts.distribution.url -->
-    <jomc.artifacts.distribution.url>file://C:/jomc-sdk/${jomc.base.version}</jomc.artifacts.distribution.url>
+    <jomc.artifacts.distribution.url>scp://shell.sourceforge.net/home/groups/j/jo/jomc/htdocs/jomc-sdk/${jomc.base.version}</jomc.artifacts.distribution.url>
     <jomc.build.version>1.6-SNAPSHOT</jomc.build.version>
     <jomc-logging.version>1.1-SNAPSHOT</jomc-logging.version>
     <surefire.version>2.7.2</surefire.version>
