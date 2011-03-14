@@ -77,6 +77,7 @@ piwikTracker.enableLinkTracking();
       <item name="JOMC SDK JTA" href="jomc-sdk-jta/index.html"/>
     </menu>
     <menu name="Sourceforge" inherit="bottom" inheritAsRef="false">
+      <item name="Home" href="http://jomc.sourceforge.net/"/>
       <item name="Project Summary" href="http://sourceforge.net/projects/jomc/"/>
       <item name="Support" href="http://sourceforge.net/projects/jomc/support/"/>
       <item name="Files" href="http://sourceforge.net/projects/jomc/files/"/>
