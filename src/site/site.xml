@@ -70,19 +70,19 @@ piwikTracker.enableLinkTracking();
         </p>
       </noscript>
     </head>
-    <menu name="Sourceforge" inherit="top" inheritAsRef="false">
+    <menu ref="parent" inherit="top" inheritAsRef="false"/>
+    <menu name="Modules">
+      <item name="JOMC SDK Model" href="jomc-sdk-model/index.html"/>
+      <item name="JOMC SDK JPA" href="jomc-sdk-jpa/index.html"/>
+      <item name="JOMC SDK JTA" href="jomc-sdk-jta/index.html"/>
+    </menu>
+    <menu name="Sourceforge" inherit="bottom" inheritAsRef="false">
       <item name="Home" href="http://jomc.sourceforge.net/project/home"/>
       <item name="Files" href="http://jomc.sourceforge.net/project/files"/>
       <item name="Issues" href="http://jomc.sourceforge.net/project/issues"/>
       <item name="Summary" href="http://jomc.sourceforge.net/project/summary"/>
       <item name="Support" href="http://jomc.sourceforge.net/project/support"/>
       <item name="Statistics" href="http://jomc.sourceforge.net/project/statistics"/>
-    </menu>
-    <menu ref="parent" inherit="top" inheritAsRef="false"/>
-    <menu name="Modules">
-      <item name="JOMC SDK Model" href="jomc-sdk-model/index.html"/>
-      <item name="JOMC SDK JPA" href="jomc-sdk-jpa/index.html"/>
-      <item name="JOMC SDK JTA" href="jomc-sdk-jta/index.html"/>
     </menu>
     <menu ref="reports" inherit="bottom" inheritAsRef="false"/>
   </body>
