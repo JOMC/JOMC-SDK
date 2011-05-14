@@ -70,36 +70,42 @@ import static org.junit.Assert.assertEquals;
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Properties</font></th>
+ *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Properties</font></th>
  *     </tr>
  *     <tr class="TableSubHeadingColor">
  *       <td align="left" scope="col" nowrap><b>Name</b></td>
  *       <td align="left" scope="col" nowrap><b>Type</b></td>
+ *       <td align="left" scope="col" nowrap><b>Flags</b></td>
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getComplexTypeMap complexTypeMap}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<Integer,org.jomc.model.Text>}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getFileMap fileMap}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.io.File,java.io.File>}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getMapOfMaps mapOfMaps}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.util.Map<String,String>,java.util.Map<String,String>>}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getPrimitiveMap primitiveMap}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<Integer,Integer>}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getStringMap stringMap}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,String>}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top"></td>
  *     </tr>
  *   </table>
