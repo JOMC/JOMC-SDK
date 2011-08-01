@@ -57,7 +57,7 @@
       <properties>
         <property name="schemas" type="org.jomc.sdk.model.SchemasType">
           <documentation defaultLanguage="en">
-            <text language="en">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').</text>
+            <text language="en" type="text/x-javadoc">List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).</text>
           </documentation>
         </property>
       </properties>
@@ -71,7 +71,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">SDK 'ModelProvider' implementation.</text>
+        <text language="en" type="text/x-javadoc">SDK {@code ModelProvider} implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -86,7 +86,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">SDK 'ModelProcessor' implementation.</text>
+        <text language="en" type="text/x-javadoc">SDK {@code ModelProcessor} implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -101,7 +101,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">SDK 'ModelValidator' implementation.</text>
+        <text language="en" type="text/x-javadoc">SDK {@code ModelValidator} implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -124,7 +124,7 @@
       <properties>
         <property name="schemas" type="org.jomc.sdk.model.SchemasType">
           <documentation defaultLanguage="en">
-            <text language="en">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').</text>
+            <text language="en" type="text/x-javadoc">List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).</text>
           </documentation>
           <schemas xmlns="http://jomc.org/sdk/model" language-id="http://www.w3.org/2001/XMLSchema"/>
         </property>
@@ -137,7 +137,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set 'Binder' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set {@code Binder} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -160,6 +160,9 @@
       </dependencies>
       <properties>
         <property name="binderProperties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Binder#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -171,7 +174,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set 'JAXBContext' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set {@code JAXBContext} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -192,7 +195,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set 'JAXBIntrospector' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set {@code JAXBIntrospector} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -213,7 +216,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set JAXB 'Marshaller' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set JAXB {@code Marshaller} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -240,30 +243,33 @@
       <properties>
         <property name="jaxbEncoding" value="UTF-8">
           <documentation defaultLanguage="en">
-            <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.</text>
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.</text>
           </documentation>
         </property>
         <property name="jaxbFormattedOutput" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.</text>
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.</text>
           </documentation>
         </property>
         <property name="jaxbFragment" type="java.lang.Boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.</text>
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.</text>
           </documentation>
         </property>
         <property name="jaxbSchemaLocation" type="boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.</text>
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.</text>
           </documentation>
         </property>
         <property name="jaxbNoNamespaceSchemaLocation" value="">
           <documentation defaultLanguage="en">
-            <text language="en">See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.</text>
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.</text>
           </documentation>
         </property>
         <property name="marshallerProperties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -275,7 +281,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set JAXB 'Unmarshaller' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set JAXB {@code Unmarshaller} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -301,6 +307,9 @@
       </dependencies>
       <properties>
         <property name="unmarshallerProperties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Unmarshaller#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -311,7 +320,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set JAXP 'Schema' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set JAXP {@code Schema} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -334,9 +343,15 @@
       </dependencies>
       <properties>
         <property name="schemaFeatures" type="java.util.Map&lt;String,Boolean&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.validation.SchemaFactory#setFeature(java.lang.String, boolean)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
         <property name="schemaProperties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.validation.SchemaFactory#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -348,7 +363,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set JAXP 'Validator' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set JAXP {@code Validator} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -371,9 +386,15 @@
       </dependencies>
       <properties>
         <property name="validatorFeatures" type="java.util.Map&lt;String,Boolean&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.validation.Validator#setFeature(java.lang.String, boolean)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
         <property name="validatorProperties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.validation.Validator#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -385,7 +406,7 @@
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set JAXP 'ValidatorHandler' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set JAXP {@code ValidatorHandler} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -409,9 +430,15 @@
       </dependencies>
       <properties>
         <property name="validatorHandlerFeatures" type="java.util.Map&lt;String,Boolean&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.validation.ValidatorHandler#setFeature(java.lang.String, boolean)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
         <property name="validatorHandlerProperties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.validation.ValidatorHandler#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -423,7 +450,7 @@
                     stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set JAXP 'EntityResolver' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set JAXP {@code EntityResolver} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -444,7 +471,7 @@
                     stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">XML Schema Set JAXP 'LSResourceResolver' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">XML Schema Set JAXP {@code LSResourceResolver} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -465,7 +492,7 @@
                     stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">JAXP 'DocumentBuilder' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">JAXP {@code DocumentBuilder} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -489,43 +516,49 @@
       <properties>
         <property name="coalescing" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which convert CDATA nodes to Text nodes and append them to the adjacent (if any) Text node; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which convert CDATA nodes to Text nodes and append them to the adjacent (if any) Text node; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="expandingEntityReferences" type="java.lang.Boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which expand entity reference nodes; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which expand entity reference nodes; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="ignoringComments" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which ignores comments; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which ignores comments; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="ignoringElementContentWhitespace" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which ignore ignorable whitespace in element content; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which ignore ignorable whitespace in element content; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="namespaceAware" type="java.lang.Boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="validating" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="XIncludeAware" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="features" type="java.util.Map&lt;String,Boolean&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.parsers.DocumentBuilderFactory#setFeature(java.lang.String, boolean)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
         <property name="attributes" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.parsers.DocumentBuilderFactory#setAttribute(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -537,7 +570,7 @@
                     stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">JAXP 'SAXParser' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">JAXP {@code SAXParser} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -555,23 +588,29 @@
       <properties>
         <property name="namespaceAware" type="java.lang.Boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="validating" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="XIncludeAware" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="features" type="java.util.Map&lt;String,Boolean&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.parsers.SAXParserFactory#setFeature(java.lang.String, boolean)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
         <property name="properties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link javax.xml.parsers.SAXParser#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
@@ -583,7 +622,7 @@
                     stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
-        <text language="en">JAXP 'SAXParser' factory implementation.</text>
+        <text language="en" type="text/x-javadoc">JAXP {@code XMLReader} factory implementation.</text>
       </documentation>
       <authors>
         <author name="Christian Schulte" version="1.0" mail="schulte2005@users.sourceforge.net"
@@ -613,23 +652,29 @@
       <properties>
         <property name="namespaceAware" type="java.lang.Boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="validating" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="XIncludeAware" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
+            <text language="en" type="text/x-javadoc">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</text>
           </documentation>
         </property>
         <property name="features" type="java.util.Map&lt;String,Boolean&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link org.xml.sax.XMLReader#setFeature(java.lang.String, boolean)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
         <property name="properties" type="java.util.Map&lt;String,Object&gt;">
+          <documentation defaultLanguage="en">
+            <text language="en" type="text/x-javadoc">See {@link org.xml.sax.XMLReader#setProperty(java.lang.String, java.lang.Object)}.</text>
+          </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
       </properties>
