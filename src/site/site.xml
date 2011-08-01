@@ -67,9 +67,9 @@ _gaq.push(['_trackPageview']);
     </head>
     <menu ref="parent" inherit="top" inheritAsRef="false"/>
     <menu name="Modules">
-      <item name="JOMC SDK Model" href="jomc-sdk-model/index.html"/>
-      <item name="JOMC SDK JPA" href="jomc-sdk-jpa/index.html"/>
-      <item name="JOMC SDK JTA" href="jomc-sdk-jta/index.html"/>
+      <item name="Model" href="jomc-sdk-model/index.html"/>
+      <item name="JPA" href="jomc-sdk-jpa/index.html"/>
+      <item name="JTA" href="jomc-sdk-jta/index.html"/>
     </menu>
     <menu name="Sourceforge" inherit="bottom" inheritAsRef="false">
       <item name="Home" href="http://jomc.sourceforge.net/project/home"/>
