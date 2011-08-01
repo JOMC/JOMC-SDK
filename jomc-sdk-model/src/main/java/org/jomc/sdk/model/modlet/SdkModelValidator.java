@@ -62,7 +62,7 @@ import org.jomc.sdk.model.MapType;
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * SDK 'ModelValidator' implementation.
+ * SDK {@code ModelValidator} implementation.
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">

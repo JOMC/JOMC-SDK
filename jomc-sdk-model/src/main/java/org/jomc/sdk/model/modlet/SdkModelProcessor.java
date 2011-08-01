@@ -55,7 +55,7 @@ import org.jomc.modlet.ModelProcessor;
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * SDK 'ModelProcessor' implementation.
+ * SDK {@code ModelProcessor} implementation.
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">

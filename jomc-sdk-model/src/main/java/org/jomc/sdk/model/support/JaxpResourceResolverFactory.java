@@ -49,7 +49,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * XML Schema Set JAXP 'LSResourceResolver' factory implementation.
+ * XML Schema Set JAXP {@code LSResourceResolver} factory implementation.
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">
@@ -107,7 +107,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
  *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').</td>
+ *       <td align="left" valign="top">List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).</td>
  *     </tr>
  *   </table>
  * </p>
@@ -181,7 +181,7 @@ public final class JaxpResourceResolverFactory implements LSResourceResolver
 
     /**
      * Gets the value of the {@code schemas} property.
-     * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').
+     * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )

@@ -71,7 +71,7 @@ import static javax.xml.XMLConstants.NULL_NS_URI;
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * SDK 'ModelProvider' implementation.
+ * SDK {@code ModelProvider} implementation.
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">

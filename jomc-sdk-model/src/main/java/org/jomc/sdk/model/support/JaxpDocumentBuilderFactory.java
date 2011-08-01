@@ -44,7 +44,7 @@ import javax.xml.parsers.ParserConfigurationException;
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * JAXP 'DocumentBuilder' factory implementation.
+ * JAXP {@code DocumentBuilder} factory implementation.
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">
@@ -108,7 +108,7 @@ import javax.xml.parsers.ParserConfigurationException;
  *       <td align="left" valign="top" nowrap>{@link #getAttributes attributes}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
+ *       <td align="left" valign="top">See {@link javax.xml.parsers.DocumentBuilderFactory#setAttribute(java.lang.String, java.lang.Object)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isCoalescing coalescing}</td>
@@ -126,7 +126,7 @@ import javax.xml.parsers.ParserConfigurationException;
  *       <td align="left" valign="top" nowrap>{@link #getFeatures features}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Boolean>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
+ *       <td align="left" valign="top">See {@link javax.xml.parsers.DocumentBuilderFactory#setFeature(java.lang.String, boolean)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isIgnoringComments ignoringComments}</td>
@@ -304,7 +304,7 @@ public final class JaxpDocumentBuilderFactory
 
     /**
      * Gets the value of the {@code attributes} property.
-     * @return The value of the {@code attributes} property.
+     * @return See {@link javax.xml.parsers.DocumentBuilderFactory#setAttribute(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -343,7 +343,7 @@ public final class JaxpDocumentBuilderFactory
 
     /**
      * Gets the value of the {@code features} property.
-     * @return The value of the {@code features} property.
+     * @return See {@link javax.xml.parsers.DocumentBuilderFactory#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )

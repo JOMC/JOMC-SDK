@@ -47,7 +47,7 @@ import org.xml.sax.SAXException;
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * XML Schema Set JAXB 'Marshaller' factory implementation.
+ * XML Schema Set JAXB {@code Marshaller} factory implementation.
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">
@@ -135,13 +135,13 @@ import org.xml.sax.SAXException;
  *       <td align="left" valign="top" nowrap>{@link #getMarshallerProperties marshallerProperties}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
+ *       <td align="left" valign="top">See {@link javax.xml.bind.Marshaller#setProperty(java.lang.String, java.lang.Object)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
  *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').</td>
+ *       <td align="left" valign="top">List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).</td>
  *     </tr>
  *   </table>
  * </p>
@@ -370,7 +370,7 @@ public final class JaxbMarshallerFactory
 
     /**
      * Gets the value of the {@code marshallerProperties} property.
-     * @return The value of the {@code marshallerProperties} property.
+     * @return See {@link javax.xml.bind.Marshaller#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -383,7 +383,7 @@ public final class JaxbMarshallerFactory
 
     /**
      * Gets the value of the {@code schemas} property.
-     * @return List of XML schemas ('schemas' element from XML namespace 'http://jomc.org/sdk/model').
+     * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )

@@ -46,7 +46,7 @@ import org.xml.sax.XMLReader;
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
- * JAXP 'SAXParser' factory implementation.
+ * JAXP {@code XMLReader} factory implementation.
  * <p>
  *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
  *     <tr class="TableHeadingColor">
@@ -110,7 +110,7 @@ import org.xml.sax.XMLReader;
  *       <td align="left" valign="top" nowrap>{@link #getFeatures features}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Boolean>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
+ *       <td align="left" valign="top">See {@link org.xml.sax.XMLReader#setFeature(java.lang.String, boolean)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isNamespaceAware namespaceAware}</td>
@@ -122,7 +122,7 @@ import org.xml.sax.XMLReader;
  *       <td align="left" valign="top" nowrap>{@link #getProperties properties}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
+ *       <td align="left" valign="top">See {@link org.xml.sax.XMLReader#setProperty(java.lang.String, java.lang.Object)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isValidating validating}</td>
@@ -321,7 +321,7 @@ public final class JaxpSaxXmlReaderFactory
 
     /**
      * Gets the value of the {@code features} property.
-     * @return The value of the {@code features} property.
+     * @return See {@link org.xml.sax.XMLReader#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -347,7 +347,7 @@ public final class JaxpSaxXmlReaderFactory
 
     /**
      * Gets the value of the {@code properties} property.
-     * @return The value of the {@code properties} property.
+     * @return See {@link org.xml.sax.XMLReader#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
