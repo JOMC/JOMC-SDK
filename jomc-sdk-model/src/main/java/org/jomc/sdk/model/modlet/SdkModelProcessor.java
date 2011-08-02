@@ -105,7 +105,7 @@ public final class SdkModelProcessor implements ModelProcessor
             throw new NullPointerException( "model" );
         }
 
-        Model processed = null;
+        Model processed = model;
         Modules modules = ModelHelper.getModules( model );
 
         if ( modules != null )
