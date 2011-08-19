@@ -44,93 +44,14 @@ import javax.persistence.Query;
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * Factory providing a native JPA query instance.
+ *
  * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="2" nowrap><font size="+2">Implementation</font></th>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Identifier:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC :: JPA Native Query Factory}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Name:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC SDK JPA Native Query Factory}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Flags:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code abstract}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Version:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code 1.0-beta-3-SNAPSHOT}</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Specifications</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Identifier</b></td>
- *       <td align="left" scope="col" nowrap><b>Class</b></td>
- *       <td align="left" scope="col" nowrap><b>Scope</b></td>
- *       <td align="left" scope="col" nowrap><b>Version</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@code javax.persistence.Query}</td>
- *       <td align="left" nowrap>{@code javax.persistence.Query}</td>
- *       <td align="left" nowrap>{@code Multiton}</td>
- *       <td align="left" nowrap></td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Properties</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Type</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getNativeQuery nativeQuery}</td>
- *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Native query to provide.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getParameterMap parameterMap}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Map of parameters to set on the query.</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Dependencies</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Description</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getEntityManager EntityManager}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK JPA'} object of the {@code 'javax.persistence.EntityManager'} {@code (javax.persistence.EntityManager)} specification.</td>
- *     </tr>
- *   </table>
+ *   This implementation is identified by identifier {@code <JOMC :: JPA Native Query Factory>}.
+ *   It does not provide any specified objects due to flag {@code <abstract>}.
  * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
- * @version $Id$
+ * @version 1.0-beta-3-SNAPSHOT
  */
 // </editor-fold>
 // SECTION-END
@@ -182,10 +103,12 @@ public final class NativeQueryFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
 
     /**
-     * Gets the {@code EntityManager} dependency.
-     * <p>This method returns the {@code 'JOMC SDK JPA'} object of the {@code 'javax.persistence.EntityManager'} {@code (javax.persistence.EntityManager)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested.</p>
-     * @return The {@code EntityManager} dependency.
+     * Gets the {@code <EntityManager>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK JPA>} object of the {@code <javax.persistence.EntityManager>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested.
+     * </p>
+     * @return The {@code <EntityManager>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -200,7 +123,7 @@ public final class NativeQueryFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code nativeQuery} property.
+     * Gets the value of the {@code <nativeQuery>} property.
      * @return Native query to provide.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -213,7 +136,7 @@ public final class NativeQueryFactory
     }
 
     /**
-     * Gets the value of the {@code parameterMap} property.
+     * Gets the value of the {@code <parameterMap>} property.
      * @return Map of parameters to set on the query.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
