@@ -48,75 +48,14 @@ import static org.junit.Assert.assertTrue;
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * Test cases for the {@code ListType} complex type.
+ *
  * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="2" nowrap><font size="+2">Implementation</font></th>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Identifier:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code org.jomc.sdk.model.test.ListTypeTest}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Name:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC SDK Model}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Flags:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code none}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Version:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code 1.0-beta-3-SNAPSHOT}</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Properties</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Type</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getComplexTypeList complexTypeList}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.List<org.jomc.model.Text>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getFileList fileList}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.List<java.io.File>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getListOfLists listOfLists}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.List<java.util.List<String>>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getPrimitiveList primitiveList}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.List<Integer>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getStringList stringList}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.List<String>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *   </table>
+ *   This implementation is identified by identifier {@code <org.jomc.sdk.model.test.ListTypeTest>}.
+ *   It does not provide any specified objects.
  * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
- * @version $Id$
+ * @version 1.0-beta-3-SNAPSHOT
  */
 // </editor-fold>
 // SECTION-END
@@ -210,8 +149,8 @@ public class ListTypeTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code complexTypeList} property.
-     * @return The value of the {@code complexTypeList} property.
+     * Gets the value of the {@code <complexTypeList>} property.
+     * @return The value of the {@code <complexTypeList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -223,8 +162,8 @@ public class ListTypeTest
     }
 
     /**
-     * Gets the value of the {@code fileList} property.
-     * @return The value of the {@code fileList} property.
+     * Gets the value of the {@code <fileList>} property.
+     * @return The value of the {@code <fileList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -236,8 +175,8 @@ public class ListTypeTest
     }
 
     /**
-     * Gets the value of the {@code listOfLists} property.
-     * @return The value of the {@code listOfLists} property.
+     * Gets the value of the {@code <listOfLists>} property.
+     * @return The value of the {@code <listOfLists>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -249,8 +188,8 @@ public class ListTypeTest
     }
 
     /**
-     * Gets the value of the {@code primitiveList} property.
-     * @return The value of the {@code primitiveList} property.
+     * Gets the value of the {@code <primitiveList>} property.
+     * @return The value of the {@code <primitiveList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -262,8 +201,8 @@ public class ListTypeTest
     }
 
     /**
-     * Gets the value of the {@code stringList} property.
-     * @return The value of the {@code stringList} property.
+     * Gets the value of the {@code <stringList>} property.
+     * @return The value of the {@code <stringList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )

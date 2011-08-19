@@ -48,212 +48,14 @@ import org.junit.Test;
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * Test cases for the {@code Test XML Schema Set}.
+ *
  * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="2" nowrap><font size="+2">Implementation</font></th>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Identifier:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code org.jomc.sdk.model.test.ModelTest}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Name:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC SDK Model}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Flags:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code none}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Version:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code 1.0-beta-3-SNAPSHOT}</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Properties</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Type</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSysIllegalSubstitution sysIllegalSubstitution}</td>
- *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSysUserDir sysUserDir}</td>
- *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSysUserHome sysUserHome}</td>
- *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSysUserName sysUserName}</td>
- *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSysUserNameAndHomeAndDir sysUserNameAndHomeAndDir}</td>
- *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top"></td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Dependencies</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Description</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomMarshaller CustomMarshaller}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomSaxParser CustomSaxParser}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomSaxXmlReader CustomSaxXmlReader}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomSchema CustomSchema}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomSchemaUnrecognizedFeature CustomSchemaUnrecognizedFeature}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomSchemaUnrecognizedProperty CustomSchemaUnrecognizedProperty}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomUnmarshaller CustomUnmarshaller}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorHandlerUnrecognizedFeature CustomValidatorHandlerUnrecognizedFeature}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorHandlerUnrecognizedProperty CustomValidatorHandlerUnrecognizedProperty}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorUnrecognizedFeature CustomValidatorUnrecognizedFeature}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getCustomValidatorUnrecognizedProperty CustomValidatorUnrecognizedProperty}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultBinder DefaultBinder}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Binder'} {@code (javax.xml.bind.Binder)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultContentHandler DefaultContentHandler}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.ContentHandler'} {@code (org.xml.sax.ContentHandler)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultContext DefaultContext}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBContext'} {@code (javax.xml.bind.JAXBContext)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultDocumentBuilder DefaultDocumentBuilder}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.DocumentBuilder'} {@code (javax.xml.parsers.DocumentBuilder)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultEntityResolver DefaultEntityResolver}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultIntrospector DefaultIntrospector}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBIntrospector'} {@code (javax.xml.bind.JAXBIntrospector)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultMarshaller DefaultMarshaller}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultResourceResolver DefaultResourceResolver}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultSaxParser DefaultSaxParser}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultSaxXmlReader DefaultSaxXmlReader}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK'} object of the {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultSchema DefaultSchema}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultUnmarshaller DefaultUnmarshaller}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultValidator DefaultValidator}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getDefaultValidatorHandler DefaultValidatorHandler}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification bound to an instance.</td>
- *     </tr>
- *   </table>
+ *   This implementation is identified by identifier {@code <org.jomc.sdk.model.test.ModelTest>}.
+ *   It does not provide any specified objects.
  * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
- * @version $Id$
+ * @version 1.0-beta-3-SNAPSHOT
  */
 // </editor-fold>
 // SECTION-END
@@ -490,9 +292,11 @@ public class ModelTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
 
     /**
-     * Gets the {@code CustomMarshaller} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * Gets the {@code <CustomMarshaller>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Marshaller>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
      * <p><strong>Properties:</strong>
      *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
      *     <tr class="TableSubHeadingColor">
@@ -501,33 +305,33 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code jaxbEncoding}</td>
+     *       <td align="left" valign="top" nowrap>{@code <jaxbEncoding>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code jaxbFormattedOutput}</td>
+     *       <td align="left" valign="top" nowrap>{@code <jaxbFormattedOutput>}</td>
      *       <td align="left" valign="top" nowrap>{@code boolean}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code jaxbFragment}</td>
+     *       <td align="left" valign="top" nowrap>{@code <jaxbFragment>}</td>
      *       <td align="left" valign="top" nowrap>{@code boolean}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code jaxbSchemaLocation}</td>
+     *       <td align="left" valign="top" nowrap>{@code <jaxbSchemaLocation>}</td>
      *       <td align="left" valign="top" nowrap>{@code boolean}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code jaxbNoNamespaceSchemaLocation}</td>
+     *       <td align="left" valign="top" nowrap>{@code <jaxbNoNamespaceSchemaLocation>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *   </table>
      * </p>
-     * @return The {@code CustomMarshaller} dependency.
+     * @return The {@code <CustomMarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -539,10 +343,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomSaxParser} dependency.
-     * <p>This method returns the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code CustomSaxParser} dependency.
+     * Gets the {@code <CustomSaxParser>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <CustomSaxParser>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -554,10 +360,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomSaxXmlReader} dependency.
-     * <p>This method returns the {@code 'JOMC SDK'} object of the {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code CustomSaxXmlReader} dependency.
+     * Gets the {@code <CustomSaxXmlReader>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <CustomSaxXmlReader>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -569,10 +377,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomSchema} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code CustomSchema} dependency.
+     * Gets the {@code <CustomSchema>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <CustomSchema>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -584,9 +394,11 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomSchemaUnrecognizedFeature} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * Gets the {@code <CustomSchemaUnrecognizedFeature>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
      * <p><strong>Properties:</strong>
      *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
      *     <tr class="TableSubHeadingColor">
@@ -595,13 +407,13 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code schemaFeatures}</td>
+     *       <td align="left" valign="top" nowrap>{@code <schemaFeatures>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Boolean>}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *   </table>
      * </p>
-     * @return The {@code CustomSchemaUnrecognizedFeature} dependency.
+     * @return The {@code <CustomSchemaUnrecognizedFeature>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -613,9 +425,11 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomSchemaUnrecognizedProperty} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * Gets the {@code <CustomSchemaUnrecognizedProperty>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
      * <p><strong>Properties:</strong>
      *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
      *     <tr class="TableSubHeadingColor">
@@ -624,13 +438,13 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code schemaProperties}</td>
+     *       <td align="left" valign="top" nowrap>{@code <schemaProperties>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Object>}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *   </table>
      * </p>
-     * @return The {@code CustomSchemaUnrecognizedProperty} dependency.
+     * @return The {@code <CustomSchemaUnrecognizedProperty>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -642,10 +456,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomUnmarshaller} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code CustomUnmarshaller} dependency.
+     * Gets the {@code <CustomUnmarshaller>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Unmarshaller>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <CustomUnmarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -657,9 +473,11 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomValidatorHandlerUnrecognizedFeature} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * Gets the {@code <CustomValidatorHandlerUnrecognizedFeature>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.ValidatorHandler>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
      * <p><strong>Properties:</strong>
      *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
      *     <tr class="TableSubHeadingColor">
@@ -668,13 +486,13 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code validatorHandlerFeatures}</td>
+     *       <td align="left" valign="top" nowrap>{@code <validatorHandlerFeatures>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Boolean>}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *   </table>
      * </p>
-     * @return The {@code CustomValidatorHandlerUnrecognizedFeature} dependency.
+     * @return The {@code <CustomValidatorHandlerUnrecognizedFeature>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -686,9 +504,11 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomValidatorHandlerUnrecognizedProperty} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * Gets the {@code <CustomValidatorHandlerUnrecognizedProperty>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.ValidatorHandler>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
      * <p><strong>Properties:</strong>
      *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
      *     <tr class="TableSubHeadingColor">
@@ -697,13 +517,13 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code validatorHandlerProperties}</td>
+     *       <td align="left" valign="top" nowrap>{@code <validatorHandlerProperties>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Object>}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *   </table>
      * </p>
-     * @return The {@code CustomValidatorHandlerUnrecognizedProperty} dependency.
+     * @return The {@code <CustomValidatorHandlerUnrecognizedProperty>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -715,9 +535,11 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomValidatorUnrecognizedFeature} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * Gets the {@code <CustomValidatorUnrecognizedFeature>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Validator>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
      * <p><strong>Properties:</strong>
      *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
      *     <tr class="TableSubHeadingColor">
@@ -726,13 +548,13 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code validatorFeatures}</td>
+     *       <td align="left" valign="top" nowrap>{@code <validatorFeatures>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Boolean>}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *   </table>
      * </p>
-     * @return The {@code CustomValidatorUnrecognizedFeature} dependency.
+     * @return The {@code <CustomValidatorUnrecognizedFeature>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -744,9 +566,11 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code CustomValidatorUnrecognizedProperty} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
+     * Gets the {@code <CustomValidatorUnrecognizedProperty>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Validator>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
      * <p><strong>Properties:</strong>
      *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
      *     <tr class="TableSubHeadingColor">
@@ -755,13 +579,13 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code validatorProperties}</td>
+     *       <td align="left" valign="top" nowrap>{@code <validatorProperties>}</td>
      *       <td align="left" valign="top" nowrap>{@code java.util.Map<java.lang.String,java.lang.Object>}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
      *   </table>
      * </p>
-     * @return The {@code CustomValidatorUnrecognizedProperty} dependency.
+     * @return The {@code <CustomValidatorUnrecognizedProperty>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -773,10 +597,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultBinder} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Binder'} {@code (javax.xml.bind.Binder)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultBinder} dependency.
+     * Gets the {@code <DefaultBinder>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Binder>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultBinder>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -788,10 +614,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultContentHandler} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.ContentHandler'} {@code (org.xml.sax.ContentHandler)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultContentHandler} dependency.
+     * Gets the {@code <DefaultContentHandler>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <org.xml.sax.ContentHandler>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultContentHandler>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -803,10 +631,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultContext} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBContext'} {@code (javax.xml.bind.JAXBContext)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultContext} dependency.
+     * Gets the {@code <DefaultContext>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.JAXBContext>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultContext>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -818,10 +648,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultDocumentBuilder} dependency.
-     * <p>This method returns the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.DocumentBuilder'} {@code (javax.xml.parsers.DocumentBuilder)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultDocumentBuilder} dependency.
+     * Gets the {@code <DefaultDocumentBuilder>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK>} object of the {@code <javax.xml.parsers.DocumentBuilder>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultDocumentBuilder>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -833,10 +665,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultEntityResolver} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.xml.sax.EntityResolver'} {@code (org.xml.sax.EntityResolver)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultEntityResolver} dependency.
+     * Gets the {@code <DefaultEntityResolver>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultEntityResolver>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -848,10 +682,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultIntrospector} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.JAXBIntrospector'} {@code (javax.xml.bind.JAXBIntrospector)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultIntrospector} dependency.
+     * Gets the {@code <DefaultIntrospector>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.JAXBIntrospector>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultIntrospector>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -863,10 +699,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultMarshaller} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Marshaller'} {@code (javax.xml.bind.Marshaller)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultMarshaller} dependency.
+     * Gets the {@code <DefaultMarshaller>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Marshaller>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultMarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -878,10 +716,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultResourceResolver} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultResourceResolver} dependency.
+     * Gets the {@code <DefaultResourceResolver>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <org.w3c.dom.ls.LSResourceResolver>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultResourceResolver>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -893,10 +733,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultSaxParser} dependency.
-     * <p>This method returns the {@code 'JOMC SDK'} object of the {@code 'javax.xml.parsers.SAXParser'} {@code (javax.xml.parsers.SAXParser)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultSaxParser} dependency.
+     * Gets the {@code <DefaultSaxParser>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultSaxParser>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -908,10 +750,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultSaxXmlReader} dependency.
-     * <p>This method returns the {@code 'JOMC SDK'} object of the {@code 'org.xml.sax.XMLReader'} {@code (org.xml.sax.XMLReader)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultSaxXmlReader} dependency.
+     * Gets the {@code <DefaultSaxXmlReader>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultSaxXmlReader>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -923,10 +767,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultSchema} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultSchema} dependency.
+     * Gets the {@code <DefaultSchema>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultSchema>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -938,10 +784,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultUnmarshaller} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.bind.Unmarshaller'} {@code (javax.xml.bind.Unmarshaller)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultUnmarshaller} dependency.
+     * Gets the {@code <DefaultUnmarshaller>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Unmarshaller>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultUnmarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -953,10 +801,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultValidator} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.Validator'} {@code (javax.xml.validation.Validator)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultValidator} dependency.
+     * Gets the {@code <DefaultValidator>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Validator>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultValidator>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -968,10 +818,12 @@ public class ModelTest
     }
 
     /**
-     * Gets the {@code DefaultValidatorHandler} dependency.
-     * <p>This method returns the {@code 'JOMC :: Test XML Schema Set'} object of the {@code 'javax.xml.validation.ValidatorHandler'} {@code (javax.xml.validation.ValidatorHandler)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code DefaultValidatorHandler} dependency.
+     * Gets the {@code <DefaultValidatorHandler>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.ValidatorHandler>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <DefaultValidatorHandler>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -987,8 +839,8 @@ public class ModelTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code sysIllegalSubstitution} property.
-     * @return The value of the {@code sysIllegalSubstitution} property.
+     * Gets the value of the {@code <sysIllegalSubstitution>} property.
+     * @return The value of the {@code <sysIllegalSubstitution>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -1000,8 +852,8 @@ public class ModelTest
     }
 
     /**
-     * Gets the value of the {@code sysUserDir} property.
-     * @return The value of the {@code sysUserDir} property.
+     * Gets the value of the {@code <sysUserDir>} property.
+     * @return The value of the {@code <sysUserDir>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -1013,8 +865,8 @@ public class ModelTest
     }
 
     /**
-     * Gets the value of the {@code sysUserHome} property.
-     * @return The value of the {@code sysUserHome} property.
+     * Gets the value of the {@code <sysUserHome>} property.
+     * @return The value of the {@code <sysUserHome>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -1026,8 +878,8 @@ public class ModelTest
     }
 
     /**
-     * Gets the value of the {@code sysUserName} property.
-     * @return The value of the {@code sysUserName} property.
+     * Gets the value of the {@code <sysUserName>} property.
+     * @return The value of the {@code <sysUserName>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
@@ -1039,8 +891,8 @@ public class ModelTest
     }
 
     /**
-     * Gets the value of the {@code sysUserNameAndHomeAndDir} property.
-     * @return The value of the {@code sysUserNameAndHomeAndDir} property.
+     * Gets the value of the {@code <sysUserNameAndHomeAndDir>} property.
+     * @return The value of the {@code <sysUserNameAndHomeAndDir>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
