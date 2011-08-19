@@ -48,121 +48,20 @@ import org.xml.sax.SAXException;
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * XML Schema Set JAXB {@code Unmarshaller} factory implementation.
+ *
  * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="2" nowrap><font size="+2">Implementation</font></th>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Identifier:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC :: JAXB Unmarshaller Factory}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Name:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC SDK Model}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Flags:</b></td>
- *       <td class="TableRowColor" align="left" nowrap> {@code stateless}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Version:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code 1.0-beta-3-SNAPSHOT}</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Specifications</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Identifier</b></td>
- *       <td align="left" scope="col" nowrap><b>Class</b></td>
- *       <td align="left" scope="col" nowrap><b>Scope</b></td>
- *       <td align="left" scope="col" nowrap><b>Version</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@code javax.xml.bind.Unmarshaller}</td>
- *       <td align="left" nowrap>{@code javax.xml.bind.Unmarshaller}</td>
- *       <td align="left" nowrap>{@code Multiton}</td>
- *       <td align="left" nowrap></td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Properties</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Type</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #isAttachmentUnmarshallerIgnored attachmentUnmarshallerIgnored}</td>
- *       <td align="left" valign="top" nowrap>{@code boolean}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Flag indicating the {@code attachmentUnmarshaller} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setAttachmentUnmarshaller(javax.xml.bind.attachment.AttachmentUnmarshaller)}.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #isSchemaIgnored schemaIgnored}</td>
- *       <td align="left" valign="top" nowrap>{@code boolean}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
- *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getUnmarshallerProperties unmarshallerProperties}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">See {@link javax.xml.bind.Unmarshaller#setProperty(java.lang.String, java.lang.Object)}.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #isValidationEventHandlerIgnored validationEventHandlerIgnored}</td>
- *       <td align="left" valign="top" nowrap>{@code boolean}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Dependencies</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Description</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getAttachmentUnmarshaller attachmentUnmarshaller}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.attachment.AttachmentUnmarshaller'} {@code (javax.xml.bind.attachment.AttachmentUnmarshaller)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSchema schema}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getValidationEventHandler validationEventHandler}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} specification bound to an instance.</td>
- *     </tr>
- *   </table>
+ *   This implementation is identified by identifier {@code <JOMC :: JAXB Unmarshaller Factory>}.
+ *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *
+ *   <ul>
+ *     <li>{@code <javax.xml.bind.Unmarshaller>} at any specification level.</li>
+ *   </ul>
+ *
+ *   No state is retained across operations due to flag {@code <stateless>}.
  * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
- * @version $Id$
+ * @version 1.0-beta-3-SNAPSHOT
  */
 // </editor-fold>
 // SECTION-END
@@ -236,10 +135,12 @@ public final class JaxbUnmarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
 
     /**
-     * Gets the {@code attachmentUnmarshaller} dependency.
-     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.attachment.AttachmentUnmarshaller'} {@code (javax.xml.bind.attachment.AttachmentUnmarshaller)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code attachmentUnmarshaller} dependency.
+     * Gets the {@code <attachmentUnmarshaller>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.bind.attachment.AttachmentUnmarshaller>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <attachmentUnmarshaller>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -250,10 +151,12 @@ public final class JaxbUnmarshallerFactory
     }
 
     /**
-     * Gets the {@code schema} dependency.
-     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.validation.Schema'} {@code (javax.xml.validation.Schema)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code schema} dependency.
+     * Gets the {@code <schema>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <schema>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -264,10 +167,12 @@ public final class JaxbUnmarshallerFactory
     }
 
     /**
-     * Gets the {@code validationEventHandler} dependency.
-     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'javax.xml.bind.ValidationEventHandler'} {@code (javax.xml.bind.ValidationEventHandler)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code validationEventHandler} dependency.
+     * Gets the {@code <validationEventHandler>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.bind.ValidationEventHandler>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <validationEventHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -282,7 +187,7 @@ public final class JaxbUnmarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code attachmentUnmarshallerIgnored} property.
+     * Gets the value of the {@code <attachmentUnmarshallerIgnored>} property.
      * @return Flag indicating the {@code attachmentUnmarshaller} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setAttachmentUnmarshaller(javax.xml.bind.attachment.AttachmentUnmarshaller)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -295,7 +200,7 @@ public final class JaxbUnmarshallerFactory
     }
 
     /**
-     * Gets the value of the {@code schemaIgnored} property.
+     * Gets the value of the {@code <schemaIgnored>} property.
      * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -308,7 +213,7 @@ public final class JaxbUnmarshallerFactory
     }
 
     /**
-     * Gets the value of the {@code schemas} property.
+     * Gets the value of the {@code <schemas>} property.
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -321,7 +226,7 @@ public final class JaxbUnmarshallerFactory
     }
 
     /**
-     * Gets the value of the {@code unmarshallerProperties} property.
+     * Gets the value of the {@code <unmarshallerProperties>} property.
      * @return See {@link javax.xml.bind.Unmarshaller#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -334,7 +239,7 @@ public final class JaxbUnmarshallerFactory
     }
 
     /**
-     * Gets the value of the {@code validationEventHandlerIgnored} property.
+     * Gets the value of the {@code <validationEventHandlerIgnored>} property.
      * @return Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

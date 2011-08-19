@@ -54,116 +54,20 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
 /**
  * XML Schema Set JAXP {@code Validator} factory implementation.
+ *
  * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="2" nowrap><font size="+2">Implementation</font></th>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Identifier:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC :: JAXP Validator Factory}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Name:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code JOMC SDK Model}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Flags:</b></td>
- *       <td class="TableRowColor" align="left" nowrap> {@code stateless}</td>
- *     </tr>
- *     <tr>
- *       <td class="TableSubHeadingColor" align="left" nowrap><b>Version:</b></td>
- *       <td class="TableRowColor" align="left" nowrap>{@code 1.0-beta-3-SNAPSHOT}</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Specifications</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Identifier</b></td>
- *       <td align="left" scope="col" nowrap><b>Class</b></td>
- *       <td align="left" scope="col" nowrap><b>Scope</b></td>
- *       <td align="left" scope="col" nowrap><b>Version</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" nowrap>{@code javax.xml.validation.Validator}</td>
- *       <td align="left" nowrap>{@code javax.xml.validation.Validator}</td>
- *       <td align="left" nowrap>{@code Multiton}</td>
- *       <td align="left" nowrap></td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="4" nowrap><font size="+2">Properties</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Type</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #isErrorHandlerIgnored errorHandlerIgnored}</td>
- *       <td align="left" valign="top" nowrap>{@code boolean}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.Validator#setErrorHandler(org.xml.sax.ErrorHandler)}.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #isResourceResolverIgnored resourceResolverIgnored}</td>
- *       <td align="left" valign="top" nowrap>{@code boolean}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.Validator#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
- *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getValidatorFeatures validatorFeatures}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Boolean>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">See {@link javax.xml.validation.Validator#setFeature(java.lang.String, boolean)}.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getValidatorProperties validatorProperties}</td>
- *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">See {@link javax.xml.validation.Validator#setProperty(java.lang.String, java.lang.Object)}.</td>
- *     </tr>
- *   </table>
- * </p>
- * <p>
- *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
- *     <tr class="TableHeadingColor">
- *       <th align="left" scope="col" colspan="3" nowrap><font size="+2">Dependencies</font></th>
- *     </tr>
- *     <tr class="TableSubHeadingColor">
- *       <td align="left" scope="col" nowrap><b>Name</b></td>
- *       <td align="left" scope="col" nowrap><b>Flags</b></td>
- *       <td align="left" scope="col" nowrap><b>Description</b></td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getErrorHandler errorHandler}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'org.xml.sax.ErrorHandler'} {@code (org.xml.sax.ErrorHandler)} specification bound to an instance.</td>
- *     </tr>
- *     <tr class="TableRowColor">
- *       <td align="left" valign="top" nowrap>{@link #getResourceResolver resourceResolver}</td>
- *       <td align="left" valign="top" nowrap>{@code none}</td>
- *       <td align="left" valign="top">Dependency on the {@code 'JOMC SDK Model Default'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification bound to an instance.</td>
- *     </tr>
- *   </table>
+ *   This implementation is identified by identifier {@code <JOMC :: JAXP Validator Factory>}.
+ *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *
+ *   <ul>
+ *     <li>{@code <javax.xml.validation.Validator>} at any specification level.</li>
+ *   </ul>
+ *
+ *   No state is retained across operations due to flag {@code <stateless>}.
  * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
- * @version $Id$
+ * @version 1.0-beta-3-SNAPSHOT
  */
 // </editor-fold>
 // SECTION-END
@@ -256,10 +160,12 @@ public final class JaxpValidatorFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
 
     /**
-     * Gets the {@code errorHandler} dependency.
-     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'org.xml.sax.ErrorHandler'} {@code (org.xml.sax.ErrorHandler)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code errorHandler} dependency.
+     * Gets the {@code <errorHandler>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <errorHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -270,10 +176,12 @@ public final class JaxpValidatorFactory
     }
 
     /**
-     * Gets the {@code resourceResolver} dependency.
-     * <p>This method returns the {@code 'JOMC SDK Model Default'} object of the {@code 'org.w3c.dom.ls.LSResourceResolver'} {@code (org.w3c.dom.ls.LSResourceResolver)} specification.</p>
-     * <p>That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.</p>
-     * @return The {@code resourceResolver} dependency.
+     * Gets the {@code <resourceResolver>} dependency.
+     * <p>
+     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.w3c.dom.ls.LSResourceResolver>} specification at any specification level.
+     *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * @return The {@code <resourceResolver>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -288,7 +196,7 @@ public final class JaxpValidatorFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code errorHandlerIgnored} property.
+     * Gets the value of the {@code <errorHandlerIgnored>} property.
      * @return Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.Validator#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -301,7 +209,7 @@ public final class JaxpValidatorFactory
     }
 
     /**
-     * Gets the value of the {@code resourceResolverIgnored} property.
+     * Gets the value of the {@code <resourceResolverIgnored>} property.
      * @return Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.Validator#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -314,7 +222,7 @@ public final class JaxpValidatorFactory
     }
 
     /**
-     * Gets the value of the {@code schemas} property.
+     * Gets the value of the {@code <schemas>} property.
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -327,7 +235,7 @@ public final class JaxpValidatorFactory
     }
 
     /**
-     * Gets the value of the {@code validatorFeatures} property.
+     * Gets the value of the {@code <validatorFeatures>} property.
      * @return See {@link javax.xml.validation.Validator#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -340,7 +248,7 @@ public final class JaxpValidatorFactory
     }
 
     /**
-     * Gets the value of the {@code validatorProperties} property.
+     * Gets the value of the {@code <validatorProperties>} property.
      * @return See {@link javax.xml.validation.Validator#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
