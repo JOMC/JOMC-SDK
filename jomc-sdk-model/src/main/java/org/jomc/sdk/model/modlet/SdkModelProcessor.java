@@ -94,6 +94,186 @@ public final class SdkModelProcessor implements ModelProcessor
 {
     // SECTION-START[SdkModelProcessor]
 
+    /**
+     * The default system property substitution starting marker.
+     * @see #getDefaultSystemPropertySubstitutionStartingMarker()
+     */
+    private static volatile String defaultSystemPropertySubstitutionStartingMarker;
+
+    /**
+     * The default system property substitution ending marker.
+     * @see #getDefaultSystemPropertySubstitutionEndingMarker()
+     */
+    private static volatile String defaultSystemPropertySubstitutionEndingMarker;
+
+    /**
+     * The default value of the default system property substitution starting marker.
+     * @see #getDefaultSystemPropertySubstitutionStartingMarker()
+     */
+    private static final String DEFAULT_SYSTEM_PROPERTY_SUBSTITUTION_STARTING_MARKER = "@@";
+
+    /**
+     * The default value of the default system property substitution ending marker.
+     * @see #getDefaultSystemPropertySubstitutionEndingMarker()
+     */
+    private static final String DEFAULT_SYSTEM_PROPERTY_SUBSTITUTION_ENDING_MARKER = "@@";
+
+    /** The system property substitution starting marker of the instance. */
+    private String systemPropertySubstitutionStartingMarker;
+
+    /** The system property substitution ending marker of the instance. */
+    private String systemPropertySubstitutionEndingMarker;
+
+    /**
+     * Constant for the name of the model context attribute backing property
+     * {@code systemPropertySubstitutionStartingMarker}.
+     * @see #processModel(org.jomc.modlet.ModelContext, org.jomc.modlet.Model)
+     * @see ModelContext#getAttribute(java.lang.String)
+     */
+    public static final String SYSTEM_PROPERTY_SUBSTITUTION_STARTING_MARKER_ATTRIBUTE_NAME =
+        "org.jomc.sdk.model.modlet.SdkModelProcessor.systemPropertySubstitutionStartingMarkerAttribute";
+
+    /**
+     * Constant for the name of the model context attribute backing property
+     * {@code systemPropertySubstitutionEndingMarker}.
+     * @see #processModel(org.jomc.modlet.ModelContext, org.jomc.modlet.Model)
+     * @see ModelContext#getAttribute(java.lang.String)
+     */
+    public static final String SYSTEM_PROPERTY_SUBSTITUTION_ENDING_MARKER_ATTRIBUTE_NAME =
+        "org.jomc.sdk.model.modlet.SdkModelProcessor.systemPropertySubstitutionEndingMarkerAttribute";
+
+    /**
+     * Gets a default string marking the start of a system property substitution.
+     * <p>The default system property substitution starting marker is controlled by system property
+     * {@code org.jomc.sdk.model.modlet.SdkModelProcessor.defaultSystemPropertySubstitutionStartingMarker} holding a
+     * string marking the start of a system property substitution. If that property is not set, the {@code @@} default
+     * is returned.</p>
+     *
+     * @return The default system property substitution starting marker.
+     *
+     * @see #setDefaultSystemPropertySubstitutionStartingMarker(java.lang.String)
+     */
+    public static String getDefaultSystemPropertySubstitutionStartingMarker()
+    {
+        if ( defaultSystemPropertySubstitutionStartingMarker == null )
+        {
+            defaultSystemPropertySubstitutionStartingMarker = System.getProperty(
+                "org.jomc.sdk.model.modlet.SdkModelProcessor.defaultSystemPropertySubstitutionStartingMarker",
+                DEFAULT_SYSTEM_PROPERTY_SUBSTITUTION_STARTING_MARKER );
+
+        }
+
+        return defaultSystemPropertySubstitutionStartingMarker;
+    }
+
+    /**
+     * Sets the default string marking the start of a system property substitution.
+     *
+     * @param value The new default string marking the start of a system property substitution or {@code null}.
+     *
+     * @see #getDefaultSystemPropertySubstitutionStartingMarker()
+     */
+    public static void setDefaultSystemPropertySubstitutionStartingMarker( final String value )
+    {
+        defaultSystemPropertySubstitutionStartingMarker = value;
+    }
+
+    /**
+     * Gets a string marking the start of a system property substitution.
+     *
+     * @return A string marking the start of a system property substitution.
+     *
+     * @see #getDefaultSystemPropertySubstitutionStartingMarker()
+     * @see #setSystemPropertySubstitutionStartingMarker(java.lang.String)
+     */
+    public final String getSystemPropertySubstitutionStartingMarker()
+    {
+        if ( this.systemPropertySubstitutionStartingMarker == null )
+        {
+            this.systemPropertySubstitutionStartingMarker = getDefaultSystemPropertySubstitutionStartingMarker();
+        }
+
+        return this.systemPropertySubstitutionStartingMarker;
+    }
+
+    /**
+     * Sets the string marking the start of a system property substitution.
+     *
+     * @param value The new string marking the start of a system property substitution or {@code null}.
+     *
+     * @see #getSystemPropertySubstitutionStartingMarker()
+     */
+    public final void setSystemPropertySubstitutionStartingMarker( final String value )
+    {
+        this.systemPropertySubstitutionStartingMarker = value;
+    }
+
+    /**
+     * Gets a default string marking the end of a system property substitution.
+     * <p>The default system property substitution ending marker is controlled by system property
+     * {@code org.jomc.sdk.model.modlet.SdkModelProcessor.defaultSystemPropertySubstitutionEndingMarker} holding a
+     * string marking the end of a system property substitution. If that property is not set, the {@code @@} default
+     * is returned.</p>
+     *
+     * @return The default system property substitution ending marker.
+     *
+     * @see #setDefaultSystemPropertySubstitutionEndingMarker(java.lang.String)
+     */
+    public static String getDefaultSystemPropertySubstitutionEndingMarker()
+    {
+        if ( defaultSystemPropertySubstitutionEndingMarker == null )
+        {
+            defaultSystemPropertySubstitutionEndingMarker = System.getProperty(
+                "org.jomc.sdk.model.modlet.SdkModelProcessor.defaultSystemPropertySubstitutionEndingMarker",
+                DEFAULT_SYSTEM_PROPERTY_SUBSTITUTION_ENDING_MARKER );
+
+        }
+
+        return defaultSystemPropertySubstitutionEndingMarker;
+    }
+
+    /**
+     * Sets the default string marking the end of a system property substitution.
+     *
+     * @param value The new default string marking the end of a system property substitution or {@code null}.
+     *
+     * @see #getDefaultSystemPropertySubstitutionEndingMarker()
+     */
+    public static void setDefaultSystemPropertySubstitutionEndingMarker( final String value )
+    {
+        defaultSystemPropertySubstitutionEndingMarker = value;
+    }
+
+    /**
+     * Gets a string marking the end of a system property substitution.
+     *
+     * @return A string marking the end of a system property substitution.
+     *
+     * @see #getDefaultSystemPropertySubstitutionEndingMarker()
+     * @see #setSystemPropertySubstitutionEndingMarker(java.lang.String)
+     */
+    public final String getSystemPropertySubstitutionEndingMarker()
+    {
+        if ( this.systemPropertySubstitutionEndingMarker == null )
+        {
+            this.systemPropertySubstitutionEndingMarker = getDefaultSystemPropertySubstitutionEndingMarker();
+        }
+
+        return this.systemPropertySubstitutionEndingMarker;
+    }
+
+    /**
+     * Sets the string marking the end of a system property substitution.
+     *
+     * @param value The new string marking the end of a system property substitution or {@code null}.
+     *
+     * @see #getSystemPropertySubstitutionEndingMarker()
+     */
+    public final void setSystemPropertySubstitutionEndingMarker( final String value )
+    {
+        this.systemPropertySubstitutionEndingMarker = value;
+    }
+
     public Model processModel( final ModelContext context, final Model model ) throws ModelException
     {
         if ( context == null )
@@ -108,11 +288,29 @@ public final class SdkModelProcessor implements ModelProcessor
         Model processed = model;
         Modules modules = ModelHelper.getModules( model );
 
+        String contextStartingMarker = this.getSystemPropertySubstitutionStartingMarker();
+        if ( DEFAULT_SYSTEM_PROPERTY_SUBSTITUTION_STARTING_MARKER.equals( contextStartingMarker )
+             && context.getAttribute( SYSTEM_PROPERTY_SUBSTITUTION_STARTING_MARKER_ATTRIBUTE_NAME ) != null )
+        {
+            contextStartingMarker =
+                (String) context.getAttribute( SYSTEM_PROPERTY_SUBSTITUTION_STARTING_MARKER_ATTRIBUTE_NAME );
+
+        }
+
+        String contextEndingMarker = this.getSystemPropertySubstitutionEndingMarker();
+        if ( DEFAULT_SYSTEM_PROPERTY_SUBSTITUTION_ENDING_MARKER.equals( contextEndingMarker )
+             && context.getAttribute( SYSTEM_PROPERTY_SUBSTITUTION_ENDING_MARKER_ATTRIBUTE_NAME ) != null )
+        {
+            contextEndingMarker =
+                (String) context.getAttribute( SYSTEM_PROPERTY_SUBSTITUTION_ENDING_MARKER_ATTRIBUTE_NAME );
+
+        }
+
         if ( modules != null )
         {
             processed = new Model( model );
             modules = ModelHelper.getModules( processed );
-            this.substituteSystemProperties( modules );
+            this.substituteSystemProperties( modules, contextStartingMarker, contextEndingMarker );
         }
         else if ( context.isLoggable( Level.WARNING ) )
         {
@@ -122,17 +320,18 @@ public final class SdkModelProcessor implements ModelProcessor
         return processed;
     }
 
-    private void substituteSystemProperties( final Modules modules )
+    private void substituteSystemProperties( final Modules modules, final String startingMarker,
+                                             final String endingMarker )
     {
         for ( Module m : modules.getModule() )
         {
-            this.substituteSystemProperties( m.getProperties() );
+            this.substituteSystemProperties( m.getProperties(), startingMarker, endingMarker );
 
             if ( m.getSpecifications() != null )
             {
                 for ( Specification s : m.getSpecifications().getSpecification() )
                 {
-                    this.substituteSystemProperties( s.getProperties() );
+                    this.substituteSystemProperties( s.getProperties(), startingMarker, endingMarker );
                 }
             }
 
@@ -140,13 +339,13 @@ public final class SdkModelProcessor implements ModelProcessor
             {
                 for ( Implementation i : m.getImplementations().getImplementation() )
                 {
-                    this.substituteSystemProperties( i.getProperties() );
+                    this.substituteSystemProperties( i.getProperties(), startingMarker, endingMarker );
 
                     if ( i.getDependencies() != null )
                     {
                         for ( Dependency d : i.getDependencies().getDependency() )
                         {
-                            this.substituteSystemProperties( d );
+                            this.substituteSystemProperties( d, startingMarker, endingMarker );
                         }
                     }
                 }
@@ -154,27 +353,23 @@ public final class SdkModelProcessor implements ModelProcessor
         }
     }
 
-    private void substituteSystemProperties( final Dependency dependency )
+    private void substituteSystemProperties( final Dependency dependency, final String startingMarker,
+                                             final String endingMarker )
     {
-        this.substituteSystemProperties( dependency.getProperties() );
+        this.substituteSystemProperties( dependency.getProperties(), startingMarker, endingMarker );
 
         if ( dependency.getDependencies() != null )
         {
             for ( Dependency d : dependency.getDependencies().getDependency() )
             {
-                this.substituteSystemProperties( d );
+                this.substituteSystemProperties( d, startingMarker, endingMarker );
             }
         }
     }
 
-    private void substituteSystemProperties( final Properties properties )
+    private void substituteSystemProperties( final Properties properties, final String startingMarker,
+                                             final String endingMarker )
     {
-        final String startingMarker =
-            System.getProperty( "org.jomc.sdk.model.modlet.SdkModelProcessor.systemPropertyStartingMarker", "@@" );
-
-        final String endingMarker =
-            System.getProperty( "org.jomc.sdk.model.modlet.SdkModelProcessor.systemPropertyEndingMarker", "@@" );
-
         if ( properties != null )
         {
             for ( Property p : properties.getProperty() )

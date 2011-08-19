@@ -108,6 +108,18 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isErrorHandlerIgnored errorHandlerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.Validator#setErrorHandler(org.xml.sax.ErrorHandler)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isResourceResolverIgnored resourceResolverIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.Validator#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
  *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
@@ -201,8 +213,16 @@ public final class JaxpValidatorFactory
         if ( !sources.isEmpty() )
         {
             validator = schemaFactory.newSchema( sources.toArray( new Source[ sources.size() ] ) ).newValidator();
-            validator.setErrorHandler( this.getErrorHandler() );
-            validator.setResourceResolver( this.getResourceResolver() );
+
+            if ( !this.isErrorHandlerIgnored() )
+            {
+                validator.setErrorHandler( this.getErrorHandler() );
+            }
+
+            if ( !this.isResourceResolverIgnored() )
+            {
+                validator.setResourceResolver( this.getResourceResolver() );
+            }
 
             for ( Map.Entry<String, Boolean> e : this.getValidatorFeatures().entrySet() )
             {
@@ -266,6 +286,32 @@ public final class JaxpValidatorFactory
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
+
+    /**
+     * Gets the value of the {@code errorHandlerIgnored} property.
+     * @return Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.Validator#setErrorHandler(org.xml.sax.ErrorHandler)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isErrorHandlerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "errorHandlerIgnored" );
+        assert _p != null : "'errorHandlerIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
+     * Gets the value of the {@code resourceResolverIgnored} property.
+     * @return Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.Validator#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isResourceResolverIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "resourceResolverIgnored" );
+        assert _p != null : "'resourceResolverIgnored' property not found.";
+        return _p.booleanValue();
+    }
 
     /**
      * Gets the value of the {@code schemas} property.

@@ -107,6 +107,30 @@ import org.xml.sax.XMLReader;
  *       <td align="left" valign="top">{@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.</td>
  *     </tr>
  *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isContentHandlerIgnored contentHandlerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setContentHandler(org.xml.sax.ContentHandler)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isDtdHandlerIgnored dtdHandlerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setDTDHandler(org.xml.sax.DTDHandler)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isEntityResolverIgnored entityResolverIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isErrorHandlerIgnored errorHandlerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setErrorHandler(org.xml.sax.ErrorHandler)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getFeatures features}</td>
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Boolean>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
@@ -123,6 +147,12 @@ import org.xml.sax.XMLReader;
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top">See {@link org.xml.sax.XMLReader#setProperty(java.lang.String, java.lang.Object)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isSchemaIgnored schemaIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isValidating validating}</td>
@@ -189,7 +219,12 @@ public final class JaxpSaxXmlReaderFactory
     public XMLReader getObject() throws ParserConfigurationException, SAXException
     {
         final SAXParserFactory f = SAXParserFactory.newInstance();
-        f.setSchema( this.getSchema() );
+
+        if ( !this.isSchemaIgnored() )
+        {
+            f.setSchema( this.getSchema() );
+        }
+
         f.setNamespaceAware( this.isNamespaceAware() );
         f.setValidating( this.isValidating() );
         f.setXIncludeAware( this.isXIncludeAware() );
@@ -197,10 +232,25 @@ public final class JaxpSaxXmlReaderFactory
         final SAXParser p = f.newSAXParser();
         final XMLReader r = p.getXMLReader();
 
-        r.setContentHandler( this.getContentHandler() );
-        r.setDTDHandler( this.getDtdHandler() );
-        r.setEntityResolver( this.getEntityResolver() );
-        r.setErrorHandler( this.getErrorHandler() );
+        if ( !this.isContentHandlerIgnored() )
+        {
+            r.setContentHandler( this.getContentHandler() );
+        }
+
+        if ( !this.isDtdHandlerIgnored() )
+        {
+            r.setDTDHandler( this.getDtdHandler() );
+        }
+
+        if ( !this.isEntityResolverIgnored() )
+        {
+            r.setEntityResolver( this.getEntityResolver() );
+        }
+
+        if ( !this.isErrorHandlerIgnored() )
+        {
+            r.setErrorHandler( this.getErrorHandler() );
+        }
 
         for ( Map.Entry<String, Boolean> e : this.getFeatures().entrySet() )
         {
@@ -320,6 +370,58 @@ public final class JaxpSaxXmlReaderFactory
     }
 
     /**
+     * Gets the value of the {@code contentHandlerIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setContentHandler(org.xml.sax.ContentHandler)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isContentHandlerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "contentHandlerIgnored" );
+        assert _p != null : "'contentHandlerIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
+     * Gets the value of the {@code dtdHandlerIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setDTDHandler(org.xml.sax.DTDHandler)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isDtdHandlerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "dtdHandlerIgnored" );
+        assert _p != null : "'dtdHandlerIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
+     * Gets the value of the {@code entityResolverIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isEntityResolverIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "entityResolverIgnored" );
+        assert _p != null : "'entityResolverIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
+     * Gets the value of the {@code errorHandlerIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setErrorHandler(org.xml.sax.ErrorHandler)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isErrorHandlerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "errorHandlerIgnored" );
+        assert _p != null : "'errorHandlerIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
      * Gets the value of the {@code features} property.
      * @return See {@link org.xml.sax.XMLReader#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
@@ -356,6 +458,19 @@ public final class JaxpSaxXmlReaderFactory
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "properties" );
         assert _p != null : "'properties' property not found.";
         return _p;
+    }
+
+    /**
+     * Gets the value of the {@code schemaIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isSchemaIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
+        assert _p != null : "'schemaIgnored' property not found.";
+        return _p.booleanValue();
     }
 
     /**

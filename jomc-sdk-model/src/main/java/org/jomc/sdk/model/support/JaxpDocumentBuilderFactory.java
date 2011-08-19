@@ -117,6 +117,18 @@ import javax.xml.parsers.ParserConfigurationException;
  *       <td align="left" valign="top">{@code true} if the factory is configured to produce parsers which convert CDATA nodes to Text nodes and append them to the adjacent (if any) Text node; {@code false} otherwise.</td>
  *     </tr>
  *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isEntityResolverIgnored entityResolverIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code entityResolver} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isErrorHandlerIgnored errorHandlerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isExpandingEntityReferences expandingEntityReferences}</td>
  *       <td align="left" valign="top" nowrap>{@code java.lang.Boolean}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
@@ -145,6 +157,12 @@ import javax.xml.parsers.ParserConfigurationException;
  *       <td align="left" valign="top" nowrap>{@code java.lang.Boolean}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top">{@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isSchemaIgnored schemaIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isValidating validating}</td>
@@ -201,7 +219,12 @@ public final class JaxpDocumentBuilderFactory
     public DocumentBuilder getObject() throws ParserConfigurationException
     {
         final DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
-        f.setSchema( this.getSchema() );
+
+        if ( !this.isSchemaIgnored() )
+        {
+            f.setSchema( this.getSchema() );
+        }
+
         f.setCoalescing( this.isCoalescing() );
         f.setExpandEntityReferences( this.isExpandingEntityReferences() );
         f.setIgnoringComments( this.isIgnoringComments() );
@@ -221,8 +244,17 @@ public final class JaxpDocumentBuilderFactory
         }
 
         final DocumentBuilder b = f.newDocumentBuilder();
-        b.setEntityResolver( this.getEntityResolver() );
-        b.setErrorHandler( this.getErrorHandler() );
+
+        if ( !this.isEntityResolverIgnored() )
+        {
+            b.setEntityResolver( this.getEntityResolver() );
+        }
+
+        if ( !this.isErrorHandlerIgnored() )
+        {
+            b.setErrorHandler( this.getErrorHandler() );
+        }
+
         return b;
     }
 
@@ -329,6 +361,32 @@ public final class JaxpDocumentBuilderFactory
     }
 
     /**
+     * Gets the value of the {@code entityResolverIgnored} property.
+     * @return Flag indicating the {@code entityResolver} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isEntityResolverIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "entityResolverIgnored" );
+        assert _p != null : "'entityResolverIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
+     * Gets the value of the {@code errorHandlerIgnored} property.
+     * @return Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isErrorHandlerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "errorHandlerIgnored" );
+        assert _p != null : "'errorHandlerIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
      * Gets the value of the {@code expandingEntityReferences} property.
      * @return {@code true} if the factory is configured to produce parsers which expand entity reference nodes; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
@@ -391,6 +449,19 @@ public final class JaxpDocumentBuilderFactory
         final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "namespaceAware" );
         assert _p != null : "'namespaceAware' property not found.";
         return _p;
+    }
+
+    /**
+     * Gets the value of the {@code schemaIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isSchemaIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
+        assert _p != null : "'schemaIgnored' property not found.";
+        return _p.booleanValue();
     }
 
     /**

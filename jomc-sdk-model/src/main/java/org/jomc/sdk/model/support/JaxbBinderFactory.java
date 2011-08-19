@@ -107,10 +107,22 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
  *       <td align="left" valign="top">See {@link javax.xml.bind.Binder#setProperty(java.lang.String, java.lang.Object)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isSchemaIgnored schemaIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Binder#setSchema(javax.xml.validation.Schema)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
  *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top">List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isValidationEventHandlerIgnored validationEventHandlerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Binder#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</td>
  *     </tr>
  *   </table>
  * </p>
@@ -153,9 +165,9 @@ public final class JaxbBinderFactory
     // SECTION-END
     // SECTION-START[JaxbBinderFactory]
 
-    public Binder getObject() throws JAXBException
+    public Binder<?> getObject() throws JAXBException
     {
-        Binder binder = null;
+        Binder<?> binder = null;
         final StringBuilder packages = new StringBuilder();
 
         for ( SchemaType s : this.getSchemas().getSchema() )
@@ -170,8 +182,16 @@ public final class JaxbBinderFactory
         {
             final String ctx = packages.toString().substring( 1 );
             binder = JAXBContext.newInstance( ctx ).createBinder();
-            binder.setSchema( this.getSchema() );
-            binder.setEventHandler( this.getValidationEventHandler() );
+
+            if ( !this.isSchemaIgnored() )
+            {
+                binder.setSchema( this.getSchema() );
+            }
+
+            if ( !this.isValidationEventHandlerIgnored() )
+            {
+                binder.setEventHandler( this.getValidationEventHandler() );
+            }
 
             for ( Map.Entry<String, Object> e : this.getBinderProperties().entrySet() )
             {
@@ -245,6 +265,19 @@ public final class JaxbBinderFactory
     }
 
     /**
+     * Gets the value of the {@code schemaIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Binder#setSchema(javax.xml.validation.Schema)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isSchemaIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
+        assert _p != null : "'schemaIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
      * Gets the value of the {@code schemas} property.
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
@@ -255,6 +288,19 @@ public final class JaxbBinderFactory
         final org.jomc.sdk.model.SchemasType _p = (org.jomc.sdk.model.SchemasType) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemas" );
         assert _p != null : "'schemas' property not found.";
         return _p;
+    }
+
+    /**
+     * Gets the value of the {@code validationEventHandlerIgnored} property.
+     * @return Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Binder#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isValidationEventHandlerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validationEventHandlerIgnored" );
+        assert _p != null : "'validationEventHandlerIgnored' property not found.";
+        return _p.booleanValue();
     }
     // </editor-fold>
     // SECTION-END

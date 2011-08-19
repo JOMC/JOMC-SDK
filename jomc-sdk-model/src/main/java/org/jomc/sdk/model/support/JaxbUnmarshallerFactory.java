@@ -102,6 +102,18 @@ import org.xml.sax.SAXException;
  *       <td align="left" scope="col" nowrap><b>Documentation</b></td>
  *     </tr>
  *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isAttachmentUnmarshallerIgnored attachmentUnmarshallerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code attachmentUnmarshaller} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setAttachmentUnmarshaller(javax.xml.bind.attachment.AttachmentUnmarshaller)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isSchemaIgnored schemaIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #getSchemas schemas}</td>
  *       <td align="left" valign="top" nowrap>{@code org.jomc.sdk.model.SchemasType}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
@@ -112,6 +124,12 @@ import org.xml.sax.SAXException;
  *       <td align="left" valign="top" nowrap>{@code java.util.Map<String,Object>}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
  *       <td align="left" valign="top">See {@link javax.xml.bind.Unmarshaller#setProperty(java.lang.String, java.lang.Object)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isValidationEventHandlerIgnored validationEventHandlerIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</td>
  *     </tr>
  *   </table>
  * </p>
@@ -181,9 +199,20 @@ public final class JaxbUnmarshallerFactory
                 unmarshaller.setProperty( e.getKey(), e.getValue() );
             }
 
-            unmarshaller.setAttachmentUnmarshaller( this.getAttachmentUnmarshaller() );
-            unmarshaller.setEventHandler( this.getValidationEventHandler() );
-            unmarshaller.setSchema( this.getSchema() );
+            if ( !this.isAttachmentUnmarshallerIgnored() )
+            {
+                unmarshaller.setAttachmentUnmarshaller( this.getAttachmentUnmarshaller() );
+            }
+
+            if ( !this.isValidationEventHandlerIgnored() )
+            {
+                unmarshaller.setEventHandler( this.getValidationEventHandler() );
+            }
+
+            if ( !this.isSchemaIgnored() )
+            {
+                unmarshaller.setSchema( this.getSchema() );
+            }
         }
 
         return unmarshaller;
@@ -253,6 +282,32 @@ public final class JaxbUnmarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
+     * Gets the value of the {@code attachmentUnmarshallerIgnored} property.
+     * @return Flag indicating the {@code attachmentUnmarshaller} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setAttachmentUnmarshaller(javax.xml.bind.attachment.AttachmentUnmarshaller)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isAttachmentUnmarshallerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "attachmentUnmarshallerIgnored" );
+        assert _p != null : "'attachmentUnmarshallerIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
+     * Gets the value of the {@code schemaIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isSchemaIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
+        assert _p != null : "'schemaIgnored' property not found.";
+        return _p.booleanValue();
+    }
+
+    /**
      * Gets the value of the {@code schemas} property.
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
@@ -276,6 +331,19 @@ public final class JaxbUnmarshallerFactory
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "unmarshallerProperties" );
         assert _p != null : "'unmarshallerProperties' property not found.";
         return _p;
+    }
+
+    /**
+     * Gets the value of the {@code validationEventHandlerIgnored} property.
+     * @return Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isValidationEventHandlerIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validationEventHandlerIgnored" );
+        assert _p != null : "'validationEventHandlerIgnored' property not found.";
+        return _p.booleanValue();
     }
     // </editor-fold>
     // SECTION-END

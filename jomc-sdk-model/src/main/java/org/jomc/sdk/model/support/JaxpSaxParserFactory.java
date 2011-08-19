@@ -124,6 +124,12 @@ import org.xml.sax.SAXException;
  *       <td align="left" valign="top">See {@link javax.xml.parsers.SAXParser#setProperty(java.lang.String, java.lang.Object)}.</td>
  *     </tr>
  *     <tr class="TableRowColor">
+ *       <td align="left" valign="top" nowrap>{@link #isSchemaIgnored schemaIgnored}</td>
+ *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+ *       <td align="left" valign="top" nowrap>{@code none}</td>
+ *       <td align="left" valign="top">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.</td>
+ *     </tr>
+ *     <tr class="TableRowColor">
  *       <td align="left" valign="top" nowrap>{@link #isValidating validating}</td>
  *       <td align="left" valign="top" nowrap>{@code java.lang.Boolean}</td>
  *       <td align="left" valign="top" nowrap>{@code none}</td>
@@ -168,7 +174,12 @@ public final class JaxpSaxParserFactory
     public SAXParser getObject() throws ParserConfigurationException, SAXException
     {
         final SAXParserFactory f = SAXParserFactory.newInstance();
-        f.setSchema( this.getSchema() );
+
+        if ( !this.isSchemaIgnored() )
+        {
+            f.setSchema( this.getSchema() );
+        }
+
         f.setNamespaceAware( this.isNamespaceAware() );
         f.setValidating( this.isValidating() );
         f.setXIncludeAware( this.isXIncludeAware() );
@@ -273,6 +284,19 @@ public final class JaxpSaxParserFactory
         final java.util.Map<String,Object> _p = (java.util.Map<String,Object>) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "properties" );
         assert _p != null : "'properties' property not found.";
         return _p;
+    }
+
+    /**
+     * Gets the value of the {@code schemaIgnored} property.
+     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
+     * @throws org.jomc.ObjectManagementException if getting the property instance fails.
+     */
+    @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
+    private boolean isSchemaIgnored()
+    {
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
+        assert _p != null : "'schemaIgnored' property not found.";
+        return _p.booleanValue();
     }
 
     /**
