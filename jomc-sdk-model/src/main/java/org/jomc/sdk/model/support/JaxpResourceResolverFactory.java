@@ -53,7 +53,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXP Resource Resolver Factory>}.
- *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXP Resource Resolver Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <org.w3c.dom.ls.LSResourceResolver>} at any specification level.</li>

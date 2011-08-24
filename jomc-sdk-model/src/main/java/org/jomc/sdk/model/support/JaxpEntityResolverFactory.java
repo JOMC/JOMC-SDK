@@ -51,7 +51,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXP Entity Resolver Factory>}.
- *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXP Entity Resolver Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <org.xml.sax.EntityResolver>} at any specification level.</li>

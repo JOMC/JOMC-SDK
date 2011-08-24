@@ -48,7 +48,7 @@ import javax.xml.parsers.ParserConfigurationException;
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXP Document Builder Factory>}.
- *   It provides objects named {@code <JOMC SDK>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXP Document Builder Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <javax.xml.parsers.DocumentBuilder>} at any specification level.</li>
@@ -135,7 +135,7 @@ public final class JaxpDocumentBuilderFactory
     /**
      * Gets the {@code <entityResolver>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <entityResolver>} dependency.
@@ -151,7 +151,7 @@ public final class JaxpDocumentBuilderFactory
     /**
      * Gets the {@code <errorHandler>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <errorHandler>} dependency.
@@ -167,7 +167,7 @@ public final class JaxpDocumentBuilderFactory
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <schema>} dependency.

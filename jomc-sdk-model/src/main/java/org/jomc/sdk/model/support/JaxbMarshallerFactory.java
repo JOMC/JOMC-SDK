@@ -51,7 +51,7 @@ import org.xml.sax.SAXException;
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXB Marshaller Factory>}.
- *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXB Marshaller Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <javax.xml.bind.Marshaller>} at any specification level.</li>
@@ -158,7 +158,7 @@ public final class JaxbMarshallerFactory
     /**
      * Gets the {@code <attachmentMarshaller>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.bind.attachment.AttachmentMarshaller>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXB Marshaller Factory :: Default>} object of the {@code <javax.xml.bind.attachment.AttachmentMarshaller>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <attachmentMarshaller>} dependency.
@@ -174,7 +174,7 @@ public final class JaxbMarshallerFactory
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXB Marshaller Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <schema>} dependency.
@@ -190,7 +190,7 @@ public final class JaxbMarshallerFactory
     /**
      * Gets the {@code <validationEventHandler>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.bind.ValidationEventHandler>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXB Marshaller Factory :: Default>} object of the {@code <javax.xml.bind.ValidationEventHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <validationEventHandler>} dependency.

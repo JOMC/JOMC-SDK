@@ -133,7 +133,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXB Binder Factory"
                     class="org.jomc.sdk.model.support.JaxbBinderFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    classDeclaration="true" name="JOMC :: JAXB Binder Factory :: Default" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -152,10 +152,10 @@
       </implementations>
       <dependencies>
         <dependency name="schema" identifier="javax.xml.validation.Schema"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Binder Factory :: Default" optional="true"/>
 
         <dependency name="validationEventHandler" identifier="javax.xml.bind.ValidationEventHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Binder Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -180,7 +180,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXB Context Factory"
                     class="org.jomc.sdk.model.support.JaxbContextFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    classDeclaration="true" name="JOMC :: JAXB Context Factory :: Default" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -201,8 +201,9 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXB Introspector Factory"
                     class="org.jomc.sdk.model.support.JaxbIntrospectorFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
-                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
+                    classDeclaration="true" name="JOMC :: JAXB Introspector Factory :: Default"
+                    version="${project.version}" vendor="${project.organization.name}" stateless="true"
+                    createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en" type="text/x-javadoc">XML Schema Set {@code JAXBIntrospector} factory implementation.</text>
@@ -222,7 +223,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXB Marshaller Factory"
                     class="org.jomc.sdk.model.support.JaxbMarshallerFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    classDeclaration="true" name="JOMC :: JAXB Marshaller Factory :: Default" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -241,13 +242,13 @@
       </implementations>
       <dependencies>
         <dependency name="attachmentMarshaller" identifier="javax.xml.bind.attachment.AttachmentMarshaller"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Marshaller Factory :: Default" optional="true"/>
 
         <dependency name="schema" identifier="javax.xml.validation.Schema"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Marshaller Factory :: Default" optional="true"/>
 
         <dependency name="validationEventHandler" identifier="javax.xml.bind.ValidationEventHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Marshaller Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -261,7 +262,7 @@
             <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.</text>
           </documentation>
         </property>
-        <property name="jaxbFragment" type="java.lang.Boolean" value="true">
+        <property name="jaxbFragment" type="java.lang.Boolean" value="false">
           <documentation defaultLanguage="en">
             <text language="en" type="text/x-javadoc">See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.</text>
           </documentation>
@@ -302,7 +303,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXB Unmarshaller Factory"
                     class="org.jomc.sdk.model.support.JaxbUnmarshallerFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    classDeclaration="true" name="JOMC :: JAXB Unmarshaller Factory :: Default" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -321,13 +322,13 @@
       </implementations>
       <dependencies>
         <dependency name="attachmentUnmarshaller" identifier="javax.xml.bind.attachment.AttachmentUnmarshaller"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Unmarshaller Factory :: Default" optional="true"/>
 
         <dependency name="schema" identifier="javax.xml.validation.Schema"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Unmarshaller Factory :: Default" optional="true"/>
 
         <dependency name="validationEventHandler" identifier="javax.xml.bind.ValidationEventHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXB Unmarshaller Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -356,7 +357,7 @@
     </implementation>
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP Schema Factory" class="org.jomc.sdk.model.support.JaxpSchemaFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    classDeclaration="true" name="JOMC :: JAXP Schema Factory :: Default" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -375,10 +376,10 @@
       </implementations>
       <dependencies>
         <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Schema Factory :: Default" optional="true"/>
 
         <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Schema Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -409,7 +410,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP Validator Factory"
                     class="org.jomc.sdk.model.support.JaxpValidatorFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    classDeclaration="true" name="JOMC :: JAXP Validator Factory :: Default" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -428,10 +429,10 @@
       </implementations>
       <dependencies>
         <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Validator Factory :: Default" optional="true"/>
 
         <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Validator Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -462,7 +463,7 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP Validator Handler Factory"
                     class="org.jomc.sdk.model.support.JaxpValidatorHandlerFactory"
-                    classDeclaration="true" name="${project.name}" version="${project.version}"
+                    classDeclaration="true" name="JOMC :: JAXP Validator Handler Factory :: Default" version="${project.version}"
                     vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
@@ -482,10 +483,10 @@
       </implementations>
       <dependencies>
         <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Validator Handler Factory :: Default" optional="true"/>
 
         <dependency name="resourceResolver" identifier="org.w3c.dom.ls.LSResourceResolver"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Validator Handler Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -516,8 +517,8 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP Entity Resolver Factory"
                     class="org.jomc.sdk.model.support.JaxpEntityResolverFactory" classDeclaration="true"
-                    name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true" createDate="2009-07-26T19:56:45Z">
+                    name="JOMC :: JAXP Entity Resolver Factory :: Default" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en" type="text/x-javadoc">XML Schema Set JAXP {@code EntityResolver} factory implementation.</text>
@@ -537,8 +538,8 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP Resource Resolver Factory"
                     class="org.jomc.sdk.model.support.JaxpResourceResolverFactory" classDeclaration="true"
-                    name="${project.name}" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true" createDate="2009-07-26T19:56:45Z">
+                    name="JOMC :: JAXP Resource Resolver Factory :: Default" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en" type="text/x-javadoc">XML Schema Set JAXP {@code LSResourceResolver} factory implementation.</text>
@@ -558,8 +559,8 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP Document Builder Factory"
                     class="org.jomc.sdk.model.support.JaxpDocumentBuilderFactory" classDeclaration="true"
-                    name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true" createDate="2009-07-26T19:56:45Z">
+                    name="JOMC :: JAXP Document Builder Factory :: Default" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en" type="text/x-javadoc">JAXP {@code DocumentBuilder} factory implementation.</text>
@@ -574,13 +575,13 @@
       </specifications>
       <dependencies>
         <dependency name="entityResolver" identifier="org.xml.sax.EntityResolver"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Document Builder Factory :: Default" optional="true"/>
 
         <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Document Builder Factory :: Default" optional="true"/>
 
         <dependency name="schema" identifier="javax.xml.validation.Schema"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP Document Builder Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -651,8 +652,8 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP SAX Parser Factory"
                     class="org.jomc.sdk.model.support.JaxpSaxParserFactory" classDeclaration="true"
-                    name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true" createDate="2009-07-26T19:56:45Z">
+                    name="JOMC :: JAXP SAX Parser Factory :: Default" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en" type="text/x-javadoc">JAXP {@code SAXParser} factory implementation.</text>
@@ -667,7 +668,7 @@
       </specifications>
       <dependencies>
         <dependency name="schema" identifier="javax.xml.validation.Schema"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP SAX Parser Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>
@@ -708,8 +709,8 @@
     <!-- *********************************************************************************************************** -->
     <implementation identifier="JOMC :: JAXP SAX XML Reader Factory"
                     class="org.jomc.sdk.model.support.JaxpSaxXmlReaderFactory" classDeclaration="true"
-                    name="JOMC SDK" version="${project.version}" vendor="${project.organization.name}"
-                    stateless="true" createDate="2009-07-26T19:56:45Z">
+                    name="JOMC :: JAXP SAX XML Reader Factory :: Default" version="${project.version}"
+                    vendor="${project.organization.name}" stateless="true" createDate="2009-07-26T19:56:45Z">
 
       <documentation defaultLanguage="en">
         <text language="en" type="text/x-javadoc">JAXP {@code XMLReader} factory implementation.</text>
@@ -724,19 +725,19 @@
       </specifications>
       <dependencies>
         <dependency name="contentHandler" identifier="org.xml.sax.ContentHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP SAX XML Reader Factory :: Default" optional="true"/>
 
         <dependency name="dtdHandler" identifier="org.xml.sax.DTDHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP SAX XML Reader Factory :: Default" optional="true"/>
 
         <dependency name="entityResolver" identifier="org.xml.sax.EntityResolver"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP SAX XML Reader Factory :: Default" optional="true"/>
 
         <dependency name="errorHandler" identifier="org.xml.sax.ErrorHandler"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP SAX XML Reader Factory :: Default" optional="true"/>
 
         <dependency name="schema" identifier="javax.xml.validation.Schema"
-                    implementationName="${project.name} Default" optional="true"/>
+                    implementationName="JOMC :: JAXP SAX XML Reader Factory :: Default" optional="true"/>
 
       </dependencies>
       <properties>

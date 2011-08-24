@@ -49,7 +49,7 @@ import org.xml.sax.SAXException;
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXP SAX Parser Factory>}.
- *   It provides objects named {@code <JOMC SDK>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXP SAX Parser Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <javax.xml.parsers.SAXParser>} at any specification level.</li>
@@ -122,7 +122,7 @@ public final class JaxpSaxParserFactory
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX Parser Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <schema>} dependency.

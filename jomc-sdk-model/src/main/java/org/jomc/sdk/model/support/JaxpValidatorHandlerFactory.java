@@ -57,7 +57,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPA
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXP Validator Handler Factory>}.
- *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXP Validator Handler Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <javax.xml.validation.ValidatorHandler>} at any specification level.</li>
@@ -164,7 +164,7 @@ public final class JaxpValidatorHandlerFactory
     /**
      * Gets the {@code <errorHandler>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP Validator Handler Factory :: Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <errorHandler>} dependency.
@@ -180,7 +180,7 @@ public final class JaxpValidatorHandlerFactory
     /**
      * Gets the {@code <resourceResolver>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.w3c.dom.ls.LSResourceResolver>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP Validator Handler Factory :: Default>} object of the {@code <org.w3c.dom.ls.LSResourceResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <resourceResolver>} dependency.

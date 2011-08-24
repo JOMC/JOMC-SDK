@@ -50,7 +50,7 @@ import org.xml.sax.XMLReader;
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXP SAX XML Reader Factory>}.
- *   It provides objects named {@code <JOMC SDK>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <org.xml.sax.XMLReader>} at any specification level.</li>
@@ -144,7 +144,7 @@ public final class JaxpSaxXmlReaderFactory
     /**
      * Gets the {@code <contentHandler>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.ContentHandler>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.ContentHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <contentHandler>} dependency.
@@ -160,7 +160,7 @@ public final class JaxpSaxXmlReaderFactory
     /**
      * Gets the {@code <dtdHandler>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.DTDHandler>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.DTDHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <dtdHandler>} dependency.
@@ -176,7 +176,7 @@ public final class JaxpSaxXmlReaderFactory
     /**
      * Gets the {@code <entityResolver>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <entityResolver>} dependency.
@@ -192,7 +192,7 @@ public final class JaxpSaxXmlReaderFactory
     /**
      * Gets the {@code <errorHandler>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <errorHandler>} dependency.
@@ -208,7 +208,7 @@ public final class JaxpSaxXmlReaderFactory
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <schema>} dependency.

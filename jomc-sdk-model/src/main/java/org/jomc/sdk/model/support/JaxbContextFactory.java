@@ -48,7 +48,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXB Context Factory>}.
- *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXB Context Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <javax.xml.bind.JAXBContext>} at any specification level.</li>

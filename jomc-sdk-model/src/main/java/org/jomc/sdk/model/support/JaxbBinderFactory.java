@@ -50,7 +50,7 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
  *
  * <p>
  *   This implementation is identified by identifier {@code <JOMC :: JAXB Binder Factory>}.
- *   It provides objects named {@code <JOMC SDK Model>} of the following specifications:
+ *   It provides objects named {@code <JOMC :: JAXB Binder Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <javax.xml.bind.Binder>} at any specification level.</li>
@@ -132,7 +132,7 @@ public final class JaxbBinderFactory
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXB Binder Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <schema>} dependency.
@@ -148,7 +148,7 @@ public final class JaxbBinderFactory
     /**
      * Gets the {@code <validationEventHandler>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK Model Default>} object of the {@code <javax.xml.bind.ValidationEventHandler>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXB Binder Factory :: Default>} object of the {@code <javax.xml.bind.ValidationEventHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <validationEventHandler>} dependency.
