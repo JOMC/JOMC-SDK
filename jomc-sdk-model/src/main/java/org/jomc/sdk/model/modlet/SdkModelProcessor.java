@@ -72,7 +72,7 @@ import org.jomc.modlet.ModelProcessor;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
 // </editor-fold>
 // SECTION-END
-public final class SdkModelProcessor implements ModelProcessor
+public class SdkModelProcessor implements ModelProcessor
 {
     // SECTION-START[SdkModelProcessor]
 

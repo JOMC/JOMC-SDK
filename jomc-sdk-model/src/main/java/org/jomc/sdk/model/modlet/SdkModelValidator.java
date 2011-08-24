@@ -79,7 +79,7 @@ import org.jomc.sdk.model.MapType;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
 // </editor-fold>
 // SECTION-END
-public final class SdkModelValidator implements ModelValidator
+public class SdkModelValidator implements ModelValidator
 {
     // SECTION-START[SdkModelValidator]
 
