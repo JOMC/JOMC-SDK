@@ -88,7 +88,7 @@ import static javax.xml.XMLConstants.NULL_NS_URI;
 @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
 // </editor-fold>
 // SECTION-END
-public final class SdkModelProvider implements ModelProvider
+public class SdkModelProvider implements ModelProvider
 {
     // SECTION-START[SdkModelProvider]
 
@@ -220,7 +220,6 @@ public final class SdkModelProvider implements ModelProvider
 
                         final Dependency d = new Dependency( dependencyDeclaration );
                         d.setImplementationName( i.getName() );
-                        d.setFinal( true );
                         d.setOverride( true );
                         i.getDependencies().getDependency().add( d );
                     }
