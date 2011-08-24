@@ -78,10 +78,10 @@ public class ModelTest
         assertNotNull( this.getDefaultMarshaller() );
         assertEquals( "UTF-8", this.getDefaultMarshaller().getProperty( Marshaller.JAXB_ENCODING ) );
         assertEquals( Boolean.FALSE, this.getDefaultMarshaller().getProperty( Marshaller.JAXB_FORMATTED_OUTPUT ) );
-        assertEquals( Boolean.TRUE, this.getDefaultMarshaller().getProperty( Marshaller.JAXB_FRAGMENT ) );
+        assertEquals( Boolean.FALSE, this.getDefaultMarshaller().getProperty( Marshaller.JAXB_FRAGMENT ) );
         assertNull( this.getDefaultMarshaller().getProperty( Marshaller.JAXB_SCHEMA_LOCATION ) );
         assertNull( this.getDefaultMarshaller().getProperty( Marshaller.JAXB_NO_NAMESPACE_SCHEMA_LOCATION ) );
-        assertNull( this.getDefaultMarshaller().getSchema() );
+        assertNotNull( this.getDefaultMarshaller().getSchema() );
     }
 
     @Test public void testCustomMarshaller() throws Exception
@@ -89,22 +89,22 @@ public class ModelTest
         assertNotNull( this.getCustomMarshaller() );
         assertEquals( "US-ASCII", this.getCustomMarshaller().getProperty( Marshaller.JAXB_ENCODING ) );
         assertEquals( Boolean.TRUE, this.getCustomMarshaller().getProperty( Marshaller.JAXB_FORMATTED_OUTPUT ) );
-        assertEquals( Boolean.FALSE, this.getCustomMarshaller().getProperty( Marshaller.JAXB_FRAGMENT ) );
+        assertEquals( Boolean.TRUE, this.getCustomMarshaller().getProperty( Marshaller.JAXB_FRAGMENT ) );
         assertNotNull( this.getCustomMarshaller().getProperty( Marshaller.JAXB_SCHEMA_LOCATION ) );
         assertNotNull( this.getCustomMarshaller().getProperty( Marshaller.JAXB_NO_NAMESPACE_SCHEMA_LOCATION ) );
-        assertNotNull( this.getCustomMarshaller().getSchema() );
+        assertNull( this.getCustomMarshaller().getSchema() );
     }
 
     @Test public void testDefaultUnmarshaller() throws Exception
     {
         assertNotNull( this.getDefaultUnmarshaller() );
-        assertNull( this.getDefaultUnmarshaller().getSchema() );
+        assertNotNull( this.getDefaultUnmarshaller().getSchema() );
     }
 
     @Test public void testCustomUnmarshaller() throws Exception
     {
         assertNotNull( this.getCustomUnmarshaller() );
-        assertNotNull( this.getCustomUnmarshaller().getSchema() );
+        assertNull( this.getCustomUnmarshaller().getSchema() );
     }
 
     @Test public void testDefaultSchema() throws Exception
@@ -329,6 +329,11 @@ public class ModelTest
      *       <td align="left" valign="top" nowrap>{@code java.lang.String}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code <schemaIgnored>}</td>
+     *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
      *   </table>
      * </p>
      * @return The {@code <CustomMarshaller>} dependency.
@@ -345,7 +350,7 @@ public class ModelTest
     /**
      * Gets the {@code <CustomSaxParser>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX Parser Factory :: Default>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <CustomSaxParser>} dependency.
@@ -362,7 +367,7 @@ public class ModelTest
     /**
      * Gets the {@code <CustomSaxXmlReader>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <CustomSaxXmlReader>} dependency.
@@ -381,6 +386,20 @@ public class ModelTest
      * <p>
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code <resourceResolverIgnored>}</td>
+     *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
      * </p>
      * @return The {@code <CustomSchema>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -460,6 +479,20 @@ public class ModelTest
      * <p>
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Unmarshaller>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
+     * </p>
+     * <p><strong>Properties:</strong>
+     *   <table border="1" width="100%" cellpadding="3" cellspacing="0">
+     *     <tr class="TableSubHeadingColor">
+     *       <th align="left" scope="col" nowrap><b>Name</b></th>
+     *       <th align="left" scope="col" nowrap><b>Type</b></th>
+     *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
+     *     </tr>
+     *     <tr class="TableRow">
+     *       <td align="left" valign="top" nowrap>{@code <schemaIgnored>}</td>
+     *       <td align="left" valign="top" nowrap>{@code boolean}</td>
+     *       <td align="left" valign="top"></td>
+     *     </tr>
+     *   </table>
      * </p>
      * @return The {@code <CustomUnmarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -650,7 +683,7 @@ public class ModelTest
     /**
      * Gets the {@code <DefaultDocumentBuilder>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK>} object of the {@code <javax.xml.parsers.DocumentBuilder>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <javax.xml.parsers.DocumentBuilder>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <DefaultDocumentBuilder>} dependency.
@@ -735,7 +768,7 @@ public class ModelTest
     /**
      * Gets the {@code <DefaultSaxParser>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX Parser Factory :: Default>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <DefaultSaxParser>} dependency.
@@ -752,7 +785,7 @@ public class ModelTest
     /**
      * Gets the {@code <DefaultSaxXmlReader>} dependency.
      * <p>
-     *   This method returns the {@code <JOMC SDK>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
+     *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
      * @return The {@code <DefaultSaxXmlReader>} dependency.
