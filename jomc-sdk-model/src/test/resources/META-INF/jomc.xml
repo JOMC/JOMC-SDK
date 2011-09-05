@@ -97,7 +97,7 @@
             <property name="jaxbFragment" type="boolean" value="true" override="true"/>
             <property name="jaxbSchemaLocation" type="boolean" value="true" override="true"/>
             <property name="jaxbNoNamespaceSchemaLocation" value="TEST" override="true"/>
-            <property name="schemaIgnored" type="boolean" value="true" override="true"/>
+            <property name="schema" type="boolean" value="false" override="true"/>
           </properties>
         </dependency>
 
@@ -108,7 +108,7 @@
                     implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
-            <property name="schemaIgnored" type="boolean" value="true" override="true"/>
+            <property name="schema" type="boolean" value="false" override="true"/>
           </properties>
         </dependency>
 
@@ -119,7 +119,7 @@
                     implementationName="JOMC :: Test XML Schema Set">
 
           <properties>
-            <property name="resourceResolverIgnored" type="boolean" value="true" override="true"/>
+            <property name="resourceResolver" type="boolean" value="false" override="true"/>
           </properties>
         </dependency>
 

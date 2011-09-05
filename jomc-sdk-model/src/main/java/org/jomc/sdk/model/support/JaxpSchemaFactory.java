@@ -116,12 +116,12 @@ public final class JaxpSchemaFactory
 
         if ( !sources.isEmpty() )
         {
-            if ( !this.isErrorHandlerIgnored() )
+            if ( this.isErrorHandler() )
             {
                 schemaFactory.setErrorHandler( this.getErrorHandler() );
             }
 
-            if ( !this.isResourceResolverIgnored() )
+            if ( this.isResourceResolver() )
             {
                 schemaFactory.setResourceResolver( this.getResourceResolver() );
             }
@@ -196,28 +196,28 @@ public final class JaxpSchemaFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code <errorHandlerIgnored>} property.
-     * @return Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.SchemaFactory#setErrorHandler(org.xml.sax.ErrorHandler)}.
+     * Gets the value of the {@code <errorHandler>} property.
+     * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.validation.SchemaFactory#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isErrorHandlerIgnored()
+    private boolean isErrorHandler()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "errorHandlerIgnored" );
-        assert _p != null : "'errorHandlerIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "errorHandler" );
+        assert _p != null : "'errorHandler' property not found.";
         return _p.booleanValue();
     }
 
     /**
-     * Gets the value of the {@code <resourceResolverIgnored>} property.
-     * @return Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.SchemaFactory#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
+     * Gets the value of the {@code <resourceResolver>} property.
+     * @return Flag indicating the {@code resourceResolver} dependency is applied. See {@link javax.xml.validation.SchemaFactory#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isResourceResolverIgnored()
+    private boolean isResourceResolver()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "resourceResolverIgnored" );
-        assert _p != null : "'resourceResolverIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "resourceResolver" );
+        assert _p != null : "'resourceResolver' property not found.";
         return _p.booleanValue();
     }
 

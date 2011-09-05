@@ -78,7 +78,7 @@ public final class JaxpSaxParserFactory
     {
         final SAXParserFactory f = SAXParserFactory.newInstance();
 
-        if ( !this.isSchemaIgnored() )
+        if ( this.isSchema() )
         {
             f.setSchema( this.getSchema() );
         }
@@ -192,15 +192,15 @@ public final class JaxpSaxParserFactory
     }
 
     /**
-     * Gets the value of the {@code <schemaIgnored>} property.
-     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
+     * Gets the value of the {@code <schema>} property.
+     * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isSchemaIgnored()
+    private boolean isSchema()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
-        assert _p != null : "'schemaIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schema" );
+        assert _p != null : "'schema' property not found.";
         return _p.booleanValue();
     }
 

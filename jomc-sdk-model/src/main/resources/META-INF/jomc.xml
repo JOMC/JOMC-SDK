@@ -165,14 +165,14 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="schemaIgnored" type="boolean" value="false">
+        <property name="schema" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Binder#setSchema(javax.xml.validation.Schema)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Binder#setSchema(javax.xml.validation.Schema)}.</text>
           </documentation>
         </property>
-        <property name="validationEventHandlerIgnored" type="boolean" value="false">
+        <property name="validationEventHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Binder#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Binder#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</text>
           </documentation>
         </property>
       </properties>
@@ -283,19 +283,19 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="attachmentMarshallerIgnored" type="boolean" value="false">
+        <property name="attachmentMarshaller" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code attachmentMarshaller} dependency is ignored. See {@link javax.xml.bind.Marshaller#setAttachmentMarshaller(javax.xml.bind.attachment.AttachmentMarshaller)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code attachmentMarshaller} dependency is applied. See {@link javax.xml.bind.Marshaller#setAttachmentMarshaller(javax.xml.bind.attachment.AttachmentMarshaller)}.</text>
           </documentation>
         </property>
-        <property name="schemaIgnored" type="boolean" value="false">
+        <property name="schema" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Marshaller#setSchema(javax.xml.validation.Schema)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Marshaller#setSchema(javax.xml.validation.Schema)}.</text>
           </documentation>
         </property>
-        <property name="validationEventHandlerIgnored" type="boolean" value="false">
+        <property name="validationEventHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Marshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Marshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</text>
           </documentation>
         </property>
       </properties>
@@ -338,19 +338,19 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="attachmentUnmarshallerIgnored" type="boolean" value="false">
+        <property name="attachmentUnmarshaller" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code attachmentUnmarshaller} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setAttachmentUnmarshaller(javax.xml.bind.attachment.AttachmentUnmarshaller)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code attachmentUnmarshaller} dependency is applied. See {@link javax.xml.bind.Unmarshaller#setAttachmentUnmarshaller(javax.xml.bind.attachment.AttachmentUnmarshaller)}.</text>
           </documentation>
         </property>
-        <property name="schemaIgnored" type="boolean" value="false">
+        <property name="schema" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.</text>
           </documentation>
         </property>
-        <property name="validationEventHandlerIgnored" type="boolean" value="false">
+        <property name="validationEventHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Unmarshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Unmarshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.</text>
           </documentation>
         </property>
       </properties>
@@ -395,14 +395,14 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="errorHandlerIgnored" type="boolean" value="false">
+        <property name="errorHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.SchemaFactory#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.validation.SchemaFactory#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
           </documentation>
         </property>
-        <property name="resourceResolverIgnored" type="boolean" value="false">
+        <property name="resourceResolver" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.SchemaFactory#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code resourceResolver} dependency is applied. See {@link javax.xml.validation.SchemaFactory#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.</text>
           </documentation>
         </property>
       </properties>
@@ -448,14 +448,14 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="errorHandlerIgnored" type="boolean" value="false">
+        <property name="errorHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.Validator#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.validation.Validator#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
           </documentation>
         </property>
-        <property name="resourceResolverIgnored" type="boolean" value="false">
+        <property name="resourceResolver" type="boolean" value="false">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.Validator#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code resourceResolver} dependency is applied. See {@link javax.xml.validation.Validator#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.</text>
           </documentation>
         </property>
       </properties>
@@ -502,12 +502,12 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="errorHandlerIgnored" type="boolean" value="false">
+        <property name="errorHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
             <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.ValidatorHandler#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
           </documentation>
         </property>
-        <property name="resourceResolverIgnored" type="boolean" value="false">
+        <property name="resourceResolver" type="boolean" value="true">
           <documentation defaultLanguage="en">
             <text language="en" type="text/x-javadoc">Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.ValidatorHandler#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.</text>
           </documentation>
@@ -632,19 +632,19 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="entityResolverIgnored" type="boolean" value="false">
+        <property name="entityResolver" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code entityResolver} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code entityResolver} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.</text>
           </documentation>
         </property>
-        <property name="errorHandlerIgnored" type="boolean" value="false">
+        <property name="errorHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
           </documentation>
         </property>
-        <property name="schemaIgnored" type="boolean" value="false">
+        <property name="schema" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.</text>
           </documentation>
         </property>
       </properties>
@@ -699,9 +699,9 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="schemaIgnored" type="boolean" value="false">
+        <property name="schema" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.</text>
           </documentation>
         </property>
       </properties>
@@ -768,29 +768,29 @@
           </documentation>
           <map xmlns="http://jomc.org/sdk/model"/>
         </property>
-        <property name="contentHandlerIgnored" type="boolean" value="false">
+        <property name="contentHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setContentHandler(org.xml.sax.ContentHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is applied. See {@link org.xml.sax.XMLReader#setContentHandler(org.xml.sax.ContentHandler)}.</text>
           </documentation>
         </property>
-        <property name="dtdHandlerIgnored" type="boolean" value="false">
+        <property name="dtdHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setDTDHandler(org.xml.sax.DTDHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code dtdHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setDTDHandler(org.xml.sax.DTDHandler)}.</text>
           </documentation>
         </property>
-        <property name="entityResolverIgnored" type="boolean" value="false">
+        <property name="entityResolver" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code entityResolver} dependency is applied. See {@link org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)}.</text>
           </documentation>
         </property>
-        <property name="errorHandlerIgnored" type="boolean" value="false">
+        <property name="errorHandler" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link org.xml.sax.XMLReader#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code errorHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setErrorHandler(org.xml.sax.ErrorHandler)}.</text>
           </documentation>
         </property>
-        <property name="schemaIgnored" type="boolean" value="false">
+        <property name="schema" type="boolean" value="true">
           <documentation defaultLanguage="en">
-            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.</text>
+            <text language="en" type="text/x-javadoc">Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.</text>
           </documentation>
         </property>
       </properties>

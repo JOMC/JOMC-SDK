@@ -114,17 +114,17 @@ public final class JaxbMarshallerFactory
                 marshaller.setProperty( Marshaller.JAXB_SCHEMA_LOCATION, schemaLocation.substring( 1 ) );
             }
 
-            if ( !this.isAttachmentMarshallerIgnored() )
+            if ( this.isAttachmentMarshaller() )
             {
                 marshaller.setAttachmentMarshaller( this.getAttachmentMarshaller() );
             }
 
-            if ( !this.isValidationEventHandlerIgnored() )
+            if ( this.isValidationEventHandler() )
             {
                 marshaller.setEventHandler( this.getValidationEventHandler() );
             }
 
-            if ( !this.isSchemaIgnored() )
+            if ( this.isSchema() )
             {
                 marshaller.setSchema( this.getSchema() );
             }
@@ -208,15 +208,15 @@ public final class JaxbMarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
 
     /**
-     * Gets the value of the {@code <attachmentMarshallerIgnored>} property.
-     * @return Flag indicating the {@code attachmentMarshaller} dependency is ignored. See {@link javax.xml.bind.Marshaller#setAttachmentMarshaller(javax.xml.bind.attachment.AttachmentMarshaller)}.
+     * Gets the value of the {@code <attachmentMarshaller>} property.
+     * @return Flag indicating the {@code attachmentMarshaller} dependency is applied. See {@link javax.xml.bind.Marshaller#setAttachmentMarshaller(javax.xml.bind.attachment.AttachmentMarshaller)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isAttachmentMarshallerIgnored()
+    private boolean isAttachmentMarshaller()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "attachmentMarshallerIgnored" );
-        assert _p != null : "'attachmentMarshallerIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "attachmentMarshaller" );
+        assert _p != null : "'attachmentMarshaller' property not found.";
         return _p.booleanValue();
     }
 
@@ -299,15 +299,15 @@ public final class JaxbMarshallerFactory
     }
 
     /**
-     * Gets the value of the {@code <schemaIgnored>} property.
-     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.bind.Marshaller#setSchema(javax.xml.validation.Schema)}.
+     * Gets the value of the {@code <schema>} property.
+     * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Marshaller#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isSchemaIgnored()
+    private boolean isSchema()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
-        assert _p != null : "'schemaIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schema" );
+        assert _p != null : "'schema' property not found.";
         return _p.booleanValue();
     }
 
@@ -325,15 +325,15 @@ public final class JaxbMarshallerFactory
     }
 
     /**
-     * Gets the value of the {@code <validationEventHandlerIgnored>} property.
-     * @return Flag indicating the {@code validationEventHandler} dependency is ignored. See {@link javax.xml.bind.Marshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
+     * Gets the value of the {@code <validationEventHandler>} property.
+     * @return Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Marshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isValidationEventHandlerIgnored()
+    private boolean isValidationEventHandler()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validationEventHandlerIgnored" );
-        assert _p != null : "'validationEventHandlerIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "validationEventHandler" );
+        assert _p != null : "'validationEventHandler' property not found.";
         return _p.booleanValue();
     }
     // </editor-fold>

@@ -36,6 +36,9 @@
 // SECTION-END
 package org.jomc.sdk.model.modlet;
 
+import org.jomc.sdk.model.support.JaxpSaxParserFactory;
+import org.jomc.sdk.model.support.JaxpSaxXmlReaderFactory;
+import org.jomc.sdk.model.support.JaxpDocumentBuilderFactory;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Locale;
@@ -162,16 +165,19 @@ public class SdkModelProvider implements ModelProvider
         m.getImplementations().setDocumentation( getTexts( "modelProviderInfo" ) );
 
         final List<Implementation> impls = m.getImplementations().getImplementation();
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbContextFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbBinderFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbContextFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbIntrospectorFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbMarshallerFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxbUnmarshallerFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpDocumentBuilderFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpEntityResolverFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpResourceResolverFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpSaxParserFactory.class ) );
+        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpSaxXmlReaderFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpSchemaFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpValidatorFactory.class ) );
         impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpValidatorHandlerFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpEntityResolverFactory.class ) );
-        impls.add( this.createJavaSchemaSetImplementation( modules, schemaSet, JaxpResourceResolverFactory.class ) );
         return m;
     }
 
@@ -221,6 +227,7 @@ public class SdkModelProvider implements ModelProvider
                         final Dependency d = new Dependency( dependencyDeclaration );
                         d.setImplementationName( i.getName() );
                         d.setOverride( true );
+                        d.setFinal( true );
                         i.getDependencies().getDependency().add( d );
                     }
                 }

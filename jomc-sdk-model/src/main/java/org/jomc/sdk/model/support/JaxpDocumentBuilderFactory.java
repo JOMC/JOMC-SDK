@@ -77,7 +77,7 @@ public final class JaxpDocumentBuilderFactory
     {
         final DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
 
-        if ( !this.isSchemaIgnored() )
+        if ( this.isSchema() )
         {
             f.setSchema( this.getSchema() );
         }
@@ -102,12 +102,12 @@ public final class JaxpDocumentBuilderFactory
 
         final DocumentBuilder b = f.newDocumentBuilder();
 
-        if ( !this.isEntityResolverIgnored() )
+        if ( this.isEntityResolver() )
         {
             b.setEntityResolver( this.getEntityResolver() );
         }
 
-        if ( !this.isErrorHandlerIgnored() )
+        if ( this.isErrorHandler() )
         {
             b.setErrorHandler( this.getErrorHandler() );
         }
@@ -224,28 +224,28 @@ public final class JaxpDocumentBuilderFactory
     }
 
     /**
-     * Gets the value of the {@code <entityResolverIgnored>} property.
-     * @return Flag indicating the {@code entityResolver} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.
+     * Gets the value of the {@code <entityResolver>} property.
+     * @return Flag indicating the {@code entityResolver} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isEntityResolverIgnored()
+    private boolean isEntityResolver()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "entityResolverIgnored" );
-        assert _p != null : "'entityResolverIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "entityResolver" );
+        assert _p != null : "'entityResolver' property not found.";
         return _p.booleanValue();
     }
 
     /**
-     * Gets the value of the {@code <errorHandlerIgnored>} property.
-     * @return Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.
+     * Gets the value of the {@code <errorHandler>} property.
+     * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isErrorHandlerIgnored()
+    private boolean isErrorHandler()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "errorHandlerIgnored" );
-        assert _p != null : "'errorHandlerIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "errorHandler" );
+        assert _p != null : "'errorHandler' property not found.";
         return _p.booleanValue();
     }
 
@@ -315,15 +315,15 @@ public final class JaxpDocumentBuilderFactory
     }
 
     /**
-     * Gets the value of the {@code <schemaIgnored>} property.
-     * @return Flag indicating the {@code schema} dependency is ignored. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.
+     * Gets the value of the {@code <schema>} property.
+     * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
-    private boolean isSchemaIgnored()
+    private boolean isSchema()
     {
-        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schemaIgnored" );
-        assert _p != null : "'schemaIgnored' property not found.";
+        final java.lang.Boolean _p = (java.lang.Boolean) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getProperty( this, "schema" );
+        assert _p != null : "'schema' property not found.";
         return _p.booleanValue();
     }
 

@@ -330,7 +330,7 @@ public class ModelTest
      *       <td align="left" valign="top"></td>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code <schemaIgnored>}</td>
+     *       <td align="left" valign="top" nowrap>{@code <schema>}</td>
      *       <td align="left" valign="top" nowrap>{@code boolean}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
@@ -395,7 +395,7 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code <resourceResolverIgnored>}</td>
+     *       <td align="left" valign="top" nowrap>{@code <resourceResolver>}</td>
      *       <td align="left" valign="top" nowrap>{@code boolean}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
@@ -488,7 +488,7 @@ public class ModelTest
      *       <th align="left" scope="col" nowrap><b>Documentation</b></th>
      *     </tr>
      *     <tr class="TableRow">
-     *       <td align="left" valign="top" nowrap>{@code <schemaIgnored>}</td>
+     *       <td align="left" valign="top" nowrap>{@code <schema>}</td>
      *       <td align="left" valign="top" nowrap>{@code boolean}</td>
      *       <td align="left" valign="top"></td>
      *     </tr>
