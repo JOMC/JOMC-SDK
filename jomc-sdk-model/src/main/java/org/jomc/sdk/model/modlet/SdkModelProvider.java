@@ -36,9 +36,6 @@
 // SECTION-END
 package org.jomc.sdk.model.modlet;
 
-import org.jomc.sdk.model.support.JaxpSaxParserFactory;
-import org.jomc.sdk.model.support.JaxpSaxXmlReaderFactory;
-import org.jomc.sdk.model.support.JaxpDocumentBuilderFactory;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Locale;
@@ -64,8 +61,11 @@ import org.jomc.sdk.model.support.JaxbContextFactory;
 import org.jomc.sdk.model.support.JaxbIntrospectorFactory;
 import org.jomc.sdk.model.support.JaxbMarshallerFactory;
 import org.jomc.sdk.model.support.JaxbUnmarshallerFactory;
+import org.jomc.sdk.model.support.JaxpDocumentBuilderFactory;
 import org.jomc.sdk.model.support.JaxpEntityResolverFactory;
 import org.jomc.sdk.model.support.JaxpResourceResolverFactory;
+import org.jomc.sdk.model.support.JaxpSaxParserFactory;
+import org.jomc.sdk.model.support.JaxpSaxXmlReaderFactory;
 import org.jomc.sdk.model.support.JaxpSchemaFactory;
 import org.jomc.sdk.model.support.JaxpValidatorFactory;
 import org.jomc.sdk.model.support.JaxpValidatorHandlerFactory;
