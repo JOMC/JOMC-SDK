@@ -2,5 +2,6 @@
 /.externalToolBuilders
 /.project
 /target
+/catalog.xml
 /maven-eclipse.xml
 /.settings
