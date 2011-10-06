@@ -288,7 +288,7 @@ public class SdkModelProcessor implements ModelProcessor
 
         if ( modules != null )
         {
-            processed = new Model( model );
+            processed = model.clone();
             modules = ModelHelper.getModules( processed );
             this.substituteSystemProperties( modules, contextStartingMarker, contextEndingMarker );
         }

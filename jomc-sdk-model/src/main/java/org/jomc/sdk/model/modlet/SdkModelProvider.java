@@ -118,7 +118,7 @@ public class SdkModelProvider implements ModelProvider
 
         if ( modules != null )
         {
-            found = new Model( model );
+            found = model.clone();
             modules = ModelHelper.getModules( found );
 
             final Implementations schemaSets =
@@ -222,7 +222,7 @@ public class SdkModelProvider implements ModelProvider
                             i.setDependencies( new Dependencies() );
                         }
 
-                        final Dependency d = new Dependency( dependencyDeclaration );
+                        final Dependency d = dependencyDeclaration.clone();
                         d.setImplementationName( i.getName() );
                         d.setOverride( true );
                         d.setFinal( true );
