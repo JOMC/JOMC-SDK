@@ -36,11 +36,11 @@ package org.jomc.sdk.model.test;
 
 import javax.xml.bind.Marshaller;
 import org.jomc.ObjectManagementException;
+import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
-import org.junit.Test;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">

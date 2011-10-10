@@ -40,6 +40,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import javax.xml.namespace.QName;
+import static javax.xml.XMLConstants.NULL_NS_URI;
 import org.jomc.model.Dependencies;
 import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
@@ -67,7 +68,6 @@ import org.jomc.sdk.model.support.JaxpSaxXmlReaderFactory;
 import org.jomc.sdk.model.support.JaxpSchemaFactory;
 import org.jomc.sdk.model.support.JaxpValidatorFactory;
 import org.jomc.sdk.model.support.JaxpValidatorHandlerFactory;
-import static javax.xml.XMLConstants.NULL_NS_URI;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">

@@ -34,19 +34,19 @@
 // SECTION-END
 package org.jomc.sdk.model.support;
 
-import java.util.Map;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import org.jomc.sdk.model.SchemaType;
 import org.jomc.sdk.model.SchemasType;
-import org.xml.sax.SAXException;
 import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CLASSPATH_ID_ATTRIBUTE;
+import org.xml.sax.SAXException;
 
 // SECTION-START[Documentation]
 // <editor-fold defaultstate="collapsed" desc=" Generated Documentation ">
