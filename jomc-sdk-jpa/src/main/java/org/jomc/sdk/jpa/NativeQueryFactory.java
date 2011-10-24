@@ -86,7 +86,6 @@ public final class NativeQueryFactory
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code NativeQueryFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public NativeQueryFactory()
@@ -99,7 +98,6 @@ public final class NativeQueryFactory
     // SECTION-END
     // SECTION-START[Dependencies]
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
     /**
      * Gets the {@code <EntityManager>} dependency.
      * <p>
@@ -119,7 +117,6 @@ public final class NativeQueryFactory
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <nativeQuery>} property.
      * @return Native query to provide.
@@ -132,7 +129,6 @@ public final class NativeQueryFactory
         assert _p != null : "'nativeQuery' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <parameterMap>} property.
      * @return Map of parameters to set on the query.
