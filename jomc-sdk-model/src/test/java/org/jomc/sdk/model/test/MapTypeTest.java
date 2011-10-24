@@ -110,7 +110,6 @@ public class MapTypeTest
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code MapTypeTest} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public MapTypeTest()
@@ -125,7 +124,6 @@ public class MapTypeTest
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <complexTypeMap>} property.
      * @return The value of the {@code <complexTypeMap>} property.
@@ -138,7 +136,6 @@ public class MapTypeTest
         assert _p != null : "'complexTypeMap' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <fileMap>} property.
      * @return The value of the {@code <fileMap>} property.
@@ -151,7 +148,6 @@ public class MapTypeTest
         assert _p != null : "'fileMap' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <mapOfMaps>} property.
      * @return The value of the {@code <mapOfMaps>} property.
@@ -164,7 +160,6 @@ public class MapTypeTest
         assert _p != null : "'mapOfMaps' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <primitiveMap>} property.
      * @return The value of the {@code <primitiveMap>} property.
@@ -177,7 +172,6 @@ public class MapTypeTest
         assert _p != null : "'primitiveMap' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <stringMap>} property.
      * @return The value of the {@code <stringMap>} property.

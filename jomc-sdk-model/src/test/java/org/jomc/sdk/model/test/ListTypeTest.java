@@ -130,7 +130,6 @@ public class ListTypeTest
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code ListTypeTest} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public ListTypeTest()
@@ -145,7 +144,6 @@ public class ListTypeTest
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <complexTypeList>} property.
      * @return The value of the {@code <complexTypeList>} property.
@@ -158,7 +156,6 @@ public class ListTypeTest
         assert _p != null : "'complexTypeList' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <fileList>} property.
      * @return The value of the {@code <fileList>} property.
@@ -171,7 +168,6 @@ public class ListTypeTest
         assert _p != null : "'fileList' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <listOfLists>} property.
      * @return The value of the {@code <listOfLists>} property.
@@ -184,7 +180,6 @@ public class ListTypeTest
         assert _p != null : "'listOfLists' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <primitiveList>} property.
      * @return The value of the {@code <primitiveList>} property.
@@ -197,7 +192,6 @@ public class ListTypeTest
         assert _p != null : "'primitiveList' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <stringList>} property.
      * @return The value of the {@code <stringList>} property.

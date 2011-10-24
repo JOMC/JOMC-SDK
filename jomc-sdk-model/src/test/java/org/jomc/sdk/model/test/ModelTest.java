@@ -275,7 +275,6 @@ public class ModelTest
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code ModelTest} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public ModelTest()
@@ -288,7 +287,6 @@ public class ModelTest
     // SECTION-END
     // SECTION-START[Dependencies]
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
     /**
      * Gets the {@code <CustomMarshaller>} dependency.
      * <p>
@@ -344,7 +342,6 @@ public class ModelTest
         assert _d != null : "'CustomMarshaller' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomSaxParser>} dependency.
      * <p>
@@ -361,7 +358,6 @@ public class ModelTest
         assert _d != null : "'CustomSaxParser' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomSaxXmlReader>} dependency.
      * <p>
@@ -378,7 +374,6 @@ public class ModelTest
         assert _d != null : "'CustomSaxXmlReader' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomSchema>} dependency.
      * <p>
@@ -409,7 +404,6 @@ public class ModelTest
         assert _d != null : "'CustomSchema' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomSchemaUnrecognizedFeature>} dependency.
      * <p>
@@ -440,7 +434,6 @@ public class ModelTest
         assert _d != null : "'CustomSchemaUnrecognizedFeature' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomSchemaUnrecognizedProperty>} dependency.
      * <p>
@@ -471,7 +464,6 @@ public class ModelTest
         assert _d != null : "'CustomSchemaUnrecognizedProperty' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomUnmarshaller>} dependency.
      * <p>
@@ -502,7 +494,6 @@ public class ModelTest
         assert _d != null : "'CustomUnmarshaller' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomValidatorHandlerUnrecognizedFeature>} dependency.
      * <p>
@@ -533,7 +524,6 @@ public class ModelTest
         assert _d != null : "'CustomValidatorHandlerUnrecognizedFeature' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomValidatorHandlerUnrecognizedProperty>} dependency.
      * <p>
@@ -564,7 +554,6 @@ public class ModelTest
         assert _d != null : "'CustomValidatorHandlerUnrecognizedProperty' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomValidatorUnrecognizedFeature>} dependency.
      * <p>
@@ -595,7 +584,6 @@ public class ModelTest
         assert _d != null : "'CustomValidatorUnrecognizedFeature' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <CustomValidatorUnrecognizedProperty>} dependency.
      * <p>
@@ -626,7 +614,6 @@ public class ModelTest
         assert _d != null : "'CustomValidatorUnrecognizedProperty' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultBinder>} dependency.
      * <p>
@@ -643,7 +630,6 @@ public class ModelTest
         assert _d != null : "'DefaultBinder' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultContentHandler>} dependency.
      * <p>
@@ -660,7 +646,6 @@ public class ModelTest
         assert _d != null : "'DefaultContentHandler' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultContext>} dependency.
      * <p>
@@ -677,7 +662,6 @@ public class ModelTest
         assert _d != null : "'DefaultContext' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultDocumentBuilder>} dependency.
      * <p>
@@ -694,7 +678,6 @@ public class ModelTest
         assert _d != null : "'DefaultDocumentBuilder' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultEntityResolver>} dependency.
      * <p>
@@ -711,7 +694,6 @@ public class ModelTest
         assert _d != null : "'DefaultEntityResolver' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultIntrospector>} dependency.
      * <p>
@@ -728,7 +710,6 @@ public class ModelTest
         assert _d != null : "'DefaultIntrospector' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultMarshaller>} dependency.
      * <p>
@@ -745,7 +726,6 @@ public class ModelTest
         assert _d != null : "'DefaultMarshaller' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultResourceResolver>} dependency.
      * <p>
@@ -762,7 +742,6 @@ public class ModelTest
         assert _d != null : "'DefaultResourceResolver' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultSaxParser>} dependency.
      * <p>
@@ -779,7 +758,6 @@ public class ModelTest
         assert _d != null : "'DefaultSaxParser' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultSaxXmlReader>} dependency.
      * <p>
@@ -796,7 +774,6 @@ public class ModelTest
         assert _d != null : "'DefaultSaxXmlReader' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultSchema>} dependency.
      * <p>
@@ -813,7 +790,6 @@ public class ModelTest
         assert _d != null : "'DefaultSchema' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultUnmarshaller>} dependency.
      * <p>
@@ -830,7 +806,6 @@ public class ModelTest
         assert _d != null : "'DefaultUnmarshaller' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultValidator>} dependency.
      * <p>
@@ -847,7 +822,6 @@ public class ModelTest
         assert _d != null : "'DefaultValidator' dependency not found.";
         return _d;
     }
-
     /**
      * Gets the {@code <DefaultValidatorHandler>} dependency.
      * <p>
@@ -868,7 +842,6 @@ public class ModelTest
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <sysIllegalSubstitution>} property.
      * @return The value of the {@code <sysIllegalSubstitution>} property.
@@ -881,7 +854,6 @@ public class ModelTest
         assert _p != null : "'sysIllegalSubstitution' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <sysUserDir>} property.
      * @return The value of the {@code <sysUserDir>} property.
@@ -894,7 +866,6 @@ public class ModelTest
         assert _p != null : "'sysUserDir' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <sysUserHome>} property.
      * @return The value of the {@code <sysUserHome>} property.
@@ -907,7 +878,6 @@ public class ModelTest
         assert _p != null : "'sysUserHome' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <sysUserName>} property.
      * @return The value of the {@code <sysUserName>} property.
@@ -920,7 +890,6 @@ public class ModelTest
         assert _p != null : "'sysUserName' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <sysUserNameAndHomeAndDir>} property.
      * @return The value of the {@code <sysUserNameAndHomeAndDir>} property.
