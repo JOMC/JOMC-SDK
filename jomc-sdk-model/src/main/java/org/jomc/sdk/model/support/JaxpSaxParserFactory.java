@@ -103,7 +103,6 @@ public final class JaxpSaxParserFactory
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code JaxpSaxParserFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public JaxpSaxParserFactory()
@@ -116,7 +115,6 @@ public final class JaxpSaxParserFactory
     // SECTION-END
     // SECTION-START[Dependencies]
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
@@ -136,7 +134,6 @@ public final class JaxpSaxParserFactory
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <XIncludeAware>} property.
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
@@ -149,7 +146,6 @@ public final class JaxpSaxParserFactory
         assert _p != null : "'XIncludeAware' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <features>} property.
      * @return See {@link javax.xml.parsers.SAXParserFactory#setFeature(java.lang.String, boolean)}.
@@ -162,7 +158,6 @@ public final class JaxpSaxParserFactory
         assert _p != null : "'features' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <namespaceAware>} property.
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
@@ -175,7 +170,6 @@ public final class JaxpSaxParserFactory
         assert _p != null : "'namespaceAware' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <properties>} property.
      * @return See {@link javax.xml.parsers.SAXParser#setProperty(java.lang.String, java.lang.Object)}.
@@ -188,7 +182,6 @@ public final class JaxpSaxParserFactory
         assert _p != null : "'properties' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <schema>} property.
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
@@ -201,7 +194,6 @@ public final class JaxpSaxParserFactory
         assert _p != null : "'schema' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <validating>} property.
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.

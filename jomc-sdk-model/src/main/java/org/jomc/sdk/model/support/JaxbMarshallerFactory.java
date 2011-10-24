@@ -139,7 +139,6 @@ public final class JaxbMarshallerFactory
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code JaxbMarshallerFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public JaxbMarshallerFactory()
@@ -152,7 +151,6 @@ public final class JaxbMarshallerFactory
     // SECTION-END
     // SECTION-START[Dependencies]
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
     /**
      * Gets the {@code <attachmentMarshaller>} dependency.
      * <p>
@@ -168,7 +166,6 @@ public final class JaxbMarshallerFactory
     {
         return (javax.xml.bind.attachment.AttachmentMarshaller) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "attachmentMarshaller" );
     }
-
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
@@ -184,7 +181,6 @@ public final class JaxbMarshallerFactory
     {
         return (javax.xml.validation.Schema) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "schema" );
     }
-
     /**
      * Gets the {@code <validationEventHandler>} dependency.
      * <p>
@@ -204,7 +200,6 @@ public final class JaxbMarshallerFactory
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <attachmentMarshaller>} property.
      * @return Flag indicating the {@code attachmentMarshaller} dependency is applied. See {@link javax.xml.bind.Marshaller#setAttachmentMarshaller(javax.xml.bind.attachment.AttachmentMarshaller)}.
@@ -217,7 +212,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'attachmentMarshaller' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <jaxbEncoding>} property.
      * @return See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.
@@ -230,7 +224,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'jaxbEncoding' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <jaxbFormattedOutput>} property.
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.
@@ -243,7 +236,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'jaxbFormattedOutput' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <jaxbFragment>} property.
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.
@@ -256,7 +248,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'jaxbFragment' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <jaxbNoNamespaceSchemaLocation>} property.
      * @return See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.
@@ -269,7 +260,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'jaxbNoNamespaceSchemaLocation' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <jaxbSchemaLocation>} property.
      * @return See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.
@@ -282,7 +272,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'jaxbSchemaLocation' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <marshallerProperties>} property.
      * @return See {@link javax.xml.bind.Marshaller#setProperty(java.lang.String, java.lang.Object)}.
@@ -295,7 +284,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'marshallerProperties' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <schema>} property.
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Marshaller#setSchema(javax.xml.validation.Schema)}.
@@ -308,7 +296,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'schema' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <schemas>} property.
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
@@ -321,7 +308,6 @@ public final class JaxbMarshallerFactory
         assert _p != null : "'schemas' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <validationEventHandler>} property.
      * @return Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Marshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.

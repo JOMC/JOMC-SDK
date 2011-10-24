@@ -125,7 +125,6 @@ public final class JaxpSaxXmlReaderFactory
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code JaxpSaxXmlReaderFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public JaxpSaxXmlReaderFactory()
@@ -138,7 +137,6 @@ public final class JaxpSaxXmlReaderFactory
     // SECTION-END
     // SECTION-START[Dependencies]
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
     /**
      * Gets the {@code <contentHandler>} dependency.
      * <p>
@@ -154,7 +152,6 @@ public final class JaxpSaxXmlReaderFactory
     {
         return (org.xml.sax.ContentHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "contentHandler" );
     }
-
     /**
      * Gets the {@code <dtdHandler>} dependency.
      * <p>
@@ -170,7 +167,6 @@ public final class JaxpSaxXmlReaderFactory
     {
         return (org.xml.sax.DTDHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "dtdHandler" );
     }
-
     /**
      * Gets the {@code <entityResolver>} dependency.
      * <p>
@@ -186,7 +182,6 @@ public final class JaxpSaxXmlReaderFactory
     {
         return (org.xml.sax.EntityResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "entityResolver" );
     }
-
     /**
      * Gets the {@code <errorHandler>} dependency.
      * <p>
@@ -202,7 +197,6 @@ public final class JaxpSaxXmlReaderFactory
     {
         return (org.xml.sax.ErrorHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "errorHandler" );
     }
-
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
@@ -222,7 +216,6 @@ public final class JaxpSaxXmlReaderFactory
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <XIncludeAware>} property.
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
@@ -235,7 +228,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'XIncludeAware' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <contentHandler>} property.
      * @return Flag indicating the {@code schema} dependency is applied. See {@link org.xml.sax.XMLReader#setContentHandler(org.xml.sax.ContentHandler)}.
@@ -248,7 +240,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'contentHandler' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <dtdHandler>} property.
      * @return Flag indicating the {@code dtdHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setDTDHandler(org.xml.sax.DTDHandler)}.
@@ -261,7 +252,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'dtdHandler' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <entityResolver>} property.
      * @return Flag indicating the {@code entityResolver} dependency is applied. See {@link org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)}.
@@ -274,7 +264,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'entityResolver' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <errorHandler>} property.
      * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setErrorHandler(org.xml.sax.ErrorHandler)}.
@@ -287,7 +276,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'errorHandler' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <features>} property.
      * @return See {@link org.xml.sax.XMLReader#setFeature(java.lang.String, boolean)}.
@@ -300,7 +288,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'features' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <namespaceAware>} property.
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
@@ -313,7 +300,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'namespaceAware' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <properties>} property.
      * @return See {@link org.xml.sax.XMLReader#setProperty(java.lang.String, java.lang.Object)}.
@@ -326,7 +312,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'properties' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <schema>} property.
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
@@ -339,7 +324,6 @@ public final class JaxpSaxXmlReaderFactory
         assert _p != null : "'schema' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <validating>} property.
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.

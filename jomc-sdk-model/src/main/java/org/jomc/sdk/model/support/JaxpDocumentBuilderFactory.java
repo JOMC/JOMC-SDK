@@ -116,7 +116,6 @@ public final class JaxpDocumentBuilderFactory
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code JaxpDocumentBuilderFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public JaxpDocumentBuilderFactory()
@@ -129,7 +128,6 @@ public final class JaxpDocumentBuilderFactory
     // SECTION-END
     // SECTION-START[Dependencies]
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
     /**
      * Gets the {@code <entityResolver>} dependency.
      * <p>
@@ -145,7 +143,6 @@ public final class JaxpDocumentBuilderFactory
     {
         return (org.xml.sax.EntityResolver) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "entityResolver" );
     }
-
     /**
      * Gets the {@code <errorHandler>} dependency.
      * <p>
@@ -161,7 +158,6 @@ public final class JaxpDocumentBuilderFactory
     {
         return (org.xml.sax.ErrorHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "errorHandler" );
     }
-
     /**
      * Gets the {@code <schema>} dependency.
      * <p>
@@ -181,7 +177,6 @@ public final class JaxpDocumentBuilderFactory
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <XIncludeAware>} property.
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
@@ -194,7 +189,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'XIncludeAware' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <attributes>} property.
      * @return See {@link javax.xml.parsers.DocumentBuilderFactory#setAttribute(java.lang.String, java.lang.Object)}.
@@ -207,7 +201,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'attributes' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <coalescing>} property.
      * @return {@code true} if the factory is configured to produce parsers which convert CDATA nodes to Text nodes and append them to the adjacent (if any) Text node; {@code false} otherwise.
@@ -220,7 +213,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'coalescing' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <entityResolver>} property.
      * @return Flag indicating the {@code entityResolver} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.
@@ -233,7 +225,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'entityResolver' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <errorHandler>} property.
      * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.
@@ -246,7 +237,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'errorHandler' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <expandingEntityReferences>} property.
      * @return {@code true} if the factory is configured to produce parsers which expand entity reference nodes; {@code false} otherwise.
@@ -259,7 +249,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'expandingEntityReferences' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <features>} property.
      * @return See {@link javax.xml.parsers.DocumentBuilderFactory#setFeature(java.lang.String, boolean)}.
@@ -272,7 +261,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'features' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <ignoringComments>} property.
      * @return {@code true} if the factory is configured to produce parsers which ignores comments; {@code false} otherwise.
@@ -285,7 +273,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'ignoringComments' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <ignoringElementContentWhitespace>} property.
      * @return {@code true} if the factory is configured to produce parsers which ignore ignorable whitespace in element content; {@code false} otherwise.
@@ -298,7 +285,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'ignoringElementContentWhitespace' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <namespaceAware>} property.
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
@@ -311,7 +297,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'namespaceAware' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <schema>} property.
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.
@@ -324,7 +309,6 @@ public final class JaxpDocumentBuilderFactory
         assert _p != null : "'schema' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <validating>} property.
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.

@@ -143,7 +143,6 @@ public final class JaxpValidatorFactory
     // SECTION-END
     // SECTION-START[Constructors]
     // <editor-fold defaultstate="collapsed" desc=" Generated Constructors ">
-
     /** Creates a new {@code JaxpValidatorFactory} instance. */
     @javax.annotation.Generated( value = "org.jomc.tools.SourceFileProcessor 1.2-SNAPSHOT", comments = "See http://jomc.sourceforge.net/jomc/1.2/jomc-tools-1.2-SNAPSHOT" )
     public JaxpValidatorFactory()
@@ -156,7 +155,6 @@ public final class JaxpValidatorFactory
     // SECTION-END
     // SECTION-START[Dependencies]
     // <editor-fold defaultstate="collapsed" desc=" Generated Dependencies ">
-
     /**
      * Gets the {@code <errorHandler>} dependency.
      * <p>
@@ -172,7 +170,6 @@ public final class JaxpValidatorFactory
     {
         return (org.xml.sax.ErrorHandler) org.jomc.ObjectManagerFactory.getObjectManager( this.getClass().getClassLoader() ).getDependency( this, "errorHandler" );
     }
-
     /**
      * Gets the {@code <resourceResolver>} dependency.
      * <p>
@@ -192,7 +189,6 @@ public final class JaxpValidatorFactory
     // SECTION-END
     // SECTION-START[Properties]
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
-
     /**
      * Gets the value of the {@code <errorHandler>} property.
      * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.validation.Validator#setErrorHandler(org.xml.sax.ErrorHandler)}.
@@ -205,7 +201,6 @@ public final class JaxpValidatorFactory
         assert _p != null : "'errorHandler' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <resourceResolver>} property.
      * @return Flag indicating the {@code resourceResolver} dependency is applied. See {@link javax.xml.validation.Validator#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
@@ -218,7 +213,6 @@ public final class JaxpValidatorFactory
         assert _p != null : "'resourceResolver' property not found.";
         return _p.booleanValue();
     }
-
     /**
      * Gets the value of the {@code <schemas>} property.
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
@@ -231,7 +225,6 @@ public final class JaxpValidatorFactory
         assert _p != null : "'schemas' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <validatorFeatures>} property.
      * @return See {@link javax.xml.validation.Validator#setFeature(java.lang.String, boolean)}.
@@ -244,7 +237,6 @@ public final class JaxpValidatorFactory
         assert _p != null : "'validatorFeatures' property not found.";
         return _p;
     }
-
     /**
      * Gets the value of the {@code <validatorProperties>} property.
      * @return See {@link javax.xml.validation.Validator#setProperty(java.lang.String, java.lang.Object)}.
