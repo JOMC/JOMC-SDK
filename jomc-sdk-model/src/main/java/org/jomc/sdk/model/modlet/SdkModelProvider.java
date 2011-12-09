@@ -46,8 +46,12 @@ import org.jomc.model.Dependency;
 import org.jomc.model.Implementation;
 import org.jomc.model.ImplementationReference;
 import org.jomc.model.Implementations;
+import org.jomc.model.Message;
+import org.jomc.model.Messages;
 import org.jomc.model.Module;
 import org.jomc.model.Modules;
+import org.jomc.model.Properties;
+import org.jomc.model.Property;
 import org.jomc.model.Text;
 import org.jomc.model.Texts;
 import org.jomc.model.modlet.ModelHelper;
@@ -193,40 +197,115 @@ public class SdkModelProvider implements ModelProvider
         i.setStateless( true );
         i.setVendor( schemaSet.getVendor() );
         i.setVersion( schemaSet.getVersion() );
-        i.setProperties( schemaSet.getProperties() );
-        i.setDependencies( schemaSet.getDependencies() );
-        i.setMessages( schemaSet.getMessages() );
 
-        final Implementation factoryDeclaration = modules.getImplementation( factoryClazz );
+        final Implementation classDeclaration = modules.getImplementation( factoryClazz );
 
-        if ( factoryDeclaration != null )
+        if ( classDeclaration != null )
         {
+            final Dependencies schemaSetDependencies = modules.getDependencies( schemaSet.getIdentifier() );
+            final Messages schemaSetMessages = modules.getMessages( schemaSet.getIdentifier() );
+            final Properties schemaSetProperties = modules.getProperties( schemaSet.getIdentifier() );
             final Implementations implementationReferences = new Implementations();
             final ImplementationReference implementationReference = new ImplementationReference();
             i.setImplementations( implementationReferences );
             implementationReferences.getReference().add( implementationReference );
-            implementationReference.setIdentifier( factoryDeclaration.getIdentifier() );
-            implementationReference.setVersion( factoryDeclaration.getVersion() );
+            implementationReference.setIdentifier( classDeclaration.getIdentifier() );
+            implementationReference.setVersion( classDeclaration.getVersion() );
 
-            final Dependencies dependencyDeclarations = modules.getDependencies( factoryDeclaration.getIdentifier() );
-            if ( dependencyDeclarations != null )
+            final Dependencies classDeclarationDependencies =
+                modules.getDependencies( classDeclaration.getIdentifier() );
+
+            final Properties classDeclarationProperties =
+                modules.getProperties( classDeclaration.getIdentifier() );
+
+            final Messages classDeclarationMessages =
+                modules.getMessages( classDeclaration.getIdentifier() );
+
+            if ( classDeclarationDependencies != null )
             {
-                for ( Dependency dependencyDeclaration : dependencyDeclarations.getDependency() )
+                for ( final Dependency classDeclarationDependency : classDeclarationDependencies.getDependency() )
                 {
-                    if ( dependencyDeclaration.getImplementationName() != null
-                         && dependencyDeclaration.getImplementationName().equals( factoryDeclaration.getName() )
-                         && !dependencyDeclaration.isFinal() )
+                    if ( classDeclarationDependency.getImplementationName() != null
+                         && classDeclarationDependency.getImplementationName().equals( classDeclaration.getName() )
+                         && !classDeclarationDependency.isFinal() )
                     {
                         if ( i.getDependencies() == null )
                         {
                             i.setDependencies( new Dependencies() );
                         }
 
-                        final Dependency d = dependencyDeclaration.clone();
+                        final Dependency d = classDeclarationDependency.clone();
                         d.setImplementationName( i.getName() );
                         d.setOverride( true );
                         d.setFinal( true );
+
                         i.getDependencies().getDependency().add( d );
+                    }
+                }
+
+                if ( schemaSetDependencies != null )
+                {
+                    for ( final Dependency schemaSetDependency : schemaSetDependencies.getDependency() )
+                    {
+                        if ( classDeclarationDependencies.getDependency( schemaSetDependency.getName() ) != null
+                             && ( i.getDependencies() == null
+                                  || i.getDependencies().getDependency( schemaSetDependency.getName() ) == null ) )
+                        {
+                            if ( i.getDependencies() == null )
+                            {
+                                i.setDependencies( new Dependencies() );
+                            }
+
+                            final Dependency d = schemaSetDependency.clone();
+                            d.setOverride( true );
+                            d.setFinal( true );
+
+                            i.getDependencies().getDependency().add( d );
+                        }
+                    }
+                }
+            }
+
+            if ( classDeclarationProperties != null && schemaSetProperties != null )
+            {
+                for ( final Property schemaSetProperty : schemaSetProperties.getProperty() )
+                {
+                    if ( classDeclarationProperties.getProperty( schemaSetProperty.getName() ) != null
+                         && ( i.getProperties() == null
+                              || i.getProperties().getProperty( schemaSetProperty.getName() ) == null ) )
+                    {
+                        if ( i.getProperties() == null )
+                        {
+                            i.setProperties( new Properties() );
+                        }
+
+                        final Property p = schemaSetProperty.clone();
+                        p.setOverride( true );
+                        p.setFinal( true );
+
+                        i.getProperties().getProperty().add( p );
+                    }
+                }
+            }
+
+            if ( classDeclarationMessages != null && schemaSetMessages != null )
+            {
+                for ( final Message schemaSetMessage : schemaSetMessages.getMessage() )
+                {
+                    if ( classDeclarationMessages.getMessage( schemaSetMessage.getName() ) != null
+                         && ( i.getMessages() == null
+                              || i.getMessages().getMessage( schemaSetMessage.getName() ) == null ) )
+                    {
+                        if ( i.getMessages() == null )
+                        {
+                            i.setMessages( new Messages() );
+                        }
+
+                        final Message m = schemaSetMessage.clone();
+                        m.setOverride( true );
+                        m.setFinal( true );
+
+                        i.getMessages().getMessage().add( m );
                     }
                 }
             }
