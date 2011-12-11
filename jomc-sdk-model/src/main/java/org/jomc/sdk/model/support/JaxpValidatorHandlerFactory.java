@@ -54,16 +54,19 @@ import org.xml.sax.SAXException;
  * XML Schema Set JAXP {@code ValidatorHandler} factory implementation.
  *
  * <p>
- *   This implementation is identified by identifier {@code <JOMC :: JAXP Validator Handler Factory>}.
+ *   This implementation is identified by {@code <JOMC :: JAXP Validator Handler Factory>}.
+ * </p>
+ * <p>
  *   It provides objects named {@code <JOMC :: JAXP Validator Handler Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <javax.xml.validation.ValidatorHandler>} at any specification level.</li>
  *     <li>{@code <org.xml.sax.ContentHandler>} at any specification level.</li>
  *   </ul>
- *
- *   No state is retained across operations due to flag {@code <stateless>}.
  * </p>
+ * <dl>
+ *   <dt><b>Stateless:</b></dt><dd>No state is retained.</dd>
+ * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version 1.0-beta-3-SNAPSHOT

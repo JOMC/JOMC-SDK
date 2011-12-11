@@ -50,15 +50,18 @@ import org.w3c.dom.ls.LSResourceResolver;
  * XML Schema Set JAXP {@code LSResourceResolver} factory implementation.
  *
  * <p>
- *   This implementation is identified by identifier {@code <JOMC :: JAXP Resource Resolver Factory>}.
+ *   This implementation is identified by {@code <JOMC :: JAXP Resource Resolver Factory>}.
+ * </p>
+ * <p>
  *   It provides objects named {@code <JOMC :: JAXP Resource Resolver Factory :: Default>} of the following specifications:
  *
  *   <ul>
  *     <li>{@code <org.w3c.dom.ls.LSResourceResolver>} at any specification level.</li>
  *   </ul>
- *
- *   No state is retained across operations due to flag {@code <stateless>}.
  * </p>
+ * <dl>
+ *   <dt><b>Stateless:</b></dt><dd>No state is retained.</dd>
+ * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version 1.0-beta-3-SNAPSHOT

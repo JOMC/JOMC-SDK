@@ -63,9 +63,11 @@ import org.jomc.sdk.model.MapType;
  * SDK {@code ModelValidator} implementation.
  *
  * <p>
- *   This implementation is identified by identifier {@code <JOMC SDK Model Validator>}.
- *   It does not provide any specified objects.
+ *   This implementation is identified by {@code <JOMC SDK Model Validator>}.
  * </p>
+ * <dl>
+ *   <dt><b>Stateless:</b></dt><dd>No state is retained.</dd>
+ * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version 1.0-beta-3-SNAPSHOT
