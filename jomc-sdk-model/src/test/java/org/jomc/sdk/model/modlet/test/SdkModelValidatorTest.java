@@ -53,8 +53,7 @@ import static org.junit.Assert.assertFalse;
  * Test cases for class {@code org.jomc.sdk.model.modlet.SdkModelValidator}.
  *
  * <p>
- *   This implementation is identified by identifier {@code <org.jomc.sdk.model.modlet.test.SdkModelValidatorTest>}.
- *   It does not provide any specified objects.
+ *   This implementation is identified by {@code <org.jomc.sdk.model.modlet.test.SdkModelValidatorTest>}.
  * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0

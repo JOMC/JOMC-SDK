@@ -44,8 +44,7 @@ import static org.junit.Assert.assertEquals;
  * Test cases for the {@code MapType} complex type.
  *
  * <p>
- *   This implementation is identified by identifier {@code <org.jomc.sdk.model.test.MapTypeTest>}.
- *   It does not provide any specified objects.
+ *   This implementation is identified by {@code <org.jomc.sdk.model.test.MapTypeTest>}.
  * </p>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
