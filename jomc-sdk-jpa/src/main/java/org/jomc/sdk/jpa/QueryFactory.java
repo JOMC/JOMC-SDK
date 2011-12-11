@@ -44,9 +44,18 @@ import javax.persistence.Query;
  * Factory providing a JPA query instance.
  *
  * <p>
- *   This implementation is identified by identifier {@code <JOMC :: JPA Query Factory>}.
- *   It does not provide any specified objects due to flag {@code <abstract>}.
+ *   This implementation is identified by {@code <JOMC :: JPA Query Factory>}.
  * </p>
+ * <p>
+ *   It provides objects named {@code <JOMC SDK JPA Query Factory>} of the following specifications:
+ *
+ *   <ul>
+ *     <li>{@code <javax.persistence.Query>} at any specification level.</li>
+ *   </ul>
+ * </p>
+ * <dl>
+ *   <dt><b>Abstract:</b></dt><dd>An {@code ObjectManager} does not produce objects.</dd>
+ * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version 1.0-beta-3-SNAPSHOT
