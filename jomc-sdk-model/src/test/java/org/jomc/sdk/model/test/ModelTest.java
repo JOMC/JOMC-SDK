@@ -50,6 +50,11 @@ import static org.junit.Assert.fail;
  * <p>
  *   This implementation is identified by {@code <org.jomc.sdk.model.test.ModelTest>}.
  * </p>
+ * <dl>
+ *   <dt><b>Abstract:</b></dt><dd>No</dd>
+ *   <dt><b>Final:</b></dt><dd>No</dd>
+ *   <dt><b>Stateless:</b></dt><dd>No</dd>
+ * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version 1.0-beta-3-SNAPSHOT
@@ -331,6 +336,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomMarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -347,6 +355,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: JAXP SAX Parser Factory :: Default>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomSaxParser>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -363,6 +374,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomSaxXmlReader>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -393,6 +407,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomSchema>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -423,6 +440,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomSchemaUnrecognizedFeature>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -453,6 +473,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomSchemaUnrecognizedProperty>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -483,6 +506,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomUnmarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -513,6 +539,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomValidatorHandlerUnrecognizedFeature>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -543,6 +572,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomValidatorHandlerUnrecognizedProperty>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -573,6 +605,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomValidatorUnrecognizedFeature>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -603,6 +638,9 @@ public class ModelTest
      *     </tr>
      *   </table>
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <CustomValidatorUnrecognizedProperty>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -619,6 +657,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Binder>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultBinder>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -635,6 +676,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <org.xml.sax.ContentHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultContentHandler>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -651,6 +695,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.JAXBContext>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultContext>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -667,6 +714,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <javax.xml.parsers.DocumentBuilder>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultDocumentBuilder>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -683,6 +733,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultEntityResolver>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -699,6 +752,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.JAXBIntrospector>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultIntrospector>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -715,6 +771,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Marshaller>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultMarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -731,6 +790,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <org.w3c.dom.ls.LSResourceResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultResourceResolver>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -747,6 +809,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: JAXP SAX Parser Factory :: Default>} object of the {@code <javax.xml.parsers.SAXParser>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultSaxParser>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -763,6 +828,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.XMLReader>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultSaxXmlReader>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -779,6 +847,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultSchema>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -795,6 +866,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.bind.Unmarshaller>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultUnmarshaller>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -811,6 +885,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.Validator>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultValidator>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -827,6 +904,9 @@ public class ModelTest
      *   This method returns the {@code <JOMC :: Test XML Schema Set>} object of the {@code <javax.xml.validation.ValidatorHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <DefaultValidatorHandler>} dependency.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
      */
@@ -843,6 +923,11 @@ public class ModelTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <sysIllegalSubstitution>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <sysIllegalSubstitution>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -855,6 +940,11 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserDir>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <sysUserDir>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -867,6 +957,11 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserHome>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <sysUserHome>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -879,6 +974,11 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserName>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <sysUserName>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -891,6 +991,11 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserNameAndHomeAndDir>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <sysUserNameAndHomeAndDir>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

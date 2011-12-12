@@ -50,6 +50,11 @@ import static org.junit.Assert.assertTrue;
  * <p>
  *   This implementation is identified by {@code <org.jomc.sdk.model.test.ListTypeTest>}.
  * </p>
+ * <dl>
+ *   <dt><b>Abstract:</b></dt><dd>No</dd>
+ *   <dt><b>Final:</b></dt><dd>No</dd>
+ *   <dt><b>Stateless:</b></dt><dd>No</dd>
+ * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
  * @version 1.0-beta-3-SNAPSHOT
@@ -145,6 +150,11 @@ public class ListTypeTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <complexTypeList>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <complexTypeList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -157,6 +167,11 @@ public class ListTypeTest
     }
     /**
      * Gets the value of the {@code <fileList>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <fileList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -169,6 +184,11 @@ public class ListTypeTest
     }
     /**
      * Gets the value of the {@code <listOfLists>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <listOfLists>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -181,6 +201,11 @@ public class ListTypeTest
     }
     /**
      * Gets the value of the {@code <primitiveList>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <primitiveList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -193,6 +218,11 @@ public class ListTypeTest
     }
     /**
      * Gets the value of the {@code <stringList>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return The value of the {@code <stringList>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
