@@ -54,7 +54,9 @@ import javax.persistence.Query;
  *   </ul>
  * </p>
  * <dl>
- *   <dt><b>Abstract:</b></dt><dd>An {@code ObjectManager} does not produce objects.</dd>
+ *   <dt><b>Abstract:</b></dt><dd>Yes</dd>
+ *   <dt><b>Final:</b></dt><dd>No</dd>
+ *   <dt><b>Stateless:</b></dt><dd>No</dd>
  * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -113,6 +115,9 @@ public final class NamedQueryFactory
      *   This method returns the {@code <JOMC SDK JPA>} object of the {@code <javax.persistence.EntityManager>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <EntityManager>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -128,6 +133,11 @@ public final class NamedQueryFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <parameterMap>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Map of parameters to set on the query.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -140,6 +150,11 @@ public final class NamedQueryFactory
     }
     /**
      * Gets the value of the {@code <queryName>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Name of the query to provide.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
