@@ -101,13 +101,13 @@ public class SdkModelValidator implements ModelValidator
         {
             for ( Module m : modules.getModule() )
             {
-                this.assertValidSdkObjects( context, m, null, null, null, report );
+                this.assertValidSdkObjects( context, modules, m, null, null, null, report );
 
                 if ( m.getSpecifications() != null )
                 {
                     for ( Specification s : m.getSpecifications().getSpecification() )
                     {
-                        this.assertValidSdkObjects( context, null, s, null, null, report );
+                        this.assertValidSdkObjects( context, modules, null, s, null, null, report );
                     }
                 }
 
@@ -115,13 +115,13 @@ public class SdkModelValidator implements ModelValidator
                 {
                     for ( Implementation i : m.getImplementations().getImplementation() )
                     {
-                        this.assertValidSdkObjects( context, null, null, i, null, report );
+                        this.assertValidSdkObjects( context, modules, null, null, i, null, report );
 
                         if ( i.getDependencies() != null )
                         {
                             for ( Dependency d : i.getDependencies().getDependency() )
                             {
-                                this.assertValidSdkObjects( context, null, null, i, d, report );
+                                this.assertValidSdkObjects( context, modules, null, null, i, d, report );
                             }
                         }
                     }
@@ -136,7 +136,7 @@ public class SdkModelValidator implements ModelValidator
         return report;
     }
 
-    private void assertValidSdkObjects( final ModelContext context, final Module module,
+    private void assertValidSdkObjects( final ModelContext context, final Modules modules, final Module module,
                                         final Specification specification, final Implementation implementation,
                                         final Dependency dependency, final ModelValidationReport report )
     {
@@ -153,21 +153,25 @@ public class SdkModelValidator implements ModelValidator
             throw new IllegalArgumentException();
         }
 
+        Module moduleOfProperties = null;
         Properties properties = null;
         JAXBElement<?> detailElement = null;
 
         if ( module != null )
         {
+            moduleOfProperties = module;
             properties = module.getProperties();
             detailElement = new ObjectFactory().createModule( module );
         }
         if ( specification != null )
         {
+            moduleOfProperties = modules.getModuleOfSpecification( specification.getIdentifier() );
             properties = specification.getProperties();
             detailElement = new ObjectFactory().createSpecification( specification );
         }
         if ( implementation != null )
         {
+            moduleOfProperties = modules.getModuleOfImplementation( implementation.getIdentifier() );
             properties = implementation.getProperties();
             detailElement = new ObjectFactory().createImplementation( implementation );
         }
@@ -207,7 +211,7 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_LIST_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationListItemValueConstraint", specification.getIdentifier(),
-                                        p.getName() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                 }
 
@@ -218,7 +222,8 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_LIST_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyListItemValueConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName() ),
+                                            detailElement ) );
 
                                     }
                                     else
@@ -226,7 +231,7 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_LIST_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "implementationListItemValueConstraint", implementation.getIdentifier(),
-                                            p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                     }
                                 }
@@ -248,7 +253,7 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_LIST_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationListItemTypeConstraint", specification.getIdentifier(),
-                                        p.getName() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                 }
 
@@ -259,7 +264,8 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_LIST_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyListItemTypeConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName() ),
+                                            detailElement ) );
 
                                     }
                                     else
@@ -267,7 +273,7 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_LIST_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "implementationListItemTypeConstraint", implementation.getIdentifier(),
-                                            p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                     }
                                 }
@@ -289,7 +295,8 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "MODULE_LIST_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "moduleListItemJavaValueConstraint", module.getName(), p.getName(),
-                                        e.getMessage() ), detailElement ) );
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
 
@@ -298,7 +305,9 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_LIST_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationListItemJavaValueConstraint", specification.getIdentifier(),
-                                        p.getName(), e.getMessage() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName(),
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
 
@@ -309,7 +318,9 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_LIST_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyListItemJavaValueConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName(), e.getMessage() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName(),
+                                            e.getMessage() != null && e.getMessage().length() > 0
+                                            ? " " + e.getMessage() : "" ), detailElement ) );
 
                                     }
                                     else
@@ -317,7 +328,9 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_LIST_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "implementationListItemJavaValueConstraint", implementation.getIdentifier(),
-                                            p.getName(), e.getMessage() ), detailElement ) );
+                                            moduleOfProperties.getName(), p.getName(),
+                                            e.getMessage() != null && e.getMessage().length() > 0
+                                            ? " " + e.getMessage() : "" ), detailElement ) );
 
                                     }
                                 }
@@ -339,8 +352,9 @@ public class SdkModelValidator implements ModelValidator
                             {
                                 report.getDetails().add( new ModelValidationReport.Detail(
                                     "MODULE_LIST_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
-                                    "moduleListJavaValueConstraint", module.getName(), p.getName(), e.getMessage() ),
-                                    detailElement ) );
+                                    "moduleListJavaValueConstraint", module.getName(), p.getName(),
+                                    e.getMessage() != null && e.getMessage().length() > 0
+                                    ? " " + e.getMessage() : "" ), detailElement ) );
 
                             }
 
@@ -349,7 +363,9 @@ public class SdkModelValidator implements ModelValidator
                                 report.getDetails().add( new ModelValidationReport.Detail(
                                     "SPECIFICATION_LIST_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                     "specificationListJavaValueConstraint", specification.getIdentifier(),
-                                    p.getName(), e.getMessage() ), detailElement ) );
+                                    moduleOfProperties.getName(), p.getName(),
+                                    e.getMessage() != null && e.getMessage().length() > 0
+                                    ? " " + e.getMessage() : "" ), detailElement ) );
 
                             }
 
@@ -360,7 +376,9 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "DEPENDENCY_LIST_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "dependencyListJavaValueConstraint", implementation.getIdentifier(),
-                                        dependency.getName(), p.getName(), e.getMessage() ), detailElement ) );
+                                        moduleOfProperties.getName(), dependency.getName(), p.getName(),
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
                                 else
@@ -368,7 +386,9 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "IMPLEMENTATION_LIST_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "implementationListJavaValueConstraint", implementation.getIdentifier(),
-                                        p.getName(), e.getMessage() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName(),
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
                             }
@@ -397,7 +417,7 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_MAP_KEY_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationMapKeyItemValueConstraint", specification.getIdentifier(),
-                                        p.getName() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                 }
 
@@ -408,7 +428,8 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_MAP_KEY_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyMapKeyItemValueConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName() ),
+                                            detailElement ) );
 
                                     }
                                     else
@@ -416,7 +437,7 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_MAP_KEY_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "implementationMapKeyItemValueConstraint", implementation.getIdentifier(),
-                                            p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                     }
                                 }
@@ -438,7 +459,7 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_MAP_VALUE_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationMapValueItemValueConstraint", specification.getIdentifier(),
-                                        p.getName() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                 }
 
@@ -449,7 +470,8 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_MAP_VALUE_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyMapValueItemValueConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName() ),
+                                            detailElement ) );
 
                                     }
                                     else
@@ -457,7 +479,7 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_MAP_VALUE_ITEM_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "implementationMapValueItemValueConstraint", implementation.getIdentifier(),
-                                            p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                     }
                                 }
@@ -479,7 +501,7 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_MAP_KEY_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationMapKeyItemTypeConstraint", specification.getIdentifier(),
-                                        p.getName() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                 }
 
@@ -491,7 +513,8 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_MAP_KEY_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyMapKeyItemTypeConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName() ),
+                                            detailElement ) );
 
                                     }
                                     else
@@ -499,7 +522,7 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_MAP_KEY_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "implementationMapKeyItemTypeConstraint", implementation.getIdentifier(),
-                                            p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                     }
                                 }
@@ -521,7 +544,7 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_MAP_VALUE_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationMapValueItemTypeConstraint", specification.getIdentifier(),
-                                        p.getName() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                 }
 
@@ -532,7 +555,8 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_MAP_VALUE_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyMapValueItemTypeConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName() ),
+                                            detailElement ) );
 
                                     }
                                     else
@@ -540,7 +564,7 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_MAP_VALUE_ITEM_TYPE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "implementationMapValueItemTypeConstraint", implementation.getIdentifier(),
-                                            p.getName() ), detailElement ) );
+                                            moduleOfProperties.getName(), p.getName() ), detailElement ) );
 
                                     }
                                 }
@@ -562,7 +586,8 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "MODULE_MAP_KEY_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "moduleMapKeyItemJavaValueConstraint", module.getName(), p.getName(),
-                                        e.getMessage() ), detailElement ) );
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
 
@@ -571,7 +596,9 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_MAP_KEY_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationMapKeyItemJavaValueConstraint", specification.getIdentifier(),
-                                        p.getName(), e.getMessage() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName(),
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
 
@@ -582,7 +609,9 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_MAP_KEY_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                             "dependencyMapKeyItemJavaValueConstraint", implementation.getIdentifier(),
-                                            dependency.getName(), p.getName(), e.getMessage() ), detailElement ) );
+                                            moduleOfProperties.getName(), dependency.getName(), p.getName(),
+                                            e.getMessage() != null && e.getMessage().length() > 0
+                                            ? " " + e.getMessage() : "" ), detailElement ) );
 
                                     }
                                     else
@@ -590,8 +619,10 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_MAP_KEY_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE,
                                             getMessage( "implementationMapKeyItemJavaValueConstraint",
-                                                        implementation.getIdentifier(), p.getName(), e.getMessage() ),
-                                            detailElement ) );
+                                                        implementation.getIdentifier(), moduleOfProperties.getName(),
+                                                        p.getName(),
+                                                        e.getMessage() != null && e.getMessage().length() > 0
+                                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                     }
                                 }
@@ -613,7 +644,8 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "MODULE_MAP_VALUE_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "moduleMapValueItemJavaValueConstraint", module.getName(), p.getName(),
-                                        e.getMessage() ), detailElement ) );
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
 
@@ -622,7 +654,9 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "SPECIFICATION_MAP_VALUE_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "specificationMapValueItemJavaValueConstraint", specification.getIdentifier(),
-                                        p.getName(), e.getMessage() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName(),
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
 
@@ -633,8 +667,11 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "DEPENDENCY_MAP_VALUE_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE,
                                             getMessage( "dependencyMapValueItemJavaValueConstraint",
-                                                        implementation.getIdentifier(), dependency.getName(),
-                                                        p.getName(), e.getMessage() ), detailElement ) );
+                                                        implementation.getIdentifier(),
+                                                        moduleOfProperties.getName(), dependency.getName(),
+                                                        p.getName(),
+                                                        e.getMessage() != null && e.getMessage().length() > 0
+                                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                     }
                                     else
@@ -642,8 +679,10 @@ public class SdkModelValidator implements ModelValidator
                                         report.getDetails().add( new ModelValidationReport.Detail(
                                             "IMPLEMENTATION_MAP_VALUE_ITEM_JAVA_VALUE_CONSTRAINT", Level.SEVERE,
                                             getMessage( "implementationMapValueItemJavaValueConstraint",
-                                                        implementation.getIdentifier(), p.getName(), e.getMessage() ),
-                                            detailElement ) );
+                                                        implementation.getIdentifier(), moduleOfProperties.getName(),
+                                                        p.getName(),
+                                                        e.getMessage() != null && e.getMessage().length() > 0
+                                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                     }
                                 }
@@ -665,7 +704,8 @@ public class SdkModelValidator implements ModelValidator
                             {
                                 report.getDetails().add( new ModelValidationReport.Detail(
                                     "MODULE_MAP_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
-                                    "moduleMapJavaValueConstraint", module.getName(), p.getName(), e.getMessage() ),
+                                    "moduleMapJavaValueConstraint", module.getName(), p.getName(),
+                                    e.getMessage() != null && e.getMessage().length() > 0 ? " " + e.getMessage() : "" ),
                                     detailElement ) );
 
                             }
@@ -675,7 +715,9 @@ public class SdkModelValidator implements ModelValidator
                                 report.getDetails().add( new ModelValidationReport.Detail(
                                     "SPECIFICATION_MAP_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                     "specificationMapJavaValueConstraint", specification.getIdentifier(),
-                                    p.getName(), e.getMessage() ), detailElement ) );
+                                    moduleOfProperties.getName(), p.getName(),
+                                    e.getMessage() != null && e.getMessage().length() > 0
+                                    ? " " + e.getMessage() : "" ), detailElement ) );
 
                             }
 
@@ -686,7 +728,9 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "DEPENDENCY_MAP_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "dependencyMapJavaValueConstraint", implementation.getIdentifier(),
-                                        dependency.getName(), p.getName(), e.getMessage() ), detailElement ) );
+                                        moduleOfProperties.getName(), dependency.getName(), p.getName(),
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
                                 else
@@ -694,13 +738,24 @@ public class SdkModelValidator implements ModelValidator
                                     report.getDetails().add( new ModelValidationReport.Detail(
                                         "IMPLEMENTATION_MAP_JAVA_VALUE_CONSTRAINT", Level.SEVERE, getMessage(
                                         "implementationMapJavaValueConstraint", implementation.getIdentifier(),
-                                        p.getName(), e.getMessage() ), detailElement ) );
+                                        moduleOfProperties.getName(), p.getName(),
+                                        e.getMessage() != null && e.getMessage().length() > 0
+                                        ? " " + e.getMessage() : "" ), detailElement ) );
 
                                 }
                             }
                         }
                     }
                 }
+            }
+        }
+
+        if ( dependency != null && dependency.getDependencies() != null )
+        {
+            for ( int i = 0, s0 = dependency.getDependencies().getDependency().size(); i < s0; i++ )
+            {
+                final Dependency d = dependency.getDependencies().getDependency().get( i );
+                this.assertValidSdkObjects( context, modules, module, specification, implementation, d, report );
             }
         }
     }
