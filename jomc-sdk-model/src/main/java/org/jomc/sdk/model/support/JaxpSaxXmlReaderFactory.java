@@ -57,7 +57,9 @@ import org.xml.sax.XMLReader;
  *   </ul>
  * </p>
  * <dl>
- *   <dt><b>Stateless:</b></dt><dd>No state is retained.</dd>
+ *   <dt><b>Abstract:</b></dt><dd>No</dd>
+ *   <dt><b>Final:</b></dt><dd>No</dd>
+ *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
  * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -146,6 +148,9 @@ public final class JaxpSaxXmlReaderFactory
      *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.ContentHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <contentHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -161,6 +166,9 @@ public final class JaxpSaxXmlReaderFactory
      *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.DTDHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <dtdHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -176,6 +184,9 @@ public final class JaxpSaxXmlReaderFactory
      *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <entityResolver>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -191,6 +202,9 @@ public final class JaxpSaxXmlReaderFactory
      *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <errorHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -206,6 +220,9 @@ public final class JaxpSaxXmlReaderFactory
      *   This method returns the {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <schema>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -221,6 +238,11 @@ public final class JaxpSaxXmlReaderFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <XIncludeAware>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -233,6 +255,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <contentHandler>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link org.xml.sax.XMLReader#setContentHandler(org.xml.sax.ContentHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -245,6 +272,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <dtdHandler>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code dtdHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setDTDHandler(org.xml.sax.DTDHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -257,6 +289,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <entityResolver>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code entityResolver} dependency is applied. See {@link org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -269,6 +306,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <errorHandler>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -281,6 +323,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <features>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link org.xml.sax.XMLReader#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -293,6 +340,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <namespaceAware>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -305,6 +357,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <properties>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link org.xml.sax.XMLReader#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -317,6 +374,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <schema>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -329,6 +391,11 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <validating>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

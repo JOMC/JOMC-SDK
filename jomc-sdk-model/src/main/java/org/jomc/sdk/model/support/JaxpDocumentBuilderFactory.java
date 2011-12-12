@@ -55,7 +55,9 @@ import javax.xml.parsers.ParserConfigurationException;
  *   </ul>
  * </p>
  * <dl>
- *   <dt><b>Stateless:</b></dt><dd>No state is retained.</dd>
+ *   <dt><b>Abstract:</b></dt><dd>No</dd>
+ *   <dt><b>Final:</b></dt><dd>No</dd>
+ *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
  * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -137,6 +139,9 @@ public final class JaxpDocumentBuilderFactory
      *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <org.xml.sax.EntityResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <entityResolver>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -152,6 +157,9 @@ public final class JaxpDocumentBuilderFactory
      *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <errorHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -167,6 +175,9 @@ public final class JaxpDocumentBuilderFactory
      *   This method returns the {@code <JOMC :: JAXP Document Builder Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <schema>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -182,6 +193,11 @@ public final class JaxpDocumentBuilderFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <XIncludeAware>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -194,6 +210,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <attributes>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.parsers.DocumentBuilderFactory#setAttribute(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -206,6 +227,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <coalescing>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which convert CDATA nodes to Text nodes and append them to the adjacent (if any) Text node; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -218,6 +244,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <entityResolver>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code entityResolver} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setEntityResolver(org.xml.sax.EntityResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -230,6 +261,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <errorHandler>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.parsers.DocumentBuilder#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -242,6 +278,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <expandingEntityReferences>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which expand entity reference nodes; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -254,6 +295,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <features>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.parsers.DocumentBuilderFactory#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -266,6 +312,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <ignoringComments>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which ignores comments; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -278,6 +329,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <ignoringElementContentWhitespace>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which ignore ignorable whitespace in element content; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -290,6 +346,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <namespaceAware>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -302,6 +363,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <schema>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.DocumentBuilderFactory#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -314,6 +380,11 @@ public final class JaxpDocumentBuilderFactory
     }
     /**
      * Gets the value of the {@code <validating>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

@@ -65,7 +65,9 @@ import org.xml.sax.SAXException;
  *   </ul>
  * </p>
  * <dl>
- *   <dt><b>Stateless:</b></dt><dd>No state is retained.</dd>
+ *   <dt><b>Abstract:</b></dt><dd>No</dd>
+ *   <dt><b>Final:</b></dt><dd>No</dd>
+ *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
  * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -166,6 +168,9 @@ public final class JaxpValidatorHandlerFactory
      *   This method returns the {@code <JOMC :: JAXP Validator Handler Factory :: Default>} object of the {@code <org.xml.sax.ErrorHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <errorHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -181,6 +186,9 @@ public final class JaxpValidatorHandlerFactory
      *   This method returns the {@code <JOMC :: JAXP Validator Handler Factory :: Default>} object of the {@code <org.w3c.dom.ls.LSResourceResolver>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <resourceResolver>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -196,6 +204,11 @@ public final class JaxpValidatorHandlerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <errorHandler>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.ValidatorHandler#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -208,6 +221,11 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <resourceResolver>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.ValidatorHandler#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -220,6 +238,11 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <schemas>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -232,6 +255,11 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <validatorHandlerFeatures>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.validation.ValidatorHandler#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -244,6 +272,11 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <validatorHandlerProperties>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.validation.ValidatorHandler#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

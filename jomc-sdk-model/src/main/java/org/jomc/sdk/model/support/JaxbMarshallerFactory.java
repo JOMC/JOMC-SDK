@@ -58,7 +58,9 @@ import org.xml.sax.SAXException;
  *   </ul>
  * </p>
  * <dl>
- *   <dt><b>Stateless:</b></dt><dd>No state is retained.</dd>
+ *   <dt><b>Abstract:</b></dt><dd>No</dd>
+ *   <dt><b>Final:</b></dt><dd>No</dd>
+ *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
  * </dl>
  *
  * @author <a href="mailto:schulte2005@users.sourceforge.net">Christian Schulte</a> 1.0
@@ -160,6 +162,9 @@ public final class JaxbMarshallerFactory
      *   This method returns the {@code <JOMC :: JAXB Marshaller Factory :: Default>} object of the {@code <javax.xml.bind.attachment.AttachmentMarshaller>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <attachmentMarshaller>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -175,6 +180,9 @@ public final class JaxbMarshallerFactory
      *   This method returns the {@code <JOMC :: JAXB Marshaller Factory :: Default>} object of the {@code <javax.xml.validation.Schema>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <schema>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -190,6 +198,9 @@ public final class JaxbMarshallerFactory
      *   This method returns the {@code <JOMC :: JAXB Marshaller Factory :: Default>} object of the {@code <javax.xml.bind.ValidationEventHandler>} specification at any specification level.
      *   That specification does not apply to any scope. A new object is returned whenever requested and bound to this instance.
      * </p>
+     * <dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl>
      * @return The {@code <validationEventHandler>} dependency.
      * {@code null} if no object is available.
      * @throws org.jomc.ObjectManagementException if getting the dependency instance fails.
@@ -205,6 +216,11 @@ public final class JaxbMarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <attachmentMarshaller>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code attachmentMarshaller} dependency is applied. See {@link javax.xml.bind.Marshaller#setAttachmentMarshaller(javax.xml.bind.attachment.AttachmentMarshaller)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -217,6 +233,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <jaxbEncoding>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.bind.Marshaller#JAXB_ENCODING}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -229,6 +250,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <jaxbFormattedOutput>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FORMATTED_OUTPUT}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -241,6 +267,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <jaxbFragment>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.bind.Marshaller#JAXB_FRAGMENT}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -253,6 +284,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <jaxbNoNamespaceSchemaLocation>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.bind.Marshaller#JAXB_NO_NAMESPACE_SCHEMA_LOCATION}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -265,6 +301,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <jaxbSchemaLocation>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.bind.Marshaller#JAXB_SCHEMA_LOCATION}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -277,6 +318,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <marshallerProperties>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return See {@link javax.xml.bind.Marshaller#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -289,6 +335,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <schema>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Marshaller#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -301,6 +352,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <schemas>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -313,6 +369,11 @@ public final class JaxbMarshallerFactory
     }
     /**
      * Gets the value of the {@code <validationEventHandler>} property.
+     * <p>
+     *   <dl>
+     *     <dt><b>Final:</b></dt><dd>No</dd>
+     *   </dl>
+     * </p>
      * @return Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Marshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
