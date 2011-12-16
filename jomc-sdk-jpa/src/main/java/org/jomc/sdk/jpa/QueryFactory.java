@@ -43,17 +43,10 @@ import javax.persistence.Query;
 /**
  * Factory providing a JPA query instance.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JPA Query Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC SDK JPA Query Factory>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <javax.persistence.Query>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JPA Query Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC SDK JPA Query Factory</dd>
+ *   <dt><b>Implements:</b></dt><dd>javax.persistence.Query</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>Yes</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>No</dd>
