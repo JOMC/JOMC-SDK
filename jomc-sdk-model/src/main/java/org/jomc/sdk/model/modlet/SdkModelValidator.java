@@ -62,10 +62,9 @@ import org.jomc.sdk.model.MapType;
 /**
  * SDK {@code ModelValidator} implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC SDK Model Validator>}.
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC SDK Model Validator</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC SDK Model</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>

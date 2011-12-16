@@ -45,17 +45,10 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
 /**
  * XML Schema Set {@code JAXBIntrospector} factory implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JAXB Introspector Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC :: JAXB Introspector Factory :: Default>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <javax.xml.bind.JAXBIntrospector>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXB Introspector Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC :: JAXB Introspector Factory :: Default</dd>
+ *   <dt><b>Implements:</b></dt><dd>javax.xml.bind.JAXBIntrospector</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>

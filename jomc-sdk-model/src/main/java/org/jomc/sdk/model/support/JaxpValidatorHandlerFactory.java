@@ -53,18 +53,10 @@ import org.xml.sax.SAXException;
 /**
  * XML Schema Set JAXP {@code ValidatorHandler} factory implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JAXP Validator Handler Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC :: JAXP Validator Handler Factory :: Default>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <javax.xml.validation.ValidatorHandler>} at any specification level.</li>
- *     <li>{@code <org.xml.sax.ContentHandler>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP Validator Handler Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP Validator Handler Factory :: Default</dd>
+ *   <dt><b>Implements:</b></dt><dd>javax.xml.validation.ValidatorHandler, org.xml.sax.ContentHandler</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>

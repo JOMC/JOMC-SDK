@@ -45,17 +45,10 @@ import org.xml.sax.SAXException;
 /**
  * JAXP {@code SAXParser} factory implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JAXP SAX Parser Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC :: JAXP SAX Parser Factory :: Default>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <javax.xml.parsers.SAXParser>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP SAX Parser Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP SAX Parser Factory :: Default</dd>
+ *   <dt><b>Implements:</b></dt><dd>javax.xml.parsers.SAXParser</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>

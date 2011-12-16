@@ -46,17 +46,10 @@ import org.xml.sax.XMLReader;
 /**
  * JAXP {@code XMLReader} factory implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JAXP SAX XML Reader Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC :: JAXP SAX XML Reader Factory :: Default>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <org.xml.sax.XMLReader>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP SAX XML Reader Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP SAX XML Reader Factory :: Default</dd>
+ *   <dt><b>Implements:</b></dt><dd>org.xml.sax.XMLReader</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>

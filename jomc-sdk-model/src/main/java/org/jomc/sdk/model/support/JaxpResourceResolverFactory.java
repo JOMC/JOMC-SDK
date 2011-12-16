@@ -49,17 +49,10 @@ import org.w3c.dom.ls.LSResourceResolver;
 /**
  * XML Schema Set JAXP {@code LSResourceResolver} factory implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JAXP Resource Resolver Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC :: JAXP Resource Resolver Factory :: Default>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <org.w3c.dom.ls.LSResourceResolver>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP Resource Resolver Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP Resource Resolver Factory :: Default</dd>
+ *   <dt><b>Implements:</b></dt><dd>org.w3c.dom.ls.LSResourceResolver</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>

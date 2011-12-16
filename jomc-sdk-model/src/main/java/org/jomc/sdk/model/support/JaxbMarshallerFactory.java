@@ -47,17 +47,10 @@ import org.xml.sax.SAXException;
 /**
  * XML Schema Set JAXB {@code Marshaller} factory implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JAXB Marshaller Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC :: JAXB Marshaller Factory :: Default>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <javax.xml.bind.Marshaller>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXB Marshaller Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC :: JAXB Marshaller Factory :: Default</dd>
+ *   <dt><b>Implements:</b></dt><dd>javax.xml.bind.Marshaller</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>

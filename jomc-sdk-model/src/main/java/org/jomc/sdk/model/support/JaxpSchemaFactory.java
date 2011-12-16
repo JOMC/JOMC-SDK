@@ -53,17 +53,10 @@ import org.xml.sax.SAXException;
 /**
  * XML Schema Set JAXP {@code Schema} factory implementation.
  *
- * <p>
- *   This implementation is identified by {@code <JOMC :: JAXP Schema Factory>}.
- * </p>
- * <p>
- *   It provides objects named {@code <JOMC :: JAXP Schema Factory :: Default>} of the following specifications:
- *
- *   <ul>
- *     <li>{@code <javax.xml.validation.Schema>} at any specification level.</li>
- *   </ul>
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP Schema Factory</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP Schema Factory :: Default</dd>
+ *   <dt><b>Implements:</b></dt><dd>javax.xml.validation.Schema</dd></dt>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
