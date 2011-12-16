@@ -47,10 +47,9 @@ import static org.junit.Assert.assertTrue;
 /**
  * Test cases for the {@code ListType} complex type.
  *
- * <p>
- *   This implementation is identified by {@code <org.jomc.sdk.model.test.ListTypeTest>}.
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>org.jomc.sdk.model.test.ListTypeTest</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC SDK Model</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>No</dd>

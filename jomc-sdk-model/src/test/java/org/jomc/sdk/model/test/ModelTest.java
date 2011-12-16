@@ -47,10 +47,9 @@ import static org.junit.Assert.fail;
 /**
  * Test cases for the {@code Test XML Schema Set}.
  *
- * <p>
- *   This implementation is identified by {@code <org.jomc.sdk.model.test.ModelTest>}.
- * </p>
  * <dl>
+ *   <dt><b>Identifier:</b></dt><dd>org.jomc.sdk.model.test.ModelTest</dd>
+ *   <dt><b>Name:</b></dt><dd>JOMC SDK Model</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>No</dd>
