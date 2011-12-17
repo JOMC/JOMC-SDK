@@ -50,7 +50,8 @@ import org.xml.sax.SAXException;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXB Unmarshaller Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXB Unmarshaller Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>javax.xml.bind.Unmarshaller</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>javax.xml.bind.Unmarshaller</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -188,11 +189,9 @@ public final class JaxbUnmarshallerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <attachmentUnmarshaller>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code attachmentUnmarshaller} dependency is applied. See {@link javax.xml.bind.Unmarshaller#setAttachmentUnmarshaller(javax.xml.bind.attachment.AttachmentUnmarshaller)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -205,11 +204,9 @@ public final class JaxbUnmarshallerFactory
     }
     /**
      * Gets the value of the {@code <schema>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Unmarshaller#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -222,11 +219,9 @@ public final class JaxbUnmarshallerFactory
     }
     /**
      * Gets the value of the {@code <schemas>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -239,11 +234,9 @@ public final class JaxbUnmarshallerFactory
     }
     /**
      * Gets the value of the {@code <unmarshallerProperties>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.bind.Unmarshaller#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -256,11 +249,9 @@ public final class JaxbUnmarshallerFactory
     }
     /**
      * Gets the value of the {@code <validationEventHandler>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Unmarshaller#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

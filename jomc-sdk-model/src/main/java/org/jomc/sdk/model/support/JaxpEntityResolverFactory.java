@@ -50,7 +50,8 @@ import org.xml.sax.helpers.DefaultHandler;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP Entity Resolver Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP Entity Resolver Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>org.xml.sax.EntityResolver</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>org.xml.sax.EntityResolver</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -132,11 +133,9 @@ public final class JaxpEntityResolverFactory extends DefaultHandler
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <schemas>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

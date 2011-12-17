@@ -52,7 +52,8 @@ import org.w3c.dom.ls.LSResourceResolver;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP Resource Resolver Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP Resource Resolver Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>org.w3c.dom.ls.LSResourceResolver</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>org.w3c.dom.ls.LSResourceResolver</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -125,11 +126,9 @@ public final class JaxpResourceResolverFactory implements LSResourceResolver
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <schemas>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

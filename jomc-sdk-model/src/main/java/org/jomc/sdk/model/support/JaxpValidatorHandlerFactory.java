@@ -56,7 +56,9 @@ import org.xml.sax.SAXException;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP Validator Handler Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP Validator Handler Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>javax.xml.validation.ValidatorHandler, org.xml.sax.ContentHandler</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>javax.xml.validation.ValidatorHandler</dd>
+ *     <dd>org.xml.sax.ContentHandler</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -196,11 +198,9 @@ public final class JaxpValidatorHandlerFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <errorHandler>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code errorHandler} dependency is ignored. See {@link javax.xml.validation.ValidatorHandler#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -213,11 +213,9 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <resourceResolver>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code resourceResolver} dependency is ignored. See {@link javax.xml.validation.ValidatorHandler#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -230,11 +228,9 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <schemas>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -247,11 +243,9 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <validatorHandlerFeatures>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.validation.ValidatorHandler#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -264,11 +258,9 @@ public final class JaxpValidatorHandlerFactory
     }
     /**
      * Gets the value of the {@code <validatorHandlerProperties>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.validation.ValidatorHandler#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

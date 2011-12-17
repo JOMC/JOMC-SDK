@@ -49,7 +49,8 @@ import static org.jomc.sdk.model.modlet.SdkModelProvider.XML_SCHEMA_JAVA_CONTEXT
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXB Binder Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXB Binder Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>javax.xml.bind.Binder</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>javax.xml.bind.Binder</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -165,11 +166,9 @@ public final class JaxbBinderFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <binderProperties>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.bind.Binder#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -182,11 +181,9 @@ public final class JaxbBinderFactory
     }
     /**
      * Gets the value of the {@code <schema>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.bind.Binder#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -199,11 +196,9 @@ public final class JaxbBinderFactory
     }
     /**
      * Gets the value of the {@code <schemas>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -216,11 +211,9 @@ public final class JaxbBinderFactory
     }
     /**
      * Gets the value of the {@code <validationEventHandler>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code validationEventHandler} dependency is applied. See {@link javax.xml.bind.Binder#setEventHandler(javax.xml.bind.ValidationEventHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

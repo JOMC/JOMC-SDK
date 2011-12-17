@@ -56,7 +56,8 @@ import org.xml.sax.SAXException;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP Schema Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP Schema Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>javax.xml.validation.Schema</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>javax.xml.validation.Schema</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -195,11 +196,9 @@ public final class JaxpSchemaFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <errorHandler>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link javax.xml.validation.SchemaFactory#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -212,11 +211,9 @@ public final class JaxpSchemaFactory
     }
     /**
      * Gets the value of the {@code <resourceResolver>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code resourceResolver} dependency is applied. See {@link javax.xml.validation.SchemaFactory#setResourceResolver(org.w3c.dom.ls.LSResourceResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -229,11 +226,9 @@ public final class JaxpSchemaFactory
     }
     /**
      * Gets the value of the {@code <schemaFeatures>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.validation.SchemaFactory#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -246,11 +241,9 @@ public final class JaxpSchemaFactory
     }
     /**
      * Gets the value of the {@code <schemaProperties>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.validation.SchemaFactory#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -263,11 +256,9 @@ public final class JaxpSchemaFactory
     }
     /**
      * Gets the value of the {@code <schemas>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return List of XML schemas ({@code schemas} element from XML namespace {@code http://jomc.org/sdk/model}).
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

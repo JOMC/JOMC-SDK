@@ -48,7 +48,8 @@ import org.xml.sax.SAXException;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP SAX Parser Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP SAX Parser Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>javax.xml.parsers.SAXParser</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>javax.xml.parsers.SAXParser</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -137,11 +138,9 @@ public final class JaxpSaxParserFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <XIncludeAware>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -154,11 +153,9 @@ public final class JaxpSaxParserFactory
     }
     /**
      * Gets the value of the {@code <features>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.parsers.SAXParserFactory#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -171,11 +168,9 @@ public final class JaxpSaxParserFactory
     }
     /**
      * Gets the value of the {@code <namespaceAware>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -188,11 +183,9 @@ public final class JaxpSaxParserFactory
     }
     /**
      * Gets the value of the {@code <properties>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link javax.xml.parsers.SAXParser#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -205,11 +198,9 @@ public final class JaxpSaxParserFactory
     }
     /**
      * Gets the value of the {@code <schema>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -222,11 +213,9 @@ public final class JaxpSaxParserFactory
     }
     /**
      * Gets the value of the {@code <validating>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

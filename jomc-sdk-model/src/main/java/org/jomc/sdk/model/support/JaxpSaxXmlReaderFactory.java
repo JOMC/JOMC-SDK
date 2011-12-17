@@ -49,7 +49,8 @@ import org.xml.sax.XMLReader;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JAXP SAX XML Reader Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC :: JAXP SAX XML Reader Factory :: Default</dd>
- *   <dt><b>Implements:</b></dt><dd>org.xml.sax.XMLReader</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>org.xml.sax.XMLReader</dd>
  *   <dt><b>Abstract:</b></dt><dd>No</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>Yes</dd>
@@ -231,11 +232,9 @@ public final class JaxpSaxXmlReaderFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <XIncludeAware>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return {@code true} if the factory is configured to produce XInclude aware parsers; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -248,11 +247,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <contentHandler>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link org.xml.sax.XMLReader#setContentHandler(org.xml.sax.ContentHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -265,11 +262,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <dtdHandler>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code dtdHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setDTDHandler(org.xml.sax.DTDHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -282,11 +277,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <entityResolver>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code entityResolver} dependency is applied. See {@link org.xml.sax.XMLReader#setEntityResolver(org.xml.sax.EntityResolver)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -299,11 +292,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <errorHandler>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code errorHandler} dependency is applied. See {@link org.xml.sax.XMLReader#setErrorHandler(org.xml.sax.ErrorHandler)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -316,11 +307,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <features>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link org.xml.sax.XMLReader#setFeature(java.lang.String, boolean)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -333,11 +322,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <namespaceAware>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return {@code true} if the factory is configured to produce parsers which are namespace aware; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -350,11 +337,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <properties>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return See {@link org.xml.sax.XMLReader#setProperty(java.lang.String, java.lang.Object)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -367,11 +352,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <schema>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Flag indicating the {@code schema} dependency is applied. See {@link javax.xml.parsers.SAXParserFactory#setSchema(javax.xml.validation.Schema)}.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -384,11 +367,9 @@ public final class JaxpSaxXmlReaderFactory
     }
     /**
      * Gets the value of the {@code <validating>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return {@code true} if the factory is configured to produce parsers which validate the XML content during parse; {@code false} otherwise.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
