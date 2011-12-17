@@ -129,11 +129,9 @@ public class MapTypeTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <complexTypeMap>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <complexTypeMap>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -146,11 +144,9 @@ public class MapTypeTest
     }
     /**
      * Gets the value of the {@code <fileMap>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <fileMap>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -163,11 +159,9 @@ public class MapTypeTest
     }
     /**
      * Gets the value of the {@code <mapOfMaps>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <mapOfMaps>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -180,11 +174,9 @@ public class MapTypeTest
     }
     /**
      * Gets the value of the {@code <primitiveMap>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <primitiveMap>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -197,11 +189,9 @@ public class MapTypeTest
     }
     /**
      * Gets the value of the {@code <stringMap>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <stringMap>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */

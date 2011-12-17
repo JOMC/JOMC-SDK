@@ -922,11 +922,9 @@ public class ModelTest
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <sysIllegalSubstitution>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <sysIllegalSubstitution>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -939,11 +937,9 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserDir>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <sysUserDir>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -956,11 +952,9 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserHome>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <sysUserHome>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -973,11 +967,9 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserName>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <sysUserName>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -990,11 +982,9 @@ public class ModelTest
     }
     /**
      * Gets the value of the {@code <sysUserNameAndHomeAndDir>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return The value of the {@code <sysUserNameAndHomeAndDir>} property.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
