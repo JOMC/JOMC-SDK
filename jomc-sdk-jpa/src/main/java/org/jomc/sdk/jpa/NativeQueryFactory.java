@@ -46,7 +46,8 @@ import javax.persistence.Query;
  * <dl>
  *   <dt><b>Identifier:</b></dt><dd>JOMC :: JPA Native Query Factory</dd>
  *   <dt><b>Name:</b></dt><dd>JOMC SDK JPA Native Query Factory</dd>
- *   <dt><b>Implements:</b></dt><dd>javax.persistence.Query</dd></dt>
+ *   <dt><b>Specifications:</b></dt>
+ *     <dd>javax.persistence.Query</dd>
  *   <dt><b>Abstract:</b></dt><dd>Yes</dd>
  *   <dt><b>Final:</b></dt><dd>No</dd>
  *   <dt><b>Stateless:</b></dt><dd>No</dd>
@@ -126,11 +127,9 @@ public final class NativeQueryFactory
     // <editor-fold defaultstate="collapsed" desc=" Generated Properties ">
     /**
      * Gets the value of the {@code <nativeQuery>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Native query to provide.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
@@ -143,11 +142,9 @@ public final class NativeQueryFactory
     }
     /**
      * Gets the value of the {@code <parameterMap>} property.
-     * <p>
-     *   <dl>
-     *     <dt><b>Final:</b></dt><dd>No</dd>
-     *   </dl>
-     * </p>
+     * <p><dl>
+     *   <dt><b>Final:</b></dt><dd>No</dd>
+     * </dl></p>
      * @return Map of parameters to set on the query.
      * @throws org.jomc.ObjectManagementException if getting the property instance fails.
      */
