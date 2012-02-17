@@ -1827,8 +1827,8 @@
     <wagon.version>2.2</wagon.version>
     <umlgraph.version>5.1</umlgraph.version>
     <cc-xjc-plugin.version>2.0</cc-xjc-plugin.version>
-    <jomc.version>1.2-SNAPSHOT</jomc.version>
-    <jomc-logging.version>1.1-SNAPSHOT</jomc-logging.version>
+    <jomc.version>1.2</jomc.version>
+    <jomc-logging.version>1.1</jomc-logging.version>
     <jomc.build.version>1.7</jomc.build.version>
     <jomc.base.version>1.0</jomc.base.version>
     <jomc-sdk-model.artifact.version>1.0-beta-3-SNAPSHOT</jomc-sdk-model.artifact.version>
