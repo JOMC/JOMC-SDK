@@ -61,8 +61,7 @@
         }
 
         return java.util.Collections.unmodifiableList( javaValue );
-    }
-]]>
+    }]]>
       </ci:code>
     </jaxb:bindings>
     <!-- *********************************************************************************************************** -->
@@ -102,8 +101,7 @@
         }
 
         return java.util.Collections.unmodifiableMap( javaValue );
-    }
-]]>
+    }]]>
       </ci:code>
     </jaxb:bindings>
     <!-- *********************************************************************************************************** -->
@@ -256,8 +254,7 @@
         return java.text.MessageFormat.format( java.util.ResourceBundle.getBundle(
             ItemType.class.getName().replace( '.', '/' ), java.util.Locale.getDefault() ).getString( key ), arguments );
 
-    }
-]]>
+    }]]>
       </ci:code>
     </jaxb:bindings>
     <!-- *********************************************************************************************************** -->
@@ -322,8 +319,7 @@
         }
 
         return null;
-    }
-]]>
+    }]]>
       </ci:code>
     </jaxb:bindings>
     <!-- *********************************************************************************************************** -->
